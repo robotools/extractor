@@ -432,51 +432,74 @@ def _gatherKerningForLookup(gpos, lookupIndex):
     Where the tuple means this:
         (lookup index, subtable index, class index)
     """
-    kerning = {}
+    allKerning = {}
     allLeftClasses = {}
     allRightClasses = {}
     lookup = gpos.LookupList.Lookup[lookupIndex]
-    # only handle pair positioning
-    if lookup.LookupType != 2:
+    # only handle pair positioning and extension
+    if lookup.LookupType not in (2, 9):
         return
     for subtableIndex, subtable in enumerate(lookup.SubTable):
-        format = subtable.Format
-        if format == 1:
-            coverage = subtable.Coverage.glyphs
-            valueFormat1 = subtable.ValueFormat1
-            pairSets = subtable.PairSet
-            for index, leftGlyphName in enumerate(coverage):
-                pairSet = pairSets[index]
-                for pairValueRecord in pairSet.PairValueRecord:
-                    rightGlyphName = pairValueRecord.SecondGlyph
-                    if valueFormat1:
-                        value = pairValueRecord.Value1
-                    else:
-                        value = pairValueRecord.Value2
-                    if hasattr(value, "XAdvance"):
-                        value = value.XAdvance
-                        kerning[leftGlyphName, rightGlyphName] = value
-        elif format == 2:
-            # extract the classes
-            leftClasses = _extractFeatureClasses(lookupIndex=lookupIndex, subtableIndex=subtableIndex, classDefs=subtable.ClassDef1.classDefs, coverage=subtable.Coverage.glyphs)
-            allLeftClasses.update(leftClasses)
-            rightClasses = _extractFeatureClasses(lookupIndex=lookupIndex, subtableIndex=subtableIndex, classDefs=subtable.ClassDef2.classDefs)
-            allRightClasses.update(rightClasses)
-            # extract the pairs
-            for class1RecordIndex, class1Record in enumerate(subtable.Class1Record):
-                for class2RecordIndex, class2Record in enumerate(class1Record.Class2Record):
-                    leftClass = (lookupIndex, subtableIndex, class1RecordIndex)
-                    rightClass = (lookupIndex, subtableIndex, class2RecordIndex)
-                    valueFormat1 = subtable.ValueFormat1
-                    if valueFormat1:
-                        value = class2Record.Value1
-                    else:
-                        value = class2Record.Value2
-                    if hasattr(value, "XAdvance") and value.XAdvance != 0:
-                        value = value.XAdvance
-                        kerning[leftClass, rightClass] = value
+        if lookup.LookupType == 2:
+            format = subtable.Format
+            if format == 1:
+                kerning = _handleLookupType2Format1(subtable)
+                allKerning.update(kerning)
+            elif format == 2:
+                kerning, leftClasses, rightClasses = _handleLookupType2Format2(subtable, lookupIndex, subtableIndex)
+                allKerning.update(kerning)
+                allLeftClasses.update(leftClasses)
+                allRightClasses.update(rightClasses)
+        elif lookup.LookupType == 9:
+            extSubtable = subtable.ExtSubTable
+            if extSubtable.Format == 1:
+                kerning = _handleLookupType2Format1(extSubtable)
+                allKerning.update(kerning)
+            elif extSubtable.Format == 2:
+                kerning, leftClasses, rightClasses = _handleLookupType2Format2(extSubtable, lookupIndex, subtableIndex)
+                allKerning.update(kerning)
+                allLeftClasses.update(leftClasses)
+                allRightClasses.update(rightClasses)
     # done
-    return kerning, allLeftClasses, allRightClasses
+    return allKerning, allLeftClasses, allRightClasses
+
+def _handleLookupType2Format1(subtable):
+    kerning = {}
+    coverage = subtable.Coverage.glyphs
+    valueFormat1 = subtable.ValueFormat1
+    pairSets = subtable.PairSet
+    for index, leftGlyphName in enumerate(coverage):
+        pairSet = pairSets[index]
+        for pairValueRecord in pairSet.PairValueRecord:
+            rightGlyphName = pairValueRecord.SecondGlyph
+            if valueFormat1:
+                value = pairValueRecord.Value1
+            else:
+                value = pairValueRecord.Value2
+            if hasattr(value, "XAdvance"):
+                value = value.XAdvance
+                kerning[leftGlyphName, rightGlyphName] = value
+    return kerning
+
+def _handleLookupType2Format2(subtable, lookupIndex, subtableIndex):
+    # extract the classes
+    leftClasses = _extractFeatureClasses(lookupIndex=lookupIndex, subtableIndex=subtableIndex, classDefs=subtable.ClassDef1.classDefs, coverage=subtable.Coverage.glyphs)
+    rightClasses = _extractFeatureClasses(lookupIndex=lookupIndex, subtableIndex=subtableIndex, classDefs=subtable.ClassDef2.classDefs)
+    # extract the pairs
+    kerning = {}
+    for class1RecordIndex, class1Record in enumerate(subtable.Class1Record):
+        for class2RecordIndex, class2Record in enumerate(class1Record.Class2Record):
+            leftClass = (lookupIndex, subtableIndex, class1RecordIndex)
+            rightClass = (lookupIndex, subtableIndex, class2RecordIndex)
+            valueFormat1 = subtable.ValueFormat1
+            if valueFormat1:
+                value = class2Record.Value1
+            else:
+                value = class2Record.Value2
+            if hasattr(value, "XAdvance") and value.XAdvance != 0:
+                value = value.XAdvance
+                kerning[leftClass, rightClass] = value
+    return kerning, leftClasses, rightClasses
 
 def _mergeKerningDictionaries(kerningDictionaries):
     """
