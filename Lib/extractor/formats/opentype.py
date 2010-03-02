@@ -464,6 +464,9 @@ def _gatherKerningForLookup(gpos, lookupIndex):
     return allKerning, allLeftClasses, allRightClasses
 
 def _handleLookupType2Format1(subtable):
+    """
+    Extract a kerning dictionary from a Lookup Type 2 Format 1.
+    """
     kerning = {}
     coverage = subtable.Coverage.glyphs
     valueFormat1 = subtable.ValueFormat1
@@ -482,6 +485,9 @@ def _handleLookupType2Format1(subtable):
     return kerning
 
 def _handleLookupType2Format2(subtable, lookupIndex, subtableIndex):
+    """
+    Extract kerning, left class and right class dictionaries from a Lookup Type 2 Format 2.
+    """
     # extract the classes
     leftClasses = _extractFeatureClasses(lookupIndex=lookupIndex, subtableIndex=subtableIndex, classDefs=subtable.ClassDef1.classDefs, coverage=subtable.Coverage.glyphs)
     rightClasses = _extractFeatureClasses(lookupIndex=lookupIndex, subtableIndex=subtableIndex, classDefs=subtable.ClassDef2.classDefs)
