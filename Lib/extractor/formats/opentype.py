@@ -21,11 +21,11 @@ def isOpenType(pathOrFile):
 def extractFontFromOpenType(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True):
     source = TTFont(pathOrFile)
     if doInfo:
-        extractInfo(source, destination)
+        extractOpenTypeInfo(source, destination)
     if doGlyphs:
-        extractGlyphs(source, destination)
+        extractOpenTypeGlyphs(source, destination)
     if doKerning:
-        kerning, groups = extractKerning(source, destination)
+        kerning, groups = extractOpenTypeKerning(source, destination)
         destination.groups.update(groups)
         destination.kerning.clear()
         destination.kerning.update(kerning)
@@ -35,7 +35,7 @@ def extractFontFromOpenType(pathOrFile, destination, doGlyphs=True, doInfo=True,
 # Info
 # ----
 
-def extractInfo(source, destination):
+def extractOpenTypeInfo(source, destination):
     info = RelaxedInfo(destination.info)
     _extractInfoHead(source, info)
     _extractInfoName(source, info)
@@ -251,7 +251,7 @@ def binaryToIntList(value, start=0):
 # Outlines
 # --------
 
-def extractGlyphs(source, destination):
+def extractOpenTypeGlyphs(source, destination):
     # grab the cmap
     cmap = source["cmap"]
     reversedMapping = {}
@@ -281,17 +281,17 @@ def extractGlyphs(source, destination):
 # Kerning
 # -------
 
-def extractKerning(source, destination, leftGroupPrefix="@KERN_LEFT_", rightGroupPrefix="@KERN_RIGHT_"):
+def extractOpenTypeKerning(source, destination, leftGroupPrefix="@KERN_LEFT_", rightGroupPrefix="@KERN_RIGHT_"):
     kerning = {}
     groups = {}
     if "GPOS" in source:
-        kerning, groups = _extractKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix)
+        kerning, groups = _extractOpenTypeKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix)
     elif "kern" in source:
-        kerning = _extractKerningFromKern(source)
+        kerning = _extractOpenTypeKerningFromKern(source)
         groups = {}
     return kerning, groups
 
-def _extractKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix):
+def _extractOpenTypeKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix):
     gpos = source["GPOS"].table
     # get an ordered list of scripts
     scriptOrder = _makeScriptOrder(gpos)
@@ -649,7 +649,7 @@ def _extractFeatureClasses(lookupIndex, subtableIndex, classDefs, coverage=None)
         classes[lookupIndex, subtableIndex, classIndex] = frozenset(glyphList)
     return classes
 
-def _extractKerningFromKern(source):
+def _extractOpenTypeKerningFromKern(source):
     kern = source["kern"]
     kerning = {}
     for subtable in kern.kernTables:
