@@ -1,5 +1,9 @@
 from robofab.ufoLib import fontInfoAttributesVersion2, validateFontInfoVersion2ValueForAttribute
 
+defaultLeftKerningGroupPrefix = "@KERN_LEFT_"
+defaultRightKerningGroupPrefix = "@KERN_RIGHT_"
+
+
 class RelaxedInfo(object):
 
     """

@@ -3,7 +3,7 @@ from fontTools.ttLib import TTFont, TTLibError
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from fontTools.misc.textTools import num2binary
 from extractor.exceptions import ExtractorError
-from extractor.tools import RelaxedInfo
+from extractor.tools import RelaxedInfo, defaultLeftKerningGroupPrefix, defaultRightKerningGroupPrefix
 
 # ----------------
 # Public Functions
@@ -12,7 +12,6 @@ from extractor.tools import RelaxedInfo
 def isOpenType(pathOrFile):
     try:
         font = TTFont(pathOrFile)
-        font.close()
         del font
     except TTLibError:
         return False
@@ -281,7 +280,7 @@ def extractOpenTypeGlyphs(source, destination):
 # Kerning
 # -------
 
-def extractOpenTypeKerning(source, destination, leftGroupPrefix="@KERN_LEFT_", rightGroupPrefix="@KERN_RIGHT_"):
+def extractOpenTypeKerning(source, destination, leftGroupPrefix=defaultLeftKerningGroupPrefix, rightGroupPrefix=defaultRightKerningGroupPrefix):
     kerning = {}
     groups = {}
     if "GPOS" in source:
