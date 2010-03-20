@@ -21,3 +21,8 @@ class RelaxedInfo(object):
         else:
             super(RelaxedInfo, self).__setattr__(attr, value)
 
+def copyAttr(src, srcAttr, dest, destAttr):
+    if not hasattr(src, srcAttr):
+        return
+    value = getattr(src, srcAttr)
+    setattr(dest, destAttr, value)

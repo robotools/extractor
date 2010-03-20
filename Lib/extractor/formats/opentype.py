@@ -3,7 +3,7 @@ from fontTools.ttLib import TTFont, TTLibError
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from fontTools.misc.textTools import num2binary
 from extractor.exceptions import ExtractorError
-from extractor.tools import RelaxedInfo, defaultLeftKerningGroupPrefix, defaultRightKerningGroupPrefix
+from extractor.tools import RelaxedInfo, copyAttr, defaultLeftKerningGroupPrefix, defaultRightKerningGroupPrefix
 
 # ----------------
 # Public Functions
@@ -133,53 +133,58 @@ def _skimNameIDs(nameIDs, priority):
 def _extracInfoOS2(source, info):
     os2 = source["OS/2"]
     # openTypeOS2WidthClass
-    info.openTypeOS2WidthClass = os2.usWidthClass
+    copyAttr(os2, "usWidthClass", info, "openTypeOS2WidthClass")
     # openTypeOS2WeightClass
-    info.openTypeOS2WeightClass = os2.usWeightClass
+    copyAttr(os2, "usWeightClass", info, "openTypeOS2WeightClass")
     # openTypeOS2Selection
-    fsSelection = binaryToIntList(os2.fsSelection)
-    fsSelection = [i for i in fsSelection if i in (1, 2, 3, 4)]
-    info.openTypeOS2Selection = fsSelection
+    if hasattr(os2, "fsSelection"):
+        fsSelection = binaryToIntList(os2.fsSelection)
+        fsSelection = [i for i in fsSelection if i in (1, 2, 3, 4)]
+        info.openTypeOS2Selection = fsSelection
     # openTypeOS2VendorID
-    info.openTypeOS2VendorID = os2.achVendID
+    copyAttr(os2, "achVendID", info, "openTypeOS2VendorID")
     # openTypeOS2Panose
-    panose = os2.panose
-    info.openTypeOS2Panose = [
-        os2.panose.bFamilyType,
-        os2.panose.bSerifStyle,
-        os2.panose.bWeight,
-        os2.panose.bProportion,
-        os2.panose.bContrast,
-        os2.panose.bStrokeVariation,
-        os2.panose.bArmStyle,
-        os2.panose.bLetterForm,
-        os2.panose.bMidline,
-        os2.panose.bXHeight
-    ]
+    if hasattr(os2, "panose"):
+        panose = os2.panose
+        info.openTypeOS2Panose = [
+            os2.panose.bFamilyType,
+            os2.panose.bSerifStyle,
+            os2.panose.bWeight,
+            os2.panose.bProportion,
+            os2.panose.bContrast,
+            os2.panose.bStrokeVariation,
+            os2.panose.bArmStyle,
+            os2.panose.bLetterForm,
+            os2.panose.bMidline,
+            os2.panose.bXHeight
+        ]
     # openTypeOS2FamilyClass
     # XXX info.openTypeOS2FamilyClass
-    info.openTypeOS2UnicodeRanges = binaryToIntList(os2.ulUnicodeRange1) + binaryToIntList(os2.ulUnicodeRange2, 32) + binaryToIntList(os2.ulUnicodeRange3, 64) + binaryToIntList(os2.ulUnicodeRange4, 96)
-    info.openTypeOS2CodePageRanges = binaryToIntList(os2.ulCodePageRange1) + binaryToIntList(os2.ulCodePageRange2, 32)
-    info.xHeight = os2.sxHeight
-    info.capHeight = os2.sCapHeight
-    info.ascender = os2.sTypoAscender
-    info.descender = os2.sTypoDescender
-    info.openTypeOS2TypoAscender = os2.sTypoAscender
-    info.openTypeOS2TypoDescender = os2.sTypoDescender
-    info.openTypeOS2TypoLineGap = os2.sTypoLineGap
-    info.openTypeOS2WinAscent = os2.usWinAscent
-    info.openTypeOS2WinDescent = os2.usWinDescent
-    info.openTypeOS2Type = binaryToIntList(os2.fsType)
-    info.openTypeOS2SubscriptXSize = os2.ySubscriptXSize
-    info.openTypeOS2SubscriptYSize = os2.ySubscriptYSize
-    info.openTypeOS2SubscriptXOffset = os2.ySubscriptXOffset
-    info.openTypeOS2SubscriptYOffset = os2.ySubscriptYOffset
-    info.openTypeOS2SuperscriptXSize = os2.ySuperscriptXSize
-    info.openTypeOS2SuperscriptYSize = os2.ySuperscriptYSize
-    info.openTypeOS2SuperscriptXOffset = os2.ySuperscriptXOffset
-    info.openTypeOS2SuperscriptYOffset = os2.ySuperscriptYOffset
-    info.openTypeOS2StrikeoutSize = os2.yStrikeoutSize
-    info.openTypeOS2StrikeoutPosition = os2.yStrikeoutPosition
+    if hasattr(os2, "ulUnicodeRange1"):
+        info.openTypeOS2UnicodeRanges = binaryToIntList(os2.ulUnicodeRange1) + binaryToIntList(os2.ulUnicodeRange2, 32) + binaryToIntList(os2.ulUnicodeRange3, 64) + binaryToIntList(os2.ulUnicodeRange4, 96)
+    if hasattr(os2, "ulCodePageRange1"):
+        info.openTypeOS2CodePageRanges = binaryToIntList(os2.ulCodePageRange1) + binaryToIntList(os2.ulCodePageRange2, 32)
+    copyAttr(os2, "sxHeight", info, "xHeight")
+    copyAttr(os2, "sCapHeight", info, "capHeight")
+    copyAttr(os2, "sTypoAscender", info, "ascender")
+    copyAttr(os2, "sTypoDescender", info, "descender")
+    copyAttr(os2, "sTypoAscender", info, "openTypeOS2TypoAscender")
+    copyAttr(os2, "sTypoDescender", info, "openTypeOS2TypoDescender")
+    copyAttr(os2, "sTypoLineGap", info, "openTypeOS2TypoLineGap")
+    copyAttr(os2, "usWinAscent", info, "openTypeOS2WinAscent")
+    copyAttr(os2, "usWinDescent", info, "openTypeOS2WinDescent")
+    if hasattr(os2, "fsType"):
+        info.openTypeOS2Type = binaryToIntList(os2.fsType)
+    copyAttr(os2, "ySubscriptXSize", info, "openTypeOS2SubscriptXSize")
+    copyAttr(os2, "ySubscriptYSize", info, "openTypeOS2SubscriptYSize")
+    copyAttr(os2, "ySubscriptXOffset", info, "openTypeOS2SubscriptXOffset")
+    copyAttr(os2, "ySubscriptYOffset", info, "openTypeOS2SubscriptYOffset")
+    copyAttr(os2, "ySuperscriptXSize", info, "openTypeOS2SuperscriptXSize")
+    copyAttr(os2, "ySuperscriptYSize", info, "openTypeOS2SuperscriptYSize")
+    copyAttr(os2, "ySuperscriptXOffset", info, "openTypeOS2SuperscriptXOffset")
+    copyAttr(os2, "ySuperscriptYOffset", info, "openTypeOS2SuperscriptYOffset")
+    copyAttr(os2, "yStrikeoutSize", info, "openTypeOS2StrikeoutSize")
+    copyAttr(os2, "yStrikeoutPosition", info, "openTypeOS2StrikeoutPosition")
 
 def _extractInfoHhea(source, info):
     if not source.has_key("hhea"):
