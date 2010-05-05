@@ -17,7 +17,7 @@ def isOpenType(pathOrFile):
         return False
     return True
 
-def extractFontFromOpenType(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True):
+def extractFontFromOpenType(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
     source = TTFont(pathOrFile)
     if doInfo:
         extractOpenTypeInfo(source, destination)
@@ -28,6 +28,8 @@ def extractFontFromOpenType(pathOrFile, destination, doGlyphs=True, doInfo=True,
         destination.groups.update(groups)
         destination.kerning.clear()
         destination.kerning.update(kerning)
+    for function in customFunctions:
+        function(source, destination)
     source.close()
 
 # ----
