@@ -145,6 +145,13 @@ def _extracInfoOS2(source, info):
         info.openTypeOS2Selection = fsSelection
     # openTypeOS2VendorID
     copyAttr(os2, "achVendID", info, "openTypeOS2VendorID")
+    ## the string could be padded with null bytes. strip those.
+    if info.openTypeOS2VendorID.endswith("\x00"):
+        r = []
+        for c in reversed(info.openTypeOS2VendorID):
+            if r or c != "\x00":
+                r.insert(0, c)
+        info.openTypeOS2VendorID = "".join(r)
     # openTypeOS2Panose
     if hasattr(os2, "panose"):
         panose = os2.panose

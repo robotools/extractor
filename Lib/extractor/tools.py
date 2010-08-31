@@ -14,6 +14,12 @@ class RelaxedInfo(object):
     def __init__(self, info):
         self._object = info
 
+    def __getattr__(self, attr):
+        if attr in fontInfoAttributesVersion2:
+            return getattr(self._object, attr)
+        else:
+            return super(RelaxedInfo, self).__getattr__(attr)
+
     def __setattr__(self, attr, value):
         if attr in fontInfoAttributesVersion2:
             if validateFontInfoVersion2ValueForAttribute(attr, value):
