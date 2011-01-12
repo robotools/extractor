@@ -129,7 +129,7 @@ def _skimNameIDs(nameIDs, priority):
             if pID == 0 or (pID == 3 and pEID in (0, 1)):
                 text = text.decode("utf_16_be")
             else:
-                text = text.decode("latin1")
+                text = text.decode("macroman")
             return text
 
 def _extracInfoOS2(source, info):
