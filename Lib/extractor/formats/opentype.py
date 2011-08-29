@@ -312,6 +312,11 @@ def _extractOpenTypeKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix):
     kerningDictionaries, leftClassDictionaries, rightClassDictionaries = _gatherDataFromLookups(gpos, scriptOrder)
     # merge all kerning pairs
     kerning = _mergeKerningDictionaries(kerningDictionaries)
+    # get rid of groups that have only one member
+    leftSingleMemberGroups = _findSingleMemberGroups(leftClassDictionaries)
+    rightSingleMemberGroups = _findSingleMemberGroups(rightClassDictionaries)
+    # filter out the single glyph groups from the kerning
+    kerning = _removeSingleMemberGroupReferences(kerning, leftSingleMemberGroups, rightSingleMemberGroups)
     # merge groups that have the exact same member list
     leftClasses, leftClassRename = _mergeClasses(leftClassDictionaries)
     rightClasses, rightClassRename = _mergeClasses(rightClassDictionaries)
@@ -535,6 +540,31 @@ def _mergeKerningDictionaries(kerningDictionaries):
     # done.
     return kerning
 
+def _findSingleMemberGroups(classDictionaries):
+    """
+    Find all classes that have only one member.
+    """
+    toRemove = {}
+    for classDictionaryGroup in classDictionaries:
+        for classDictionary in classDictionaryGroup:
+            for name, members in classDictionary.items():
+                if len(members) == 1:
+                    toRemove[name] = list(members)[0]
+                    del classDictionary[name]
+    return toRemove
+
+def _removeSingleMemberGroupReferences(kerning, leftGroups, rightGroups):
+    """
+    Translate group names into glyph names in pairs
+    if the group only contains one glyph.
+    """
+    new = {}
+    for (left, right), value in kerning.items():
+        left = leftGroups.get(left, left)
+        right = rightGroups.get(right, right)
+        new[left, right] = value
+    return new
+
 def _mergeClasses(classDictionaries):
     """
     Look for classes that have the exact same list
@@ -596,7 +626,7 @@ def _validateClasses(classes):
             if glyphName not in glyphToClass:
                 glyphToClass[glyphName] = set()
             glyphToClass[glyphName].add(className)
-    for groupList in glyphToClass.values():
+    for glyphName, groupList in glyphToClass.items():
         if len(groupList) > 1:
             raise ExtractorError("Kerning classes are in an conflicting state.")
 
