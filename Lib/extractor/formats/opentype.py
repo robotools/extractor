@@ -200,7 +200,7 @@ def _extractInfoHhea(source, info):
         return
     hhea = source["hhea"]
     info.openTypeHheaAscender = hhea.ascent
-    info.openTypeHheaAscender = hhea.descent
+    info.openTypeHheaDescender = hhea.descent
     info.openTypeHheaLineGap = hhea.lineGap
     info.openTypeHheaCaretSlopeRise = hhea.caretSlopeRise
     info.openTypeHheaCaretSlopeRun = hhea.caretSlopeRun
