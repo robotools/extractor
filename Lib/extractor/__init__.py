@@ -15,4 +15,15 @@ def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=Tr
         format = "Type1"
     else:
         raise ExtractorError("Unknown file format.")
-    func(pathOrFile, destination, doGlyphs=doGlyphs, doInfo=doInfo, doKerning=doKerning, customFunctions=customFunctions.get(format, []))
+    # wrap the extraction in a try: except: so that
+    # callers don't need to worry about lower level
+    # (fontTools, woffTools, etc.) errors. if an error
+    # occurs, print the traceback for debugging and
+    # raise an ExtractorError.
+    try:
+        func(pathOrFile, destination, doGlyphs=doGlyphs, doInfo=doInfo, doKerning=doKerning, customFunctions=customFunctions.get(format, []))
+    except:
+        import sys
+        import traceback
+        traceback.print_exc(file=sys.stdout)
+        raise ExtractorError("There was an error reading the %s file." % format)
