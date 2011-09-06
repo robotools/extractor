@@ -10,7 +10,7 @@ def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=Tr
     elif isWOFF(pathOrFile):
         func = extractFontFromWOFF
         format = "WOFF"
-    elif isType1:
+    elif isType1(pathOrFile):
         func = extractFontFromType1
         format = "Type1"
     else:
