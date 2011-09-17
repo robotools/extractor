@@ -267,14 +267,31 @@ def binaryToIntList(value, start=0):
 def extractOpenTypeGlyphs(source, destination):
     # grab the cmap
     cmap = source["cmap"]
-    reversedMapping = {}
+    preferred = [
+        (3, 10, 12),
+        (3, 10, 4),
+        (3, 1, 12),
+        (3, 1, 4),
+        (0, 3, 12),
+        (0, 3, 4),
+        (3, 0, 12),
+        (3, 0, 4),
+        (1, 0, 12),
+        (1, 0, 4)
+    ]
+    found = {}
     for table in cmap.tables:
-        if table.format == 4:
-            for uniValue, glyphName in table.cmap.items():
-                if glyphName in reversedMapping:
-                    continue
-                reversedMapping[glyphName] = uniValue
-            break
+        found[table.platformID, table.platEncID, table.format] = table
+        table = None
+    for key in preferred:
+        if key not in found:
+            continue
+        table = found[key]
+        break
+    reversedMapping = {}
+    if table is not None:
+        for uniValue, glyphName in table.cmap.items():
+            reversedMapping[glyphName] = uniValue
     # grab the glyphs
     glyphSet = source.getGlyphSet()
     for glyphName in glyphSet.keys():
