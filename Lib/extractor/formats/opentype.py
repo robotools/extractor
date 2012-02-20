@@ -3,7 +3,7 @@ from fontTools.ttLib import TTFont, TTLibError
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from fontTools.misc.textTools import num2binary
 from extractor.exceptions import ExtractorError
-from extractor.tools import RelaxedInfo, copyAttr, defaultLeftKerningGroupPrefix, defaultRightKerningGroupPrefix
+from extractor.tools import RelaxedInfo, copyAttr
 
 # ----------------
 # Public Functions
@@ -311,17 +311,17 @@ def extractOpenTypeGlyphs(source, destination):
 # Kerning
 # -------
 
-def extractOpenTypeKerning(source, destination, leftGroupPrefix=defaultLeftKerningGroupPrefix, rightGroupPrefix=defaultRightKerningGroupPrefix):
+def extractOpenTypeKerning(source, destination):
     kerning = {}
     groups = {}
     if "GPOS" in source:
-        kerning, groups = _extractOpenTypeKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix)
+        kerning, groups = _extractOpenTypeKerningFromGPOS(source)
     elif "kern" in source:
         kerning = _extractOpenTypeKerningFromKern(source)
         groups = {}
     return kerning, groups
 
-def _extractOpenTypeKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix):
+def _extractOpenTypeKerningFromGPOS(source):
     gpos = source["GPOS"].table
     # get an ordered list of scripts
     scriptOrder = _makeScriptOrder(gpos)
@@ -343,8 +343,8 @@ def _extractOpenTypeKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix):
     # populate the class marging into the kerning
     kerning = _replaceRenamedPairMembers(kerning, leftClassRename, rightClassRename)
     # rename the groups to final names
-    leftClassRename = _renameClasses(leftClasses, leftGroupPrefix)
-    rightClassRename = _renameClasses(rightClasses, rightGroupPrefix)
+    leftClassRename = _renameClasses(leftClasses, "public.kern1.")
+    rightClassRename = _renameClasses(rightClasses, "public.kern2.")
     # populate the final group names
     kerning = _replaceRenamedPairMembers(kerning, leftClassRename, rightClassRename)
     leftGroups = _setGroupNames(leftClasses, leftClassRename)

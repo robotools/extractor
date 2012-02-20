@@ -1,5 +1,4 @@
 from opentype import extractOpenTypeInfo, extractOpenTypeGlyphs, extractOpenTypeKerning
-from extractor.tools import defaultLeftKerningGroupPrefix, defaultRightKerningGroupPrefix
 
 # ----------------
 # Public Functions
@@ -40,5 +39,5 @@ def extractWOFFInfo(source, destination):
 def extractWOFFGlyphs(source, destination):
     return extractOpenTypeGlyphs(source, destination)
 
-def extractWOFFKerning(source, destination, leftGroupPrefix=defaultLeftKerningGroupPrefix, rightGroupPrefix=defaultRightKerningGroupPrefix):
-    return extractOpenTypeKerning(source, destination, leftGroupPrefix=leftGroupPrefix, rightGroupPrefix=rightGroupPrefix)
+def extractWOFFKerning(source, destination):
+    return extractOpenTypeKerning(source, destination)
