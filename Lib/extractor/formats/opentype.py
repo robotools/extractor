@@ -76,9 +76,24 @@ def _extractInfoHead(source, info):
     info.styleMapStyleName = styleMapStyleName
 
 def _extractInfoName(source, info):
+    records = []
     nameIDs = {}
     for record in source["name"].names:
-        nameIDs[record.nameID, record.platformID, record.platEncID, record.langID] = record.string
+        nameID = record.nameID
+        platformID = record.platformID
+        encodingID = record.platEncID
+        languageID = record.langID
+        string = _decodeNameString(record.string, platformID, encodingID)
+        nameIDs[nameID, platformID, encodingID, languageID] = string
+        records.append((nameID, platformID, encodingID, languageID, 
+            dict(
+                nameID=nameID,
+                platformID=platformID,
+                encodingID=encodingID,
+                languageID=languageID,
+                string=string
+            )
+        ))
     attributes = dict(
         familyName=_priorityOrder(16) + _priorityOrder(1),
         styleName=_priorityOrder(17) + _priorityOrder(2),
@@ -106,6 +121,7 @@ def _extractInfoName(source, info):
         value = _skimNameIDs(nameIDs, priority)
         if value is not None:
             setattr(info, attr, value)
+    info.openTypeNameRecords = [record[-1] for record in sorted(records)]
 
 def _priorityOrder(nameID):
     priority = [
@@ -126,11 +142,14 @@ def _skimNameIDs(nameIDs, priority):
                 continue
             if lID != langID and langID is not None:
                 continue
-            if pID == 0 or (pID == 3 and pEID in (0, 1)):
-                text = text.decode("utf_16_be")
-            else:
-                text = text.decode("macroman")
             return text
+
+def _decodeNameString(text, pID, pEID):
+    if pID == 0 or (pID == 3 and pEID in (0, 1)):
+        text = text.decode("utf_16_be")
+    else:
+        text = text.decode("macroman")
+    return text
 
 def _extracInfoOS2(source, info):
     os2 = source["OS/2"]
