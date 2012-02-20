@@ -17,11 +17,11 @@ def extractFontFromWOFF(pathOrFile, destination, doGlyphs=True, doInfo=True, doK
     from woffTools import WOFFFont
     source = WOFFFont(pathOrFile)
     if doInfo:
-        extractOpenTypeInfo(source, destination)
+        extractWOFFInfo(source, destination)
     if doGlyphs:
-        extractOpenTypeGlyphs(source, destination)
+        extractWOFFGlyphs(source, destination)
     if doKerning:
-        kerning, groups = extractOpenTypeKerning(source, destination)
+        kerning, groups = extractWOFFKerning(source, destination)
         destination.groups.update(groups)
         destination.kerning.clear()
         destination.kerning.update(kerning)
