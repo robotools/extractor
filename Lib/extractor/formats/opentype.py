@@ -45,6 +45,7 @@ def extractOpenTypeInfo(source, destination):
     _extractInfoVhea(source, info)
     _extractInfoPost(source, info)
     _extractInfoCFF(source, info)
+    _extractInfoGasp(source, info)
 
 def _extractInfoHead(source, info):
     head = source["head"]
@@ -268,6 +269,28 @@ def _extractInfoCFF(source, info):
     info.postscriptDefaultWidthX = private.rawDict.get("defaultWidthX", None)
     # XXX postscriptSlantAngle
     # XXX postscriptUniqueID
+
+def _extractInfoGasp(source, info):
+    if not source.has_key("gasp"):
+        return
+    gasp = source["gasp"]
+    records = []
+    for size, bits in sorted(gasp.gaspRange.items()):
+        behavior = []
+        if bits & 0x0001:
+            behavior.append(0)
+        if bits & 0x0002:
+            behavior.append(1)
+        if bits & 0x0004:
+            behavior.append(2)
+        if bits & 0x0008:
+            behavior.append(3)
+        record = dict(
+            rangeMaxPPEM=size,
+            rangeGaspBehavior=behavior
+        )
+        records.append(record)
+    info.openTypeGaspRangeRecords = records
 
 # Tools
 
