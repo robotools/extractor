@@ -208,7 +208,10 @@ def _flattenWOFFMetadataString(element, sub=False):
     if sub:
         attrib = ["%s=%s" % (key, quoteattr(value)) for key, value in element.attrib.items()]
         attrib = " ".join(attrib)
-        start = "<%s %s>" % (element.tag, attrib)
+        if attrib:
+            start = "<%s %s>" % (element.tag, attrib)
+        else:
+            start = "<%s>" % (element.tag)
         end = "</%s>" % (element.tag)
         text = start + text + end
     return text
