@@ -361,6 +361,8 @@ def extractOpenTypeKerning(source, destination):
     elif "kern" in source:
         kerning = _extractOpenTypeKerningFromKern(source)
         groups = {}
+    for name, group in groups.items():
+        groups[name] = list(sorted(group))
     return kerning, groups
 
 def _extractOpenTypeKerningFromGPOS(source):
