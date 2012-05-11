@@ -231,22 +231,24 @@ def _extractInfoCFF(source, info):
     info.postscriptFontName = cff.fontNames[0]
     # TopDict
     topDict = cff.topDictIndex[0]
-    info.postscriptFullName = topDict.FullName
-    info.postscriptWeightName = topDict.Weight
+    info.postscriptFullName = topDict.rawDict.get("FullName", None)
+    info.postscriptWeightName = topDict.rawDict.get("Weight", None)
     # Private
-    private = topDict.Private
-    info.postscriptBlueValues = private.rawDict.get("BlueValues", [])
-    info.postscriptOtherBlues = private.rawDict.get("OtherBlues", [])
-    info.postscriptFamilyBlues = private.rawDict.get("FamilyBlues", [])
-    info.postscriptFamilyOtherBlues = private.rawDict.get("FamilyOtherBlues", [])
-    info.postscriptStemSnapH = private.rawDict.get("StemSnapH", [])
-    info.postscriptStemSnapV = private.rawDict.get("StemSnapV", [])
-    info.postscriptBlueFuzz = private.rawDict.get("BlueFuzz", None)
-    info.postscriptBlueShift = private.rawDict.get("BlueShift", None)
-    info.postscriptBlueScale = private.rawDict.get("BlueScale", None)
-    info.postscriptForceBold = bool(private.rawDict.get("ForceBold", None))
-    info.postscriptNominalWidthX = private.rawDict.get("nominalWidthX", None)
-    info.postscriptDefaultWidthX = private.rawDict.get("defaultWidthX", None)
+    # CID doesn't have this, so safely extract.
+    if hasattr(topDict, "Private"):
+        private = topDict.Private
+        info.postscriptBlueValues = private.rawDict.get("BlueValues", [])
+        info.postscriptOtherBlues = private.rawDict.get("OtherBlues", [])
+        info.postscriptFamilyBlues = private.rawDict.get("FamilyBlues", [])
+        info.postscriptFamilyOtherBlues = private.rawDict.get("FamilyOtherBlues", [])
+        info.postscriptStemSnapH = private.rawDict.get("StemSnapH", [])
+        info.postscriptStemSnapV = private.rawDict.get("StemSnapV", [])
+        info.postscriptBlueFuzz = private.rawDict.get("BlueFuzz", None)
+        info.postscriptBlueShift = private.rawDict.get("BlueShift", None)
+        info.postscriptBlueScale = private.rawDict.get("BlueScale", None)
+        info.postscriptForceBold = bool(private.rawDict.get("ForceBold", None))
+        info.postscriptNominalWidthX = private.rawDict.get("nominalWidthX", None)
+        info.postscriptDefaultWidthX = private.rawDict.get("defaultWidthX", None)
     # XXX postscriptSlantAngle
     # XXX postscriptUniqueID
 
