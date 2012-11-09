@@ -236,6 +236,8 @@ def _extractInfoVhea(source, info):
     info.openTypeVheaCaretSlopeRise = vhea.caretSlopeRise
     info.openTypeVheaCaretSlopeRun = vhea.caretSlopeRun
     info.openTypeVheaCaretOffset = vhea.caretOffset
+    if hasattr(vhea, "caretOffset"):
+        info.openTypeVheaCaretOffset = vhea.caretOffset
 
 def _extractInfoPost(source, info):
     post = source["post"]
@@ -523,20 +525,23 @@ def _gatherKerningForLookup(gpos, lookupIndex):
     for subtableIndex, subtable in enumerate(lookup.SubTable):
         if lookup.LookupType == 2:
             format = subtable.Format
-            if format == 1:
+            lookupType = subtable.LookupType
+            if (lookupType, format) == (2, 1):
                 kerning = _handleLookupType2Format1(subtable)
                 allKerning.update(kerning)
-            elif format == 2:
+            elif (lookupType, format) == (2, 2):
                 kerning, leftClasses, rightClasses = _handleLookupType2Format2(subtable, lookupIndex, subtableIndex)
                 allKerning.update(kerning)
                 allLeftClasses.update(leftClasses)
                 allRightClasses.update(rightClasses)
         elif lookup.LookupType == 9:
             extSubtable = subtable.ExtSubTable
-            if extSubtable.Format == 1:
+            format = extSubtable.Format
+            lookupType = extSubtable.LookupType
+            if (lookupType, format) == (2, 1):
                 kerning = _handleLookupType2Format1(extSubtable)
                 allKerning.update(kerning)
-            elif extSubtable.Format == 2:
+            elif (lookupType, format) == (2, 2):
                 kerning, leftClasses, rightClasses = _handleLookupType2Format2(extSubtable, lookupIndex, subtableIndex)
                 allKerning.update(kerning)
                 allLeftClasses.update(leftClasses)
