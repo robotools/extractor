@@ -2,17 +2,21 @@ from exceptions import ExtractorError
 from formats.opentype import isOpenType, extractFontFromOpenType
 from formats.woff import isWOFF, extractFontFromWOFF
 from formats.type1 import isType1, extractFontFromType1
+from formats.ttx import isTTX, extractFontFromTTX
 
 def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions={}):
     if isOpenType(pathOrFile):
         func = extractFontFromOpenType
         format = "OTF"
-    elif isWOFF(pathOrFile):
-        func = extractFontFromWOFF
-        format = "WOFF"
     elif isType1(pathOrFile):
         func = extractFontFromType1
         format = "Type1"
+    elif isWOFF(pathOrFile):
+        func = extractFontFromWOFF
+        format = "WOFF"
+    elif isTTX(pathOrFile):
+        func = extractFontFromTTX
+        format = "ttx"
     else:
         raise ExtractorError("Unknown file format.")
     # wrap the extraction in a try: except: so that
