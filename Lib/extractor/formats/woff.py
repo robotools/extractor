@@ -14,7 +14,7 @@ def isWOFF(pathOrFile):
         return False
     return True
 
-def extractFontFromWOFF(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
+def extractFontFromWOFF(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, doGroups=True, doFeatures=True, doLib=True, customFunctions=[]):
     from woffTools import WOFFFont
     source = WOFFFont(pathOrFile)
     if doInfo:

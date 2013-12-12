@@ -1,5 +1,9 @@
 from opentype import extractOpenTypeInfo, extractOpenTypeGlyphs, extractOpenTypeKerning
 
+# ----------------
+# Public Functions
+# ----------------
+
 def isTTX(pathOrFile):
     from fontTools.ttLib import TTFont, TTLibError
     try:
@@ -9,8 +13,8 @@ def isTTX(pathOrFile):
     except TTLibError:
         return False
     return True
-    
-def extractFontFromTTX(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
+
+def extractFontFromTTX(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, doGroups=True, doFeatures=True, doLib=True, customFunctions=[]):
     from fontTools.ttLib import TTFont, TTLibError
     source = TTFont()
     source.importXML(pathOrFile)
