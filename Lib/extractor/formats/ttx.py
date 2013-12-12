@@ -10,7 +10,7 @@ def isTTX(pathOrFile):
         font = TTFont()
         font.importXML(pathOrFile)
         del font
-    except TTLibError:
+    except:
         return False
     return True
 
