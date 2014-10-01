@@ -18,7 +18,7 @@ def isType1(pathOrFile):
         return False
     return True
 
-def extractFontFromType1(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
+def extractFontFromType1(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, doGroups=True, doFeatures=True, doLib=True, customFunctions=[]):
     source = _readT1Font(pathOrFile)
     destination.lib["public.glyphOrder"] = _extractType1GlyphOrder(source)
     if doInfo:
