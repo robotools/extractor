@@ -26,7 +26,7 @@ def isVFB(pathOrFile):
 
 def extractFontFromVFB(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, doGroups=True, doFeatures=True, doLib=True, customFunctions=[]):
     ufoPath = tempfile.mkdtemp(suffix=".ufo")
-    cmds = [_ufo2vfbLocation, pathOrFile, ufoPath]
+    cmds = [_ufo2vfbLocation, "-64", pathOrFile, ufoPath]
     cmds = subprocess.list2cmdline(cmds)
     popen = subprocess.Popen(cmds, shell=True)
     popen.wait()
