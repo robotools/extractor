@@ -1,4 +1,4 @@
-from fontTools.t1Lib import T1Font, readLWFN, readPFB, readOther, T1Error
+from fontTools.t1Lib import T1Font, T1Error
 from fontTools.agl import AGL2UV
 from fontTools.misc.psLib import PSInterpreter
 from fontTools.misc.transform import Transform
@@ -9,17 +9,17 @@ from extractor.tools import RelaxedInfo
 # ----------------
 # Public Functions
 # ----------------
-    
+
 def isType1(pathOrFile):
     try:
-        font = _readT1Font(pathOrFile)
+        font = T1Font(pathOrFile)
         del font
     except T1Error:
         return False
     return True
 
 def extractFontFromType1(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
-    source = _readT1Font(pathOrFile)
+    source = T1Font(pathOrFile)
     destination.lib["public.glyphOrder"] = _extractType1GlyphOrder(source)
     if doInfo:
         extractType1Info(source, destination)
@@ -38,29 +38,6 @@ def extractType1Info(source, destination):
     _extractType1FontInfo(source, info)
     _extractType1Private(source, info)
     _extractType1FontMatrix(source, info)
-
-# ----
-# Read
-# ----
-
-def _readT1Font(pathOrFile):
-    ## rewrite the fontTools read() cause it was using lots of carbon stuff not avialble in py 64bit
-    import AppKit
-    fileType, error = AppKit.NSWorkspace.sharedWorkspace().typeOfFile_error_(pathOrFile, None)
-    normpath = pathOrFile.lower()
-    
-    readFunc = None
-    if fileType == "com.adobe.postscript-lwfn-font":
-        readFunc = readLWFN
-    elif fileType == "com.apple.font-suitcase":
-        readFunc = readLWFN
-    elif normpath[-4:] == '.pfb':
-        readFunc = readPFB
-    else:
-        readFunc = readOther
-    font = T1Font()
-    font.data = readFunc(pathOrFile)
-    return font
 
 # ----
 # Info
@@ -119,7 +96,7 @@ def _extractType1FontMatrix(source, info):
     # units per em
     matrix = source["FontMatrix"]
     matrix = Transform(*matrix).inverse()
-    info.unitsPerEm = int(round(matrix[3])) 
+    info.unitsPerEm = int(round(matrix[3]))
 
 def _extractType1Private(source, info):
     private = source["Private"]
@@ -185,5 +162,3 @@ def _extractType1GlyphOrder(t1Font):
     interpreter = GlyphOrderPSInterpreter()
     interpreter.interpret(t1Font.data)
     return interpreter.glyphOrder
-
-
