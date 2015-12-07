@@ -3,7 +3,7 @@ from fontTools.ttLib import TTFont, TTLibError
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from fontTools.misc.textTools import num2binary
 from extractor.exceptions import ExtractorError
-from extractor.tools import RelaxedInfo, copyAttr, defaultLeftKerningGroupPrefix, defaultRightKerningGroupPrefix
+from extractor.tools import RelaxedInfo, copyAttr
 
 # ----------------
 # Public Functions
@@ -45,6 +45,7 @@ def extractOpenTypeInfo(source, destination):
     _extractInfoVhea(source, info)
     _extractInfoPost(source, info)
     _extractInfoCFF(source, info)
+    _extractInfoGasp(source, info)
 
 def _extractInfoHead(source, info):
     head = source["head"]
@@ -76,9 +77,24 @@ def _extractInfoHead(source, info):
     info.styleMapStyleName = styleMapStyleName
 
 def _extractInfoName(source, info):
+    records = []
     nameIDs = {}
     for record in source["name"].names:
-        nameIDs[record.nameID, record.platformID, record.platEncID, record.langID] = record.string
+        nameID = record.nameID
+        platformID = record.platformID
+        encodingID = record.platEncID
+        languageID = record.langID
+        string = _decodeNameString(record.string, platformID, encodingID)
+        nameIDs[nameID, platformID, encodingID, languageID] = string
+        records.append((nameID, platformID, encodingID, languageID, 
+            dict(
+                nameID=nameID,
+                platformID=platformID,
+                encodingID=encodingID,
+                languageID=languageID,
+                string=string
+            )
+        ))
     attributes = dict(
         familyName=_priorityOrder(16) + _priorityOrder(1),
         styleName=_priorityOrder(17) + _priorityOrder(2),
@@ -106,6 +122,7 @@ def _extractInfoName(source, info):
         value = _skimNameIDs(nameIDs, priority)
         if value is not None:
             setattr(info, attr, value)
+    info.openTypeNameRecords = [record[-1] for record in sorted(records)]
 
 def _priorityOrder(nameID):
     priority = [
@@ -126,11 +143,14 @@ def _skimNameIDs(nameIDs, priority):
                 continue
             if lID != langID and langID is not None:
                 continue
-            if pID == 0 or (pID == 3 and pEID in (0, 1)):
-                text = text.decode("utf_16_be")
-            else:
-                text = text.decode("macroman")
             return text
+
+def _decodeNameString(text, pID, pEID):
+    if pID == 0 or (pID == 3 and pEID in (0, 1)):
+        text = text.decode("utf_16_be")
+    else:
+        text = text.decode("macroman")
+    return text
 
 def _extracInfoOS2(source, info):
     os2 = source["OS/2"]
@@ -215,6 +235,7 @@ def _extractInfoVhea(source, info):
     info.openTypeVheaVertTypoLineGap = vhea.lineGap
     info.openTypeVheaCaretSlopeRise = vhea.caretSlopeRise
     info.openTypeVheaCaretSlopeRun = vhea.caretSlopeRun
+    info.openTypeVheaCaretOffset = vhea.caretOffset
     if hasattr(vhea, "caretOffset"):
         info.openTypeVheaCaretOffset = vhea.caretOffset
 
@@ -252,6 +273,28 @@ def _extractInfoCFF(source, info):
         info.postscriptDefaultWidthX = private.rawDict.get("defaultWidthX", None)
     # XXX postscriptSlantAngle
     # XXX postscriptUniqueID
+
+def _extractInfoGasp(source, info):
+    if not source.has_key("gasp"):
+        return
+    gasp = source["gasp"]
+    records = []
+    for size, bits in sorted(gasp.gaspRange.items()):
+        behavior = []
+        if bits & 0x0001:
+            behavior.append(0)
+        if bits & 0x0002:
+            behavior.append(1)
+        if bits & 0x0004:
+            behavior.append(2)
+        if bits & 0x0008:
+            behavior.append(3)
+        record = dict(
+            rangeMaxPPEM=size,
+            rangeGaspBehavior=behavior
+        )
+        records.append(record)
+    info.openTypeGaspRangeRecords = records
 
 # Tools
 
@@ -314,17 +357,19 @@ def extractOpenTypeGlyphs(source, destination):
 # Kerning
 # -------
 
-def extractOpenTypeKerning(source, destination, leftGroupPrefix=defaultLeftKerningGroupPrefix, rightGroupPrefix=defaultRightKerningGroupPrefix):
+def extractOpenTypeKerning(source, destination):
     kerning = {}
     groups = {}
     if "GPOS" in source:
-        kerning, groups = _extractOpenTypeKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix)
+        kerning, groups = _extractOpenTypeKerningFromGPOS(source)
     elif "kern" in source:
         kerning = _extractOpenTypeKerningFromKern(source)
         groups = {}
+    for name, group in groups.items():
+        groups[name] = list(sorted(group))
     return kerning, groups
 
-def _extractOpenTypeKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix):
+def _extractOpenTypeKerningFromGPOS(source):
     gpos = source["GPOS"].table
     # get an ordered list of scripts
     scriptOrder = _makeScriptOrder(gpos)
@@ -346,8 +391,8 @@ def _extractOpenTypeKerningFromGPOS(source, leftGroupPrefix, rightGroupPrefix):
     # populate the class marging into the kerning
     kerning = _replaceRenamedPairMembers(kerning, leftClassRename, rightClassRename)
     # rename the groups to final names
-    leftClassRename = _renameClasses(leftClasses, leftGroupPrefix)
-    rightClassRename = _renameClasses(rightClasses, rightGroupPrefix)
+    leftClassRename = _renameClasses(leftClasses, "public.kern1.")
+    rightClassRename = _renameClasses(rightClasses, "public.kern2.")
     # populate the final group names
     kerning = _replaceRenamedPairMembers(kerning, leftClassRename, rightClassRename)
     leftGroups = _setGroupNames(leftClasses, leftClassRename)
