@@ -6,13 +6,13 @@ from distutils.core import setup
 try:
     import fontTools
 except:
-    print "*** Warning: defcon requires FontTools, see:"
+    print "*** Warning: extractor requires FontTools, see:"
     print "    fonttools.sf.net"
 
 try:
     import robofab
 except:
-    print "*** Warning: defcon requires RoboFab, see:"
+    print "*** Warning: extractor requires RoboFab, see:"
     print "    robofab.com"
 
 
