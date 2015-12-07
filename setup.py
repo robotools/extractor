@@ -18,7 +18,7 @@ except:
 
 setup(name="extractor",
     version="0.1",
-    description="A package that extracts data from font binaries into objext with the same basic API as defcon.",
+    description="A package that extracts data from font binaries into an object with the same basic API as defcon.",
     author="Tal Leming",
     author_email="tal@typesupply.com",
     url="https://github.com/typesupply/extractor",
