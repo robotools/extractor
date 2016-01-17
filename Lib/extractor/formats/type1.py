@@ -71,19 +71,19 @@ def _extractType1FontInfo(source, info):
     # Notice
     notice = sourceInfo.get("Notice")
     if notice:
-        info.copyright = notice.decode("mac_roman")
+        info.copyright = notice
     # FullName
     fullName = sourceInfo.get("FullName")
     if fullName:
-        info.postscriptFullName = fullName.decode("mac_roman")
+        info.postscriptFullName = fullName
     # FamilyName
     familyName = sourceInfo.get("FamilyName")
     if familyName:
-        info.familyName = familyName.decode("mac_roman")
+        info.familyName = familyName
     # Weight
     postscriptWeightName = sourceInfo.get("Weight")
     if postscriptWeightName:
-        info.postscriptWeightName = postscriptWeightName.decode("mac_roman")
+        info.postscriptWeightName = postscriptWeightName
     # ItalicAngle
     info.italicAngle = sourceInfo.get("ItalicAngle")
     # IsFixedPitch
