@@ -86,7 +86,7 @@ def _extractInfoName(source, info):
         languageID = record.langID
         string = _decodeNameString(record.string, platformID, encodingID)
         nameIDs[nameID, platformID, encodingID, languageID] = string
-        records.append((nameID, platformID, encodingID, languageID, 
+        records.append((nameID, platformID, encodingID, languageID,
             dict(
                 nameID=nameID,
                 platformID=platformID,
@@ -216,7 +216,7 @@ def _extracInfoOS2(source, info):
     copyAttr(os2, "yStrikeoutPosition", info, "openTypeOS2StrikeoutPosition")
 
 def _extractInfoHhea(source, info):
-    if not source.has_key("hhea"):
+    if "hhea" not in source:
         return
     hhea = source["hhea"]
     info.openTypeHheaAscender = hhea.ascent
@@ -227,7 +227,7 @@ def _extractInfoHhea(source, info):
     info.openTypeHheaCaretOffset = hhea.caretOffset
 
 def _extractInfoVhea(source, info):
-    if not source.has_key("vhea"):
+    if "vhea" not in source:
         return
     vhea = source["vhea"]
     info.openTypeVheaVertTypoAscender = vhea.ascent
@@ -247,7 +247,7 @@ def _extractInfoPost(source, info):
     info.postscriptIsFixedPitch = bool(post.isFixedPitch)
 
 def _extractInfoCFF(source, info):
-    if not source.has_key("CFF "):
+    if "CFF " not in source:
         return
     cff = source["CFF "].cff
     info.postscriptFontName = cff.fontNames[0]
@@ -275,7 +275,7 @@ def _extractInfoCFF(source, info):
     # XXX postscriptUniqueID
 
 def _extractInfoGasp(source, info):
-    if not source.has_key("gasp"):
+    if "gasp" not in source:
         return
     gasp = source["gasp"]
     records = []
@@ -615,7 +615,7 @@ def _findSingleMemberGroups(classDictionaries):
     toRemove = {}
     for classDictionaryGroup in classDictionaries:
         for classDictionary in classDictionaryGroup:
-            for name, members in classDictionary.items():
+            for name, members in list(classDictionary.items()):
                 if len(members) == 1:
                     toRemove[name] = list(members)[0]
                     del classDictionary[name]
@@ -777,5 +777,3 @@ def _extractOpenTypeKerningFromKern(source):
         # there are no minimum values.
         kerning.update(subtable.kernTable)
     return kerning
-
-

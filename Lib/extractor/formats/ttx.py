@@ -1,4 +1,4 @@
-from opentype import extractOpenTypeInfo, extractOpenTypeGlyphs, extractOpenTypeKerning
+from extractor.formats.opentype import extractOpenTypeInfo, extractOpenTypeGlyphs, extractOpenTypeKerning
 
 def isTTX(pathOrFile):
     from fontTools.ttLib import TTFont, TTLibError
@@ -9,7 +9,7 @@ def isTTX(pathOrFile):
     except TTLibError:
         return False
     return True
-    
+
 def extractFontFromTTX(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
     from fontTools.ttLib import TTFont, TTLibError
     source = TTFont()
@@ -25,4 +25,4 @@ def extractFontFromTTX(pathOrFile, destination, doGlyphs=True, doInfo=True, doKe
         destination.kerning.update(kerning)
     for function in customFunctions:
         function(source, destination)
-    source.close()   
+    source.close()
