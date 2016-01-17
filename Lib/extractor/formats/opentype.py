@@ -17,12 +17,14 @@ def isOpenType(pathOrFile):
         return False
     return True
 
-def extractFontFromOpenType(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
+def extractFontFromOpenType(pathOrFile, destination, doGlyphOrder=True, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
     source = TTFont(pathOrFile)
     if doInfo:
         extractOpenTypeInfo(source, destination)
     if doGlyphs:
         extractOpenTypeGlyphs(source, destination)
+    if doGlyphOrder:
+        extractGlyphOrder(source, destination)
     if doKerning:
         kerning, groups = extractOpenTypeKerning(source, destination)
         destination.groups.update(groups)
@@ -31,6 +33,11 @@ def extractFontFromOpenType(pathOrFile, destination, doGlyphs=True, doInfo=True,
     for function in customFunctions:
         function(source, destination)
     source.close()
+
+def extractGlyphOrder(source, destination):
+    glyphOrder = source.getGlyphOrder()
+    if len(glyphOrder):
+        destination.lib["public.glyphOrder"] = glyphOrder
 
 # ----
 # Info
