@@ -1,8 +1,8 @@
-from exceptions import ExtractorError
-from formats.opentype import isOpenType, extractFontFromOpenType
-from formats.woff import isWOFF, extractFontFromWOFF
-from formats.type1 import isType1, extractFontFromType1
-from formats.ttx import isTTX, extractFontFromTTX
+from extractor.exceptions import ExtractorError
+from extractor.formats.opentype import isOpenType, extractFontFromOpenType
+from extractor.formats.woff import isWOFF, extractFontFromWOFF
+from extractor.formats.type1 import isType1, extractFontFromType1
+from extractor.formats.ttx import isTTX, extractFontFromTTX
 
 def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions={}):
     if isOpenType(pathOrFile):

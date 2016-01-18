@@ -1,6 +1,6 @@
 from xml.sax.saxutils import quoteattr
 from extractor.tools import RelaxedInfo
-from opentype import extractOpenTypeInfo, extractOpenTypeGlyphs, extractOpenTypeKerning
+from extractor.formats.opentype import extractOpenTypeInfo, extractOpenTypeGlyphs, extractOpenTypeKerning
 
 # ----------------
 # Public Functions
