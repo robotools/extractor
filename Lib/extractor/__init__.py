@@ -4,21 +4,30 @@ from extractor.formats.woff import isWOFF, extractFontFromWOFF
 from extractor.formats.type1 import isType1, extractFontFromType1
 from extractor.formats.ttx import isTTX, extractFontFromTTX
 
-def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions={}):
+_extractFunctions = dict(
+    OTF=extractFontFromOpenType,
+    Type1=extractFontFromType1,
+    WOFF=extractFontFromWOFF,
+    ttx=extractFontFromTTX,
+)
+
+def extractFormat(pathOrFile):
     if isOpenType(pathOrFile):
-        func = extractFontFromOpenType
-        format = "OTF"
+        return "OTF"
     elif isType1(pathOrFile):
-        func = extractFontFromType1
-        format = "Type1"
+        return "Type1"
     elif isWOFF(pathOrFile):
-        func = extractFontFromWOFF
-        format = "WOFF"
+        return "WOFF"
     elif isTTX(pathOrFile):
-        func = extractFontFromTTX
-        format = "ttx"
-    else:
+        return "ttx"
+    return None
+
+def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, format=None, customFunctions={}):
+    if format is None:
+        format = extractFormat(pathOrFile)
+    if format not in _extractFunctions:
         raise ExtractorError("Unknown file format.")
+    func = _extractFunctions[format]
     # wrap the extraction in a try: except: so that
     # callers don't need to worry about lower level
     # (fontTools, woffTools, etc.) errors. if an error
