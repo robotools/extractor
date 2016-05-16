@@ -91,7 +91,7 @@ def _extractInfoName(source, info):
         platformID = record.platformID
         encodingID = record.platEncID
         languageID = record.langID
-        string = _decodeNameString(record.string, platformID, encodingID)
+        string = record.toUnicode()
         nameIDs[nameID, platformID, encodingID, languageID] = string
         records.append((nameID, platformID, encodingID, languageID,
             dict(
@@ -151,13 +151,6 @@ def _skimNameIDs(nameIDs, priority):
             if lID != langID and langID is not None:
                 continue
             return text
-
-def _decodeNameString(text, pID, pEID):
-    if pID == 0 or (pID == 3 and pEID in (0, 1)):
-        text = text.decode("utf_16_be")
-    else:
-        text = text.decode("macroman")
-    return text
 
 def _extracInfoOS2(source, info):
     os2 = source["OS/2"]
