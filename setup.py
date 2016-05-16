@@ -7,13 +7,13 @@ try:
     import fontTools
 except:
     print "*** Warning: extractor requires FontTools, see:"
-    print "    fonttools.sf.net"
+    print "    https://github.com/behdad/fonttools"
 
 try:
     import robofab
 except:
     print "*** Warning: extractor requires RoboFab, see:"
-    print "    robofab.com"
+    print "    https://github.com/robofab-developers/robofab.git"
 
 
 setup(name="extractor",
