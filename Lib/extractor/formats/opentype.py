@@ -235,7 +235,6 @@ def _extractInfoVhea(source, info):
     info.openTypeVheaVertTypoLineGap = vhea.lineGap
     info.openTypeVheaCaretSlopeRise = vhea.caretSlopeRise
     info.openTypeVheaCaretSlopeRun = vhea.caretSlopeRun
-    info.openTypeVheaCaretOffset = vhea.caretOffset
     if hasattr(vhea, "caretOffset"):
         info.openTypeVheaCaretOffset = vhea.caretOffset
 
