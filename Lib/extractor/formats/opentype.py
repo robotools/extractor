@@ -2,6 +2,7 @@ import time
 from fontTools.ttLib import TTFont, TTLibError
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from fontTools.misc.textTools import num2binary
+from fontTools.pens.boundsPen import ControlBoundsPen
 from extractor.exceptions import ExtractorError
 from extractor.tools import RelaxedInfo, copyAttr
 
@@ -312,6 +313,8 @@ def binaryToIntList(value, start=0):
 def extractOpenTypeGlyphs(source, destination):
     # grab the cmap
     cmap = source["cmap"]
+    vmtx = source.get("vmtx")
+    vorg = source.get("VORG")
     preferred = [
         (3, 10, 12),
         (3, 10, 4),
@@ -349,6 +352,22 @@ def extractOpenTypeGlyphs(source, destination):
         sourceGlyph.draw(pen)
         # width
         destinationGlyph.width = sourceGlyph.width
+        # height and vertical origin
+        if vmtx is not None and glyphName in vmtx.metrics:
+            destinationGlyph.height = vmtx[glyphName][0]
+            if vorg is not None:
+                if glyphName in vorg.VOriginRecords:
+                    destinationGlyph.verticalOrigin = vorg[glyphName]
+                else:
+                    destinationGlyph.verticalOrigin = vorg.defaultVertOriginY
+            else:
+                tsb = vmtx[glyphName][1]
+                bounds_pen = ControlBoundsPen(glyphSet)
+                sourceGlyph.draw(bounds_pen)
+                if bounds_pen.bounds is None:
+                    continue
+                xMin, yMin, xMax, yMax = bounds_pen.bounds
+                destinationGlyph.verticalOrigin = tsb + yMax
         # unicode
         destinationGlyph.unicode = reversedMapping.get(glyphName)
 
