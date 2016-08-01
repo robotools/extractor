@@ -7,7 +7,10 @@ from extractor.formats.opentype import extractOpenTypeInfo, extractOpenTypeGlyph
 # ----------------
 
 def isWOFF(pathOrFile):
-    from woffTools import WOFFFont, WOFFLibError
+    try:
+        from woffTools import WOFFFont, WOFFLibError
+    except ImportError:
+        return False
     try:
         font = WOFFFont(pathOrFile)
         del font
