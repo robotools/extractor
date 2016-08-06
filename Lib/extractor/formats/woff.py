@@ -142,8 +142,7 @@ def _extractWOFFMetadataExtension(element, destination):
             extension["items"].append(item)
     extensions = []
     if destination.woffMetadataExtensions:
-        extensions.update(destination.woffMetadataExtensions)
-    e = extensions + [extension]
+        extensions.extend(destination.woffMetadataExtensions)
     destination.woffMetadataExtensions = extensions + [extension]
 
 def _extractWOFFMetadataExtensionItem(element):
