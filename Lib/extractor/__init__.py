@@ -30,7 +30,7 @@ def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=Tr
     func = _extractFunctions[format]
     # wrap the extraction in a try: except: so that
     # callers don't need to worry about lower level
-    # (fontTools, woffTools, etc.) errors. if an error
+    # (fontTools, etc.) errors. if an error
     # occurs, print the traceback for debugging and
     # raise an ExtractorError.
     try:

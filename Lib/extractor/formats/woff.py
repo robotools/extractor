@@ -1,26 +1,29 @@
 from xml.sax.saxutils import quoteattr
+from fontTools.ttLib import TTFont, TTLibError
 from extractor.tools import RelaxedInfo
 from extractor.formats.opentype import extractOpenTypeInfo, extractOpenTypeGlyphs, extractOpenTypeKerning
+
+try:
+    from xml.etree import cElementTree as ElementTree
+except ImportError:
+    from xml.etree import ElementTree
 
 # ----------------
 # Public Functions
 # ----------------
 
 def isWOFF(pathOrFile):
+    flavor = None
     try:
-        from woffTools import WOFFFont, WOFFLibError
-    except ImportError:
-        return False
-    try:
-        font = WOFFFont(pathOrFile)
+        font = TTFont(pathOrFile)
+        flavor = font.flavor
         del font
-    except WOFFLibError:
+    except TTLibError:
         return False
-    return True
+    return flavor in ("woff", "woff2")
 
 def extractFontFromWOFF(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
-    from woffTools import WOFFFont
-    source = WOFFFont(pathOrFile)
+    source = TTFont(pathOrFile)
     if doInfo:
         extractWOFFInfo(source, destination)
     if doGlyphs:
@@ -40,9 +43,9 @@ def extractFontFromWOFF(pathOrFile, destination, doGlyphs=True, doInfo=True, doK
 
 def extractWOFFInfo(source, destination):
     info = RelaxedInfo(destination.info)
-    info.woffMajorVersion = source.majorVersion
-    info.woffMinorVersion = source.minorVersion
-    _extractWOFFMetadata(source, info)
+    info.woffMajorVersion = source.flavorData.majorVersion
+    info.woffMinorVersion = source.flavorData.minorVersion
+    _extractWOFFMetadata(source.flavorData, info)
     return extractOpenTypeInfo(source, destination)
 
 def extractWOFFGlyphs(source, destination):
@@ -56,9 +59,9 @@ def extractWOFFKerning(source, destination):
 # --------
 
 def _extractWOFFMetadata(source, destination):
-    metadata = source.metadata
-    if metadata is None:
+    if source.metaData is None:
         return
+    metadata = ElementTree.fromstring(source.metaData)
     for element in metadata:
         if element.tag == "uniqueid":
             _extractWOFFMetadataUniqueID(element, destination)
