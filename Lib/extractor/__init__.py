@@ -12,12 +12,12 @@ _extractFunctions = dict(
 )
 
 def extractFormat(pathOrFile):
-    if isOpenType(pathOrFile):
-        return "OTF"
-    elif isType1(pathOrFile):
+    if isType1(pathOrFile):
         return "Type1"
     elif isWOFF(pathOrFile):
         return "WOFF"
+    elif isOpenType(pathOrFile):
+        return "OTF"
     elif isTTX(pathOrFile):
         return "ttx"
     return None
