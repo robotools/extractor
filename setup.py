@@ -9,15 +9,14 @@ pytest_runner = ['pytest_runner'] if needs_pytest else []
 needs_wheel = {'bdist_wheel'}.intersection(sys.argv)
 wheel = ['wheel'] if needs_wheel else []
 
-# TODO: add README.rst, so we can use on both Github and PyPI
-# with open('README.rst', 'r') as f:
-#     long_description = f.read()
+with open('README.rst', 'r') as f:
+    long_description = f.read()
 
 setup(
     name="ufo_extractor",
     version="0.2.0.dev0",
     description="Tools for extracting data from font binaries into UFO objects.",
-    # long_description=long_description,
+    long_description=long_description,
     author="Tal Leming",
     author_email="tal@typesupply.com",
     url="https://github.com/typesupply/extractor",
