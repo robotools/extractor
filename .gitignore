@@ -1,3 +1,27 @@
+# Byte-compiled / optimized files
 __pycache__/
-build/
-*.pyc
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / Packaging
+*.egg-info
+*.eggs
+MANIFEST
+build
+dist
+
+# Unit test / coverage files
+.tox/*
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# OSX Finder
+.DS_Store
+
+# pyenv python configuration file
+.python-version
