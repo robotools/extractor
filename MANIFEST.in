@@ -1,0 +1,6 @@
+include License.txt
+
+include tox.ini
+include requirements.txt
+
+recursive-include tests *.py
