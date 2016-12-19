@@ -5,7 +5,7 @@ from extractor.formats.type1 import isType1, extractFontFromType1
 from extractor.formats.ttx import isTTX, extractFontFromTTX
 
 
-__version__ = "0.2.0.dev0"
+__version__ = "0.2.0"
 
 _extractFunctions = dict(
     OTF=extractFontFromOpenType,

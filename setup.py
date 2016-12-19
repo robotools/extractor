@@ -14,7 +14,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name="ufo_extractor",
-    version="0.2.0.dev0",
+    version="0.2.0",
     description="Tools for extracting data from font binaries into UFO objects.",
     long_description=long_description,
     author="Tal Leming",
