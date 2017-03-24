@@ -345,8 +345,8 @@ def extractOpenTypeGlyphs(source, destination):
     for glyphName in glyphSet.keys():
         sourceGlyph = glyphSet[glyphName]
         # make the new glyph
-        destination.newGlyph(glyphName)
-        destinationGlyph = destination[glyphName]
+        destinationGlyph = destination.newGlyph(glyphName)
+        destinationGlyph.disableNotifications()
         # outlines
         pen = destinationGlyph.getPen()
         sourceGlyph.draw(pen)
@@ -370,6 +370,8 @@ def extractOpenTypeGlyphs(source, destination):
                 destinationGlyph.verticalOrigin = tsb + yMax
         # unicode
         destinationGlyph.unicode = reversedMapping.get(glyphName)
+        destinationGlyph.enableNotifications()
+        destinationGlyph.dirty = False
 
 # -------
 # Kerning
