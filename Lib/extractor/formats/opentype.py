@@ -300,10 +300,10 @@ def _extractInfoGasp(source, info):
 
 def binaryToIntList(value, start=0):
     intList = []
-    counter = 0
+    counter = start
     while value:
         if value & 1:
-            intList.append(start + counter)
+            intList.append(counter)
         value >>= 1
         counter += 1
     return intList
