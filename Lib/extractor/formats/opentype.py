@@ -299,12 +299,14 @@ def _extractInfoGasp(source, info):
 # Tools
 
 def binaryToIntList(value, start=0):
-    string = num2binary(value)
-    all = []
-    for index, v in enumerate(reversed(string)):
-        if v == "1":
-            all.append(start + index)
-    return all
+    intList = []
+    counter = 0
+    while value:
+        if value & 1:
+            intList.append(start + counter)
+        value >>= 1
+        counter += 1
+    return intList
 
 # --------
 # Outlines
