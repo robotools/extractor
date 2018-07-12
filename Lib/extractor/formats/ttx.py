@@ -1,12 +1,12 @@
 from extractor.formats.opentype import extractOpenTypeInfo, extractOpenTypeGlyphs, extractOpenTypeKerning
 
 def isTTX(pathOrFile):
-    from fontTools.ttLib import TTFont, TTLibError
+    from fontTools.ttLib import TTFont
     try:
         font = TTFont()
         font.importXML(pathOrFile)
         del font
-    except TTLibError:
+    except Exception:
         return False
     return True
 
