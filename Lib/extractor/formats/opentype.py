@@ -317,6 +317,7 @@ def extractOpenTypeGlyphs(source, destination):
     vmtx = source.get("vmtx")
     vorg = source.get("VORG")
     cmap = source.getBestCmap()
+    is_ttf = "glyf" in source
     reversedMapping = source.get("cmap").buildReversed()
     # grab the glyphs
     glyphSet = source.getGlyphSet()
@@ -326,8 +327,12 @@ def extractOpenTypeGlyphs(source, destination):
         destination.newGlyph(glyphName)
         destinationGlyph = destination[glyphName]
         # outlines
-        pen = destinationGlyph.getPen()
-        sourceGlyph.draw(pen)
+        if is_ttf:
+            pen = destinationGlyph.getPointPen()
+            sourceGlyph.drawPoints(pen)
+        else:
+            pen = destinationGlyph.getPen()
+            sourceGlyph.draw(pen)
         # width
         destinationGlyph.width = sourceGlyph.width
         # height and vertical origin
