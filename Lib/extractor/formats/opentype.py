@@ -314,34 +314,11 @@ def binaryToIntList(value, start=0):
 
 def extractOpenTypeGlyphs(source, destination):
     # grab the cmap
-    cmap = source["cmap"]
     vmtx = source.get("vmtx")
     vorg = source.get("VORG")
-    preferred = [
-        (3, 10, 12),
-        (3, 10, 4),
-        (3, 1, 12),
-        (3, 1, 4),
-        (0, 3, 12),
-        (0, 3, 4),
-        (3, 0, 12),
-        (3, 0, 4),
-        (1, 0, 12),
-        (1, 0, 4)
-    ]
-    found = {}
-    for table in cmap.tables:
-        found[table.platformID, table.platEncID, table.format] = table
-        table = None
-    for key in preferred:
-        if key not in found:
-            continue
-        table = found[key]
-        break
-    reversedMapping = {}
-    if table is not None:
-        for uniValue, glyphName in table.cmap.items():
-            reversedMapping[glyphName] = uniValue
+    cmap = source.getBestCmap()
+    is_ttf = "glyf" in source
+    reversedMapping = source.get("cmap").buildReversed()
     # grab the glyphs
     glyphSet = source.getGlyphSet()
     for glyphName in glyphSet.keys():
@@ -350,8 +327,12 @@ def extractOpenTypeGlyphs(source, destination):
         destination.newGlyph(glyphName)
         destinationGlyph = destination[glyphName]
         # outlines
-        pen = destinationGlyph.getPen()
-        sourceGlyph.draw(pen)
+        if is_ttf:
+            pen = destinationGlyph.getPointPen()
+            sourceGlyph.drawPoints(pen)
+        else:
+            pen = destinationGlyph.getPen()
+            sourceGlyph.draw(pen)
         # width
         destinationGlyph.width = sourceGlyph.width
         # height and vertical origin
@@ -370,8 +351,8 @@ def extractOpenTypeGlyphs(source, destination):
                     continue
                 xMin, yMin, xMax, yMax = bounds_pen.bounds
                 destinationGlyph.verticalOrigin = tsb + yMax
-        # unicode
-        destinationGlyph.unicode = reversedMapping.get(glyphName)
+        # unicodes
+        destinationGlyph.unicodes = reversedMapping.get(glyphName, [])
 
 # -------
 # Kerning
