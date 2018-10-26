@@ -3,7 +3,7 @@ from extractor.formats.opentype import isOpenType, extractFontFromOpenType
 from extractor.formats.woff import isWOFF, extractFontFromWOFF
 from extractor.formats.type1 import isType1, extractFontFromType1
 from extractor.formats.ttx import isTTX, extractFontFromTTX
-
+from extractor.formats.vfb import isVFB, extractFontFromVFB, haveVfb2ufo
 
 __version__ = "0.2.1.dev0"
 
@@ -12,6 +12,7 @@ _extractFunctions = dict(
     Type1=extractFontFromType1,
     WOFF=extractFontFromWOFF,
     ttx=extractFontFromTTX,
+    vfb=extractFontFromVFB
 )
 
 def extractFormat(pathOrFile):
@@ -23,6 +24,8 @@ def extractFormat(pathOrFile):
         return "OTF"
     elif isTTX(pathOrFile):
         return "ttx"
+    elif haveVfb2ufo() and isVFB(pathOrFile):
+        return "vfb"
     return None
 
 def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, format=None, customFunctions={}):
