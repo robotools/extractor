@@ -21,7 +21,7 @@ setup(
     author_email="tal@typesupply.com",
     maintainer="Just van Rossum, Frederik Berlaen",
     maintainer_email="justvanrossum@gmail.com",
-    url="https://github.com/typesupply/extractor",
+    url="https://github.com/robotools/extractor",
     license="MIT",
     package_dir={"": "Lib"},
     packages=find_packages("Lib"),
