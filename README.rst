@@ -43,8 +43,8 @@ Note that, for historical reasons, the package is listed on the
 However, the import name for the package remains ``extractor``, without prefix.
 
 
-.. |Travis Build Status| image:: https://travis-ci.org/typesupply/extractor.svg?branch=master
-   :target: https://travis-ci.org/typesupply/extractor
+.. |Travis Build Status| image:: https://travis-ci.org/robotools/extractor.svg?branch=master
+   :target: https://travis-ci.org/robotools/extractor
 .. |PyPI Version| image:: https://img.shields.io/pypi/v/ufo-extractor.svg
    :target: https://pypi.org/project/ufo-extractor/
 .. |Python Versions| image:: https://img.shields.io/badge/python-2.7%2C%203.5-blue.svg
