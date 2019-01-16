@@ -19,6 +19,8 @@ setup(
     long_description=long_description,
     author="Tal Leming",
     author_email="tal@typesupply.com",
+    maintainer="Just van Rossum, Frederik Berlaen",
+    maintainer_email="justvanrossum@gmail.com",
     url="https://github.com/typesupply/extractor",
     license="MIT",
     package_dir={"": "Lib"},
