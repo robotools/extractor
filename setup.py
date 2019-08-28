@@ -31,7 +31,6 @@ setup(
     ],
     install_requires=[
         "fonttools>=3.3.1",
-        "ufoLib>=2.0.0",
     ],
     classifiers=[
         "Development Status :: 4 - Beta",

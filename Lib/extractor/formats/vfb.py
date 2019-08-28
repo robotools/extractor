@@ -3,7 +3,7 @@ import shutil
 import tempfile
 import subprocess
 
-from ufoLib import UFOReader
+from fontTools.ufoLib import UFOReader
 
 _ufo2vfbLocation = "/usr/local/bin/vfb2ufo"
 
