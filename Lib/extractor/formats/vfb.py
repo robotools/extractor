@@ -23,13 +23,14 @@ def isVFB(pathOrFile):
 
 def extractFontFromVFB(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, doGroups=True, doFeatures=True, doLib=True, customFunctions=[]):
     ufoPath = tempfile.mkdtemp(suffix=".ufo")
-    cmds = [_ufo2vfbLocation, "-64", pathOrFile, ufoPath]
+    cmds = [_ufo2vfbLocation, "-64", "-fo", pathOrFile, ufoPath]
     cmds = subprocess.list2cmdline(cmds)
     popen = subprocess.Popen(cmds, shell=True)
     popen.wait()
     try:
         # vfb2ufo writes ufo2, and has no update since 2015...so dont get to crazy here...
-        source = UFOReader(ufoPath)
+        # dont validate as vfb2ufo writes invalid ufos
+        source = UFOReader(ufoPath, validate=False)
         if doInfo:
             source.readInfo(destination.info)
         if doKerning:
