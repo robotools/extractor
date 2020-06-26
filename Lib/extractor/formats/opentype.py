@@ -1,9 +1,9 @@
 import time
 from fontTools.pens.boundsPen import ControlBoundsPen
+from fontTools.pens.hashPointPen import HashPointPen
 from fontTools.ttLib import TTFont, TTLibError
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from extractor.exceptions import ExtractorError
-from extractor.hashPointPen import HashPointPen
 from extractor.stream import InstructionStream
 from extractor.tools import RelaxedInfo, copyAttr
 
