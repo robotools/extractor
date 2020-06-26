@@ -1,4 +1,7 @@
-from fontTools.ufoLib import fontInfoAttributesVersion3, validateFontInfoVersion3ValueForAttribute
+from fontTools.ufoLib import (
+    fontInfoAttributesVersion3,
+    validateFontInfoVersion3ValueForAttribute,
+)
 
 
 class RelaxedInfo(object):
