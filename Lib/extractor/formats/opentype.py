@@ -1,9 +1,10 @@
 import time
+from fontTools.pens.boundsPen import ControlBoundsPen
 from fontTools.ttLib import TTFont, TTLibError
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
-from fontTools.pens.boundsPen import ControlBoundsPen
 from extractor.exceptions import ExtractorError
 from extractor.hashPointPen import HashPointPen
+from extractor.stream import InstructionStream
 from extractor.tools import RelaxedInfo, copyAttr
 
 # ----------------
@@ -126,8 +127,8 @@ def extractPreProgram(source, lib):
     lib["controlValueProgram"] = _byteCodeToHtic(prep)
 
 def _byteCodeToHtic(program):
-    ttx_asm = program.getAssembly()
-    return ttx_asm
+    stream = InstructionStream(program_bytes=program.getBytecode())
+    return "\n%s\n" % str(stream)
 
 # ----
 # Info
