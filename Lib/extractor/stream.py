@@ -80,7 +80,8 @@ class InstructionStream(object):
                     else:
                         # Take number of arguments from the stream
                         _, num_args = self.read_byte()
-                        args.append(str(num_args))
+                        # args.append(str(num_args))
+                        # TODO: Reactivate when NPUSH can be roundtripped
                     if cmd_name.endswith("B"):
                         for n in range(num_args):
                             _, i = self.read_byte()
@@ -90,6 +91,7 @@ class InstructionStream(object):
                             _, i = self.read_word()
                             args.append(str(i))
                     arg_bits = 0  # Don't output bits for push instructions
+                    cmd_name = "push"  # Write generic push instruction for now
 
                 if arg_bits == 0:
                     asm += "\n%s%s" % ("  " * indent, cmd_name,)
