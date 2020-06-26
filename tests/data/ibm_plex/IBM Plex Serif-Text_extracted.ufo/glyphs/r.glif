@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="r" format="2">
+  <advance width="454"/>
+  <unicode hex="0072"/>
+  <outline>
+    <contour>
+      <point x="48" y="50" type="line"/>
+      <point x="119" y="50" type="line"/>
+      <point x="119" y="446" type="line"/>
+      <point x="48" y="459" type="line"/>
+      <point x="48" y="497" type="line"/>
+      <point x="213" y="530" type="line"/>
+      <point x="213" y="438" type="line"/>
+      <point x="217" y="438" type="line"/>
+      <point x="224" y="454"/>
+      <point x="246" y="487"/>
+      <point x="276" y="514"/>
+      <point x="317" y="530"/>
+      <point x="344" y="530" type="qcurve"/>
+      <point x="389" y="530"/>
+      <point x="443" y="486"/>
+      <point x="443" y="444" type="qcurve"/>
+      <point x="443" y="412"/>
+      <point x="410" y="376"/>
+      <point x="384" y="376" type="qcurve"/>
+      <point x="355" y="376"/>
+      <point x="322" y="408"/>
+      <point x="322" y="431" type="qcurve"/>
+      <point x="322" y="450"/>
+      <point x="337" y="473"/>
+      <point x="348" y="475" type="qcurve"/>
+      <point x="348" y="478" type="line"/>
+      <point x="344" y="479"/>
+      <point x="334" y="480"/>
+      <point x="326" y="480" type="qcurve"/>
+      <point x="306" y="480"/>
+      <point x="266" y="460"/>
+      <point x="234" y="427"/>
+      <point x="215" y="387"/>
+      <point x="215" y="367" type="qcurve"/>
+      <point x="215" y="50" type="line"/>
+      <point x="306" y="50" type="line"/>
+      <point x="306" y="0" type="line"/>
+      <point x="48" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 32 28 3 12 18 18 12 34 34 0 6 12 37 3 3 4 4 5 2 2 7 5 0 3 37 20 10 12 26 10 5 26 10
+SVTCA[0]
+CALL
+CALL
+CALL
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+MIRP[10100]
+SRP1
+SRP2
+IP
+SRP0
+MDRP[10000]
+SRP1
+SRP2
+IP
+RUTG
+MDAP[1]
+RTG
+SRP0
+MIRP[10100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>7ab7171f15e4e583d42e81d167d0d37f5eec077e2d87481377f3a1032fe9cd7c3db613fdebe5a2ca6fd27a6f4e0b6989db3cb60cad60e4607fe83ed0ac5c6fa2</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

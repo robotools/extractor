@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dotbelowcomb" format="2">
+  <unicode hex="0323"/>
+  <outline>
+    <contour>
+      <point x="0" y="-170" type="qcurve"/>
+      <point x="-25" y="-170"/>
+      <point x="-55" y="-139"/>
+      <point x="-55" y="-116" type="qcurve"/>
+      <point x="-55" y="-113" type="line"/>
+      <point x="-55" y="-90"/>
+      <point x="-25" y="-59"/>
+      <point x="0" y="-59" type="qcurve"/>
+      <point x="25" y="-59"/>
+      <point x="55" y="-90"/>
+      <point x="55" y="-113" type="qcurve"/>
+      <point x="55" y="-116" type="line"/>
+      <point x="55" y="-139"/>
+      <point x="25" y="-170"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+PUSHB 0 7
+SVTCA[0]
+MDAP[1]
+MDRP[11100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w0q0-170-25-170-55-139q-55-116l-55-113-55-90-25-59q0-5925-5955-90q55-113l55-11655-13925-170</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

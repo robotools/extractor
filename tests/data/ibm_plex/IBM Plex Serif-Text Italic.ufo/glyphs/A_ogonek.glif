@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Aogonek" format="2">
+  <advance width="648"/>
+  <unicode hex="0104"/>
+  <outline>
+    <contour>
+      <point x="477" y="-206" type="qcurve" name="ab03"/>
+      <point x="445" y="-206"/>
+      <point x="404" y="-172"/>
+      <point x="404" y="-142" type="qcurve"/>
+      <point x="404" y="-118"/>
+      <point x="426" y="-79"/>
+      <point x="463" y="-45"/>
+      <point x="509" y="-17"/>
+      <point x="533" y="-5" type="qcurve"/>
+      <point x="532" y="0" type="line"/>
+      <point x="349" y="0" type="line" name="ab02"/>
+      <point x="359" y="45" type="line" name="sv01"/>
+      <point x="434" y="45" type="line"/>
+      <point x="422" y="229" type="line"/>
+      <point x="179" y="229" type="line" name="sv02"/>
+      <point x="77" y="45" type="line" name="sv04"/>
+      <point x="152" y="45" type="line"/>
+      <point x="141" y="0" type="line"/>
+      <point x="-52" y="0" type="line" name="ab01"/>
+      <point x="-41" y="45" type="line" name="sv03"/>
+      <point x="10" y="45" type="line"/>
+      <point x="388" y="698" type="line" name="at01"/>
+      <point x="481" y="698" type="line"/>
+      <point x="530" y="45" type="line" name="sv05"/>
+      <point x="581" y="45" type="line"/>
+      <point x="570" y="0" type="line" name="sv06"/>
+      <point x="554" y="-12"/>
+      <point x="520" y="-43"/>
+      <point x="491" y="-76"/>
+      <point x="472" y="-111"/>
+      <point x="472" y="-128" type="qcurve"/>
+      <point x="472" y="-160"/>
+      <point x="501" y="-160" type="qcurve" name="sv07"/>
+      <point x="517" y="-160"/>
+      <point x="541" y="-145"/>
+      <point x="555" y="-133" type="qcurve" name="sv08"/>
+      <point x="579" y="-156" type="line"/>
+      <point x="560" y="-176"/>
+      <point x="509" y="-206"/>
+    </contour>
+    <contour>
+      <point x="204" y="275" type="line" name="iv01"/>
+      <point x="420" y="275" type="line"/>
+      <point x="400" y="612" type="line"/>
+      <point x="393" y="612" type="line" name="sv09"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0iYWIwMyI+CiAgICAgI
+      Dxoc3RlbSBwb3M9Ii0yMDYiIHdpZHRoPSI0NiIgLz4KICAgICAgPGhzdGVtIHBvcz0iMC
+      Igd2lkdGg9IjQ1IiAvPgogICAgICA8aHN0ZW0gcG9zPSIyMjkiIHdpZHRoPSI0NiIgLz4
+      KICAgICAgPGhzdGVtIHBvcz0iNjEyIiB3aWR0aD0iODYiIC8+CiAgICAgIDx2c3RlbSBw
+      b3M9IjQwNCIgd2lkdGg9IjY4IiAvPgogICAgPC9oaW50c2V0PgogIDwvaGludFNldExpc
+      3Q+Cg==
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJjYXBoZWlnaHQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ25iIiBwb2ludD0iYWIwMS
+      Igem9uZT0iYmFzZWxpbmUiLz4KICAgIDx0dGMgY29kZT0iYWxpZ25iIiBwb2ludD0iYWI
+      wMiIgem9uZT0iYmFzZWxpbmUiLz4KICAgIDx0dGMgY29kZT0iYWxpZ25iIiBwb2ludD0i
+      YWIwMyIgem9uZT0iZGVzY2VuZGVyIi8+CiAgICA8dHRjIGNvZGU9Im1kZWx0YXYiIHBva
+      W50PSJhYjAzIiBkZWx0YT0iLTgiIHBwbTE9IjkiIHBwbTI9IjE3Ii8+CiAgICA8dHRjIG
+      NvZGU9InNpbmdsZXYiIHBvaW50MT0iYWIwMiIgcG9pbnQyPSJzdjAxIiBzdGVtPSJ1Y19
+      zZXJpZiIvPgogICAgPHR0YyBjb2RlPSJpbnRlcnBvbGF0ZXYiIHBvaW50PSJpdjAxIiBw
+      b2ludDE9ImF0MDEiIHBvaW50Mj0iYWIwMSIgYWxpZ249InJvdW5kIi8+CiAgICA8dHRjI
+      GNvZGU9InNpbmdsZXYiIHBvaW50MT0iaXYwMSIgcG9pbnQyPSJzdjAyIiBzdGVtPSJ1Y1
+      9zdGVtIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0iYWIwMSIgcG9pbnQ
+      yPSJzdjAzIiBzdGVtPSJ1Y19zZXJpZiIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBw
+      b2ludDE9InN2MDMiIHBvaW50Mj0ic3YwNCIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2I
+      iBwb2ludDE9InN2MDEiIHBvaW50Mj0ic3YwNSIvPgogICAgPHR0YyBjb2RlPSJzaW5nbG
+      V2IiBwb2ludDE9ImFiMDIiIHBvaW50Mj0ic3YwNiIvPgogICAgPHR0YyBjb2RlPSJzaW5
+      nbGV2IiBwb2ludDE9ImFiMDMiIHBvaW50Mj0ic3YwNyIgcm91bmQ9InRydWUiLz4KICAg
+      IDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJzdjA3IiBwb2ludDI9InN2MDgiIHJvd
+      W5kPSJ0cnVlIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0iYXQwMSIgcG
+      9pbnQyPSJzdjA5Ii8+CiAgPC90dFByb2dyYW0+Cg==
+      </data>
+    </dict>
+  </lib>
+</glyph>

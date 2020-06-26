@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bar" format="2">
+  <advance width="313"/>
+  <unicode hex="007C"/>
+  <outline>
+    <contour>
+      <point x="126" y="760" type="line"/>
+      <point x="187" y="760" type="line"/>
+      <point x="187" y="-138" type="line"/>
+      <point x="126" y="-138" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+PUSHB 0 32 10 3
+SVTCA[0]
+MDAP[1]
+CALL
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w313l126760l187760l187-138l126-138</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

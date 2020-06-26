@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0491" format="2">
+  <advance width="492"/>
+  <unicode hex="0491"/>
+  <outline>
+    <contour>
+      <point x="48" y="50" type="line"/>
+      <point x="119" y="50" type="line"/>
+      <point x="119" y="469" type="line"/>
+      <point x="48" y="469" type="line"/>
+      <point x="48" y="518" type="line"/>
+      <point x="377" y="518" type="line"/>
+      <point x="377" y="667" type="line"/>
+      <point x="460" y="667" type="line"/>
+      <point x="460" y="465" type="line"/>
+      <point x="215" y="465" type="line"/>
+      <point x="215" y="50" type="line"/>
+      <point x="306" y="50" type="line"/>
+      <point x="306" y="0" type="line"/>
+      <point x="48" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 18 10 0 9 4 4 6 4 3 3 4 0 3 13 20 10 4 26 10
+SVTCA[0]
+CALL
+CALL
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP0
+MDRP[11100]
+SRP0
+MIRP[10100]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w492l4850l11950l119469l48469l48518l377518l377667l460667l460465l215465l21550l30650l3060l480</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

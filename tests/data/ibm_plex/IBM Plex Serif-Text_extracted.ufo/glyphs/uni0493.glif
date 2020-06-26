@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0493" format="2">
+  <advance width="492"/>
+  <unicode hex="0493"/>
+  <outline>
+    <contour>
+      <point x="48" y="50" type="line"/>
+      <point x="119" y="50" type="line"/>
+      <point x="119" y="237" type="line"/>
+      <point x="38" y="237" type="line"/>
+      <point x="38" y="287" type="line"/>
+      <point x="119" y="287" type="line"/>
+      <point x="119" y="469" type="line"/>
+      <point x="48" y="469" type="line"/>
+      <point x="48" y="518" type="line"/>
+      <point x="460" y="518" type="line"/>
+      <point x="460" y="365" type="line"/>
+      <point x="393" y="365" type="line"/>
+      <point x="393" y="465" type="line"/>
+      <point x="215" y="465" type="line"/>
+      <point x="215" y="287" type="line"/>
+      <point x="346" y="287" type="line"/>
+      <point x="346" y="237" type="line"/>
+      <point x="215" y="237" type="line"/>
+      <point x="215" y="50" type="line"/>
+      <point x="306" y="50" type="line"/>
+      <point x="306" y="0" type="line"/>
+      <point x="48" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 40 18 0 17 3 14 4 11 13 4 8 7 3 8 4 4 15 3 1 0 3 16 3 207 3 223 3 4 11 3 3 8 21 0 3 21 20 10 8 26 10
+SVTCA[0]
+CALL
+CALL
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+SDB
+DELTAP1
+DELTAP2
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+MDRP[11100]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>7bf037eef9dbd0ae5207cd206fa13d1c5ffc377b1c85582dddfb34db89b97bda80af04bc6a494106c73a60b2d9928f62f286c9264ffb2279ca31126b87e191eb</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

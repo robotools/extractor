@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="slash" format="2">
+  <advance width="380"/>
+  <unicode hex="002F"/>
+  <outline>
+    <contour>
+      <point x="274" y="748" type="line"/>
+      <point x="338" y="748" type="line"/>
+      <point x="72" y="-143" type="line"/>
+      <point x="8" y="-143" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+PUSHB 0 30 10 3
+SVTCA[0]
+MDAP[1]
+CALL
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w380l274748l338748l72-143l8-143</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="aringacute" format="2">
+  <advance width="549"/>
+  <unicode hex="01FB"/>
+  <outline>
+    <component base="a"/>
+    <component base="ringacute" xOffset="-37"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>8559191dc21d5e202057faa8130d7c7a9259396a734e720cf1b1b577be0f0a58b27c521dafc3a7d541d5713c1b5604c1786de03238a70a800ec133ea563835b3</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

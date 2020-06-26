@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Uhungarumlaut" format="2">
+  <advance width="741"/>
+  <unicode hex="0170"/>
+  <outline>
+    <component base="U"/>
+    <component base="hungarumlaut.case" xOffset="92"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>e65bd9d8b126682f9a9653ca11484ee26522f96fa784cab289178edb274e64513ac0902d903950d4964ff8fe60a68f6775ce2a649ee25ef88279f956a109d0be</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

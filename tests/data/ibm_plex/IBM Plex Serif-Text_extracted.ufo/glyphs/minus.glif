@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="minus" format="2">
+  <advance width="600"/>
+  <unicode hex="2212"/>
+  <outline>
+    <contour>
+      <point x="66" y="334" type="line"/>
+      <point x="534" y="334" type="line"/>
+      <point x="534" y="276" type="line"/>
+      <point x="66" y="276" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+PUSHB 3 5 0
+SVTCA[0]
+MDAP[1]
+MIRP[10100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w600l66334l534334l534276l66276</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

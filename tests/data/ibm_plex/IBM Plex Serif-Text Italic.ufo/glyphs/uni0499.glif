@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0499" format="2">
+  <advance width="432"/>
+  <unicode hex="0499"/>
+  <outline>
+    <contour>
+      <point x="123" y="-11" type="line" name="ab01"/>
+      <point x="61" y="-4"/>
+      <point x="1" y="55"/>
+      <point x="1" y="90" type="qcurve"/>
+      <point x="1" y="125"/>
+      <point x="41" y="166"/>
+      <point x="67" y="166" type="qcurve" name="iv02"/>
+      <point x="92" y="166"/>
+      <point x="117" y="136"/>
+      <point x="117" y="116" type="qcurve"/>
+      <point x="117" y="90"/>
+      <point x="81" y="58"/>
+      <point x="60" y="57" type="qcurve"/>
+      <point x="58" y="49" type="line"/>
+      <point x="69" y="41"/>
+      <point x="106" y="30"/>
+      <point x="135" y="30" type="qcurve" name="sv01"/>
+      <point x="185" y="30"/>
+      <point x="251" y="68"/>
+      <point x="264" y="119" type="qcurve"/>
+      <point x="268" y="134"/>
+      <point x="272" y="161"/>
+      <point x="272" y="177" type="qcurve"/>
+      <point x="272" y="246"/>
+      <point x="179" y="246" type="qcurve"/>
+      <point x="126" y="246" type="line" name="sv02"/>
+      <point x="138" y="295" type="line" name="iv01"/>
+      <point x="187" y="295" type="line"/>
+      <point x="232" y="295"/>
+      <point x="298" y="343"/>
+      <point x="307" y="379" type="qcurve"/>
+      <point x="311" y="393"/>
+      <point x="314" y="410"/>
+      <point x="314" y="419" type="qcurve"/>
+      <point x="314" y="478"/>
+      <point x="244" y="478" type="qcurve" name="sv03"/>
+      <point x="208" y="478"/>
+      <point x="144" y="439"/>
+      <point x="113" y="394" type="qcurve" name="iv03"/>
+      <point x="83" y="414" type="line"/>
+      <point x="120" y="472"/>
+      <point x="207" y="530"/>
+      <point x="270" y="530" type="qcurve" name="at01"/>
+      <point x="338" y="530"/>
+      <point x="405" y="471"/>
+      <point x="405" y="425" type="qcurve"/>
+      <point x="405" y="374"/>
+      <point x="335" y="298"/>
+      <point x="273" y="281" type="qcurve" name="iv04"/>
+      <point x="272" y="275" type="line"/>
+      <point x="317" y="267"/>
+      <point x="367" y="214"/>
+      <point x="367" y="172" type="qcurve"/>
+      <point x="367" y="140"/>
+      <point x="343" y="82"/>
+      <point x="298" y="34"/>
+      <point x="235" y="-1"/>
+      <point x="197" y="-8" type="qcurve" name="sv04"/>
+      <point x="161" y="-150" type="line"/>
+      <point x="87" y="-150" type="line" name="sv05"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgPC9oaW50U2V0TGlzdD4K
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJ4aGVpZ2h0Ii8+CiAgICA8dHRjIGNvZGU9ImFsaWduYiIgcG9pbnQ9ImFiMDEiIH
+      pvbmU9ImJhc2VsaW5lIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0iYWI
+      wMSIgcG9pbnQyPSJzdjAxIiBzdGVtPSJsY19jeXIiLz4KICAgIDx0dGMgY29kZT0iaW50
+      ZXJwb2xhdGV2IiBwb2ludD0iaXYwMSIgcG9pbnQxPSJzdjAxIiBwb2ludDI9ImF0MDEiI
+      GFsaWduPSJyb3VuZCIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9Iml2MD
+      EiIHBvaW50Mj0ic3YwMiIgc3RlbT0ibGNfY3lyIi8+CiAgICA8dHRjIGNvZGU9ImludGV
+      ycG9sYXRldiIgcG9pbnQ9Iml2MDIiIHBvaW50MT0ic3YwMiIgcG9pbnQyPSJzdjAxIiBh
+      bGlnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhdDAxI
+      iBwb2ludDI9InN2MDMiIHN0ZW09ImxjX2N5ciIvPgogICAgPHR0YyBjb2RlPSJpbnRlcn
+      BvbGF0ZXYiIHBvaW50PSJpdjAzIiBwb2ludDE9InN2MDMiIHBvaW50Mj0iaXYwMSIvPgo
+      gICAgPHR0YyBjb2RlPSJpbnRlcnBvbGF0ZXYiIHBvaW50PSJpdjA0IiBwb2ludDE9Iml2
+      MDEiIHBvaW50Mj0ic3YwMiIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9I
+      mFiMDEiIHBvaW50Mj0ic3YwNCIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludD
+      E9ImFiMDEiIHBvaW50Mj0ic3YwNSIgc3RlbT0ic3B1ciIvPgogIDwvdHRQcm9ncmFtPgo
+      =
+      </data>
+    </dict>
+  </lib>
+</glyph>

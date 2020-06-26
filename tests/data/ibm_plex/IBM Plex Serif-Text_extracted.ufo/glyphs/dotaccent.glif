@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dotaccent" format="2">
+  <advance width="600"/>
+  <unicode hex="02D9"/>
+  <outline>
+    <contour>
+      <point x="300" y="613" type="qcurve"/>
+      <point x="274" y="613"/>
+      <point x="243" y="645"/>
+      <point x="243" y="669" type="qcurve"/>
+      <point x="243" y="672" type="line"/>
+      <point x="243" y="696"/>
+      <point x="274" y="728"/>
+      <point x="300" y="728" type="qcurve"/>
+      <point x="326" y="728"/>
+      <point x="357" y="696"/>
+      <point x="357" y="672" type="qcurve"/>
+      <point x="357" y="669" type="line"/>
+      <point x="357" y="645"/>
+      <point x="326" y="613"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 12 0 7 1 13 7 0 0 32 0 2 14 0
+SVTCA[0]
+MDAP[1]
+SDB
+DELTAP1
+MDRP[11100]
+SDB
+DELTAP1
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w600q300613274613243645q243669l243672243696274728q300728326728357696q357672l357669357645326613</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

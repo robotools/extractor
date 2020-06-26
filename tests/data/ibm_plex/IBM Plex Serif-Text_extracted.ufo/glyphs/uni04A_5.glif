@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04A5" format="2">
+  <advance width="804"/>
+  <unicode hex="04A5"/>
+  <outline>
+    <contour>
+      <point x="48" y="50" type="line"/>
+      <point x="119" y="50" type="line"/>
+      <point x="119" y="468" type="line"/>
+      <point x="48" y="468" type="line"/>
+      <point x="48" y="518" type="line"/>
+      <point x="286" y="518" type="line"/>
+      <point x="286" y="468" type="line"/>
+      <point x="215" y="468" type="line"/>
+      <point x="215" y="290" type="line"/>
+      <point x="440" y="290" type="line"/>
+      <point x="440" y="468" type="line"/>
+      <point x="369" y="468" type="line"/>
+      <point x="369" y="518" type="line"/>
+      <point x="772" y="518" type="line"/>
+      <point x="772" y="365" type="line"/>
+      <point x="705" y="365" type="line"/>
+      <point x="705" y="465" type="line"/>
+      <point x="536" y="465" type="line"/>
+      <point x="536" y="50" type="line"/>
+      <point x="627" y="50" type="line"/>
+      <point x="627" y="0" type="line"/>
+      <point x="369" y="0" type="line"/>
+      <point x="369" y="50" type="line"/>
+      <point x="440" y="50" type="line"/>
+      <point x="440" y="237" type="line"/>
+      <point x="215" y="237" type="line"/>
+      <point x="215" y="50" type="line"/>
+      <point x="286" y="50" type="line"/>
+      <point x="286" y="0" type="line"/>
+      <point x="48" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 45 26 0 18 22 3 21 15 17 4 12 11 3 12 8 4 15 25 31 25 79 25 3 23 25 25 4 29 7 3 3 4 0 3 29 20 10 21 20 10 12 26 10 4 26 10
+SVTCA[0]
+CALL
+CALL
+CALL
+CALL
+MIRP[10100]
+SRP0
+MIRP[10100]
+MDRP[10000]
+SRP1
+SRP2
+IP
+MDAP[1]
+SDB
+DELTAP1
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+MDRP[11100]
+SRP0
+MIRP[10100]
+MDRP[10000]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>04e053bbeda8a24eb91afbc547ad1919fbafb18f2cc25bb23c6b1010ba97a72057c3db19587c2a41a1896e1ddf4d2b3a3cd759c050913b972c9e788422b440a4</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

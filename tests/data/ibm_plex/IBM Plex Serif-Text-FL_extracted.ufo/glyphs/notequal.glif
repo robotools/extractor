@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="notequal" format="2">
+  <advance width="600"/>
+  <unicode hex="2260"/>
+  <outline>
+    <contour>
+      <point x="193" y="171" type="line"/>
+      <point x="66" y="171" type="line"/>
+      <point x="66" y="229" type="line"/>
+      <point x="226" y="229" type="line"/>
+      <point x="309" y="381" type="line"/>
+      <point x="66" y="381" type="line"/>
+      <point x="66" y="439" type="line"/>
+      <point x="342" y="439" type="line"/>
+      <point x="400" y="541" type="line"/>
+      <point x="465" y="541" type="line"/>
+      <point x="407" y="439" type="line"/>
+      <point x="534" y="439" type="line"/>
+      <point x="534" y="381" type="line"/>
+      <point x="374" y="381" type="line"/>
+      <point x="291" y="229" type="line"/>
+      <point x="534" y="229" type="line"/>
+      <point x="534" y="171" type="line"/>
+      <point x="258" y="171" type="line"/>
+      <point x="200" y="69" type="line"/>
+      <point x="135" y="69" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]
+push 6
+MDAP[1]
+push 31 6 1
+DELTAP1
+push 5 6
+MIRP[10100]
+push 2
+MDRP[11100]
+push 31 2 1
+DELTAP1
+push 1 6
+MIRP[10100]
+push 6
+SRP0
+push 8
+MDRP[11100]
+push 6
+SRP0
+push 10
+MDRP[10000]
+push 5
+SRP0
+push 13
+MDRP[10000]
+push 2
+SRP0
+push 14
+MDRP[10000]
+push 1
+SRP0
+push 17
+MDRP[10000]
+push 1
+SRP0
+push 19
+MDRP[11100]
+IUP[0]
+IUP[1]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>662fda489c16bdb2fe2498e05d4121119b194accc9a268565fb3e75c99bf68676fc5648631641da28b4afea303f6847c4d1723b6b685206415653cf171b87804</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="exclamdown" format="2">
+  <advance width="263"/>
+  <unicode hex="00A1"/>
+  <outline>
+    <contour>
+      <point x="172" y="395" type="qcurve" name="sv01"/>
+      <point x="143" y="395"/>
+      <point x="113" y="428"/>
+      <point x="113" y="449" type="qcurve"/>
+      <point x="113" y="454"/>
+      <point x="114" y="463"/>
+      <point x="116" y="473" type="qcurve"/>
+      <point x="122" y="499"/>
+      <point x="163" y="530"/>
+      <point x="191" y="530" type="qcurve" name="at01"/>
+      <point x="220" y="530"/>
+      <point x="250" y="497"/>
+      <point x="250" y="476" type="qcurve"/>
+      <point x="250" y="471"/>
+      <point x="249" y="462"/>
+      <point x="247" y="452" type="qcurve"/>
+      <point x="241" y="426"/>
+      <point x="200" y="395"/>
+    </contour>
+    <contour>
+      <point x="25" y="20" type="line"/>
+      <point x="130" y="328" type="line" name="sv02"/>
+      <point x="169" y="328" type="line"/>
+      <point x="121" y="20" type="line"/>
+      <point x="70" y="-180" type="line"/>
+      <point x="-26" y="-180" type="line" name="av01"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0ic3YwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjM5NSIgd2lkdGg9IjEzNSIgLz4KICAgICAgPHZzdGVtIHBvcz0iMT
+      EzIiB3aWR0aD0iMTM3IiAvPgogICAgPC9oaW50c2V0PgogIDwvaGludFNldExpc3Q+Cg=
+      =
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnYiIHBvaW50PSJhdjAxIiBhb
+      Glnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ250IiBwb2ludD0iYXQwMSIgem
+      9uZT0ieGhlaWdodCIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9ImF0MDE
+      iIHBvaW50Mj0ic3YwMSIgcm91bmQ9InRydWUiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xl
+      diIgcG9pbnQxPSJzdjAxIiBwb2ludDI9InN2MDIiIHJvdW5kPSJ0cnVlIi8+CiAgPC90d
+      FByb2dyYW0+Cg==
+      </data>
+    </dict>
+  </lib>
+</glyph>

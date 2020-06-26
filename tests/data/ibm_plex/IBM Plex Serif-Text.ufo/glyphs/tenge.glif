@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="tenge" format="2">
+  <advance width="654"/>
+  <unicode hex="20B8"/>
+  <outline>
+    <contour>
+      <point x="182" y="50" type="line" name="sv01"/>
+      <point x="276" y="50" type="line"/>
+      <point x="276" y="526" type="line"/>
+      <point x="117" y="526" type="line" name="sv04"/>
+      <point x="117" y="406" type="line"/>
+      <point x="37" y="406" type="line" name="sv05"/>
+      <point x="37" y="577" type="line" name="sv03"/>
+      <point x="617" y="577" type="line"/>
+      <point x="617" y="406" type="line"/>
+      <point x="537" y="406" type="line" name="sv06"/>
+      <point x="537" y="526" type="line"/>
+      <point x="377" y="526" type="line" name="sv07"/>
+      <point x="377" y="50" type="line" name="sv08"/>
+      <point x="471" y="50" type="line"/>
+      <point x="471" y="0" type="line"/>
+      <point x="182" y="0" type="line" name="ab01"/>
+    </contour>
+    <contour>
+      <point x="37" y="698" type="line" name="at01"/>
+      <point x="617" y="698" type="line"/>
+      <point x="617" y="647" type="line"/>
+      <point x="37" y="647" type="line" name="sv02"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0ic3YwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjAiIHdpZHRoPSI1MCIgLz4KICAgICAgPGhzdGVtIHBvcz0iNTI2Ii
+      B3aWR0aD0iNTEiIC8+CiAgICAgIDxoc3RlbSBwb3M9IjY0NyIgd2lkdGg9IjUxIiAvPgo
+      gICAgICA8dnN0ZW0gcG9zPSIzNyIgd2lkdGg9IjgwIiAvPgogICAgICA8dnN0ZW0gcG9z
+      PSIyNzYiIHdpZHRoPSIxMDEiIC8+CiAgICAgIDx2c3RlbSBwb3M9IjUzNyIgd2lkdGg9I
+      jgwIiAvPgogICAgPC9oaW50c2V0PgogIDwvaGludFNldExpc3Q+Cg==
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJjYXBoZWlnaHQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ25iIiBwb2ludD0iYWIwMS
+      Igem9uZT0iYmFzZWxpbmUiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJ
+      hYjAxIiBwb2ludDI9InN2MDEiIHN0ZW09InN0ZW1fc2VyaWYiLz4KICAgIDx0dGMgY29k
+      ZT0ic2luZ2xldiIgcG9pbnQxPSJhdDAxIiBwb2ludDI9InN2MDIiIHN0ZW09InVjX3N0Z
+      W0iLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJzdjAyIiBwb2ludDI9In
+      N2MDMiIHN0ZW09InVjX3N0ZW0iLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQ
+      xPSJzdjAzIiBwb2ludDI9InN2MDQiIHN0ZW09InVjX3N0ZW0iLz4KICAgIDx0dGMgY29k
+      ZT0ic2luZ2xldiIgcG9pbnQxPSJzdjA0IiBwb2ludDI9InN2MDUiIHJvdW5kPSJ0cnVlI
+      i8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0ic3YwNSIgcG9pbnQyPSJzdj
+      A2Ii8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0ic3YwNCIgcG9pbnQyPSJ
+      zdjA3Ii8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0ic3YwMSIgcG9pbnQy
+      PSJzdjA4Ii8+CiAgPC90dFByb2dyYW0+Cg==
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  CALL zone_align 16 28
+  CALL zone_align 15 20
+  MIRP[MdRGr] 0 3
+  SRP0 16
+  MIRP[MdRGr] 19 5
+  MIRP[MdRGr] 6 5
+  MIRP[MdRGr] 3 5
+  MDRP[MDRGr] 5
+  MDRP[MdrGr] 9
+  SRP0 3
+  MDRP[MdrGr] 11
+  SRP0 0
+  MDRP[MdrGr] 12
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>f737b72fe94e03edc52af3d00a3d9ac4a254d24653ba1e322264e036e51873d4c101554f7adc47c4fd6b91bd061a2c89d7959ebc56bcf7f1e54fe43406471f51</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="endash" format="2">
+  <advance width="560"/>
+  <unicode hex="2013"/>
+  <outline>
+    <contour>
+      <point x="56" y="329" type="line" name="av01"/>
+      <point x="539" y="329" type="line"/>
+      <point x="526" y="278" type="line"/>
+      <point x="43" y="278" type="line" name="sv01"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0iYXYwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjI3OCIgd2lkdGg9IjUxIiAvPgogICAgICA8dnN0ZW0gcG9zPSI0My
+      Igd2lkdGg9IjQ5NiIgLz4KICAgIDwvaGludHNldD4KICA8L2hpbnRTZXRMaXN0Pgo=
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnYiIHBvaW50PSJhdjAxIiBhb
+      Glnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhdjAxIi
+      Bwb2ludDI9InN2MDEiIHN0ZW09ImJvd2xfdGhpbiIvPgogIDwvdHRQcm9ncmFtPgo=
+      </data>
+    </dict>
+  </lib>
+</glyph>

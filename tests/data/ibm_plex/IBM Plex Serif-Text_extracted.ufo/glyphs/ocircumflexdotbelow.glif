@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ocircumflexdotbelow" format="2">
+  <advance width="568"/>
+  <unicode hex="1ED9"/>
+  <outline>
+    <component base="o"/>
+    <component base="circumflex" xOffset="-16"/>
+    <component base="dotbelowcomb" xOffset="284"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>2979711b971b20c4a0da9c059fb08a0e1c5d9e57cecb99b63ed7d4d682322d32fe758cef7447d6caaf74382b5592de693906b143bd2dc7f7150947ac2de6ff2e</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

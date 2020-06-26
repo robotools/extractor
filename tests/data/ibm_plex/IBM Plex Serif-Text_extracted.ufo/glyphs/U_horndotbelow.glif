@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Uhorndotbelow" format="2">
+  <advance width="741"/>
+  <unicode hex="1EF0"/>
+  <outline>
+    <component base="Uhorn"/>
+    <component base="dotbelowcomb" xOffset="376"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>67a3955c27c52572bd08c5badfb7b05017b38a9f16ebd0759208a600b7f5c9b30181b8da6f1a72ae0b8920b5e1580ea33e973556129ab0a5f4adc23b7543279d</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

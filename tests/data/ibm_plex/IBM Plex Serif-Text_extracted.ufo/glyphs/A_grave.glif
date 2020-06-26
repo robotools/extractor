@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Agrave" format="2">
+  <advance width="689"/>
+  <unicode hex="00C0"/>
+  <outline>
+    <component base="A"/>
+    <component base="grave.case" xOffset="45"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>2f064cc2a5d5b08b5d7278fe422b0d1b80df0cfa78163292b7f8fb397d024a2dc4d72fb75822480222101de9e3a845d253fd659051670965b41907a4ea0e9bbf</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

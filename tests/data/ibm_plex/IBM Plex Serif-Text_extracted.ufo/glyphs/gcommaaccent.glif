@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="gcommaaccent" format="2">
+  <advance width="553"/>
+  <unicode hex="0123"/>
+  <outline>
+    <component base="g.alt02"/>
+    <component base="commaturnedtop" xOffset="-32"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>e22cd88aa9ac90123c573d50cd96df2e48881f1f7e7a108ab07eefcfec7f0c6359beb90800ec349bf12ba02ceff8918507453dbf5d566c8b88d2394b7397c123</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

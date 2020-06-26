@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="greaterequal" format="2">
+  <advance width="600"/>
+  <unicode hex="2265"/>
+  <outline>
+    <contour>
+      <point x="89" y="180" type="line"/>
+      <point x="442" y="347" type="line"/>
+      <point x="442" y="353" type="line"/>
+      <point x="89" y="520" type="line"/>
+      <point x="89" y="582" type="line"/>
+      <point x="511" y="386" type="line"/>
+      <point x="511" y="314" type="line"/>
+      <point x="89" y="118" type="line"/>
+    </contour>
+    <contour>
+      <point x="89" y="58" type="line"/>
+      <point x="511" y="58" type="line"/>
+      <point x="511" y="0" type="line"/>
+      <point x="89" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+PUSHB 7 8 5 11 20 10 4
+SVTCA[0]
+MDAP[1]
+CALL
+MIRP[10100]
+MDRP[11100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w600l89180l442347l442353l89520l89582l511386l511314l89118l8958l51158l5110l890</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

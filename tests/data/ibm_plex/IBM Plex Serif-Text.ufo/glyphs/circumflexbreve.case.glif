@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="circumflexbreve.case" format="2">
+  <anchor x="0" y="698" name="_top"/>
+  <outline>
+    <contour>
+      <point x="0" y="922" type="qcurve" name="sv02"/>
+      <point x="-37" y="922"/>
+      <point x="-86" y="947"/>
+      <point x="-119" y="987"/>
+      <point x="-139" y="1035"/>
+      <point x="-148" y="1059" type="qcurve"/>
+      <point x="-117" y="1075" type="line" name="sv03"/>
+      <point x="-96" y="1037" type="line"/>
+      <point x="-82" y="1011"/>
+      <point x="-41" y="989"/>
+      <point x="0" y="989" type="qcurve" name="sv04"/>
+      <point x="41" y="989"/>
+      <point x="82" y="1011"/>
+      <point x="96" y="1037" type="qcurve"/>
+      <point x="117" y="1075" type="line" name="sv05"/>
+      <point x="148" y="1059" type="line"/>
+      <point x="139" y="1035"/>
+      <point x="119" y="987"/>
+      <point x="86" y="947"/>
+      <point x="37" y="922"/>
+    </contour>
+    <contour>
+      <point x="-157" y="768" type="line"/>
+      <point x="-31" y="889" type="line" name="sv01"/>
+      <point x="31" y="889" type="line"/>
+      <point x="157" y="768" type="line"/>
+      <point x="134" y="746" type="line" name="sv06"/>
+      <point x="0" y="821" type="line" name="sv07"/>
+      <point x="-134" y="746" type="line" name="av01"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0ic3YwMiI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjkyMiIgd2lkdGg9IjY3IiAvPgogICAgICA8dnN0ZW0gcG9zPSItMT
+      U3IiB3aWR0aD0iMzE0IiAvPgogICAgPC9oaW50c2V0PgogIDwvaGludFNldExpc3Q+Cg=
+      =
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnYiIHBvaW50PSJhdjAxIiBhb
+      Glnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0ibWRlbHRhdiIgcG9pbnQ9ImF2MDEiIG
+      RlbHRhPSI4IiBwcG0xPSIxNCIgcHBtMj0iMTQiLz4KICAgIDx0dGMgY29kZT0ibWRlbHR
+      hdiIgcG9pbnQ9ImF2MDEiIGRlbHRhPSI4IiBwcG0xPSIxMCIgcHBtMj0iMTEiLz4KICAg
+      IDx0dGMgY29kZT0ibWRlbHRhdiIgcG9pbnQ9ImF2MDEiIGRlbHRhPSI4IiBwcG0xPSIxO
+      CIgcHBtMj0iMTgiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhdjAxIi
+      Bwb2ludDI9InN2MDEiIHJvdW5kPSJ0cnVlIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXY
+      iIHBvaW50MT0ic3YwMSIgcG9pbnQyPSJzdjAyIiByb3VuZD0idHJ1ZSIvPgogICAgPHR0
+      YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9InN2MDIiIHBvaW50Mj0ic3YwMyIgcm91bmQ9I
+      nRydWUiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJzdjAyIiBwb2ludD
+      I9InN2MDQiIHJvdW5kPSJ0cnVlIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW5
+      0MT0ic3YwMyIgcG9pbnQyPSJzdjA1Ii8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBv
+      aW50MT0iYXYwMSIgcG9pbnQyPSJzdjA2Ii8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiI
+      HBvaW50MT0ic3YwMSIgcG9pbnQyPSJzdjA3IiByb3VuZD0idHJ1ZSIvPgogICAgPHR0Yy
+      Bjb2RlPSJtZGVsdGF2IiBwb2ludD0ic3YwNyIgZGVsdGE9Ii04IiBwcG0xPSIyMSIgcHB
+      tMj0iMjEiLz4KICA8L3R0UHJvZ3JhbT4K
+      </data>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>0.0</real>
+        </dict>
+      </array>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  MDAP[R] 26
+  deltap 26 14+8
+  deltap 26 10+8 11+8
+  deltap 26 18+8
+  MDRP[MDRGr] 21
+  MDRP[MDRGr] 0
+  MDRP[MDRGr] 6
+  SRP0 0
+  MDRP[MDRGr] 10
+  SRP0 6
+  MDRP[MdrGr] 14
+  SRP0 26
+  MDRP[MdrGr] 24
+  SRP0 21
+  MDRP[MDRGr] 25
+  deltap 25 21-8
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>9070f1a1118a0c5a35c237a6a27c28c25b82421673b04b4fe55307a3930e20eb83c92712606253fbe251403e88358cd53526dfa6abaad7958c216899d6f1b49a</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

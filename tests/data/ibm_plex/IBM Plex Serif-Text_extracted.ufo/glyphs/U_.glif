@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="U" format="2">
+  <advance width="741"/>
+  <unicode hex="0055"/>
+  <outline>
+    <contour>
+      <point x="381" y="-12" type="qcurve"/>
+      <point x="310" y="-12"/>
+      <point x="211" y="19"/>
+      <point x="147" y="86"/>
+      <point x="118" y="193"/>
+      <point x="118" y="269" type="qcurve"/>
+      <point x="118" y="648" type="line"/>
+      <point x="44" y="648" type="line"/>
+      <point x="44" y="698" type="line"/>
+      <point x="293" y="698" type="line"/>
+      <point x="293" y="648" type="line"/>
+      <point x="219" y="648" type="line"/>
+      <point x="219" y="255" type="line"/>
+      <point x="219" y="151"/>
+      <point x="293" y="49"/>
+      <point x="389" y="49" type="qcurve"/>
+      <point x="485" y="49"/>
+      <point x="565" y="151"/>
+      <point x="565" y="255" type="qcurve"/>
+      <point x="565" y="648" type="line"/>
+      <point x="491" y="648" type="line"/>
+      <point x="491" y="698" type="line"/>
+      <point x="698" y="698" type="line"/>
+      <point x="698" y="648" type="line"/>
+      <point x="624" y="648" type="line"/>
+      <point x="624" y="279" type="line"/>
+      <point x="624" y="204"/>
+      <point x="599" y="95"/>
+      <point x="541" y="23"/>
+      <point x="448" y="-12"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 20 24 20 3 21 15 5 0 11 7 3 8 0 20 10 21 28 10 8 28 10
+SVTCA[0]
+CALL
+CALL
+CALL
+SRP0
+MIRP[10100]
+MDRP[10000]
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>742f1ba0cb0f2c8bcb688a0e76bf6449feba334a958e0b314fb3d3148822d89b07737d91da0e1c493e3918e29b78e4131d2ecf5b34de9a7f38c4c789d7b76313</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

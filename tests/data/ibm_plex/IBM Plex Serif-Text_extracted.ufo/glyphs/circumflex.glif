@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="circumflex" format="2">
+  <advance width="600"/>
+  <unicode hex="02C6"/>
+  <outline>
+    <contour>
+      <point x="143" y="615" type="line"/>
+      <point x="269" y="769" type="line"/>
+      <point x="331" y="769" type="line"/>
+      <point x="457" y="615" type="line"/>
+      <point x="429" y="595" type="line"/>
+      <point x="300" y="693" type="line"/>
+      <point x="171" y="595" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 16 15 5 1 19 5 1 4 6 1 15 6 112 6 2 9 6
+SVTCA[0]
+MDAP[1]
+SDB
+DELTAP1
+MDRP[11100]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[11100]
+SDB
+DELTAP1
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w600l143615l269769l331769l457615l429595l300693l171595</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Abreve" format="2">
+  <advance width="689"/>
+  <unicode hex="0102"/>
+  <outline>
+    <component base="A"/>
+    <component base="breve.case" xOffset="45"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>ab13af2a25a6796d9b497e8e46f9c8e2bb52b3d01d947a9806568e67f4420c8dbf0abb58c24e59045e14b5ea081bb302150dcf29c4e0fbe02d27c415ee7deae8</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

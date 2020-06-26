@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="tugrik" format="2">
+  <advance width="664"/>
+  <unicode hex="20AE"/>
+  <outline>
+    <contour>
+      <point x="189" y="50" type="line"/>
+      <point x="283" y="50" type="line"/>
+      <point x="283" y="181" type="line"/>
+      <point x="162" y="122" type="line"/>
+      <point x="162" y="177" type="line"/>
+      <point x="283" y="236" type="line"/>
+      <point x="283" y="334" type="line"/>
+      <point x="162" y="275" type="line"/>
+      <point x="162" y="330" type="line"/>
+      <point x="283" y="389" type="line"/>
+      <point x="283" y="644" type="line"/>
+      <point x="115" y="644" type="line"/>
+      <point x="115" y="527" type="line"/>
+      <point x="35" y="527" type="line"/>
+      <point x="35" y="698" type="line"/>
+      <point x="630" y="698" type="line"/>
+      <point x="630" y="527" type="line"/>
+      <point x="550" y="527" type="line"/>
+      <point x="550" y="644" type="line"/>
+      <point x="384" y="644" type="line"/>
+      <point x="384" y="438" type="line"/>
+      <point x="505" y="498" type="line"/>
+      <point x="505" y="443" type="line"/>
+      <point x="384" y="384" type="line"/>
+      <point x="384" y="286" type="line"/>
+      <point x="505" y="345" type="line"/>
+      <point x="505" y="290" type="line"/>
+      <point x="384" y="231" type="line"/>
+      <point x="384" y="50" type="line"/>
+      <point x="478" y="50" type="line"/>
+      <point x="478" y="0" type="line"/>
+      <point x="189" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]
+push 0
+RCVT
+IF
+  push 14
+  MDAP[1]
+ELSE
+  push 14 28
+  MIAP[0]
+EIF
+push 0
+RCVT
+IF
+  push 31
+  MDAP[1]
+ELSE
+  push 31 18
+  MIAP[0]
+EIF
+push 0 1
+MIRP[10100]
+push 14
+SRP0
+push 11 6
+MIRP[10100]
+push 3 31 11
+SRP1
+SRP2
+IP
+push 3
+MDAP[1]
+push 0 3 1
+DELTAP1
+push 21 11 0
+SRP1
+SRP2
+IP
+RUTG
+push 21
+MDAP[1]
+RTG
+push 22 6
+MIRP[10100]
+push 26
+MDRP[11100]
+push 0 26 1
+DELTAP1
+push 2 3 26
+SRP1
+SRP2
+IP
+push 3
+SRP0
+push 4 6
+MIRP[10100]
+push 26
+SRP0
+push 25 6
+MIRP[10100]
+push 5 4 25
+SRP1
+SRP2
+IP
+push 4
+SRP0
+push 8
+MDRP[11100]
+push 15 8 1
+DELTAP1
+push 7 6
+MIRP[10100]
+push 6 7 22
+SRP1
+SRP2
+IP
+push 9 8 21
+SRP1
+SRP2
+IP
+push 14
+SRP0
+push 13
+MDRP[11100]
+push 17
+MDRP[10000]
+push 11
+SRP0
+push 19
+MDRP[10000]
+push 20 8 21
+SRP1
+SRP2
+IP
+push 23 7 22
+SRP1
+SRP2
+IP
+push 24 4 25
+SRP1
+SRP2
+IP
+push 27 3 26
+SRP1
+SRP2
+IP
+push 0
+SRP0
+push 28
+MDRP[10000]
+IUP[0]
+IUP[1]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>65cde1acbf684c9437bcaf50881f59747a4ab083fbb6fbc232370c1c7a61d75b667dbcf265ae29765c73878e886e17ad11e034df02a8b2b24933375379a9acdd</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

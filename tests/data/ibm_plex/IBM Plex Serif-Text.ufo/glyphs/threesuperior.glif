@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="threesuperior" format="2">
+  <advance width="347"/>
+  <unicode hex="00B3"/>
+  <outline>
+    <contour>
+      <point x="155" y="324" type="qcurve" name="ab01"/>
+      <point x="95" y="324"/>
+      <point x="29" y="372"/>
+      <point x="29" y="402" type="qcurve"/>
+      <point x="29" y="422"/>
+      <point x="52" y="447"/>
+      <point x="72" y="447" type="qcurve" name="iv02"/>
+      <point x="92" y="447"/>
+      <point x="113" y="422"/>
+      <point x="113" y="405" type="qcurve"/>
+      <point x="113" y="395"/>
+      <point x="102" y="376"/>
+      <point x="94" y="371" type="qcurve"/>
+      <point x="94" y="369" type="line"/>
+      <point x="109" y="360"/>
+      <point x="143" y="360" type="qcurve" name="sv02"/>
+      <point x="182" y="360"/>
+      <point x="223" y="394"/>
+      <point x="223" y="425" type="qcurve"/>
+      <point x="223" y="439" type="line"/>
+      <point x="223" y="468"/>
+      <point x="186" y="502"/>
+      <point x="148" y="502" type="qcurve"/>
+      <point x="116" y="502" type="line" name="sv03"/>
+      <point x="116" y="541" type="line" name="iv01"/>
+      <point x="145" y="541" type="line"/>
+      <point x="180" y="541"/>
+      <point x="217" y="576"/>
+      <point x="217" y="600" type="qcurve"/>
+      <point x="217" y="612" type="line"/>
+      <point x="217" y="640"/>
+      <point x="180" y="668"/>
+      <point x="151" y="668" type="qcurve" name="sv01"/>
+      <point x="119" y="668"/>
+      <point x="104" y="659" type="qcurve"/>
+      <point x="104" y="657" type="line"/>
+      <point x="112" y="652"/>
+      <point x="123" y="633"/>
+      <point x="123" y="623" type="qcurve"/>
+      <point x="123" y="606"/>
+      <point x="102" y="581"/>
+      <point x="82" y="581" type="qcurve" name="iv03"/>
+      <point x="62" y="581"/>
+      <point x="39" y="606"/>
+      <point x="39" y="626" type="qcurve"/>
+      <point x="39" y="641"/>
+      <point x="58" y="669"/>
+      <point x="92" y="691"/>
+      <point x="136" y="704"/>
+      <point x="162" y="704" type="qcurve" name="at01"/>
+      <point x="227" y="704"/>
+      <point x="296" y="659"/>
+      <point x="296" y="612" type="qcurve"/>
+      <point x="296" y="577"/>
+      <point x="245" y="531"/>
+      <point x="212" y="526" type="qcurve" name="iv04"/>
+      <point x="212" y="522" type="line"/>
+      <point x="249" y="516"/>
+      <point x="303" y="471"/>
+      <point x="303" y="433" type="qcurve"/>
+      <point x="303" y="380"/>
+      <point x="221" y="324"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgPC9oaW50U2V0TGlzdD4K
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJjYXBoZWlnaHQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ25iIiBwb2ludD0iYWIwMS
+      Igem9uZT0ic3VwX2JvdCIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9ImF
+      0MDEiIHBvaW50Mj0ic3YwMSIgc3RlbT0ibGNfdGhpbiIvPgogICAgPHR0YyBjb2RlPSJz
+      aW5nbGV2IiBwb2ludDE9ImFiMDEiIHBvaW50Mj0ic3YwMiIgc3RlbT0ibGNfdGhpbiIvP
+      gogICAgPHR0YyBjb2RlPSJpbnRlcnBvbGF0ZXYiIHBvaW50PSJpdjAxIiBwb2ludDE9In
+      N2MDEiIHBvaW50Mj0ic3YwMiIgYWxpZ249InJvdW5kIi8+CiAgICA8dHRjIGNvZGU9InN
+      pbmdsZXYiIHBvaW50MT0iaXYwMSIgcG9pbnQyPSJzdjAzIiBzdGVtPSJsY190aGluIi8+
+      CiAgICA8dHRjIGNvZGU9ImludGVycG9sYXRldiIgcG9pbnQ9Iml2MDIiIHBvaW50MT0ic
+      3YwMyIgcG9pbnQyPSJzdjAyIiBhbGlnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0iaW
+      50ZXJwb2xhdGV2IiBwb2ludD0iaXYwMyIgcG9pbnQxPSJzdjAxIiBwb2ludDI9Iml2MDE
+      iIGFsaWduPSJyb3VuZCIvPgogICAgPHR0YyBjb2RlPSJpbnRlcnBvbGF0ZXYiIHBvaW50
+      PSJpdjA0IiBwb2ludDE9Iml2MDEiIHBvaW50Mj0ic3YwMyIvPgogIDwvdHRQcm9ncmFtP
+      go=
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  CALL zone_align 49 28
+  CALL zone_align 0 18
+  SRP0 49
+  MIRP[MdRGr] 32 1
+  SRP0 0
+  MIRP[MdRGr] 15 1
+  SRP1 15
+  SRP2 32
+  IP 24
+  MDAP[R] 24
+  MIRP[MdRGr] 23 1
+  SRP1 15
+  SRP2 23
+  IP 6
+  MDAP[R] 6
+  SRP1 24
+  SRP2 32
+  IP 41
+  MDAP[R] 41
+  SRP1 23
+  SRP2 24
+  IP 55
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>cad21a369a35ab83910d8dec83bde3212eee4ff35fc74d984e6809c013333aac740335b48037255357cb96322060be468a9dcf0e2fefa8913f3d538d21b0bebd</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

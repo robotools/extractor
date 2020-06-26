@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="I" format="2">
+  <advance width="353"/>
+  <unicode hex="0049"/>
+  <outline>
+    <contour>
+      <point x="52" y="50" type="line"/>
+      <point x="126" y="50" type="line"/>
+      <point x="126" y="648" type="line"/>
+      <point x="52" y="648" type="line"/>
+      <point x="52" y="698" type="line"/>
+      <point x="301" y="698" type="line"/>
+      <point x="301" y="648" type="line"/>
+      <point x="227" y="648" type="line"/>
+      <point x="227" y="50" type="line"/>
+      <point x="301" y="50" type="line"/>
+      <point x="301" y="0" type="line"/>
+      <point x="52" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 14 8 0 7 3 3 4 0 3 11 20 10 4 28 10
+SVTCA[0]
+CALL
+CALL
+MIRP[10100]
+SRP0
+MIRP[10100]
+MDRP[10000]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w353l5250l12650l126648l52648l52698l301698l301648l227648l22750l30150l3010l520</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

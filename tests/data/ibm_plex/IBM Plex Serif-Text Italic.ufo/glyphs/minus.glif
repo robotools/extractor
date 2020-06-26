@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="minus" format="2">
+  <advance width="550"/>
+  <unicode hex="2212"/>
+  <outline>
+    <contour>
+      <point x="78" y="332" type="line" name="av01"/>
+      <point x="507" y="332" type="line"/>
+      <point x="494" y="278" type="line"/>
+      <point x="65" y="278" type="line" name="sv01"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0iYXYwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjI3OCIgd2lkdGg9IjU0IiAvPgogICAgICA8dnN0ZW0gcG9zPSI2NS
+      Igd2lkdGg9IjQ0MiIgLz4KICAgIDwvaGludHNldD4KICA8L2hpbnRTZXRMaXN0Pgo=
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnYiIHBvaW50PSJhdjAxIiBhb
+      Glnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhdjAxIi
+      Bwb2ludDI9InN2MDEiIHN0ZW09InVjX3N0ZW0iLz4KICA8L3R0UHJvZ3JhbT4K
+      </data>
+    </dict>
+  </lib>
+</glyph>

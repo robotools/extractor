@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="circumflexacute.case" format="2">
+  <outline>
+    <contour>
+      <point x="-157" y="766" type="line"/>
+      <point x="-31" y="920" type="line"/>
+      <point x="31" y="920" type="line"/>
+      <point x="157" y="766" type="line"/>
+      <point x="129" y="746" type="line"/>
+      <point x="0" y="848" type="line"/>
+      <point x="-129" y="746" type="line"/>
+    </contour>
+    <contour>
+      <point x="105" y="892" type="line"/>
+      <point x="181" y="1071" type="line"/>
+      <point x="260" y="1031" type="line"/>
+      <point x="136" y="877" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]
+push 6
+MDAP[1]
+push 31 6 47 6 2
+DELTAP1
+push 159 6 1
+DELTAP1
+push 95 6 1
+DELTAP1
+push 1
+MDRP[11100]
+push 6
+SRP0
+push 4
+MDRP[10000]
+push 1
+SRP0
+push 5
+MDRP[11100]
+push 10 1 5
+SRP1
+SRP2
+IP
+RUTG
+push 10
+MDAP[1]
+RTG
+push 8
+MDRP[11100]
+IUP[0]
+IUP[1]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w0l-157+766l-31+920l31+920l157+766l129+746l0+848l-129+746l105+892l181+1071l260+1031l136+877</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

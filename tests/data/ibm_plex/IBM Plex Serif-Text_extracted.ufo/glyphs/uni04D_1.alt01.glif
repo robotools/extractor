@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04D1.alt01" format="2">
+  <advance width="614"/>
+  <outline>
+    <component base="a.alt01"/>
+    <component base="breve.cyrl" xOffset="-26"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>fd37db1c68048645ce0dafe2972b44fab94a705237296bd0398fe2ba4d88e71d722a7b8e4e34e365fd001e752c75dbcc336f6c4068de495fe4073c2fba1a1be2</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

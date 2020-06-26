@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0410" format="2">
+  <advance width="689"/>
+  <unicode hex="0410"/>
+  <outline>
+    <component base="A"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>380cbb0f4baf5ae59193f280a6eb0caa9ae535ed20fc8181ed8bf45740cf043f1987723f3d8826cc3307fb86273a29707c3f48ca783343f600b952fcab7fb818</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Eacute" format="2">
+  <advance width="644"/>
+  <unicode hex="00C9"/>
+  <outline>
+    <component base="E"/>
+    <component base="acute.case" xOffset="36"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>455766954121377166d4dbd15be9baa62e7d27b9c392ef4e86fd1964a615d7ceba8ff245b740e9ec2236388927081e3a9f663b87cf339aca7a05e6024ebe2912</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

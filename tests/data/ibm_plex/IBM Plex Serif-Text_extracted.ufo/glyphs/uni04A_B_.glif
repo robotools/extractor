@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04AB" format="2">
+  <advance width="520"/>
+  <unicode hex="04AB"/>
+  <outline>
+    <contour>
+      <point x="240" y="-9" type="line"/>
+      <point x="193" y="-2"/>
+      <point x="120" y="43"/>
+      <point x="70" y="113"/>
+      <point x="44" y="205"/>
+      <point x="44" y="259" type="qcurve"/>
+      <point x="44" y="322"/>
+      <point x="81" y="422"/>
+      <point x="147" y="492"/>
+      <point x="238" y="530"/>
+      <point x="292" y="530" type="qcurve"/>
+      <point x="333" y="530"/>
+      <point x="399" y="511"/>
+      <point x="445" y="478"/>
+      <point x="470" y="432"/>
+      <point x="470" y="405" type="qcurve"/>
+      <point x="470" y="373"/>
+      <point x="435" y="334"/>
+      <point x="405" y="334" type="qcurve"/>
+      <point x="373" y="334"/>
+      <point x="341" y="371"/>
+      <point x="341" y="397" type="qcurve"/>
+      <point x="341" y="420"/>
+      <point x="364" y="451"/>
+      <point x="383" y="460" type="qcurve"/>
+      <point x="383" y="464" type="line"/>
+      <point x="371" y="470"/>
+      <point x="332" y="478"/>
+      <point x="302" y="478" type="qcurve"/>
+      <point x="268" y="478"/>
+      <point x="211" y="453"/>
+      <point x="171" y="409"/>
+      <point x="148" y="347"/>
+      <point x="148" y="311" type="qcurve"/>
+      <point x="148" y="231" type="line"/>
+      <point x="148" y="152"/>
+      <point x="228" y="58"/>
+      <point x="297" y="58" type="qcurve"/>
+      <point x="357" y="58"/>
+      <point x="426" y="110"/>
+      <point x="446" y="149" type="qcurve"/>
+      <point x="482" y="126" type="line"/>
+      <point x="466" y="80"/>
+      <point x="388" y="2"/>
+      <point x="322" y="-9" type="qcurve"/>
+      <point x="322" y="-150" type="line"/>
+      <point x="240" y="-150" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 29 46 13 0 44 0 0 18 16 18 32 18 3 28 18 18 28 37 37 6 0 28 3 10 0 20 10 10 26 10
+SVTCA[0]
+CALL
+CALL
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+RUTG
+MDAP[1]
+RTG
+SDB
+DELTAP1
+SRP0
+MDRP[10000]
+SRP0
+MIRP[10100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>662671cb4fde7f545dfed0796a42be73e346163de89fa8fcef17bf182393efe1e4cebfb2f90c4aba2912bf4b1a0cec0addc9d87f87cdbf940f9429bb4103a055</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

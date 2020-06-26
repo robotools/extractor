@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Dcroat" format="2">
+  <advance width="715"/>
+  <unicode hex="0110"/>
+  <outline>
+    <contour>
+      <point x="52" y="50" type="line"/>
+      <point x="126" y="50" type="line"/>
+      <point x="126" y="323" type="line"/>
+      <point x="38" y="323" type="line"/>
+      <point x="38" y="375" type="line"/>
+      <point x="126" y="375" type="line"/>
+      <point x="126" y="648" type="line"/>
+      <point x="52" y="648" type="line"/>
+      <point x="52" y="698" type="line"/>
+      <point x="351" y="698" type="line"/>
+      <point x="421" y="698"/>
+      <point x="536" y="654"/>
+      <point x="619" y="567"/>
+      <point x="665" y="436"/>
+      <point x="665" y="349" type="qcurve"/>
+      <point x="665" y="262"/>
+      <point x="619" y="131"/>
+      <point x="536" y="44"/>
+      <point x="421" y="0"/>
+      <point x="351" y="0" type="qcurve"/>
+      <point x="52" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="227" y="54" type="line"/>
+      <point x="338" y="54" type="line"/>
+      <point x="441" y="54"/>
+      <point x="553" y="176"/>
+      <point x="553" y="283" type="qcurve"/>
+      <point x="553" y="415" type="line"/>
+      <point x="553" y="522"/>
+      <point x="441" y="644"/>
+      <point x="338" y="644" type="qcurve"/>
+      <point x="227" y="644" type="line"/>
+      <point x="227" y="375" type="line"/>
+      <point x="359" y="375" type="line"/>
+      <point x="359" y="323" type="line"/>
+      <point x="227" y="323" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]
+push 0
+RCVT
+IF
+  push 8
+  MDAP[1]
+ELSE
+  push 8 28
+  MIAP[0]
+EIF
+push 0
+RCVT
+IF
+  push 20
+  MDAP[1]
+ELSE
+  push 20 18
+  MIAP[0]
+EIF
+push 0 1
+MIRP[10100]
+push 8
+SRP0
+push 30 6
+MIRP[10100]
+push 3 30 0
+SRP1
+SRP2
+IP
+push 3
+MDAP[1]
+push 4 6
+MIRP[10100]
+push 8
+SRP0
+push 7 1
+MIRP[10100]
+push 20
+SRP0
+push 21 6
+MIRP[10100]
+push 4
+SRP0
+push 31
+MDRP[10000]
+push 3
+SRP0
+push 34
+MDRP[10000]
+IUP[0]
+IUP[1]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>cb27b669ef8db2ea804d9bf676a2d4d4279e5b46fd45a8665b027d54d5a098bec920ba93563126f257cd99c5e7cc1d6c86f3650b7597d2494709288258e97e1e</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

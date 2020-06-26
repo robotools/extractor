@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="brevecomb" format="2">
+  <unicode hex="0306"/>
+  <outline>
+    <component base="breve" xOffset="-300"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>35bbf1bc3c91272f5700a7812e37070ccf27f415fad053b72439b54928509147aa126cf4d328d276dff01cb46caf26682e77e7208d8be337152c5ff07765cfb9</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

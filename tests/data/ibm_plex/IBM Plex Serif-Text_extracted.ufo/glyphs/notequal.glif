@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="notequal" format="2">
+  <advance width="600"/>
+  <unicode hex="2260"/>
+  <outline>
+    <contour>
+      <point x="193" y="171" type="line"/>
+      <point x="66" y="171" type="line"/>
+      <point x="66" y="229" type="line"/>
+      <point x="226" y="229" type="line"/>
+      <point x="309" y="381" type="line"/>
+      <point x="66" y="381" type="line"/>
+      <point x="66" y="439" type="line"/>
+      <point x="342" y="439" type="line"/>
+      <point x="400" y="541" type="line"/>
+      <point x="465" y="541" type="line"/>
+      <point x="407" y="439" type="line"/>
+      <point x="534" y="439" type="line"/>
+      <point x="534" y="381" type="line"/>
+      <point x="374" y="381" type="line"/>
+      <point x="291" y="229" type="line"/>
+      <point x="534" y="229" type="line"/>
+      <point x="534" y="171" type="line"/>
+      <point x="258" y="171" type="line"/>
+      <point x="200" y="69" type="line"/>
+      <point x="135" y="69" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 26 19 1 17 1 14 2 13 5 10 6 8 6 1 5 15 2 1 10 2 5 5 15 6 1 10 6
+SVTCA[0]
+MDAP[1]
+SDB
+DELTAP1
+MIRP[10100]
+MDRP[11100]
+SDB
+DELTAP1
+MIRP[10100]
+SRP0
+MDRP[11100]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[11100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>8cd50e6da733824e420187bee6c4ee21c8d6cdf61a3678eb911ea8f2c03300cbdcad678f026c4b927f65e995e4a0db1e419bc54f8e44ab8703456a17bef07799</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

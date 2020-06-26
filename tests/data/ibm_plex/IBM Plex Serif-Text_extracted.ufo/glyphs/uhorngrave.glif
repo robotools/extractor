@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uhorngrave" format="2">
+  <advance width="624"/>
+  <unicode hex="1EEB"/>
+  <outline>
+    <component base="uhorn"/>
+    <component base="grave" xOffset="3"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>0d7a3f56d45010f6674e5dda223d17263e2e29ac2e51be12f7386860bb8d676a27da0e46e2c47b23980e19a7b3a63df777e3269c7ea42cb96859fad5a637270e</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

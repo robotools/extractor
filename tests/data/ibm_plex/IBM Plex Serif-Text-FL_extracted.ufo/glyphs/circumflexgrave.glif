@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="circumflexgrave" format="2">
+  <outline>
+    <contour>
+      <point x="-157" y="597" type="line"/>
+      <point x="-31" y="751" type="line"/>
+      <point x="31" y="751" type="line"/>
+      <point x="157" y="597" type="line"/>
+      <point x="129" y="577" type="line"/>
+      <point x="0" y="679" type="line"/>
+      <point x="-129" y="577" type="line"/>
+    </contour>
+    <contour>
+      <point x="-260" y="862" type="line"/>
+      <point x="-181" y="902" type="line"/>
+      <point x="-105" y="723" type="line"/>
+      <point x="-136" y="708" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]
+push 6
+MDAP[1]
+push 15 6 1
+DELTAP1
+push 79 6 1
+DELTAP1
+push 47 6 1
+DELTAP1
+push 1
+MDRP[11100]
+push 6
+SRP0
+push 4
+MDRP[10000]
+push 1
+SRP0
+push 5
+MDRP[11100]
+push 10 1 5
+SRP1
+SRP2
+IP
+RUTG
+push 10
+MDAP[1]
+RTG
+push 8
+MDRP[11100]
+IUP[0]
+IUP[1]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w0l-157+597l-31+751l31+751l157+597l129+577l0+679l-129+577l-260+862l-181+902l-105+723l-136+708</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="arrowleftarrowright" format="2">
+  <advance width="860"/>
+  <unicode hex="21C6"/>
+  <outline>
+    <component base="arrowright" yOffset="-148"/>
+    <component base="arrowleft" yOffset="148"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>80db2a6ed000d91407000cd5a40aa29a2b3057f55a611be063c52909a71da662d5c8fb67be7a35c07631855b47ebbd36b28d8df6b2fd324911697b9d020d38cc</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

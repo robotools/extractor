@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04BA" format="2">
+  <advance width="726"/>
+  <unicode hex="04BA"/>
+  <outline>
+    <contour>
+      <point x="52" y="50" type="line"/>
+      <point x="126" y="50" type="line"/>
+      <point x="126" y="648" type="line"/>
+      <point x="52" y="648" type="line"/>
+      <point x="52" y="698" type="line"/>
+      <point x="301" y="698" type="line"/>
+      <point x="301" y="648" type="line"/>
+      <point x="227" y="648" type="line"/>
+      <point x="227" y="394" type="line"/>
+      <point x="231" y="394" type="line"/>
+      <point x="263" y="412"/>
+      <point x="341" y="431"/>
+      <point x="392" y="431" type="qcurve"/>
+      <point x="511" y="431"/>
+      <point x="618" y="326"/>
+      <point x="618" y="213" type="qcurve"/>
+      <point x="618" y="50" type="line"/>
+      <point x="692" y="50" type="line"/>
+      <point x="692" y="0" type="line"/>
+      <point x="443" y="0" type="line"/>
+      <point x="443" y="50" type="line"/>
+      <point x="517" y="50" type="line"/>
+      <point x="517" y="209" type="line"/>
+      <point x="517" y="302"/>
+      <point x="446" y="378"/>
+      <point x="370" y="378" type="qcurve"/>
+      <point x="325" y="378"/>
+      <point x="256" y="359"/>
+      <point x="227" y="341" type="qcurve"/>
+      <point x="227" y="50" type="line"/>
+      <point x="301" y="50" type="line"/>
+      <point x="301" y="0" type="line"/>
+      <point x="52" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]
+push 0
+RCVT
+IF
+  push 4
+  MDAP[1]
+ELSE
+  push 4 28
+  MIAP[0]
+EIF
+push 0
+RCVT
+IF
+  push 32
+  MDAP[1]
+ELSE
+  push 32 18
+  MIAP[0]
+EIF
+push 0
+RCVT
+IF
+  push 19
+  MDAP[1]
+ELSE
+  push 19 18
+  MIAP[0]
+EIF
+push 32
+SRP0
+push 0 1
+MIRP[10100]
+push 4
+SRP0
+push 3 1
+MIRP[10100]
+push 7
+MDRP[10000]
+push 12 4 32
+SRP1
+SRP2
+IP
+push 12
+MDAP[1]
+push 0 12 1
+DELTAP1
+push 176 12 1
+DELTAP1
+push 224 12 1
+DELTAP1
+push 25 1
+MIRP[10100]
+push 8 12 25
+SRP1
+SRP2
+IP
+push 19
+SRP0
+push 20 1
+MIRP[10100]
+push 16
+MDRP[10000]
+push 0
+SRP0
+push 29
+MDRP[10000]
+IUP[0]
+IUP[1]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>32404689dd011df21913462dbe72381d2859e0a7c47f1f015167fedc2847adf7518f0776395a3c509092a8f83fae1debf651603ef993e79a1ada7664633a83a1</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

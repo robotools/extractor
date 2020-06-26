@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2153" format="2">
+  <advance width="897"/>
+  <unicode hex="2153"/>
+  <outline>
+    <component base="onesuperior"/>
+    <component base="fraction" xOffset="403"/>
+    <component base="threeinferior" xOffset="550"/>
+  </outline>
+</glyph>

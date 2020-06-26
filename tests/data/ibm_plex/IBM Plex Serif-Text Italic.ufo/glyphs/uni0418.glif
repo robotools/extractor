@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni0418" format="2">
+  <advance width="732"/>
+  <unicode hex="0418"/>
+  <anchor x="475" y="698" name="top"/>
+  <outline>
+    <contour>
+      <point x="-10" y="45" type="line" name="sv01"/>
+      <point x="60" y="45" type="line"/>
+      <point x="212" y="653" type="line"/>
+      <point x="142" y="653" type="line" name="sv02"/>
+      <point x="153" y="698" type="line" name="at01"/>
+      <point x="391" y="698" type="line"/>
+      <point x="380" y="653" type="line"/>
+      <point x="310" y="653" type="line" name="sv03"/>
+      <point x="237" y="360" type="line"/>
+      <point x="183" y="171" type="line" name="sv04"/>
+      <point x="186" y="171" type="line"/>
+      <point x="610" y="620" type="line" name="iv02"/>
+      <point x="619" y="653" type="line"/>
+      <point x="549" y="653" type="line" name="sv05"/>
+      <point x="560" y="698" type="line" name="at02"/>
+      <point x="798" y="698" type="line"/>
+      <point x="787" y="653" type="line"/>
+      <point x="717" y="653" type="line" name="sv06"/>
+      <point x="565" y="45" type="line" name="sv08"/>
+      <point x="635" y="45" type="line"/>
+      <point x="624" y="0" type="line"/>
+      <point x="386" y="0" type="line" name="ab02"/>
+      <point x="397" y="45" type="line" name="sv07"/>
+      <point x="467" y="45" type="line"/>
+      <point x="540" y="338" type="line"/>
+      <point x="594" y="527" type="line"/>
+      <point x="591" y="527" type="line" name="sv09"/>
+      <point x="166" y="78" type="line" name="iv01"/>
+      <point x="158" y="45" type="line" name="sv10"/>
+      <point x="228" y="45" type="line"/>
+      <point x="217" y="0" type="line"/>
+      <point x="-21" y="0" type="line" name="ab01"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0ic3YwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjAiIHdpZHRoPSI0NSIgLz4KICAgICAgPGhzdGVtIHBvcz0iNjUzIi
+      B3aWR0aD0iNDUiIC8+CiAgICAgIDx2c3RlbSBwb3M9Ii0yMSIgd2lkdGg9IjgxOSIgLz4
+      KICAgIDwvaGludHNldD4KICA8L2hpbnRTZXRMaXN0Pgo=
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJjYXBoZWlnaHQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ250IiBwb2ludD0iYXQwMi
+      Igem9uZT0iY2FwaGVpZ2h0Ii8+CiAgICA8dHRjIGNvZGU9ImFsaWduYiIgcG9pbnQ9ImF
+      iMDEiIHpvbmU9ImJhc2VsaW5lIi8+CiAgICA8dHRjIGNvZGU9ImFsaWduYiIgcG9pbnQ9
+      ImFiMDIiIHpvbmU9ImJhc2VsaW5lIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBva
+      W50MT0iYWIwMSIgcG9pbnQyPSJzdjAxIiBzdGVtPSJ1Y19zZXJpZiIvPgogICAgPHR0Yy
+      Bjb2RlPSJzaW5nbGV2IiBwb2ludDE9ImF0MDEiIHBvaW50Mj0ic3YwMiIgc3RlbT0idWN
+      fc2VyaWYiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJzdjAyIiBwb2lu
+      dDI9InN2MDMiLz4KICAgIDx0dGMgY29kZT0iaW50ZXJwb2xhdGV2IiBwb2ludD0iaXYwM
+      SIgcG9pbnQxPSJhdDAxIiBwb2ludDI9ImFiMDEiLz4KICAgIDx0dGMgY29kZT0ic2luZ2
+      xldiIgcG9pbnQxPSJpdjAxIiBwb2ludDI9InN2MDQiLz4KICAgIDx0dGMgY29kZT0iaW5
+      0ZXJwb2xhdGV2IiBwb2ludD0iaXYwMiIgcG9pbnQxPSJhdDAyIiBwb2ludDI9ImFiMDIi
+      Lz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhdDAyIiBwb2ludDI9InN2M
+      DUiIHN0ZW09InVjX3NlcmlmIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT
+      0ic3YwNSIgcG9pbnQyPSJzdjA2Ii8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW5
+      0MT0iYWIwMiIgcG9pbnQyPSJzdjA3IiBzdGVtPSJ1Y19zZXJpZiIvPgogICAgPHR0YyBj
+      b2RlPSJzaW5nbGV2IiBwb2ludDE9InN2MDciIHBvaW50Mj0ic3YwOCIvPgogICAgPHR0Y
+      yBjb2RlPSJzaW5nbGV2IiBwb2ludDE9Iml2MDIiIHBvaW50Mj0ic3YwOSIvPgogICAgPH
+      R0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9InN2MDEiIHBvaW50Mj0ic3YxMCIvPgogIDw
+      vdHRQcm9ncmFtPgo=
+      </data>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>75.96</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>300.0</real>
+          <key>y</key>
+          <real>0.0</real>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

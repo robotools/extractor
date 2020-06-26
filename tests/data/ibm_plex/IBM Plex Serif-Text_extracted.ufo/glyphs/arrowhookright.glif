@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="arrowhookright" format="2">
+  <advance width="860"/>
+  <unicode hex="21AA"/>
+  <outline>
+    <contour>
+      <point x="545" y="103" type="line"/>
+      <point x="661" y="269" type="line"/>
+      <point x="282" y="249" type="line"/>
+      <point x="235" y="249"/>
+      <point x="158" y="274"/>
+      <point x="104" y="319"/>
+      <point x="74" y="384"/>
+      <point x="74" y="424" type="qcurve"/>
+      <point x="74" y="466"/>
+      <point x="105" y="530"/>
+      <point x="160" y="575"/>
+      <point x="237" y="598"/>
+      <point x="282" y="598" type="qcurve"/>
+      <point x="282" y="518" type="line"/>
+      <point x="259" y="518"/>
+      <point x="217" y="507"/>
+      <point x="185" y="484"/>
+      <point x="166" y="448"/>
+      <point x="166" y="424" type="qcurve"/>
+      <point x="166" y="399"/>
+      <point x="185" y="363"/>
+      <point x="218" y="340"/>
+      <point x="259" y="329"/>
+      <point x="282" y="329" type="qcurve"/>
+      <point x="661" y="309" type="line"/>
+      <point x="545" y="475" type="line"/>
+      <point x="576" y="500" type="line"/>
+      <point x="787" y="289" type="line"/>
+      <point x="576" y="78" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+PUSHB 13 9 12 2 9 23 12 23
+SVTCA[0]
+MDAP[1]
+MDAP[1]
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>47bc913f4eba019dfdb2683b153339cc493113f199261d79408cb240586cfd3ecad8a8ee8c5064bf9bdd904b240c9fd3c85772bd0d557f59674864a87fcc6cc1</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

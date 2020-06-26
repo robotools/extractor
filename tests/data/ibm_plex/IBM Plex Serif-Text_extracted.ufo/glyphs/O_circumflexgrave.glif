@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ocircumflexgrave" format="2">
+  <advance width="724"/>
+  <unicode hex="1ED2"/>
+  <outline>
+    <component base="O"/>
+    <component base="circumflexgrave.case" xOffset="362"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>2546bd93e473ed3dea8b8512f00273b14b92b466da3a1b647c233692f8f5a3415b279571bebd82c071c4c7a23be38f99f1d608a77b7cb212202fb13733b6a8e7</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

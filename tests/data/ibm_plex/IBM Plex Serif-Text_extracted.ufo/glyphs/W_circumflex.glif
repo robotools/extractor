@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Wcircumflex" format="2">
+  <advance width="979"/>
+  <unicode hex="0174"/>
+  <outline>
+    <component base="W"/>
+    <component base="circumflex.case" xOffset="208"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>91eb8053cfde5b18ef317a4cb9378f9eb7355629e9cab3ff8e0f7bc36c2c0d20438ba33553f69178d53a82b43315157157be0ea072ebba2a4eb3d1f67f998ba6</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

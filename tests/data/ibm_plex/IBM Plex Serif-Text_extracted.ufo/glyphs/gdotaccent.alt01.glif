@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="gdotaccent.alt01" format="2">
+  <advance width="582"/>
+  <outline>
+    <component base="g.alt01"/>
+    <component base="dotaccent" xOffset="-26"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>9a61519e6874d2ab8b414977ff6bdfb37cb44959cbce589b47c4f8fe283baf5728c567a3a6bc271cb21a729ea3aa8ebfc5a1778ef1a079fa9b86cc8ae26e614c</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

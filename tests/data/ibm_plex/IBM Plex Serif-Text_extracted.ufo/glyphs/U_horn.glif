@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Uhorn" format="2">
+  <advance width="741"/>
+  <unicode hex="01AF"/>
+  <outline>
+    <contour>
+      <point x="381" y="-12" type="qcurve"/>
+      <point x="310" y="-12"/>
+      <point x="211" y="19"/>
+      <point x="147" y="86"/>
+      <point x="118" y="193"/>
+      <point x="118" y="269" type="qcurve"/>
+      <point x="118" y="648" type="line"/>
+      <point x="44" y="648" type="line"/>
+      <point x="44" y="698" type="line"/>
+      <point x="293" y="698" type="line"/>
+      <point x="293" y="648" type="line"/>
+      <point x="219" y="648" type="line"/>
+      <point x="219" y="255" type="line"/>
+      <point x="219" y="151"/>
+      <point x="293" y="49"/>
+      <point x="389" y="49" type="qcurve"/>
+      <point x="485" y="49"/>
+      <point x="565" y="151"/>
+      <point x="565" y="255" type="qcurve"/>
+      <point x="565" y="648" type="line"/>
+      <point x="491" y="648" type="line"/>
+      <point x="491" y="698" type="line"/>
+      <point x="642" y="698" type="line"/>
+      <point x="642" y="808" type="line"/>
+      <point x="726" y="808" type="line"/>
+      <point x="726" y="725" type="line"/>
+      <point x="726" y="696"/>
+      <point x="691" y="660"/>
+      <point x="654" y="660" type="qcurve"/>
+      <point x="624" y="660" type="line"/>
+      <point x="624" y="279" type="line"/>
+      <point x="624" y="204"/>
+      <point x="599" y="95"/>
+      <point x="541" y="23"/>
+      <point x="448" y="-12"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 23 29 20 23 21 20 3 21 15 5 0 11 7 3 8 0 20 10 21 28 10 8 28 10
+SVTCA[0]
+CALL
+CALL
+CALL
+SRP0
+MIRP[10100]
+MDRP[10000]
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP0
+MDRP[11100]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>f49374f029999b9b73151926e731b8baffd8d60ade71a7ac73dddf17623686a8fcff4b306143eb20e4ed0ad38e455d4670cc9f679ef698b55ef28e4292cab39d</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

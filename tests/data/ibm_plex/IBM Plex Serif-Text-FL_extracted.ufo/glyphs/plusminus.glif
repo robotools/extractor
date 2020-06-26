@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="plusminus" format="2">
+  <advance width="600"/>
+  <unicode hex="00B1"/>
+  <outline>
+    <contour>
+      <point x="269" y="364" type="line"/>
+      <point x="66" y="364" type="line"/>
+      <point x="66" y="422" type="line"/>
+      <point x="269" y="422" type="line"/>
+      <point x="269" y="615" type="line"/>
+      <point x="331" y="615" type="line"/>
+      <point x="331" y="422" type="line"/>
+      <point x="534" y="422" type="line"/>
+      <point x="534" y="364" type="line"/>
+      <point x="331" y="364" type="line"/>
+      <point x="331" y="171" type="line"/>
+      <point x="269" y="171" type="line"/>
+    </contour>
+    <contour>
+      <point x="66" y="58" type="line"/>
+      <point x="534" y="58" type="line"/>
+      <point x="534" y="0" type="line"/>
+      <point x="66" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]
+push 11
+MDAP[1]
+push 0
+RCVT
+IF
+  push 15
+  MDAP[1]
+ELSE
+  push 15 18
+  MIAP[0]
+EIF
+push 11
+SRP0
+push 1
+MDRP[11100]
+push 2 6
+MIRP[10100]
+push 4
+MDRP[11100]
+push 2
+SRP0
+push 6
+MDRP[10000]
+push 1
+SRP0
+push 9
+MDRP[10000]
+push 15
+SRP0
+push 12 6
+MIRP[10100]
+IUP[0]
+IUP[1]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w600l269+364l66+364l66+422l269+422l269+615l331+615l331+422l534+422l534+364l331+364l331+171l269+171l66+58l534+58l534+0l66+0</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

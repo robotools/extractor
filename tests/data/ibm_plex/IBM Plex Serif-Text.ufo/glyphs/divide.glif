@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="divide" format="2">
+  <advance width="600"/>
+  <unicode hex="00F7"/>
+  <outline>
+    <contour>
+      <point x="300" y="57" type="qcurve" name="sv03"/>
+      <point x="270" y="57"/>
+      <point x="237" y="93"/>
+      <point x="237" y="118" type="qcurve"/>
+      <point x="237" y="124" type="line"/>
+      <point x="237" y="149"/>
+      <point x="270" y="185"/>
+      <point x="300" y="185" type="qcurve" name="sv02"/>
+      <point x="330" y="185"/>
+      <point x="363" y="149"/>
+      <point x="363" y="124" type="qcurve"/>
+      <point x="363" y="118" type="line"/>
+      <point x="363" y="93"/>
+      <point x="330" y="57"/>
+    </contour>
+    <contour>
+      <point x="300" y="425" type="qcurve" name="sv04"/>
+      <point x="270" y="425"/>
+      <point x="237" y="461"/>
+      <point x="237" y="486" type="qcurve"/>
+      <point x="237" y="492" type="line"/>
+      <point x="237" y="517"/>
+      <point x="270" y="553"/>
+      <point x="300" y="553" type="qcurve" name="sv05"/>
+      <point x="330" y="553"/>
+      <point x="363" y="517"/>
+      <point x="363" y="492" type="qcurve"/>
+      <point x="363" y="486" type="line"/>
+      <point x="363" y="461"/>
+      <point x="330" y="425"/>
+    </contour>
+    <contour>
+      <point x="66" y="334" type="line" name="av01"/>
+      <point x="534" y="334" type="line"/>
+      <point x="534" y="276" type="line"/>
+      <point x="66" y="276" type="line" name="sv01"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0ic3YwMyI+CiAgICAgI
+      Dxoc3RlbTMgc3RlbTNMaXN0PSI1NywxMjgsMjc2LDU4LDQyNSwxMjgiIC8+CiAgICAgID
+      x2c3RlbSBwb3M9IjIzNyIgd2lkdGg9IjEyNiIgLz4KICAgIDwvaGludHNldD4KICA8L2h
+      pbnRTZXRMaXN0Pgo=
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnYiIHBvaW50PSJhdjAxIiBhb
+      Glnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhdjAxIi
+      Bwb2ludDI9InN2MDEiIHN0ZW09InVjX3N0ZW0iLz4KICAgIDx0dGMgY29kZT0ic2luZ2x
+      ldiIgcG9pbnQxPSJzdjAxIiBwb2ludDI9InN2MDIiIHJvdW5kPSJ0cnVlIi8+CiAgICA8
+      dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0ic3YwMiIgcG9pbnQyPSJzdjAzIiByb3VuZ
+      D0idHJ1ZSIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9ImF2MDEiIHBvaW
+      50Mj0ic3YwNCIgcm91bmQ9InRydWUiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9
+      pbnQxPSJzdjA0IiBwb2ludDI9InN2MDUiIHJvdW5kPSJ0cnVlIi8+CiAgPC90dFByb2dy
+      YW0+Cg==
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  MDAP[R] 28
+  MIRP[MdRGr] 31 5
+  MDRP[MDRGr] 7
+  MDRP[MDRGr] 0
+  SRP0 28
+  MDRP[MDRGr] 14
+  MDRP[MDRGr] 21
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>2f6e50b658eb63c512af1eb47ec04936f151eaf5a84802c93fc431d27fdbe331cc2e2edf7f43d6a71e4481606f27d019b39040eddb65973b14f7d437f809c35b</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

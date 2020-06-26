@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni040A" format="2">
+  <advance width="1021"/>
+  <unicode hex="040A"/>
+  <outline>
+    <contour>
+      <point x="52" y="50" type="line"/>
+      <point x="126" y="50" type="line"/>
+      <point x="126" y="648" type="line"/>
+      <point x="52" y="648" type="line"/>
+      <point x="52" y="698" type="line"/>
+      <point x="301" y="698" type="line"/>
+      <point x="301" y="648" type="line"/>
+      <point x="227" y="648" type="line"/>
+      <point x="227" y="384" type="line"/>
+      <point x="532" y="384" type="line"/>
+      <point x="532" y="648" type="line"/>
+      <point x="458" y="648" type="line"/>
+      <point x="458" y="698" type="line"/>
+      <point x="707" y="698" type="line"/>
+      <point x="707" y="648" type="line"/>
+      <point x="633" y="648" type="line"/>
+      <point x="633" y="412" type="line"/>
+      <point x="772" y="412" type="line"/>
+      <point x="875" y="412"/>
+      <point x="981" y="309"/>
+      <point x="981" y="206" type="qcurve"/>
+      <point x="981" y="103"/>
+      <point x="875" y="0"/>
+      <point x="772" y="0" type="qcurve"/>
+      <point x="458" y="0" type="line"/>
+      <point x="458" y="50" type="line"/>
+      <point x="532" y="50" type="line"/>
+      <point x="532" y="330" type="line"/>
+      <point x="227" y="330" type="line"/>
+      <point x="227" y="50" type="line"/>
+      <point x="301" y="50" type="line"/>
+      <point x="301" y="0" type="line"/>
+      <point x="52" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="760" y="54" type="line"/>
+      <point x="816" y="54"/>
+      <point x="875" y="119"/>
+      <point x="875" y="175" type="qcurve"/>
+      <point x="875" y="237" type="line"/>
+      <point x="875" y="293"/>
+      <point x="816" y="358"/>
+      <point x="760" y="358" type="qcurve"/>
+      <point x="633" y="358" type="line"/>
+      <point x="633" y="54" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 56 42 5 24 29 0 28 5 8 25 3 24 16 5 0 41 1 10 41 41 12 24 15 11 3 12 15 8 47 8 63 8 3 9 8 8 4 32 7 3 3 4 0 3 32 24 20 10 32 20 10 12 28 10 4 28 10
+SVTCA[0]
+CALL
+CALL
+CALL
+CALL
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+MDRP[10000]
+SRP1
+SRP2
+IP
+MDAP[1]
+SDB
+DELTAP1
+SRP0
+MIRP[10100]
+MDRP[10000]
+SRP1
+SRP2
+IP
+MDAP[1]
+SDB
+DELTAP1
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP0
+MDRP[10000]
+SRP0
+MIRP[10100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>fa6681fff1ef442bf1ce7ab5cc5ef57ad4c2130dc8cfbe66ce07a8f886fe30b8460a562978739a473efa8f8271af8ef17f4fadf691e4247b006e8204b46956c3</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

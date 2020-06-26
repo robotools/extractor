@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="five" format="2">
+  <advance width="600"/>
+  <unicode hex="0035"/>
+  <outline>
+    <contour>
+      <point x="268" y="-12" type="qcurve"/>
+      <point x="221" y="-12"/>
+      <point x="146" y="10"/>
+      <point x="93" y="46"/>
+      <point x="64" y="92"/>
+      <point x="64" y="116" type="qcurve"/>
+      <point x="64" y="148"/>
+      <point x="99" y="185"/>
+      <point x="127" y="185" type="qcurve"/>
+      <point x="156" y="185"/>
+      <point x="192" y="149"/>
+      <point x="192" y="121" type="qcurve"/>
+      <point x="192" y="101"/>
+      <point x="169" y="69"/>
+      <point x="155" y="63" type="qcurve"/>
+      <point x="155" y="59" type="line"/>
+      <point x="170" y="50"/>
+      <point x="224" y="39"/>
+      <point x="258" y="39" type="qcurve"/>
+      <point x="338" y="39"/>
+      <point x="418" y="118"/>
+      <point x="418" y="190" type="qcurve"/>
+      <point x="418" y="214" type="line"/>
+      <point x="418" y="285"/>
+      <point x="344" y="365"/>
+      <point x="274" y="365" type="qcurve"/>
+      <point x="229" y="365"/>
+      <point x="168" y="327"/>
+      <point x="152" y="301" type="qcurve"/>
+      <point x="95" y="313" type="line"/>
+      <point x="120" y="698" type="line"/>
+      <point x="495" y="698" type="line"/>
+      <point x="495" y="603" type="line"/>
+      <point x="165" y="603" type="line"/>
+      <point x="146" y="342" type="line"/>
+      <point x="150" y="341" type="line"/>
+      <point x="169" y="376"/>
+      <point x="248" y="430"/>
+      <point x="308" y="430" type="qcurve"/>
+      <point x="355" y="430"/>
+      <point x="435" y="402"/>
+      <point x="494" y="347"/>
+      <point x="527" y="264"/>
+      <point x="527" y="209" type="qcurve"/>
+      <point x="527" y="159"/>
+      <point x="490" y="78"/>
+      <point x="422" y="20"/>
+      <point x="326" y="-12"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 28 0 8 16 8 2 9 8 8 25 18 25 6 38 38 33 18 18 3 0 33 11 30 0 20 10 30 28 10
+SVTCA[0]
+CALL
+CALL
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+SDB
+DELTAP1
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>6d11ec217092a5e6bc013952d812766abe1de8f5dc2f19ce4d4bb44210523437fb13139bc06ab7551bc214fb730a1c107a5eb585791404109276abba75d0f569</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

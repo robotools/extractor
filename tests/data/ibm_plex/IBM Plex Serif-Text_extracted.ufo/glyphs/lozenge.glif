@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lozenge" format="2">
+  <advance width="600"/>
+  <unicode hex="25CA"/>
+  <outline>
+    <contour>
+      <point x="47" y="349" type="line"/>
+      <point x="262" y="698" type="line"/>
+      <point x="337" y="698" type="line"/>
+      <point x="552" y="349" type="line"/>
+      <point x="337" y="0" type="line"/>
+      <point x="262" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="296" y="56" type="line"/>
+      <point x="303" y="56" type="line"/>
+      <point x="482" y="349" type="line"/>
+      <point x="303" y="642" type="line"/>
+      <point x="296" y="642" type="line"/>
+      <point x="117" y="349" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 9 10 1 6 5 20 10 1 28 10
+SVTCA[0]
+CALL
+CALL
+MDRP[10000]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w600l47349l262698l337698l552349l3370l2620l29656l30356l482349l303642l296642l117349</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

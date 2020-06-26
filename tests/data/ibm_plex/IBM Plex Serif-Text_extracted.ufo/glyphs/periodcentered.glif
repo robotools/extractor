@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="periodcentered" format="2">
+  <advance width="324"/>
+  <unicode hex="00B7"/>
+  <outline>
+    <contour>
+      <point x="162" y="236" type="qcurve"/>
+      <point x="130" y="236"/>
+      <point x="95" y="274"/>
+      <point x="95" y="301" type="qcurve"/>
+      <point x="95" y="307" type="line"/>
+      <point x="95" y="334"/>
+      <point x="130" y="372"/>
+      <point x="162" y="372" type="qcurve"/>
+      <point x="194" y="372"/>
+      <point x="229" y="334"/>
+      <point x="229" y="307" type="qcurve"/>
+      <point x="229" y="301" type="line"/>
+      <point x="229" y="274"/>
+      <point x="194" y="236"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+PUSHB 0 7
+SVTCA[0]
+MDAP[1]
+MDRP[11100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w324q16223613023695274q95301l9530795334130372q162372194372229334q229307l229301229274194236</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

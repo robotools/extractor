@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="litre" format="2">
+  <advance width="497"/>
+  <unicode hex="2113"/>
+  <outline>
+    <contour>
+      <point x="277" y="-12" type="qcurve" name="ab01"/>
+      <point x="201" y="-12"/>
+      <point x="122" y="84"/>
+      <point x="122" y="162" type="qcurve"/>
+      <point x="122" y="186" type="line" name="sv02"/>
+      <point x="110" y="178"/>
+      <point x="77" y="156"/>
+      <point x="60" y="148" type="qcurve" name="sv03"/>
+      <point x="37" y="187" type="line" name="sv04"/>
+      <point x="58" y="201"/>
+      <point x="104" y="231"/>
+      <point x="120" y="242" type="qcurve" name="iv01"/>
+      <point x="120" y="567" type="line"/>
+      <point x="120" y="621"/>
+      <point x="141" y="694"/>
+      <point x="179" y="740"/>
+      <point x="232" y="760"/>
+      <point x="264" y="760" type="qcurve" name="at01"/>
+      <point x="332" y="760"/>
+      <point x="400" y="672"/>
+      <point x="400" y="590" type="qcurve"/>
+      <point x="400" y="490"/>
+      <point x="293" y="313"/>
+      <point x="190" y="226" type="qcurve" name="sv05"/>
+      <point x="190" y="179" type="line"/>
+      <point x="190" y="106"/>
+      <point x="240" y="42"/>
+      <point x="288" y="42" type="qcurve" name="sv01"/>
+      <point x="335" y="42"/>
+      <point x="401" y="107"/>
+      <point x="424" y="158" type="qcurve"/>
+      <point x="466" y="133" type="line"/>
+      <point x="453" y="103"/>
+      <point x="418" y="50"/>
+      <point x="371" y="11"/>
+      <point x="313" y="-12"/>
+    </contour>
+    <contour>
+      <point x="189" y="290" type="line" name="sv06"/>
+      <point x="261" y="353"/>
+      <point x="331" y="505"/>
+      <point x="331" y="575" type="qcurve"/>
+      <point x="331" y="607" type="line"/>
+      <point x="331" y="659"/>
+      <point x="295" y="706"/>
+      <point x="266" y="706" type="qcurve" name="sv07"/>
+      <point x="249" y="706"/>
+      <point x="221" y="695"/>
+      <point x="200" y="668"/>
+      <point x="189" y="623"/>
+      <point x="189" y="590" type="qcurve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0iYWIwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9Ii0xMiIgd2lkdGg9IjU0IiAvPgogICAgICA8aHN0ZW0gcG9zPSI3MD
+      YiIHdpZHRoPSI1NCIgLz4KICAgICAgPHZzdGVtIHBvcz0iMTIwIiB3aWR0aD0iNjkiIC8
+      +CiAgICAgIDx2c3RlbSBwb3M9IjMzMSIgd2lkdGg9IjY5IiAvPgogICAgPC9oaW50c2V0
+      PgogIDwvaGludFNldExpc3Q+Cg==
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJhc2NlbmRlciIvPgogICAgPHR0YyBjb2RlPSJhbGlnbmIiIHBvaW50PSJhYjAxIi
+      B6b25lPSJiYXNlbGluZSIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9ImF
+      iMDEiIHBvaW50Mj0ic3YwMSIgc3RlbT0ic3RlbV9zZXJpZiIvPgogICAgPHR0YyBjb2Rl
+      PSJpbnRlcnBvbGF0ZXYiIHBvaW50PSJpdjAxIiBwb2ludDE9ImF0MDEiIHBvaW50Mj0ic
+      3YwMSIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9Iml2MDEiIHBvaW50Mj
+      0ic3YwMiIgc3RlbT0ic3RlbV9zZXJpZiIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiB
+      wb2ludDE9InN2MDIiIHBvaW50Mj0ic3YwMyIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2
+      IiBwb2ludDE9Iml2MDEiIHBvaW50Mj0ic3YwNCIvPgogICAgPHR0YyBjb2RlPSJzaW5nb
+      GV2IiBwb2ludDE9InN2MDIiIHBvaW50Mj0ic3YwNSIvPgogICAgPHR0YyBjb2RlPSJzaW
+      5nbGV2IiBwb2ludDE9Iml2MDEiIHBvaW50Mj0ic3YwNiIvPgogICAgPHR0YyBjb2RlPSJ
+      zaW5nbGV2IiBwb2ludDE9ImF0MDEiIHBvaW50Mj0ic3YwNyIgc3RlbT0ic3RlbV9zZXJp
+      ZiIvPgogIDwvdHRQcm9ncmFtPgo=
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  CALL zone_align 17 32
+  CALL zone_align 0 20
+  MIRP[MdRGr] 27 3
+  SRP1 27
+  SRP2 17
+  IP 11
+  SRP0 11
+  MIRP[MdRGr] 4 3
+  MDRP[MdrGr] 7
+  SRP0 11
+  MDRP[MdrGr] 8
+  SRP0 4
+  MDRP[MdrGr] 23
+  SRP0 11
+  MDRP[MdrGr] 36
+  SRP0 17
+  MIRP[MdRGr] 43 3
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>15684875538cd0bff432201f63a6298be38fd402e953a9d06b4efcaa1f034b48a4f5b89ec40fcce0c7fdd6796218e131da29c0150b5768368cbb00ca74cbd2d3</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

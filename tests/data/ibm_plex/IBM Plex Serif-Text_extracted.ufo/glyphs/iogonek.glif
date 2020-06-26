@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="iogonek" format="2">
+  <advance width="332"/>
+  <unicode hex="012F"/>
+  <outline>
+    <contour>
+      <point x="227" y="-206" type="qcurve"/>
+      <point x="186" y="-206"/>
+      <point x="130" y="-170"/>
+      <point x="130" y="-130" type="qcurve"/>
+      <point x="130" y="-92"/>
+      <point x="189" y="-35"/>
+      <point x="238" y="-4" type="qcurve"/>
+      <point x="237" y="0" type="line"/>
+      <point x="48" y="0" type="line"/>
+      <point x="48" y="50" type="line"/>
+      <point x="119" y="50" type="line"/>
+      <point x="119" y="446" type="line"/>
+      <point x="48" y="459" type="line"/>
+      <point x="48" y="497" type="line"/>
+      <point x="215" y="530" type="line"/>
+      <point x="215" y="50" type="line"/>
+      <point x="286" y="50" type="line"/>
+      <point x="286" y="0" type="line"/>
+      <point x="257" y="-24"/>
+      <point x="225" y="-60"/>
+      <point x="208" y="-88"/>
+      <point x="204" y="-110"/>
+      <point x="204" y="-119" type="qcurve"/>
+      <point x="204" y="-139"/>
+      <point x="229" y="-165"/>
+      <point x="250" y="-165" type="qcurve"/>
+      <point x="264" y="-165"/>
+      <point x="286" y="-152"/>
+      <point x="293" y="-143" type="qcurve"/>
+      <point x="317" y="-166" type="line"/>
+      <point x="306" y="-183"/>
+      <point x="262" y="-206"/>
+    </contour>
+    <contour>
+      <point x="167" y="627" type="qcurve"/>
+      <point x="138" y="627"/>
+      <point x="107" y="661"/>
+      <point x="107" y="686" type="qcurve"/>
+      <point x="107" y="691" type="line"/>
+      <point x="107" y="716"/>
+      <point x="138" y="750"/>
+      <point x="167" y="750" type="qcurve"/>
+      <point x="196" y="750"/>
+      <point x="227" y="716"/>
+      <point x="227" y="691" type="qcurve"/>
+      <point x="227" y="686" type="line"/>
+      <point x="227" y="661"/>
+      <point x="196" y="627"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 51 39 32 14 28 25 0 17 8 15 9 12 3 13 13 14 11 11 7 14 9 3 8 0 0 16 0 32 0 48 0 64 0 80 0 96 0 112 0 128 0 9 9 0 22 10 8 20 10 14 26 10
+SVTCA[0]
+CALL
+CALL
+CALL
+SDB
+DELTAP1
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+MIRP[10100]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[11100]
+MDRP[11100]
+SRP0
+MDRP[11100]
+MDRP[11100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>e88e9649d66ff7ce2aa5a315a9621d7a49ccde315c26686c6ffe405e326e4900e1f1f9b59593e1d83fca20de577ad4f0fe91b688daa25416e33c299a83b87643</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

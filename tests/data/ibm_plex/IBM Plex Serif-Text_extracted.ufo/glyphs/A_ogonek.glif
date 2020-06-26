@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Aogonek" format="2">
+  <advance width="689"/>
+  <unicode hex="0104"/>
+  <outline>
+    <contour>
+      <point x="598" y="-206" type="qcurve"/>
+      <point x="559" y="-206"/>
+      <point x="505" y="-170"/>
+      <point x="505" y="-130" type="qcurve"/>
+      <point x="505" y="-92"/>
+      <point x="573" y="-33"/>
+      <point x="626" y="-4" type="qcurve"/>
+      <point x="625" y="0" type="line"/>
+      <point x="427" y="0" type="line"/>
+      <point x="427" y="50" type="line"/>
+      <point x="515" y="50" type="line"/>
+      <point x="455" y="224" type="line"/>
+      <point x="191" y="224" type="line"/>
+      <point x="131" y="50" type="line"/>
+      <point x="219" y="50" type="line"/>
+      <point x="219" y="0" type="line"/>
+      <point x="16" y="0" type="line"/>
+      <point x="16" y="50" type="line"/>
+      <point x="68" y="50" type="line"/>
+      <point x="293" y="698" type="line"/>
+      <point x="396" y="698" type="line"/>
+      <point x="621" y="50" type="line"/>
+      <point x="673" y="50" type="line"/>
+      <point x="673" y="0" type="line"/>
+      <point x="642" y="-26"/>
+      <point x="605" y="-63"/>
+      <point x="585" y="-90"/>
+      <point x="579" y="-110"/>
+      <point x="579" y="-119" type="qcurve"/>
+      <point x="579" y="-139"/>
+      <point x="601" y="-165"/>
+      <point x="621" y="-165" type="qcurve"/>
+      <point x="635" y="-165"/>
+      <point x="657" y="-152"/>
+      <point x="664" y="-143" type="qcurve"/>
+      <point x="688" y="-166" type="line"/>
+      <point x="677" y="-183"/>
+      <point x="633" y="-206"/>
+    </contour>
+    <contour>
+      <point x="207" y="276" type="line"/>
+      <point x="441" y="276" type="line"/>
+      <point x="326" y="617" type="line"/>
+      <point x="322" y="617" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 54 41 19 34 31 0 23 8 21 9 13 17 3 16 12 5 38 38 19 16 9 3 8 0 0 16 0 32 0 48 0 64 0 80 0 96 0 112 0 128 0 9 9 0 22 10 8 20 10 16 20 10 19 28 10
+SVTCA[0]
+CALL
+CALL
+CALL
+CALL
+SDB
+DELTAP1
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+MIRP[10100]
+SRP0
+MIRP[10100]
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[11100]
+MDRP[11100]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>ca45d352f3f0194ab3f266d05edeff152aa66a283294c006ec83baf59df33532aac965db6c4858cbb21bab0e0e88091f15a2a0ba3850263dec3b003d87a7229a</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

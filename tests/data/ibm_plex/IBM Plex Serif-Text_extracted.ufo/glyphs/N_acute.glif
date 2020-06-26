@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Nacute" format="2">
+  <advance width="780"/>
+  <unicode hex="0143"/>
+  <outline>
+    <component base="N"/>
+    <component base="acute.case" xOffset="99"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>1546d89126afc1a4077275ff19d371eaf4293e0174e506b827aefdca4dde61833568faf5cfc538d5c87c6953e840d7e942a1f86b4d27f2444aa9e4660c21f179</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

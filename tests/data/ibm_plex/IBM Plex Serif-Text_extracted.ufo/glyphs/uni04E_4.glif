@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04E4" format="2">
+  <advance width="792"/>
+  <unicode hex="04E4"/>
+  <outline>
+    <component base="uni0418"/>
+    <component base="dieresis.case" xOffset="96"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>ef81b0fe1304c9e47cca00491af44359ba6f93466064cf1275848991bf4e39d0a2de93f9e5ad0531f2f5a390eebe5c879536b9e90c4217b4f7ab4c4679ed7047</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

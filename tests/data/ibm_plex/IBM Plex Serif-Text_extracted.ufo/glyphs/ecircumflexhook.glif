@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ecircumflexhook" format="2">
+  <advance width="540"/>
+  <unicode hex="1EC3"/>
+  <outline>
+    <component base="e"/>
+    <component base="circumflexhook" xOffset="276"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>32ec4f0b753f94c83c5decfd2e598600f50818270b006be0ad5b92175e5b2051c86056f2e8eff9598e74dbdacfdd7a1407e2bc385d74059b44c6c1c80cc98b42</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

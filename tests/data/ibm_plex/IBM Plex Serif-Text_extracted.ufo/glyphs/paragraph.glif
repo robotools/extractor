@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="paragraph" format="2">
+  <advance width="639"/>
+  <unicode hex="00B6"/>
+  <outline>
+    <contour>
+      <point x="292" y="-155" type="qcurve"/>
+      <point x="253" y="-155"/>
+      <point x="187" y="-138"/>
+      <point x="140" y="-106"/>
+      <point x="114" y="-63"/>
+      <point x="114" y="-37" type="qcurve"/>
+      <point x="114" y="-7"/>
+      <point x="148" y="32"/>
+      <point x="177" y="32" type="qcurve"/>
+      <point x="204" y="32"/>
+      <point x="234" y="0"/>
+      <point x="234" y="-26" type="qcurve"/>
+      <point x="234" y="-49"/>
+      <point x="210" y="-78"/>
+      <point x="190" y="-84" type="qcurve"/>
+      <point x="190" y="-87" type="line"/>
+      <point x="208" y="-98"/>
+      <point x="256" y="-111"/>
+      <point x="291" y="-111" type="qcurve"/>
+      <point x="302" y="-111" type="line"/>
+      <point x="302" y="301" type="line"/>
+      <point x="249" y="301"/>
+      <point x="159" y="327"/>
+      <point x="91" y="376"/>
+      <point x="53" y="450"/>
+      <point x="53" y="500" type="qcurve"/>
+      <point x="53" y="549"/>
+      <point x="91" y="624"/>
+      <point x="158" y="673"/>
+      <point x="249" y="698"/>
+      <point x="301" y="698" type="qcurve"/>
+      <point x="568" y="698" type="line"/>
+      <point x="568" y="648" type="line"/>
+      <point x="494" y="648" type="line"/>
+      <point x="494" y="79" type="line"/>
+      <point x="494" y="-37"/>
+      <point x="388" y="-155"/>
+    </contour>
+    <contour>
+      <point x="355" y="-99" type="line"/>
+      <point x="397" y="-81"/>
+      <point x="441" y="6"/>
+      <point x="441" y="78" type="qcurve"/>
+      <point x="441" y="648" type="line"/>
+      <point x="355" y="648" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 24 37 19 33 42 19 18 8 8 18 20 20 20 42 0 42 3 30 18 1 0 30 28 10 0
+SVTCA[0]
+MDAP[1]
+CALL
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+SRP1
+SRP2
+IP
+RDTG
+MDAP[1]
+RTG
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>0e13bebb25fa2b923fdd80d49eccd2b4b8432e9c20b13d3598b23d1fb0c08a84e30ace8d8b1cd50cf67aa49b5bf92895e9b1b5dcbced9569e72b00c71f923eab</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

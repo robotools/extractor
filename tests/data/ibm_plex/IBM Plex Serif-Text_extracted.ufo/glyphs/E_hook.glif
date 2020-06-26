@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ehook" format="2">
+  <advance width="644"/>
+  <unicode hex="1EBA"/>
+  <outline>
+    <component base="E"/>
+    <component base="hookcomb.case" xOffset="336"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>954251d0db7ca785fdf1d0ee4a4cf50eeebc25b6427f792749439b8fb010b1a27e0209a0eaa21b07f8952dc016beb28620f946f29a164e9eeaff9e215d89f771</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

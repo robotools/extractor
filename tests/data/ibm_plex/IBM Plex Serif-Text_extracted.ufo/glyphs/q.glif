@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="q" format="2">
+  <advance width="604"/>
+  <unicode hex="0071"/>
+  <outline>
+    <contour>
+      <point x="321" y="-150" type="line"/>
+      <point x="412" y="-150" type="line"/>
+      <point x="412" y="79" type="line"/>
+      <point x="409" y="79" type="line"/>
+      <point x="393" y="42"/>
+      <point x="319" y="-12"/>
+      <point x="259" y="-12" type="qcurve"/>
+      <point x="211" y="-12"/>
+      <point x="133" y="24"/>
+      <point x="78" y="93"/>
+      <point x="48" y="194"/>
+      <point x="48" y="259" type="qcurve"/>
+      <point x="48" y="324"/>
+      <point x="78" y="425"/>
+      <point x="133" y="494"/>
+      <point x="211" y="530"/>
+      <point x="259" y="530" type="qcurve"/>
+      <point x="320" y="530"/>
+      <point x="396" y="476"/>
+      <point x="412" y="439" type="qcurve"/>
+      <point x="416" y="439" type="line"/>
+      <point x="468" y="518" type="line"/>
+      <point x="508" y="518" type="line"/>
+      <point x="508" y="-150" type="line"/>
+      <point x="579" y="-150" type="line"/>
+      <point x="579" y="-200" type="line"/>
+      <point x="321" y="-200" type="line"/>
+    </contour>
+    <contour>
+      <point x="288" y="52" type="qcurve"/>
+      <point x="311" y="52"/>
+      <point x="356" y="66"/>
+      <point x="391" y="92"/>
+      <point x="412" y="129"/>
+      <point x="412" y="153" type="qcurve"/>
+      <point x="412" y="365" type="line"/>
+      <point x="412" y="389"/>
+      <point x="391" y="426"/>
+      <point x="356" y="452"/>
+      <point x="311" y="466"/>
+      <point x="288" y="466" type="qcurve"/>
+      <point x="224" y="466"/>
+      <point x="151" y="380"/>
+      <point x="151" y="306" type="qcurve"/>
+      <point x="151" y="212" type="line"/>
+      <point x="151" y="138"/>
+      <point x="224" y="52"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 28 23 0 19 38 6 38 6 16 3 27 16 27 6 6 0 3 26 22 10 6 20 10 21 26 10 16 26 10
+SVTCA[0]
+CALL
+CALL
+CALL
+CALL
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>285960c43cb6e318a438e929cc217e8622dc74877df9bd24882c9be8383ca0b96a399e5ecee828ee5813a284ed54891a16fef1e07f0b0a4fdaaed317f97bd2b2</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

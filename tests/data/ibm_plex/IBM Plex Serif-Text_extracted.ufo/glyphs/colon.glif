@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="colon" format="2">
+  <advance width="287"/>
+  <unicode hex="003A"/>
+  <outline>
+    <component base="period" xOffset="10"/>
+    <component base="period" xOffset="10" yOffset="406"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>fb7c91f33e72ca76ff1a8212e4998e0f177b13524444673ee96226c68036409560c6bbec054919c3f7e805f289d2bb873352b9df7117b1b67865254de4626e65</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

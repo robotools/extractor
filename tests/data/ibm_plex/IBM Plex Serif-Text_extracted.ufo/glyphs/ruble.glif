@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ruble" format="2">
+  <advance width="638"/>
+  <unicode hex="20BD"/>
+  <outline>
+    <contour>
+      <point x="52" y="50" type="line"/>
+      <point x="126" y="50" type="line"/>
+      <point x="126" y="159" type="line"/>
+      <point x="52" y="159" type="line"/>
+      <point x="52" y="209" type="line"/>
+      <point x="126" y="209" type="line"/>
+      <point x="126" y="319" type="line"/>
+      <point x="52" y="319" type="line"/>
+      <point x="52" y="369" type="line"/>
+      <point x="126" y="369" type="line"/>
+      <point x="126" y="648" type="line"/>
+      <point x="52" y="648" type="line"/>
+      <point x="52" y="698" type="line"/>
+      <point x="391" y="698" type="line"/>
+      <point x="489" y="698"/>
+      <point x="592" y="602"/>
+      <point x="592" y="511" type="qcurve"/>
+      <point x="592" y="420"/>
+      <point x="485" y="319"/>
+      <point x="388" y="319" type="qcurve"/>
+      <point x="227" y="319" type="line"/>
+      <point x="227" y="209" type="line"/>
+      <point x="451" y="209" type="line"/>
+      <point x="451" y="159" type="line"/>
+      <point x="227" y="159" type="line"/>
+      <point x="227" y="50" type="line"/>
+      <point x="321" y="50" type="line"/>
+      <point x="321" y="0" type="line"/>
+      <point x="52" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="227" y="369" type="line"/>
+      <point x="375" y="369" type="line"/>
+      <point x="429" y="369"/>
+      <point x="486" y="434"/>
+      <point x="486" y="483" type="qcurve"/>
+      <point x="486" y="533" type="line"/>
+      <point x="486" y="582"/>
+      <point x="429" y="647"/>
+      <point x="375" y="647" type="qcurve"/>
+      <point x="227" y="647" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 47 38 5 12 29 8 25 0 24 3 21 4 20 7 8 3 7 3 3 4 4 7 0 15 7 31 7 47 7 63 7 4 9 7 7 11 28 11 3 12 0 3 28 20 10 12 28 10
+SVTCA[0]
+CALL
+CALL
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+SDB
+DELTAP1
+SRP1
+SRP2
+IP
+MDAP[1]
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MIRP[10100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>1ac83475219a985f08923ab7d912c9ce611c6d1385bd45bb095a4a8e4b9f74dcf3797bde9e256deea77a7101db41e9e7bb5ebf0d85394a7047bb047681d993ae</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

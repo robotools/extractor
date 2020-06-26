@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni215C" format="2">
+  <advance width="865"/>
+  <unicode hex="215C"/>
+  <outline>
+    <component base="threesuperior"/>
+    <component base="fraction" xOffset="351"/>
+    <component base="eightinferior" xOffset="493"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>33c362be0ef1148563bd254847dea26047888cfed1722151ae9ef71002d817d60499eefd3621662fc68aa2f5fb3764aa6eaa0670f084700d4e524f881d7a0e61</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

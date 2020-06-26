@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="paragraph" format="2">
+  <advance width="639"/>
+  <unicode hex="00B6"/>
+  <outline>
+    <contour>
+      <point x="292" y="-155" type="qcurve" name="av01"/>
+      <point x="253" y="-155"/>
+      <point x="187" y="-138"/>
+      <point x="140" y="-106"/>
+      <point x="114" y="-63"/>
+      <point x="114" y="-37" type="qcurve"/>
+      <point x="114" y="-7"/>
+      <point x="148" y="32"/>
+      <point x="177" y="32" type="qcurve" name="iv02"/>
+      <point x="204" y="32"/>
+      <point x="234" y="0"/>
+      <point x="234" y="-26" type="qcurve"/>
+      <point x="234" y="-49"/>
+      <point x="210" y="-78"/>
+      <point x="190" y="-84" type="qcurve"/>
+      <point x="190" y="-87" type="line"/>
+      <point x="208" y="-98"/>
+      <point x="256" y="-111"/>
+      <point x="291" y="-111" type="qcurve" name="sv01"/>
+      <point x="302" y="-111" type="line" name="sv03"/>
+      <point x="302" y="301" type="line" name="iv01"/>
+      <point x="249" y="301"/>
+      <point x="159" y="327"/>
+      <point x="91" y="376"/>
+      <point x="53" y="450"/>
+      <point x="53" y="500" type="qcurve"/>
+      <point x="53" y="549"/>
+      <point x="91" y="624"/>
+      <point x="158" y="673"/>
+      <point x="249" y="698"/>
+      <point x="301" y="698" type="qcurve" name="at01"/>
+      <point x="568" y="698" type="line"/>
+      <point x="568" y="648" type="line"/>
+      <point x="494" y="648" type="line" name="sv04"/>
+      <point x="494" y="79" type="line"/>
+      <point x="494" y="-37"/>
+      <point x="388" y="-155"/>
+    </contour>
+    <contour>
+      <point x="355" y="-99" type="line" name="sv05"/>
+      <point x="397" y="-81"/>
+      <point x="441" y="6"/>
+      <point x="441" y="78" type="qcurve"/>
+      <point x="441" y="648" type="line"/>
+      <point x="355" y="648" type="line" name="sv02"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0iYXYwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9Ii0xNTUiIHdpZHRoPSI0NCIgLz4KICAgICAgPGhzdGVtIHBvcz0iNj
+      Q4IiB3aWR0aD0iNTAiIC8+CiAgICAgIDx2c3RlbSBwb3M9IjExNCIgd2lkdGg9IjEyMCI
+      gLz4KICAgICAgPHZzdGVtIHBvcz0iMzAxIiB3aWR0aD0iNTQiIC8+CiAgICAgIDx2c3Rl
+      bSBwb3M9IjQ0MSIgd2lkdGg9IjUzIiAvPgogICAgPC9oaW50c2V0PgogIDwvaGludFNld
+      Expc3Q+Cg==
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnYiIHBvaW50PSJhdjAxIiBhb
+      Glnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ250IiBwb2ludD0iYXQwMSIgem
+      9uZT0iY2FwaGVpZ2h0Ii8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0iYXY
+      wMSIgcG9pbnQyPSJzdjAxIiBzdGVtPSJsY190aGluIi8+CiAgICA8dHRjIGNvZGU9InNp
+      bmdsZXYiIHBvaW50MT0iYXQwMSIgcG9pbnQyPSJzdjAyIiBzdGVtPSJzdGVtX3NlcmlmI
+      i8+CiAgICA8dHRjIGNvZGU9ImludGVycG9sYXRldiIgcG9pbnQ9Iml2MDEiIHBvaW50MT
+      0ic3YwMiIgcG9pbnQyPSJhdjAxIiBhbGlnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0
+      iaW50ZXJwb2xhdGV2IiBwb2ludD0iaXYwMiIgcG9pbnQxPSJzdjAxIiBwb2ludDI9Iml2
+      MDEiIGFsaWduPSJsZWZ0Ii8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0ic
+      3YwMSIgcG9pbnQyPSJzdjAzIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT
+      0ic3YwMiIgcG9pbnQyPSJzdjA0Ii8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW5
+      0MT0ic3YwMyIgcG9pbnQyPSJzdjA1Ii8+CiAgPC90dFByb2dyYW0+Cg==
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  MDAP[R] 0
+  CALL zone_align 30 28
+  SRP0 0
+  MIRP[MdRGr] 18 1
+  SRP0 30
+  MIRP[MdRGr] 42 3
+  SRP1 0
+  SRP2 42
+  IP 20
+  MDAP[R] 20
+  SRP1 20
+  SRP2 18
+  IP 8
+  RDTG
+  MDAP[R] 8
+  RTG
+  SRP0 18
+  MDRP[MdrGr] 19
+  SRP0 42
+  MDRP[MdrGr] 33
+  SRP0 19
+  MDRP[MdrGr] 37
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>0e13bebb25fa2b923fdd80d49eccd2b4b8432e9c20b13d3598b23d1fb0c08a84e30ace8d8b1cd50cf67aa49b5bf92895e9b1b5dcbced9569e72b00c71f923eab</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

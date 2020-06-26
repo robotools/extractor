@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="fraction" format="2">
+  <advance width="139"/>
+  <unicode hex="2044"/>
+  <outline>
+    <contour>
+      <point x="284" y="698" type="line"/>
+      <point x="350" y="698" type="line"/>
+      <point x="-143" y="0" type="line"/>
+      <point x="-209" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+PUSHB 3 20 10 0 28 10
+SVTCA[0]
+CALL
+CALL
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w139l284698l350698l-1430l-2090</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

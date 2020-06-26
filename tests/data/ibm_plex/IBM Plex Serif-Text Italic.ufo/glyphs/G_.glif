@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="G" format="2">
+  <advance width="685"/>
+  <unicode hex="0047"/>
+  <anchor x="429" y="698" name="top"/>
+  <anchor x="271" y="0" name="bottom"/>
+  <outline>
+    <contour>
+      <point x="266" y="-12" type="qcurve" name="ab01"/>
+      <point x="168" y="-12"/>
+      <point x="57" y="107"/>
+      <point x="57" y="222" type="qcurve"/>
+      <point x="57" y="272"/>
+      <point x="78" y="383"/>
+      <point x="120" y="492"/>
+      <point x="183" y="590"/>
+      <point x="266" y="665"/>
+      <point x="370" y="710"/>
+      <point x="432" y="710" type="qcurve" name="at01"/>
+      <point x="496" y="710"/>
+      <point x="578" y="667"/>
+      <point x="588" y="635" type="qcurve" name="iv01"/>
+      <point x="594" y="635" type="line"/>
+      <point x="610" y="698" type="line" name="at02"/>
+      <point x="686" y="698" type="line"/>
+      <point x="635" y="491" type="line"/>
+      <point x="559" y="491" type="line" name="sv02"/>
+      <point x="572" y="543" type="line"/>
+      <point x="575" y="556"/>
+      <point x="575" y="570" type="qcurve"/>
+      <point x="575" y="611"/>
+      <point x="503" y="657"/>
+      <point x="445" y="657" type="qcurve" name="sv01"/>
+      <point x="395" y="657"/>
+      <point x="314" y="617"/>
+      <point x="252" y="549"/>
+      <point x="208" y="459"/>
+      <point x="196" y="409" type="qcurve"/>
+      <point x="184" y="361"/>
+      <point x="168" y="297"/>
+      <point x="158" y="250"/>
+      <point x="154" y="215"/>
+      <point x="154" y="197" type="qcurve"/>
+      <point x="154" y="128"/>
+      <point x="221" y="44"/>
+      <point x="284" y="44" type="qcurve" name="sv03"/>
+      <point x="317" y="44"/>
+      <point x="378" y="64"/>
+      <point x="428" y="103"/>
+      <point x="465" y="158"/>
+      <point x="474" y="194" type="qcurve" name="hr01"/>
+      <point x="499" y="293" type="line"/>
+      <point x="389" y="293" type="line" name="sv04"/>
+      <point x="400" y="338" type="line" name="iv02"/>
+      <point x="664" y="338" type="line"/>
+      <point x="653" y="293" type="line"/>
+      <point x="596" y="293" type="line" name="sv05"/>
+      <point x="524" y="0" type="line"/>
+      <point x="489" y="0" type="line" name="ab02"/>
+      <point x="466" y="91" type="line"/>
+      <point x="459" y="91" type="line" name="iv03"/>
+      <point x="447" y="72"/>
+      <point x="411" y="35"/>
+      <point x="363" y="6"/>
+      <point x="302" y="-12"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0iaHIwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9Ii0xMiIgd2lkdGg9IjU2IiAvPgogICAgICA8aHN0ZW0gcG9zPSIyOT
+      MiIHdpZHRoPSI0NSIgLz4KICAgICAgPGhzdGVtIHBvcz0iNjk4IiB3aWR0aD0iLTIwIiA
+      vPgogICAgICA8dnN0ZW0gcG9zPSI1NyIgd2lkdGg9Ijk3IiAvPgogICAgPC9oaW50c2V0
+      PgogICAgPGhpbnRzZXQgcG9pbnRUYWc9ImFiMDIiPgogICAgICA8aHN0ZW0gcG9zPSItM
+      TIiIHdpZHRoPSI1NiIgLz4KICAgICAgPGhzdGVtIHBvcz0iLTEyIiB3aWR0aD0iNTYiIC
+      8+CiAgICAgIDxoc3RlbSBwb3M9IjIxIiB3aWR0aD0iLTIxIiAvPgogICAgICA8aHN0ZW0
+      gcG9zPSIyOTMiIHdpZHRoPSI0NSIgLz4KICAgICAgPGhzdGVtIHBvcz0iMjkzIiB3aWR0
+      aD0iNDUiIC8+CiAgICAgIDxoc3RlbSBwb3M9IjI5MyIgd2lkdGg9IjQ1IiAvPgogICAgI
+      CA8aHN0ZW0gcG9zPSI2NTciIHdpZHRoPSI1MyIgLz4KICAgICAgPGhzdGVtIHBvcz0iNj
+      U3IiB3aWR0aD0iNTMiIC8+CiAgICAgIDxoc3RlbSBwb3M9IjY1NyIgd2lkdGg9IjUzIiA
+      vPgogICAgICA8dnN0ZW0zIHN0ZW0zTGlzdD0iNTcsOTcsNTcsOTcsNTcsOTciIC8+CiAg
+      ICA8L2hpbnRzZXQ+CiAgPC9oaW50U2V0TGlzdD4K
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJjYXBoZWlnaHQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ250IiBwb2ludD0iYXQwMi
+      Igem9uZT0iY2FwaGVpZ2h0Ii8+CiAgICA8dHRjIGNvZGU9ImFsaWduYiIgcG9pbnQ9ImF
+      iMDEiIHpvbmU9ImJhc2VsaW5lIi8+CiAgICA8dHRjIGNvZGU9ImFsaWduYiIgcG9pbnQ9
+      ImFiMDIiIHpvbmU9ImJhc2VsaW5lIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBva
+      W50MT0iYXQwMSIgcG9pbnQyPSJzdjAxIiBzdGVtPSJ1Y19zdGVtIi8+CiAgICA8dHRjIG
+      NvZGU9ImludGVycG9sYXRldiIgcG9pbnQ9Iml2MDEiIHBvaW50MT0ic3YwMSIgcG9pbnQ
+      yPSJhYjAxIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0iYXQwMiIgcG9p
+      bnQyPSJzdjAyIiByb3VuZD0idHJ1ZSIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb
+      2ludDE9ImFiMDEiIHBvaW50Mj0ic3YwMyIgc3RlbT0idWNfc3RlbSIvPgogICAgPHR0Yy
+      Bjb2RlPSJpbnRlcnBvbGF0ZXYiIHBvaW50PSJpdjAyIiBwb2ludDE9InN2MDEiIHBvaW5
+      0Mj0ic3YwMyIgYWxpZ249InJvdW5kIi8+CiAgICA8dHRjIGNvZGU9Im1kZWx0YXYiIHBv
+      aW50PSJpdjAyIiBkZWx0YT0iOCIgcHBtMT0iMTAiIHBwbTI9IjEwIi8+CiAgICA8dHRjI
+      GNvZGU9InNpbmdsZXYiIHBvaW50MT0iaXYwMiIgcG9pbnQyPSJzdjA0IiBzdGVtPSJ1Y1
+      9zZXJpZiIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9InN2MDQiIHBvaW5
+      0Mj0ic3YwNSIvPgogICAgPHR0YyBjb2RlPSJpbnRlcnBvbGF0ZXYiIHBvaW50PSJpdjAz
+      IiBwb2ludDE9InN2MDMiIHBvaW50Mj0iYXQwMSIvPgogIDwvdHRQcm9ncmFtPgo=
+      </data>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>75.96</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>254.0</real>
+          <key>y</key>
+          <real>0.0</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>75.96</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>271.0</real>
+          <key>y</key>
+          <real>0.0</real>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

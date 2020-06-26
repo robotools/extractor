@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="edieresis" format="2">
+  <advance width="540"/>
+  <unicode hex="00EB"/>
+  <outline>
+    <component base="e"/>
+    <component base="dieresis" xOffset="-24"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>93f90c6e339c13fc917244fe80982027d80faa25ba1c344dd152bef0daf96fcac872fc5cc4bdf01b5a945fa1f4f81a50b95b67017aef3588d113147de42ce383</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

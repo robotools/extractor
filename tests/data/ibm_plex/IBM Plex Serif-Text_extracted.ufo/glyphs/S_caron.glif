@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Scaron" format="2">
+  <advance width="595"/>
+  <unicode hex="0160"/>
+  <outline>
+    <component base="S"/>
+    <component base="caron.case" xOffset="-9"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>fe78fa97960da1063089bc940b5fa3f58357b5afced64e3e5098daaf8fda77ee6acd73970d906bd1c04f1bc162f440bb996ad9cf7d7200ad9b3b458b60d59543</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

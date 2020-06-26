@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Adotbelow" format="2">
+  <advance width="689"/>
+  <unicode hex="1EA0"/>
+  <outline>
+    <component base="A"/>
+    <component base="dotbelowcomb" xOffset="323"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>e9eafc9e7e426e5238b553c2a0cf2016a44d417981dff65966ba86d1f81550ca182105329e29115a11f3463593cf5c81463b34b050a785f0f7d42339576e44f5</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

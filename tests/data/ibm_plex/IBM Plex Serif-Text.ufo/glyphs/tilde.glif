@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="tilde" format="2">
+  <advance width="600"/>
+  <unicode hex="02DC"/>
+  <anchor x="300" y="540" name="_top"/>
+  <outline>
+    <contour>
+      <point x="364" y="614" type="qcurve" name="av01"/>
+      <point x="344" y="614"/>
+      <point x="306" y="632"/>
+      <point x="288" y="641" type="qcurve"/>
+      <point x="269" y="651"/>
+      <point x="229" y="670"/>
+      <point x="214" y="670" type="qcurve" name="sv01"/>
+      <point x="199" y="670"/>
+      <point x="179" y="656"/>
+      <point x="159" y="636" type="qcurve" name="iv01"/>
+      <point x="137" y="659" type="line"/>
+      <point x="162" y="692"/>
+      <point x="204" y="733"/>
+      <point x="236" y="733" type="qcurve" name="sv02"/>
+      <point x="256" y="733"/>
+      <point x="294" y="715"/>
+      <point x="312" y="706" type="qcurve"/>
+      <point x="331" y="696"/>
+      <point x="371" y="677"/>
+      <point x="386" y="677" type="qcurve" name="sv03"/>
+      <point x="401" y="677"/>
+      <point x="421" y="691"/>
+      <point x="441" y="711" type="qcurve" name="iv02"/>
+      <point x="463" y="688" type="line"/>
+      <point x="438" y="655"/>
+      <point x="396" y="614"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0ic3YwMiI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjYxNCIgd2lkdGg9IjYzIiAvPgogICAgICA8aHN0ZW0gcG9zPSI2Nz
+      AiIHdpZHRoPSI2MyIgLz4KICAgICAgPHZzdGVtIHBvcz0iMTM3IiB3aWR0aD0iMzI2IiA
+      vPgogICAgICA8dnN0ZW0gcG9zPSIxMzciIHdpZHRoPSIzMjYiIC8+CiAgICA8L2hpbnRz
+      ZXQ+CiAgPC9oaW50U2V0TGlzdD4K
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnYiIHBvaW50PSJhdjAxIiBhb
+      Glnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0ibWRlbHRhdiIgcG9pbnQ9ImF2MDEiIG
+      RlbHRhPSItOCIgcHBtMT0iMTQiIHBwbTI9IjE0Ii8+CiAgICA8dHRjIGNvZGU9Im1kZWx
+      0YXYiIHBvaW50PSJhdjAxIiBkZWx0YT0iLTgiIHBwbTE9IjE2IiBwcG0yPSIxNiIvPgog
+      ICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9ImF2MDEiIHBvaW50Mj0ic3YwMSIgc
+      m91bmQ9InRydWUiLz4KICAgIDx0dGMgY29kZT0iaW50ZXJwb2xhdGV2IiBwb2ludD0iaX
+      YwMSIgcG9pbnQxPSJzdjAxIiBwb2ludDI9ImF2MDEiLz4KICAgIDx0dGMgY29kZT0ic2l
+      uZ2xldiIgcG9pbnQxPSJzdjAxIiBwb2ludDI9InN2MDIiIHJvdW5kPSJ0cnVlIi8+CiAg
+      ICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0iYXYwMSIgcG9pbnQyPSJzdjAzIiByb
+      3VuZD0idHJ1ZSIvPgogICAgPHR0YyBjb2RlPSJpbnRlcnBvbGF0ZXYiIHBvaW50PSJpdj
+      AyIiBwb2ludDE9InN2MDIiIHBvaW50Mj0ic3YwMyIvPgogIDwvdHRQcm9ncmFtPgo=
+      </data>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>300.0</real>
+          <key>y</key>
+          <real>0.0</real>
+        </dict>
+      </array>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  MDAP[R] 0
+  deltap 0 14-8
+  deltap 0 16-8
+  MDRP[MDRGr] 6
+  SRP1 0
+  SRP2 6
+  IP 9
+  MDRP[MDRGr] 13
+  SRP0 0
+  MDRP[MDRGr] 19
+  SRP1 19
+  SRP2 13
+  IP 22
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>3925bd65c2087087dd8a8cd91610f807d260a039ef9f7d999e22e819de95554606533a808e8b61236b23b59f7ece30020662e052d5bcc5546087b206e93c8138</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

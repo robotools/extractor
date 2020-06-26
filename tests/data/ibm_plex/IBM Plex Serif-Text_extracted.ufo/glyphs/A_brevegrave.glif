@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Abrevegrave" format="2">
+  <advance width="689"/>
+  <unicode hex="1EB0"/>
+  <outline>
+    <component base="A"/>
+    <component base="brevegrave.case" xOffset="345"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>d2ddf2a1ed7c403f01f62084af02c2f0490b6965181b0f8bd392458a6ca29f734ae3fe3f96269cdb66b322cb60ac5462f2edae381b308174cce71277fae33aee</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

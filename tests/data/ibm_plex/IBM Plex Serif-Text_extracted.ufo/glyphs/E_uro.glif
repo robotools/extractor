@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Euro" format="2">
+  <advance width="619"/>
+  <unicode hex="20AC"/>
+  <outline>
+    <contour>
+      <point x="329" y="-12" type="qcurve"/>
+      <point x="264" y="-12"/>
+      <point x="160" y="39"/>
+      <point x="88" y="134"/>
+      <point x="50" y="267"/>
+      <point x="50" y="349" type="qcurve"/>
+      <point x="50" y="434"/>
+      <point x="89" y="569"/>
+      <point x="164" y="661"/>
+      <point x="272" y="710"/>
+      <point x="340" y="710" type="qcurve"/>
+      <point x="389" y="710"/>
+      <point x="467" y="689"/>
+      <point x="521" y="653"/>
+      <point x="549" y="604"/>
+      <point x="549" y="576" type="qcurve"/>
+      <point x="549" y="544"/>
+      <point x="513" y="504"/>
+      <point x="481" y="504" type="qcurve"/>
+      <point x="449" y="504"/>
+      <point x="417" y="542"/>
+      <point x="417" y="570" type="qcurve"/>
+      <point x="417" y="590"/>
+      <point x="440" y="622"/>
+      <point x="459" y="631" type="qcurve"/>
+      <point x="459" y="635" type="line"/>
+      <point x="422" y="655"/>
+      <point x="352" y="655" type="qcurve"/>
+      <point x="304" y="655"/>
+      <point x="234" y="624"/>
+      <point x="187" y="568"/>
+      <point x="163" y="493"/>
+      <point x="161" y="448" type="qcurve"/>
+      <point x="398" y="448" type="line"/>
+      <point x="398" y="398" type="line"/>
+      <point x="160" y="398" type="line"/>
+      <point x="160" y="298" type="line"/>
+      <point x="398" y="298" type="line"/>
+      <point x="398" y="248" type="line"/>
+      <point x="162" y="248" type="line"/>
+      <point x="172" y="156"/>
+      <point x="270" y="55"/>
+      <point x="351" y="55" type="qcurve"/>
+      <point x="384" y="55"/>
+      <point x="438" y="75"/>
+      <point x="480" y="111"/>
+      <point x="511" y="159"/>
+      <point x="522" y="187" type="qcurve"/>
+      <point x="562" y="167" type="line"/>
+      <point x="553" y="136"/>
+      <point x="516" y="73"/>
+      <point x="458" y="21"/>
+      <point x="380" y="-12"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 56 47 39 42 39 3 16 36 1 15 36 159 36 175 36 3 9 36 36 27 42 35 3 32 18 18 27 32 0 32 1 15 32 112 32 176 32 192 32 4 10 32 32 27 42 42 6 0 27 3 10 0 20 10 10 28 10
+SVTCA[0]
+CALL
+CALL
+SRP0
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+SDB
+DELTAP1
+DELTAP2
+SRP1
+SRP2
+IP
+RUTG
+MDAP[1]
+RTG
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+SDB
+DELTAP1
+DELTAP2
+MIRP[10100]
+SRP1
+SRP2
+IP
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>a0f31ed09effb4ba39913a4fe9c9a2784713b8fa77274bdee0d18916f0b31a6900cff51d9593f985ece25ca92a0206de2277b5cb2bab7859c42294dab2a88a5e</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="umacron" format="2">
+  <advance width="624"/>
+  <unicode hex="016B"/>
+  <outline>
+    <component base="u"/>
+    <component base="macron" xOffset="3"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>457583ffafcbf60a77521e71b7dac9be34df88861db149042b094b140d5353355875ea55af7a93114a5d19b45beb052a8df1b5de2482c8ba357a710ee065f51a</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

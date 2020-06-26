@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ohorndotbelow" format="2">
+  <advance width="724"/>
+  <unicode hex="1EE2"/>
+  <outline>
+    <component base="Ohorn"/>
+    <component base="dotbelowcomb" xOffset="362"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>5537532afcaef9b43eeb3f6af1289dba142f1a6de55cfac7e8284d1a115e83ae4b99aeb46c2c6152dbdabf8f76611d15a1dbc9e6bb2c3a66c3cae9d5cc9fb954</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

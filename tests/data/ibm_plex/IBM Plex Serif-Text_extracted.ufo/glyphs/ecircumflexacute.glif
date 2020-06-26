@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ecircumflexacute" format="2">
+  <advance width="540"/>
+  <unicode hex="1EBF"/>
+  <outline>
+    <component base="e"/>
+    <component base="circumflexacute" xOffset="276"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>9f4f22fe8a924ab5c316216b5ccdbe6dc7db0f36ef0c718801eb92e70966141b9a85da432c2bb73165f8850b4d8ae40ee2c94cbfe9aeed05a229aaebd7684cca</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

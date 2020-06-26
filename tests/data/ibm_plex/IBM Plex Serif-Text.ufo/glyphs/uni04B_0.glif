@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04B0" format="2">
+  <advance width="644"/>
+  <unicode hex="04B0"/>
+  <outline>
+    <contour>
+      <point x="180" y="50" type="line" name="sv01"/>
+      <point x="272" y="50" type="line"/>
+      <point x="272" y="235" type="line"/>
+      <point x="129" y="235" type="line" name="iv01"/>
+      <point x="129" y="287" type="line" name="sv02"/>
+      <point x="269" y="287" type="line"/>
+      <point x="73" y="648" type="line"/>
+      <point x="21" y="648" type="line" name="sv03"/>
+      <point x="21" y="698" type="line" name="at01"/>
+      <point x="272" y="698" type="line"/>
+      <point x="272" y="648" type="line"/>
+      <point x="186" y="648" type="line" name="sv04"/>
+      <point x="344" y="347" type="line" name="sv05"/>
+      <point x="348" y="347" type="line"/>
+      <point x="506" y="648" type="line"/>
+      <point x="420" y="648" type="line" name="sv06"/>
+      <point x="420" y="698" type="line" name="at02"/>
+      <point x="623" y="698" type="line"/>
+      <point x="623" y="648" type="line"/>
+      <point x="571" y="648" type="line" name="sv07"/>
+      <point x="372" y="287" type="line" name="sv08"/>
+      <point x="516" y="287" type="line"/>
+      <point x="516" y="235" type="line"/>
+      <point x="373" y="235" type="line" name="sv09"/>
+      <point x="373" y="50" type="line" name="sv10"/>
+      <point x="464" y="50" type="line"/>
+      <point x="464" y="0" type="line"/>
+      <point x="180" y="0" type="line" name="ab01"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0ic3YwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjAiIHdpZHRoPSI1MCIgLz4KICAgICAgPGhzdGVtIHBvcz0iMjM1Ii
+      B3aWR0aD0iNTIiIC8+CiAgICAgIDxoc3RlbSBwb3M9IjY0OCIgd2lkdGg9IjUwIiAvPgo
+      gICAgICA8dnN0ZW0gcG9zPSIyNjkiIHdpZHRoPSIxMDMiIC8+CiAgICA8L2hpbnRzZXQ+
+      CiAgPC9oaW50U2V0TGlzdD4K
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJjYXBoZWlnaHQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ250IiBwb2ludD0iYXQwMi
+      Igem9uZT0iY2FwaGVpZ2h0Ii8+CiAgICA8dHRjIGNvZGU9ImFsaWduYiIgcG9pbnQ9ImF
+      iMDEiIHpvbmU9ImJhc2VsaW5lIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50
+      MT0iYWIwMSIgcG9pbnQyPSJzdjAxIiBzdGVtPSJzdGVtX3NlcmlmIi8+CiAgICA8dHRjI
+      GNvZGU9ImludGVycG9sYXRldiIgcG9pbnQ9Iml2MDEiIHBvaW50MT0iYXQwMSIgcG9pbn
+      QyPSJhYjAxIiBhbGlnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9
+      pbnQxPSJpdjAxIiBwb2ludDI9InN2MDIiIHN0ZW09InVjX3N0ZW0iLz4KICAgIDx0dGMg
+      Y29kZT0ic2luZ2xldiIgcG9pbnQxPSJhdDAxIiBwb2ludDI9InN2MDMiIHN0ZW09InN0Z
+      W1fc2VyaWYiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJzdjAzIiBwb2
+      ludDI9InN2MDQiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJzdjAyIiB
+      wb2ludDI9InN2MDUiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhdDAy
+      IiBwb2ludDI9InN2MDYiIHN0ZW09InN0ZW1fc2VyaWYiLz4KICAgIDx0dGMgY29kZT0ic
+      2luZ2xldiIgcG9pbnQxPSJzdjA2IiBwb2ludDI9InN2MDciLz4KICAgIDx0dGMgY29kZT
+      0ic2luZ2xldiIgcG9pbnQxPSJzdjAyIiBwb2ludDI9InN2MDgiLz4KICAgIDx0dGMgY29
+      kZT0ic2luZ2xldiIgcG9pbnQxPSJpdjAxIiBwb2ludDI9InN2MDkiLz4KICAgIDx0dGMg
+      Y29kZT0ic2luZ2xldiIgcG9pbnQxPSJzdjAxIiBwb2ludDI9InN2MTAiLz4KICA8L3R0U
+      HJvZ3JhbT4K
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  CALL zone_align 8 28
+  CALL zone_align 16 28
+  CALL zone_align 27 20
+  MIRP[MdRGr] 0 3
+  SRP1 27
+  SRP2 8
+  IP 3
+  MDAP[R] 3
+  MIRP[MdRGr] 4 5
+  SRP0 8
+  MIRP[MdRGr] 7 3
+  MDRP[MdrGr] 11
+  SRP0 4
+  MDRP[MdrGr] 12
+  SRP0 16
+  MIRP[MdRGr] 15 3
+  MDRP[MdrGr] 19
+  SRP0 4
+  MDRP[MdrGr] 20
+  SRP0 3
+  MDRP[MdrGr] 23
+  SRP0 0
+  MDRP[MdrGr] 24
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>583c13bb95e4f007a911ba80e27a962404682274ded84ac1c71c3ff0e4b4c94f38bb7a586d3ad26298ee0842793263e4515482e0b7c3127ca289f672feb9856f</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

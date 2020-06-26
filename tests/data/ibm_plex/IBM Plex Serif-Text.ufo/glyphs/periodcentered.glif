@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="periodcentered" format="2">
+  <advance width="324"/>
+  <unicode hex="00B7"/>
+  <outline>
+    <contour>
+      <point x="162" y="236" type="qcurve" name="sv01"/>
+      <point x="130" y="236"/>
+      <point x="95" y="274"/>
+      <point x="95" y="301" type="qcurve"/>
+      <point x="95" y="307" type="line"/>
+      <point x="95" y="334"/>
+      <point x="130" y="372"/>
+      <point x="162" y="372" type="qcurve" name="av01"/>
+      <point x="194" y="372"/>
+      <point x="229" y="334"/>
+      <point x="229" y="307" type="qcurve"/>
+      <point x="229" y="301" type="line"/>
+      <point x="229" y="274"/>
+      <point x="194" y="236"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0ic3YwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjIzNiIgd2lkdGg9IjEzNiIgLz4KICAgICAgPHZzdGVtIHBvcz0iOT
+      UiIHdpZHRoPSIxMzQiIC8+CiAgICA8L2hpbnRzZXQ+CiAgPC9oaW50U2V0TGlzdD4K
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnYiIHBvaW50PSJhdjAxIiBhb
+      Glnbj0icm91bmQiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhdjAxIi
+      Bwb2ludDI9InN2MDEiIHJvdW5kPSJ0cnVlIi8+CiAgPC90dFByb2dyYW0+Cg==
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  MDAP[R] 7
+  MDRP[MDRGr] 0
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w324q16223613023695274q95301l9530795334130372q162372194372229334q229307l229301229274194236</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

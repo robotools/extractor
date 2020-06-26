@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Tbar" format="2">
+  <advance width="665"/>
+  <unicode hex="0166"/>
+  <outline>
+    <contour>
+      <point x="189" y="50" type="line" name="sv01"/>
+      <point x="283" y="50" type="line"/>
+      <point x="283" y="330" type="line"/>
+      <point x="135" y="330" type="line" name="iv01"/>
+      <point x="135" y="383" type="line" name="sv03"/>
+      <point x="283" y="383" type="line"/>
+      <point x="283" y="644" type="line"/>
+      <point x="115" y="644" type="line" name="sv04"/>
+      <point x="115" y="527" type="line"/>
+      <point x="35" y="527" type="line" name="sv02"/>
+      <point x="35" y="698" type="line" name="at01"/>
+      <point x="630" y="698" type="line"/>
+      <point x="630" y="527" type="line"/>
+      <point x="550" y="527" type="line" name="sv05"/>
+      <point x="550" y="644" type="line"/>
+      <point x="384" y="644" type="line" name="sv06"/>
+      <point x="384" y="383" type="line" name="sv07"/>
+      <point x="531" y="383" type="line"/>
+      <point x="531" y="330" type="line"/>
+      <point x="384" y="330" type="line" name="sv08"/>
+      <point x="384" y="50" type="line" name="sv09"/>
+      <point x="478" y="50" type="line"/>
+      <point x="478" y="0" type="line"/>
+      <point x="189" y="0" type="line" name="ab01"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0ic3YwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjAiIHdpZHRoPSI1MCIgLz4KICAgICAgPGhzdGVtIHBvcz0iMzMwIi
+      B3aWR0aD0iNTMiIC8+CiAgICAgIDxoc3RlbSBwb3M9IjY0NCIgd2lkdGg9IjU0IiAvPgo
+      gICAgICA8dnN0ZW0gcG9zPSIzNSIgd2lkdGg9IjgwIiAvPgogICAgICA8dnN0ZW0gcG9z
+      PSIyODMiIHdpZHRoPSIxMDEiIC8+CiAgICAgIDx2c3RlbSBwb3M9IjU1MCIgd2lkdGg9I
+      jgwIiAvPgogICAgPC9oaW50c2V0PgogIDwvaGludFNldExpc3Q+Cg==
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJjYXBoZWlnaHQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ25iIiBwb2ludD0iYWIwMS
+      Igem9uZT0iYmFzZWxpbmUiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJ
+      hYjAxIiBwb2ludDI9InN2MDEiIHN0ZW09InN0ZW1fc2VyaWYiLz4KICAgIDx0dGMgY29k
+      ZT0ic2luZ2xldiIgcG9pbnQxPSJhdDAxIiBwb2ludDI9InN2MDIiIHJvdW5kPSJ0cnVlI
+      i8+CiAgICA8dHRjIGNvZGU9ImludGVycG9sYXRldiIgcG9pbnQ9Iml2MDEiIHBvaW50MT
+      0ic3YwMiIgcG9pbnQyPSJzdjAxIiBhbGlnbj0ibGVmdCIvPgogICAgPHR0YyBjb2RlPSJ
+      zaW5nbGV2IiBwb2ludDE9Iml2MDEiIHBvaW50Mj0ic3YwMyIgc3RlbT0idWNfc3RlbSIv
+      PgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9ImF0MDEiIHBvaW50Mj0ic3YwN
+      CIgc3RlbT0idWNfc3RlbSIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9In
+      N2MDIiIHBvaW50Mj0ic3YwNSIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE
+      9InN2MDQiIHBvaW50Mj0ic3YwNiIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2lu
+      dDE9InN2MDMiIHBvaW50Mj0ic3YwNyIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb
+      2ludDE9Iml2MDEiIHBvaW50Mj0ic3YwOCIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2Ii
+      Bwb2ludDE9InN2MDEiIHBvaW50Mj0ic3YwOSIvPgogIDwvdHRQcm9ncmFtPgo=
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  CALL zone_align 10 28
+  CALL zone_align 23 20
+  MIRP[MdRGr] 0 3
+  SRP0 10
+  MDRP[MDRGr] 9
+  SRP1 0
+  SRP2 9
+  IP 3
+  RDTG
+  MDAP[R] 3
+  RTG
+  MIRP[MdRGr] 4 5
+  SRP0 10
+  MIRP[MdRGr] 7 5
+  SRP0 9
+  MDRP[MdrGr] 13
+  SRP0 7
+  MDRP[MdrGr] 15
+  SRP0 4
+  MDRP[MdrGr] 16
+  SRP0 3
+  MDRP[MdrGr] 19
+  SRP0 0
+  MDRP[MdrGr] 20
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>3cb54c9119c2b3e77a027346f712e35bab322056bba279a362554095f0176b8839fd418f097a705a518f4251beeafe279aefc3364f2e2a1bdd79ff85ec43b2fc</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

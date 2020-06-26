@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="oneinferior" format="2">
+  <advance width="358"/>
+  <unicode hex="2081"/>
+  <outline>
+    <contour>
+      <point x="54" y="39" type="line" name="sv01"/>
+      <point x="159" y="39" type="line"/>
+      <point x="159" y="310" type="line" name="sv02"/>
+      <point x="51" y="270" type="line"/>
+      <point x="36" y="303" type="line"/>
+      <point x="177" y="368" type="line" name="at01"/>
+      <point x="232" y="368" type="line"/>
+      <point x="232" y="39" type="line" name="sv03"/>
+      <point x="324" y="39" type="line"/>
+      <point x="324" y="0" type="line"/>
+      <point x="54" y="0" type="line" name="ab01"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0ic3YwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjAiIHdpZHRoPSIzOSIgLz4KICAgICAgPGhzdGVtIHBvcz0iMzY4Ii
+      B3aWR0aD0iLTIwIiAvPgogICAgICA8dnN0ZW0gcG9zPSIxNTkiIHdpZHRoPSI3MyIgLz4
+      KICAgIDwvaGludHNldD4KICA8L2hpbnRTZXRMaXN0Pgo=
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJpbmZfdG9wIi8+CiAgICA8dHRjIGNvZGU9ImFsaWduYiIgcG9pbnQ9ImFiMDEiIH
+      pvbmU9ImJhc2VsaW5lIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0iYWI
+      wMSIgcG9pbnQyPSJzdjAxIiBzdGVtPSJsY190aGluIi8+CiAgICA8dHRjIGNvZGU9InNp
+      bmdsZXYiIHBvaW50MT0iYXQwMSIgcG9pbnQyPSJzdjAyIi8+CiAgICA8dHRjIGNvZGU9I
+      nNpbmdsZXYiIHBvaW50MT0ic3YwMSIgcG9pbnQyPSJzdjAzIi8+CiAgPC90dFByb2dyYW
+      0+Cg==
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  CALL zone_align 5 24
+  CALL zone_align 10 20
+  MIRP[MdRGr] 0 1
+  SRP0 5
+  MDRP[MdrGr] 2
+  SRP0 0
+  MDRP[MdrGr] 7
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w358l5439l15939l159310l51270l36303l177368l232368l23239l32439l3240l540</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

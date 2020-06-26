@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ohornacute" format="2">
+  <advance width="568"/>
+  <unicode hex="1EDB"/>
+  <outline>
+    <component base="ohorn"/>
+    <component base="acute" xOffset="-16"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>35274c3abe16115bd7618a4cd39502b7a69ce2993b480e8318eeb3611647afedeef3f65d6254792e72e7bb287993dfda97659a6534bad840e2ac7190ac377152</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

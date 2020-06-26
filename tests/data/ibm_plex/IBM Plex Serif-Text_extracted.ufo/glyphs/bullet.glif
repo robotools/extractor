@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bullet" format="2">
+  <advance width="416"/>
+  <unicode hex="2022"/>
+  <outline>
+    <contour>
+      <point x="208" y="177" type="qcurve"/>
+      <point x="150" y="177"/>
+      <point x="84" y="247"/>
+      <point x="84" y="298" type="qcurve"/>
+      <point x="84" y="309" type="line"/>
+      <point x="84" y="360"/>
+      <point x="150" y="430"/>
+      <point x="208" y="430" type="qcurve"/>
+      <point x="266" y="430"/>
+      <point x="332" y="360"/>
+      <point x="332" y="309" type="qcurve"/>
+      <point x="332" y="298" type="line"/>
+      <point x="332" y="247"/>
+      <point x="266" y="177"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+PUSHB 0 7
+SVTCA[0]
+MDAP[1]
+MDRP[11100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w416q20817715017784247q84298l8430984360150430q208430266430332360q332309l332298332247266177</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

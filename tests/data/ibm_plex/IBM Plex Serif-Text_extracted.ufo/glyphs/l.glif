@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="l" format="2">
+  <advance width="306"/>
+  <unicode hex="006C"/>
+  <outline>
+    <contour>
+      <point x="34" y="50" type="line"/>
+      <point x="105" y="50" type="line"/>
+      <point x="105" y="676" type="line"/>
+      <point x="34" y="689" type="line"/>
+      <point x="34" y="727" type="line"/>
+      <point x="201" y="760" type="line"/>
+      <point x="201" y="50" type="line"/>
+      <point x="272" y="50" type="line"/>
+      <point x="272" y="0" type="line"/>
+      <point x="34" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 19 6 0 3 3 4 4 5 2 2 7 5 0 3 9 20 10 5 32 10
+SVTCA[0]
+CALL
+CALL
+MIRP[10100]
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+MIRP[10100]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w306l3450l10550l105676l34689l34727l201760l20150l27250l2720l340</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

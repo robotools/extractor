@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ocircumflextilde" format="2">
+  <advance width="568"/>
+  <unicode hex="1ED7"/>
+  <outline>
+    <component base="o"/>
+    <component base="circumflextilde" xOffset="284"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>67ad5f1582b5e842a09b895529b88805275c9f4ec11557c117330b5581da365314bdc0a45eaa5a8f506ccea9b92c0d46ce33ec234b522b4d092b00c8783000b6</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

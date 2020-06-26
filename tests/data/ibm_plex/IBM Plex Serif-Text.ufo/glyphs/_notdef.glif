@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name=".notdef" format="2">
+  <advance width="464"/>
+  <outline>
+    <contour>
+      <point x="32" y="0" type="line" name="ab01"/>
+      <point x="32" y="780" type="line" name="sv01"/>
+      <point x="432" y="780" type="line"/>
+      <point x="432" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="80" y="48" type="line" name="sv02"/>
+      <point x="384" y="48" type="line"/>
+      <point x="384" y="732" type="line"/>
+      <point x="80" y="732" type="line" name="sv03"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbmIiIHBvaW50PSJhYjAxIiB6b
+      25lPSJiYXNlbGluZSIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9ImFiMD
+      EiIHBvaW50Mj0ic3YwMSIgcm91bmQ9InRydWUiLz4KICAgIDx0dGMgY29kZT0ic2luZ2x
+      ldiIgcG9pbnQxPSJhYjAxIiBwb2ludDI9InN2MDIiIHJvdW5kPSJ0cnVlIi8+CiAgICA8
+      dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0ic3YwMSIgcG9pbnQyPSJzdjAzIiByb3VuZ
+      D0idHJ1ZSIvPgogIDwvdHRQcm9ncmFtPgo=
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  CALL zone_align 0 20
+  MDRP[MDRGr] 1
+  SRP0 0
+  MDRP[MDRGr] 4
+  SRP0 1
+  MDRP[MDRGr] 7
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w464l320l32780l432780l4320l8048l38448l384732l80732</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

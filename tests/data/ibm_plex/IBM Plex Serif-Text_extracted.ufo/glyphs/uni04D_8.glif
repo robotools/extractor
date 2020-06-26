@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni04D8" format="2">
+  <advance width="704"/>
+  <unicode hex="04D8"/>
+  <outline>
+    <component base="Schwa"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>ace8dc57b25c6f08663174b12fab80f5bb8541a77bffb6ca8489fa1ab5ef083c02cb8ca8de4cd0cbade7a98c76b6f7c67be1215e5f6c6d135024ecda5bf7b155</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

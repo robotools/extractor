@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="caron" format="2">
+  <advance width="600"/>
+  <unicode hex="02C7"/>
+  <outline>
+    <contour>
+      <point x="143" y="753" type="line"/>
+      <point x="171" y="773" type="line"/>
+      <point x="300" y="675" type="line"/>
+      <point x="429" y="773" type="line"/>
+      <point x="457" y="753" type="line"/>
+      <point x="331" y="599" type="line"/>
+      <point x="269" y="599" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 12 3 1 2 6 1 15 6 112 6 2 9 6
+SVTCA[0]
+MDAP[1]
+SDB
+DELTAP1
+MDRP[11100]
+SRP0
+MDRP[11100]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w600l143753l171773l300675l429773l457753l331599l269599</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

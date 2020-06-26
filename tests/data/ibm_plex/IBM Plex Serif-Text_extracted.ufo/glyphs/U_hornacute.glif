@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Uhornacute" format="2">
+  <advance width="741"/>
+  <unicode hex="1EE8"/>
+  <outline>
+    <component base="Uhorn"/>
+    <component base="acute.case" xOffset="92"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>b1397eab4c72d743ad0ce23238113294f6db42194e44e471b9cb3f8fd0aa26f6b15249473c40ca0e9d6603059f51affbddd5165db1fb78486643e96af1251fe0</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

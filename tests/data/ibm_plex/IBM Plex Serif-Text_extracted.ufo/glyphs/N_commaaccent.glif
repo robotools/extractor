@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ncommaaccent" format="2">
+  <advance width="780"/>
+  <unicode hex="0145"/>
+  <outline>
+    <component base="N"/>
+    <component base="commabelowcomb" xOffset="392"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>f3baa7f09f70657c27de00ba545e2a82f1f64f3ac3863478ed909f310f1b21f59ba2d3713859fef007a43fc907f54fc3541ad81e1159bca024829c33ee888473</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

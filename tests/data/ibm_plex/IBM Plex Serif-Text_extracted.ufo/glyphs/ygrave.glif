@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ygrave" format="2">
+  <advance width="541"/>
+  <unicode hex="1EF3"/>
+  <outline>
+    <component base="y"/>
+    <component base="grave" xOffset="-10"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>4e264bc7aa37d2c1ed9322ead820bf8a1f0b7166f8ebf4196f85d696f0bf3aea17364ef9ded9fa5bc6940fa5d0f4bb3effee8b4fb3c96e02e40f171d2f27c328</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

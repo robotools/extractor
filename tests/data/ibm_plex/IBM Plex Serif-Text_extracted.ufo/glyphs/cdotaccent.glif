@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="cdotaccent" format="2">
+  <advance width="520"/>
+  <unicode hex="010B"/>
+  <outline>
+    <component base="c"/>
+    <component base="dotaccent" xOffset="-17"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>f20414c3422734450a2f153550ff335c22cc3aacc9a687b49f486d02e40d7f7e261008d12756420c233ade5f21f2e2ec58b8a911bbf50692743946a3f322c510</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

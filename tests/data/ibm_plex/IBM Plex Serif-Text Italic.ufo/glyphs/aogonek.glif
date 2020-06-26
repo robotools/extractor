@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="aogonek" format="2">
+  <advance width="556"/>
+  <unicode hex="0105"/>
+  <outline>
+    <contour>
+      <point x="339" y="-206" type="qcurve" name="ab03"/>
+      <point x="307" y="-206"/>
+      <point x="267" y="-172"/>
+      <point x="267" y="-142" type="qcurve"/>
+      <point x="267" y="-119"/>
+      <point x="288" y="-81"/>
+      <point x="322" y="-50"/>
+      <point x="364" y="-24"/>
+      <point x="386" y="-13" type="qcurve"/>
+      <point x="384" y="-8" type="line"/>
+      <point x="373" y="-12"/>
+      <point x="362" y="-12" type="qcurve" name="ab02"/>
+      <point x="333" y="-12"/>
+      <point x="309" y="25"/>
+      <point x="309" y="48" type="qcurve"/>
+      <point x="309" y="60"/>
+      <point x="315" y="91"/>
+      <point x="317" y="100" type="qcurve"/>
+      <point x="338" y="179" type="line"/>
+      <point x="329" y="182" type="line" name="iv01"/>
+      <point x="309" y="140"/>
+      <point x="269" y="68"/>
+      <point x="223" y="17"/>
+      <point x="170" y="-12"/>
+      <point x="139" y="-12" type="qcurve" name="ab01"/>
+      <point x="86" y="-12"/>
+      <point x="38" y="65"/>
+      <point x="38" y="135" type="qcurve"/>
+      <point x="38" y="176"/>
+      <point x="54" y="266"/>
+      <point x="85" y="354"/>
+      <point x="130" y="434"/>
+      <point x="187" y="494"/>
+      <point x="257" y="530"/>
+      <point x="297" y="530" type="qcurve" name="at01"/>
+      <point x="383" y="530"/>
+      <point x="407" y="443" type="qcurve" name="iv02"/>
+      <point x="416" y="443" type="line" name="hr01"/>
+      <point x="460" y="518" type="line" name="at02"/>
+      <point x="508" y="518" type="line"/>
+      <point x="391" y="57" type="line"/>
+      <point x="409" y="49" type="line" name="sv03"/>
+      <point x="519" y="164" type="line" name="sv04"/>
+      <point x="545" y="145" type="line"/>
+      <point x="436" y="15" type="line"/>
+      <point x="422" y="-2"/>
+      <point x="387" y="-37"/>
+      <point x="356" y="-73"/>
+      <point x="335" y="-109"/>
+      <point x="335" y="-128" type="qcurve"/>
+      <point x="335" y="-160"/>
+      <point x="363" y="-160" type="qcurve" name="sv05"/>
+      <point x="380" y="-160"/>
+      <point x="405" y="-144"/>
+      <point x="418" y="-133" type="qcurve" name="sv06"/>
+      <point x="442" y="-156" type="line"/>
+      <point x="423" y="-176"/>
+      <point x="372" y="-206"/>
+    </contour>
+    <contour>
+      <point x="173" y="57" type="qcurve" name="sv01"/>
+      <point x="193" y="57"/>
+      <point x="235" y="87"/>
+      <point x="275" y="136"/>
+      <point x="313" y="198"/>
+      <point x="344" y="262"/>
+      <point x="368" y="323"/>
+      <point x="374" y="347" type="qcurve"/>
+      <point x="379" y="364" type="line"/>
+      <point x="392" y="412"/>
+      <point x="364" y="474"/>
+      <point x="322" y="474" type="qcurve" name="sv02"/>
+      <point x="272" y="474"/>
+      <point x="186" y="381"/>
+      <point x="161" y="290" type="qcurve"/>
+      <point x="156" y="273"/>
+      <point x="147" y="231"/>
+      <point x="139" y="187"/>
+      <point x="134" y="147"/>
+      <point x="134" y="133" type="qcurve"/>
+      <point x="134" y="97"/>
+      <point x="150" y="57"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0iaHIwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9Ii0yMDYiIHdpZHRoPSI0NiIgLz4KICAgICAgPGhzdGVtIHBvcz0iLT
+      IwNiIgd2lkdGg9IjQ2IiAvPgogICAgICA8aHN0ZW0gcG9zPSItMjA2IiB3aWR0aD0iNDY
+      iIC8+CiAgICAgIDxoc3RlbSBwb3M9Ii0yMDYiIHdpZHRoPSI0NiIgLz4KICAgICAgPGhz
+      dGVtIHBvcz0iLTEyIiB3aWR0aD0iNjkiIC8+CiAgICAgIDxoc3RlbSBwb3M9Ii0xMiIgd
+      2lkdGg9IjYxIiAvPgogICAgICA8aHN0ZW0gcG9zPSItMTIiIHdpZHRoPSI2OSIgLz4KIC
+      AgICAgPGhzdGVtIHBvcz0iLTEyIiB3aWR0aD0iNjkiIC8+CiAgICAgIDxoc3RlbSBwb3M
+      9IjQ3NCIgd2lkdGg9IjU2IiAvPgogICAgICA8aHN0ZW0gcG9zPSI0NzQiIHdpZHRoPSI1
+      NiIgLz4KICAgICAgPGhzdGVtIHBvcz0iNDc0IiB3aWR0aD0iNTYiIC8+CiAgICAgIDxoc
+      3RlbSBwb3M9IjUxOCIgd2lkdGg9Ii0yMCIgLz4KICAgICAgPHZzdGVtIHBvcz0iMzgiIH
+      dpZHRoPSI5NiIgLz4KICAgICAgPHZzdGVtIHBvcz0iMzgiIHdpZHRoPSI5NiIgLz4KICA
+      gICAgPHZzdGVtIHBvcz0iMzgiIHdpZHRoPSI5NiIgLz4KICAgICAgPHZzdGVtIHBvcz0i
+      MzgiIHdpZHRoPSI5NiIgLz4KICAgICAgPHZzdGVtIHBvcz0iMjY3IiB3aWR0aD0iNjgiI
+      C8+CiAgICAgIDx2c3RlbSBwb3M9IjMwOSIgd2lkdGg9IjgyIiAvPgogICAgICA8dnN0ZW
+      0gcG9zPSIzMDkiIHdpZHRoPSI4MiIgLz4KICAgICAgPHZzdGVtIHBvcz0iMzA5IiB3aWR
+      0aD0iODIiIC8+CiAgICA8L2hpbnRzZXQ+CiAgPC9oaW50U2V0TGlzdD4K
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJ4aGVpZ2h0Ii8+CiAgICA8dHRjIGNvZGU9ImFsaWdudCIgcG9pbnQ9ImF0MDIiIH
+      pvbmU9InhoZWlnaHQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ25iIiBwb2ludD0iYWIwMSI
+      gem9uZT0iYmFzZWxpbmUiLz4KICAgIDx0dGMgY29kZT0iYWxpZ25iIiBwb2ludD0iYWIw
+      MiIgem9uZT0iYmFzZWxpbmUiLz4KICAgIDx0dGMgY29kZT0iYWxpZ25iIiBwb2ludD0iY
+      WIwMyIgem9uZT0iZGVzY2VuZGVyIi8+CiAgICA8dHRjIGNvZGU9Im1kZWx0YXYiIHBvaW
+      50PSJhYjAzIiBkZWx0YT0iLTgiIHBwbTE9IjkiIHBwbTI9IjE3Ii8+CiAgICA8dHRjIGN
+      vZGU9InNpbmdsZXYiIHBvaW50MT0iYWIwMSIgcG9pbnQyPSJzdjAxIiBzdGVtPSJib3ds
+      X3RoaWNrIi8+CiAgICA8dHRjIGNvZGU9ImludGVycG9sYXRldiIgcG9pbnQ9Iml2MDEiI
+      HBvaW50MT0ic3YwMSIgcG9pbnQyPSJhdDAxIiBhbGlnbj0icmlnaHQiLz4KICAgIDx0dG
+      MgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhdDAxIiBwb2ludDI9InN2MDIiIHN0ZW09ImJ
+      vd2xfdGhpbiIvPgogICAgPHR0YyBjb2RlPSJpbnRlcnBvbGF0ZXYiIHBvaW50PSJpdjAy
+      IiBwb2ludDE9InN2MDIiIHBvaW50Mj0iYWIwMSIvPgogICAgPHR0YyBjb2RlPSJzaW5nb
+      GV2IiBwb2ludDE9ImFiMDIiIHBvaW50Mj0ic3YwMyIgc3RlbT0iYm93bF90aGluIi8+Ci
+      AgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0ic3YwMyIgcG9pbnQyPSJzdjA0IiB
+      zdGVtPSJzdHJva2VfdGlwIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0i
+      YWIwMyIgcG9pbnQyPSJzdjA1IiByb3VuZD0idHJ1ZSIvPgogICAgPHR0YyBjb2RlPSJza
+      W5nbGV2IiBwb2ludDE9InN2MDUiIHBvaW50Mj0ic3YwNiIgcm91bmQ9InRydWUiLz4KIC
+      A8L3R0UHJvZ3JhbT4K
+      </data>
+    </dict>
+  </lib>
+</glyph>

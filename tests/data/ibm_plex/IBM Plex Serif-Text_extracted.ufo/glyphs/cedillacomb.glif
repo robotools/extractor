@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="cedillacomb" format="2">
+  <unicode hex="0327"/>
+  <outline>
+    <component base="cedilla" xOffset="-300"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>e6dae74d0f775bfb7f9d0a3b4666466cd4bdc4ee5388f5356b9e00a148f0caaf16f7ad2c86696fb1af6cbb58857ba6bc6ecc5946ec972631471d45e9dd0086f5</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

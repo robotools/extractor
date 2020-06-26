@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="parenleft" format="2">
+  <advance width="328"/>
+  <unicode hex="0028"/>
+  <outline>
+    <contour>
+      <point x="304" y="-154" type="line"/>
+      <point x="260" y="-127"/>
+      <point x="171" y="-37"/>
+      <point x="100" y="82"/>
+      <point x="55" y="228"/>
+      <point x="55" y="312" type="qcurve"/>
+      <point x="55" y="396"/>
+      <point x="100" y="542"/>
+      <point x="171" y="661"/>
+      <point x="260" y="751"/>
+      <point x="304" y="778" type="qcurve"/>
+      <point x="332" y="744" type="line"/>
+      <point x="291" y="713"/>
+      <point x="226" y="627"/>
+      <point x="181" y="525"/>
+      <point x="158" y="410"/>
+      <point x="158" y="350" type="qcurve"/>
+      <point x="158" y="274" type="line"/>
+      <point x="158" y="214"/>
+      <point x="181" y="99"/>
+      <point x="226" y="-3"/>
+      <point x="291" y="-89"/>
+      <point x="332" y="-120" type="qcurve"/>
+      <point x="304" y="-154" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]
+push 10
+MDAP[1]
+push 23
+MDAP[1]
+IUP[0]
+IUP[1]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>56406ecacaad487b47cea3c65a8e604cad35c2a961f3739895989d97b7bc649eb3c136242d2a5478845bc7dc46f67aa9578d46e04f63c26782c1a1d3f569d861</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

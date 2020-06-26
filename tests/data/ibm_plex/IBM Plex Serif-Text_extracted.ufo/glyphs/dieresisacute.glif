@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dieresisacute" format="2">
+  <outline>
+    <contour>
+      <point x="-98" y="595" type="qcurve"/>
+      <point x="-124" y="595"/>
+      <point x="-153" y="625"/>
+      <point x="-153" y="648" type="qcurve"/>
+      <point x="-153" y="652" type="line"/>
+      <point x="-153" y="675"/>
+      <point x="-124" y="705"/>
+      <point x="-98" y="705" type="qcurve"/>
+      <point x="-72" y="705"/>
+      <point x="-43" y="675"/>
+      <point x="-43" y="652" type="qcurve"/>
+      <point x="-43" y="648" type="line"/>
+      <point x="-43" y="625"/>
+      <point x="-72" y="595"/>
+    </contour>
+    <contour>
+      <point x="98" y="595" type="qcurve"/>
+      <point x="72" y="595"/>
+      <point x="43" y="625"/>
+      <point x="43" y="648" type="qcurve"/>
+      <point x="43" y="652" type="line"/>
+      <point x="43" y="675"/>
+      <point x="72" y="705"/>
+      <point x="98" y="705" type="qcurve"/>
+      <point x="124" y="705"/>
+      <point x="153" y="675"/>
+      <point x="153" y="652" type="qcurve"/>
+      <point x="153" y="648" type="line"/>
+      <point x="153" y="625"/>
+      <point x="124" y="595"/>
+    </contour>
+    <contour>
+      <point x="-26" y="723" type="line"/>
+      <point x="50" y="902" type="line"/>
+      <point x="129" y="862" type="line"/>
+      <point x="5" y="708" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 14 29 31 21 7 14 0 7 0 15 0 1 9 31 0
+SVTCA[0]
+MDAP[1]
+RUTG
+MDAP[1]
+RTG
+SDB
+DELTAP1
+SRP0
+MDRP[11100]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[11100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>422112888ecd6ae1ef9de76202f739f07a013674b4fc74d9aff013b56240ce06283f3b626ae0a18762d1ea3d028d91829de0e18ad5863cdedeaf994b5cd37831</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

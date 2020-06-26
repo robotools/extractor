@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="sacute" format="2">
+  <advance width="491"/>
+  <unicode hex="015B"/>
+  <outline>
+    <component base="s"/>
+    <component base="acute" xOffset="-64"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>141afb800d72ed07a653d61444c7c203bc732a214485b31bef5d47ef425af873234a92a8cb0d2c9c5d97e1a78ba71a9493d44a88db02f2a48ec0a537652a9906</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

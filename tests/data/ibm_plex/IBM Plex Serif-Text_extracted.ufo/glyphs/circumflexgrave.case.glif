@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="circumflexgrave.case" format="2">
+  <outline>
+    <contour>
+      <point x="-157" y="766" type="line"/>
+      <point x="-31" y="920" type="line"/>
+      <point x="31" y="920" type="line"/>
+      <point x="157" y="766" type="line"/>
+      <point x="129" y="746" type="line"/>
+      <point x="0" y="848" type="line"/>
+      <point x="-129" y="746" type="line"/>
+    </contour>
+    <contour>
+      <point x="-260" y="1031" type="line"/>
+      <point x="-181" y="1071" type="line"/>
+      <point x="-105" y="892" type="line"/>
+      <point x="-136" y="877" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 21 8 10 10 1 5 5 1 4 6 1 15 6 31 6 79 6 143 6 4 10 6
+SVTCA[0]
+MDAP[1]
+SDB
+DELTAP1
+MDRP[11100]
+SRP0
+MDRP[10000]
+SRP0
+MDRP[11100]
+SRP1
+SRP2
+IP
+RUTG
+MDAP[1]
+RTG
+MDRP[11100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w0l-157766l-31920l31920l157766l129746l0848l-129746l-2601031l-1811071l-105892l-136877</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

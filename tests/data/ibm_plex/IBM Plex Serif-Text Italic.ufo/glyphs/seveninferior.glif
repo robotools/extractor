@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="seveninferior" format="2">
+  <advance width="334"/>
+  <unicode hex="2087"/>
+  <outline>
+    <contour>
+      <point x="260" y="310" type="line" name="hr00"/>
+      <point x="98" y="310" type="line" name="sv01"/>
+      <point x="83" y="246" type="line"/>
+      <point x="39" y="246" type="line" name="sv02"/>
+      <point x="70" y="368" type="line" name="at01"/>
+      <point x="322" y="368" type="line"/>
+      <point x="309" y="316" type="line"/>
+      <point x="102" y="0" type="line"/>
+      <point x="31" y="0" type="line" name="ab01"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0iaHIwMCI+CiAgICAgI
+      Dxoc3RlbSBwb3M9IjIxIiB3aWR0aD0iLTIxIiAvPgogICAgICA8aHN0ZW0gcG9zPSIzMT
+      AiIHdpZHRoPSI1OCIgLz4KICAgICAgPHZzdGVtIHBvcz0iMzEiIHdpZHRoPSIyOTEiIC8
+      +CiAgICA8L2hpbnRzZXQ+CiAgPC9oaW50U2V0TGlzdD4K
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJpbmZfdG9wIi8+CiAgICA8dHRjIGNvZGU9ImFsaWduYiIgcG9pbnQ9ImFiMDEiIH
+      pvbmU9ImJhc2VsaW5lIi8+CiAgICA8dHRjIGNvZGU9InNpbmdsZXYiIHBvaW50MT0iYXQ
+      wMSIgcG9pbnQyPSJzdjAxIiByb3VuZD0idHJ1ZSIvPgogICAgPHR0YyBjb2RlPSJzaW5n
+      bGV2IiBwb2ludDE9InN2MDEiIHBvaW50Mj0ic3YwMiIgcm91bmQ9InRydWUiLz4KICA8L
+      3R0UHJvZ3JhbT4K
+      </data>
+    </dict>
+  </lib>
+</glyph>

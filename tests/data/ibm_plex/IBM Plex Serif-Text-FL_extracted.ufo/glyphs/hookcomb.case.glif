@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="hookcomb.case" format="2">
+  <outline>
+    <contour>
+      <point x="-14" y="762" type="line"/>
+      <point x="38" y="870" type="line"/>
+      <point x="-90" y="870" type="line"/>
+      <point x="-90" y="939" type="line"/>
+      <point x="23" y="939" type="line"/>
+      <point x="62" y="939"/>
+      <point x="94" y="907"/>
+      <point x="94" y="884" type="qcurve"/>
+      <point x="94" y="862"/>
+      <point x="68" y="811"/>
+      <point x="45" y="781" type="qcurve"/>
+      <point x="18" y="746" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]
+RUTG
+push 11
+MDAP[1]
+RTG
+push 96 11 1
+DELTAP1
+push 3
+MDRP[11100]
+push 144 3 1
+DELTAP1
+push 2
+MDRP[11100]
+IUP[0]
+IUP[1]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w0l-14+762l38+870l-90+870l-90+939l23+93962+93994+907q94+88494+86268+811q45+781l18+746</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

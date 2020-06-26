@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dagger" format="2">
+  <advance width="551"/>
+  <unicode hex="2020"/>
+  <outline>
+    <contour>
+      <point x="233" y="26" type="line"/>
+      <point x="233" y="250" type="line"/>
+      <point x="259" y="445" type="line"/>
+      <point x="292" y="445" type="line"/>
+      <point x="318" y="250" type="line"/>
+      <point x="318" y="26" type="line"/>
+      <point x="292" y="-200" type="line"/>
+      <point x="259" y="-200" type="line"/>
+    </contour>
+    <contour>
+      <point x="48" y="524" type="line"/>
+      <point x="135" y="524" type="line"/>
+      <point x="237" y="496" type="line"/>
+      <point x="237" y="468" type="line"/>
+      <point x="135" y="440" type="line"/>
+      <point x="48" y="440" type="line"/>
+    </contour>
+    <contour>
+      <point x="233" y="661" type="line"/>
+      <point x="233" y="748" type="line"/>
+      <point x="318" y="748" type="line"/>
+      <point x="318" y="661" type="line"/>
+      <point x="292" y="519" type="line"/>
+      <point x="259" y="519" type="line"/>
+    </contour>
+    <contour>
+      <point x="314" y="468" type="line"/>
+      <point x="314" y="496" type="line"/>
+      <point x="416" y="524" type="line"/>
+      <point x="503" y="524" type="line"/>
+      <point x="503" y="440" type="line"/>
+      <point x="416" y="440" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 13 25 13 22 8 13 8 3 7 22 10 15 30 10
+SVTCA[0]
+CALL
+CALL
+CALL
+SRP0
+MDRP[10000]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>3a0273b41e8d31d7502fc3b54b931367bd7517b4994750fb758fd18b7b31d13b6ec879c0c6946843d8791c965a0e2e59411df304c057f809efdb9db2a7e80195</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

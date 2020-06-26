@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Scommaaccent" format="2">
+  <advance width="595"/>
+  <unicode hex="0218"/>
+  <outline>
+    <component base="S"/>
+    <component base="commabelowcomb" xOffset="298"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>f604a2fbd099affd40f3eee8b80011254ffd785b92a4d2d3641ab7c0bf939c8f246ac80fb2d7d157dc9a638088daaa86b8faa1fd23ca83d8d81632f8c18658c4</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

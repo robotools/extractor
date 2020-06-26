@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni042D" format="2">
+  <advance width="654"/>
+  <unicode hex="042D"/>
+  <outline>
+    <contour>
+      <point x="293" y="-12" type="qcurve" name="ab01"/>
+      <point x="236" y="-12"/>
+      <point x="148" y="12"/>
+      <point x="87" y="50"/>
+      <point x="56" y="99"/>
+      <point x="56" y="124" type="qcurve"/>
+      <point x="56" y="156"/>
+      <point x="90" y="194"/>
+      <point x="119" y="194" type="qcurve" name="iv02"/>
+      <point x="149" y="194"/>
+      <point x="184" y="158"/>
+      <point x="184" y="129" type="qcurve"/>
+      <point x="184" y="108"/>
+      <point x="161" y="75"/>
+      <point x="148" y="69" type="qcurve"/>
+      <point x="148" y="65" type="line"/>
+      <point x="166" y="54"/>
+      <point x="231" y="40"/>
+      <point x="279" y="40" type="qcurve" name="sv01"/>
+      <point x="332" y="40"/>
+      <point x="412" y="76"/>
+      <point x="465" y="140"/>
+      <point x="492" y="229"/>
+      <point x="492" y="282" type="qcurve"/>
+      <point x="492" y="329" type="line"/>
+      <point x="214" y="329" type="line" name="iv01"/>
+      <point x="214" y="383" type="line" name="sv02"/>
+      <point x="492" y="383" type="line"/>
+      <point x="492" y="424" type="line"/>
+      <point x="492" y="476"/>
+      <point x="468" y="562"/>
+      <point x="421" y="623"/>
+      <point x="350" y="657"/>
+      <point x="302" y="657" type="qcurve" name="sv03"/>
+      <point x="233" y="657"/>
+      <point x="151" y="594"/>
+      <point x="151" y="544" type="qcurve"/>
+      <point x="151" y="488" type="line"/>
+      <point x="71" y="488" type="line" name="sv04"/>
+      <point x="71" y="698" type="line" name="at01"/>
+      <point x="151" y="698" type="line"/>
+      <point x="151" y="637" type="line" name="iv03"/>
+      <point x="155" y="637" type="line"/>
+      <point x="177" y="670"/>
+      <point x="257" y="710"/>
+      <point x="323" y="710" type="qcurve" name="at02"/>
+      <point x="384" y="710"/>
+      <point x="488" y="662"/>
+      <point x="562" y="570"/>
+      <point x="604" y="436"/>
+      <point x="604" y="349" type="qcurve"/>
+      <point x="604" y="264"/>
+      <point x="561" y="130"/>
+      <point x="480" y="37"/>
+      <point x="365" y="-12"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgPC9oaW50U2V0TGlzdD4K
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b
+      25lPSJjYXBoZWlnaHQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ250IiBwb2ludD0iYXQwMi
+      Igem9uZT0iY2FwaGVpZ2h0Ii8+CiAgICA8dHRjIGNvZGU9ImFsaWduYiIgcG9pbnQ9ImF
+      iMDEiIHpvbmU9ImJhc2VsaW5lIi8+CiAgICA8dHRjIGNvZGU9ImludGVycG9sYXRldiIg
+      cG9pbnQ9Iml2MDEiIHBvaW50MT0iYXQwMiIgcG9pbnQyPSJhYjAxIiBhbGlnbj0icm91b
+      mQiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhYjAxIiBwb2ludDI9In
+      N2MDEiIHN0ZW09InVjX3N0ZW0iLz4KICAgIDx0dGMgY29kZT0iaW50ZXJwb2xhdGV2IiB
+      wb2ludD0iaXYwMiIgcG9pbnQxPSJpdjAxIiBwb2ludDI9InN2MDEiIGFsaWduPSJyb3Vu
+      ZCIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludDE9Iml2MDEiIHBvaW50Mj0ic
+      3YwMiIgc3RlbT0idWNfc3RlbSIvPgogICAgPHR0YyBjb2RlPSJzaW5nbGV2IiBwb2ludD
+      E9ImF0MDIiIHBvaW50Mj0ic3YwMyIgc3RlbT0idWNfc3RlbSIvPgogICAgPHR0YyBjb2R
+      lPSJzaW5nbGV2IiBwb2ludDE9ImF0MDEiIHBvaW50Mj0ic3YwNCIgcm91bmQ9InRydWUi
+      Lz4KICAgIDx0dGMgY29kZT0iaW50ZXJwb2xhdGV2IiBwb2ludD0iaXYwMyIgcG9pbnQxP
+      SJzdjAzIiBwb2ludDI9ImFiMDEiLz4KICA8L3R0UHJvZ3JhbT4K
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  CALL zone_align 39 28
+  CALL zone_align 45 28
+  CALL zone_align 0 20
+  SRP1 0
+  SRP2 45
+  IP 25
+  MDAP[R] 25
+  SRP0 0
+  MIRP[MdRGr] 18 5
+  SRP1 18
+  SRP2 25
+  IP 8
+  MDAP[R] 8
+  SRP0 25
+  MIRP[MdRGr] 26 5
+  SRP0 45
+  MIRP[MdRGr] 33 5
+  SRP0 39
+  MDRP[MDRGr] 38
+  SRP1 0
+  SRP2 33
+  IP 41
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>8c62c549b7c6699a46132da6d22cedb5e3f59758fb5cad694fffb642a75df286350e0ae756b183406cc63c377c6c37c3696028b69240f455f5a004dd91262cc8</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

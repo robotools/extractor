@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="partialdiff" format="2">
+  <advance width="587"/>
+  <unicode hex="2202"/>
+  <outline>
+    <contour>
+      <point x="289" y="-12" type="qcurve" name="ab01"/>
+      <point x="233" y="-12"/>
+      <point x="146" y="25"/>
+      <point x="84" y="92"/>
+      <point x="52" y="188"/>
+      <point x="52" y="248" type="qcurve"/>
+      <point x="52" y="306"/>
+      <point x="83" y="401"/>
+      <point x="139" y="468"/>
+      <point x="219" y="504"/>
+      <point x="268" y="504" type="qcurve" name="av01"/>
+      <point x="354" y="504"/>
+      <point x="400" y="439" type="qcurve" name="iv01"/>
+      <point x="404" y="441" type="line"/>
+      <point x="380" y="514"/>
+      <point x="267" y="650"/>
+      <point x="178" y="698" type="qcurve" name="at01"/>
+      <point x="263" y="698" type="line"/>
+      <point x="303" y="678"/>
+      <point x="395" y="610"/>
+      <point x="474" y="506"/>
+      <point x="526" y="362"/>
+      <point x="526" y="268" type="qcurve"/>
+      <point x="526" y="126"/>
+      <point x="398" y="-12"/>
+    </contour>
+    <contour>
+      <point x="289" y="41" type="qcurve" name="sv02"/>
+      <point x="351" y="41"/>
+      <point x="424" y="120"/>
+      <point x="424" y="198" type="qcurve"/>
+      <point x="424" y="291" type="line"/>
+      <point x="424" y="369"/>
+      <point x="351" y="448"/>
+      <point x="289" y="448" type="qcurve" name="sv01"/>
+      <point x="227" y="448"/>
+      <point x="154" y="369"/>
+      <point x="154" y="291" type="qcurve"/>
+      <point x="154" y="198" type="line"/>
+      <point x="154" y="120"/>
+      <point x="227" y="41"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      ICA8aGludFNldExpc3Q+CiAgICA8aGludHNldCBwb2ludFRhZz0iYWIwMSI+CiAgICAgI
+      Dxoc3RlbSBwb3M9Ii0xMiIgd2lkdGg9IjUzIiAvPgogICAgICA8aHN0ZW0gcG9zPSI0ND
+      giIHdpZHRoPSI1NiIgLz4KICAgICAgPGhzdGVtIHBvcz0iNjk4IiB3aWR0aD0iLTIwIiA
+      vPgogICAgICA8dnN0ZW0gcG9zPSI1MiIgd2lkdGg9IjEwMiIgLz4KICAgICAgPHZzdGVt
+      IHBvcz0iNDI0IiB3aWR0aD0iMTAyIiAvPgogICAgPC9oaW50c2V0PgogIDwvaGludFNld
+      Expc3Q+Cg==
+      </data>
+      <key>com.fontlab.ttprogram</key>
+      <data>
+      ICA8dHRQcm9ncmFtPgogICAgPHR0YyBjb2RlPSJhbGlnbnYiIHBvaW50PSJhdjAxIiBhb
+      Glnbj0ibGVmdCIvPgogICAgPHR0YyBjb2RlPSJhbGlnbnQiIHBvaW50PSJhdDAxIiB6b2
+      5lPSJjYXBoZWlnaHQiLz4KICAgIDx0dGMgY29kZT0iYWxpZ25iIiBwb2ludD0iYWIwMSI
+      gem9uZT0iYmFzZWxpbmUiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJh
+      djAxIiBwb2ludDI9InN2MDEiIHN0ZW09InN0ZW1fc2VyaWYiLz4KICAgIDx0dGMgY29kZ
+      T0iaW50ZXJwb2xhdGV2IiBwb2ludD0iaXYwMSIgcG9pbnQxPSJzdjAxIiBwb2ludDI9Im
+      FiMDEiLz4KICAgIDx0dGMgY29kZT0ic2luZ2xldiIgcG9pbnQxPSJhYjAxIiBwb2ludDI
+      9InN2MDIiIHN0ZW09InN0ZW1fc2VyaWYiLz4KICA8L3R0UHJvZ3JhbT4K
+      </data>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+  SVTCA[Y]
+  RDTG
+  MDAP[R] 10
+  RTG
+  CALL zone_align 16 28
+  CALL zone_align 0 20
+  SRP0 10
+  MIRP[MdRGr] 32 3
+  SRP1 0
+  SRP2 32
+  IP 12
+  SRP0 0
+  MIRP[MdRGr] 25 3
+  IUP[Y]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>9ba359737c7a6c362f5734d108e0124f816dfa32a8a67ccc6b44067facb0fdc161eeacb52ca4af29f8bd1a2a44628030661dbc3cf145822b75e522196ccbf154</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

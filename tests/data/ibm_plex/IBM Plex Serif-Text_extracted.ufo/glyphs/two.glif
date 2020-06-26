@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="two" format="2">
+  <advance width="600"/>
+  <unicode hex="0032"/>
+  <outline>
+    <contour>
+      <point x="54" y="74" type="line"/>
+      <point x="275" y="296" type="line"/>
+      <point x="324" y="345"/>
+      <point x="380" y="444"/>
+      <point x="380" y="503" type="qcurve"/>
+      <point x="380" y="527" type="line"/>
+      <point x="380" y="589"/>
+      <point x="309" y="659"/>
+      <point x="247" y="659" type="qcurve"/>
+      <point x="215" y="659"/>
+      <point x="167" y="647"/>
+      <point x="153" y="639" type="qcurve"/>
+      <point x="153" y="635" type="line"/>
+      <point x="167" y="629"/>
+      <point x="190" y="597"/>
+      <point x="190" y="577" type="qcurve"/>
+      <point x="190" y="550"/>
+      <point x="154" y="513"/>
+      <point x="125" y="513" type="qcurve"/>
+      <point x="96" y="513"/>
+      <point x="62" y="550"/>
+      <point x="62" y="582" type="qcurve"/>
+      <point x="62" y="608"/>
+      <point x="92" y="654"/>
+      <point x="146" y="689"/>
+      <point x="220" y="710"/>
+      <point x="264" y="710" type="qcurve"/>
+      <point x="369" y="710"/>
+      <point x="489" y="609"/>
+      <point x="489" y="519" type="qcurve"/>
+      <point x="489" y="475"/>
+      <point x="462" y="401"/>
+      <point x="417" y="337"/>
+      <point x="356" y="279"/>
+      <point x="322" y="251" type="qcurve"/>
+      <point x="135" y="91" type="line"/>
+      <point x="135" y="87" type="line"/>
+      <point x="462" y="87" type="line"/>
+      <point x="462" y="182" type="line"/>
+      <point x="516" y="182" type="line"/>
+      <point x="516" y="0" type="line"/>
+      <point x="54" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 18 38 36 18 18 8 41 8 3 26 0 36 10 41 20 10 26 28 10
+SVTCA[0]
+CALL
+CALL
+MIRP[10100]
+MDRP[10000]
+SRP0
+MIRP[10100]
+SRP1
+SRP2
+IP
+MDAP[1]
+SRP0
+MDRP[11100]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>e1af4cc8db2fc2db82245bd5ac9582e638d578ef5fb8930e069dc58ec46bc55b94e3f08a6bac0ac48e1c72ced21fc2bcf9d192db5f4ff5f96385c97eb4cd6ea6</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

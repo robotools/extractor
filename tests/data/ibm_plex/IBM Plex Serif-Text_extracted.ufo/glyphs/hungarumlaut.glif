@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="hungarumlaut" format="2">
+  <advance width="600"/>
+  <unicode hex="02DD"/>
+  <outline>
+    <contour>
+      <point x="181" y="600" type="line"/>
+      <point x="258" y="783" type="line"/>
+      <point x="342" y="741" type="line"/>
+      <point x="212" y="584" type="line"/>
+    </contour>
+    <contour>
+      <point x="348" y="600" type="line"/>
+      <point x="425" y="783" type="line"/>
+      <point x="509" y="741" type="line"/>
+      <point x="379" y="584" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+NPUSHB 11 7 3 5 1 15 3 47 3 2 9 3
+SVTCA[0]
+MDAP[1]
+SDB
+DELTAP1
+MDRP[11100]
+MDRP[10000]
+SRP0
+MDRP[10000]
+IUP[0]
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w600l181600l258783l342741l212584l348600l425783l509741l379584</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

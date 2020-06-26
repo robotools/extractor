@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="guillemotright" format="2">
+  <advance width="516"/>
+  <unicode hex="00BB"/>
+  <outline>
+    <component base="guilsinglright"/>
+    <component base="guilsinglright" xOffset="210"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>783e7f4a72b2a15b127acdeedec00d3f4abb45f2b2bdfeab08a51924525d1f4163648a0909be079edfe4eac07d81ec4cd527b8ee32ba4f5b1a60d7a817b6d681</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>
