@@ -1,9 +1,9 @@
 import time
 from fontTools.ttLib import TTFont, TTLibError
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
-from fontTools.misc.textTools import num2binary
 from fontTools.pens.boundsPen import ControlBoundsPen
 from extractor.exceptions import ExtractorError
+from extractor.hashPointPen import HashPointPen
 from extractor.tools import RelaxedInfo, copyAttr
 
 # ----------------
@@ -18,7 +18,7 @@ def isOpenType(pathOrFile):
         return False
     return True
 
-def extractFontFromOpenType(pathOrFile, destination, doGlyphOrder=True, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
+def extractFontFromOpenType(pathOrFile, destination, doGlyphOrder=True, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[], doInstructions=True):
     source = TTFont(pathOrFile)
     if doInfo:
         extractOpenTypeInfo(source, destination)
@@ -33,12 +33,101 @@ def extractFontFromOpenType(pathOrFile, destination, doGlyphOrder=True, doGlyphs
         destination.kerning.update(kerning)
     for function in customFunctions:
         function(source, destination)
+    if doInstructions:
+        extractInstructions(source, destination)
     source.close()
 
 def extractGlyphOrder(source, destination):
     glyphOrder = source.getGlyphOrder()
     if len(glyphOrder):
         destination.lib["public.glyphOrder"] = glyphOrder
+
+def extractInstructions(source, destination):
+    lib = destination.lib["public.truetype.instructions"] = {
+        "formatVersion": 1,
+        "maxFunctionDefs": 0,
+        "maxInstructionDefs": 0,
+        "maxStackElements": 0,
+        "maxStorage": 0,
+        "maxTwilightPoints": 0,
+        "maxZones": 0,
+    }
+    extractControlValues(source, lib)
+    extractFontProgram(source, lib)
+    extractGlyphPrograms(source, destination)
+    extractMaxpValues(source, lib)
+    extractPreProgram(source, lib)
+
+def extractControlValues(source, lib):
+    """
+    Extract the TrueType control values table to the font lib.
+    """
+    if "cvt " not in source:
+        return
+    cvt = source["cvt "]
+    lib["controlValue"] = [
+        {"id": str(i), "value": val}
+        for i, val in enumerate(cvt.values)
+    ]
+
+def extractFontProgram(source, lib):
+    """
+    Extract the TrueType font program to the font lib.
+    """
+    if "fpgm" not in source:
+        return
+    fpgm = source["fpgm"].program
+    lib["fontProgram"] = _byteCodeToHtic(fpgm)
+
+def extractGlyphPrograms(source, destination):
+    """
+    Extract the TrueType pre-program to the font lib.
+    """
+    if "glyf" not in source:
+        return
+    glyf = source["glyf"]
+    glyph_set = source.getGlyphSet()
+    for name in glyph_set.keys():
+        glyph = glyph_set[name]._glyph
+        if not hasattr(glyph, "program"):
+            continue
+        destinationGlyph = destination[name]
+        hash_pen = HashPointPen(destinationGlyph, destination)
+        destinationGlyph.drawPoints(hash_pen)
+        destinationGlyph.lib["public.truetype.instructions"] = {
+            "assembly": _byteCodeToHtic(glyph.program),
+            "formatVersion": "1",
+            "id": hash_pen.getHash(),
+        }
+
+def extractMaxpValues(source, lib):
+    """
+    Extract the TrueType maximum profile values to the font lib.
+    """
+    if "maxp" not in source:
+        return
+    maxp = source["maxp"]
+    lib.update({
+        "maxFunctionDefs": maxp.maxFunctionDefs,
+        "maxInstructionDefs": maxp.maxInstructionDefs,
+        "maxStackElements": maxp.maxStackElements,
+        "maxStorage": maxp.maxStorage,
+        "maxTwilightPoints": maxp.maxTwilightPoints,
+        "maxZones": maxp.maxZones,
+    })
+
+def extractPreProgram(source, lib):
+    """
+    Extract the TrueType pre-program to the font lib.
+    """
+    if "prep" not in source:
+        return
+    prep = source["prep"].program
+    lib["controlValueProgram"] = _byteCodeToHtic(prep)
+
+def _byteCodeToHtic(program):
+    ttx_asm = program.getAssembly()
+    return ttx_asm
 
 # ----
 # Info
