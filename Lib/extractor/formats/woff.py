@@ -1,7 +1,11 @@
 from xml.sax.saxutils import quoteattr
 from fontTools.ttLib import TTFont, TTLibError
 from extractor.tools import RelaxedInfo
-from extractor.formats.opentype import extractOpenTypeInfo, extractOpenTypeGlyphs, extractOpenTypeKerning
+from extractor.formats.opentype import (
+    extractOpenTypeInfo,
+    extractOpenTypeGlyphs,
+    extractOpenTypeKerning,
+)
 
 try:
     from xml.etree import cElementTree as ElementTree
@@ -11,6 +15,7 @@ except ImportError:
 # ----------------
 # Public Functions
 # ----------------
+
 
 def isWOFF(pathOrFile):
     flavor = None
@@ -22,7 +27,15 @@ def isWOFF(pathOrFile):
         return False
     return flavor in ("woff", "woff2")
 
-def extractFontFromWOFF(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
+
+def extractFontFromWOFF(
+    pathOrFile,
+    destination,
+    doGlyphs=True,
+    doInfo=True,
+    doKerning=True,
+    customFunctions=[],
+):
     source = TTFont(pathOrFile)
     if doInfo:
         extractWOFFInfo(source, destination)
@@ -37,9 +50,11 @@ def extractFontFromWOFF(pathOrFile, destination, doGlyphs=True, doInfo=True, doK
         function(source, destination)
     source.close()
 
+
 # ----------------
 # Specific Imports
 # ----------------
+
 
 def extractWOFFInfo(source, destination):
     info = RelaxedInfo(destination.info)
@@ -48,15 +63,19 @@ def extractWOFFInfo(source, destination):
     _extractWOFFMetadata(source.flavorData, info)
     return extractOpenTypeInfo(source, destination)
 
+
 def extractWOFFGlyphs(source, destination):
     return extractOpenTypeGlyphs(source, destination)
+
 
 def extractWOFFKerning(source, destination):
     return extractOpenTypeKerning(source, destination)
 
+
 # --------
 # Metadata
 # --------
+
 
 def _extractWOFFMetadata(source, destination):
     if source.metaData is None:
@@ -82,13 +101,18 @@ def _extractWOFFMetadata(source, destination):
         elif element.tag == "extension":
             _extractWOFFMetadataExtension(element, destination)
 
+
 def _extractWOFFMetadataUniqueID(element, destination):
-    destination.woffMetadataUniqueID = _extractWOFFMetadataDict(element, ("id",))
+    destination.woffMetadataUniqueID = _extractWOFFMetadataDict(
+        element, ("id",)
+    )
+
 
 def _extractWOFFMetadataVendor(element, destination):
     attributes = ("name", "url", "dir", "class")
     record = _extractWOFFMetadataDict(element, attributes)
     destination.woffMetadataVendor = record
+
 
 def _extractWOFFMetadataCredits(element, destination):
     attributes = ("name", "url", "role", "dir", "class")
@@ -99,12 +123,14 @@ def _extractWOFFMetadataCredits(element, destination):
             credits.append(record)
     destination.woffMetadataCredits = dict(credits=credits)
 
+
 def _extractWOFFMetadataDescription(element, destination):
     description = _extractWOFFMetadataDict(element, ("url",))
     textRecords = _extractWOFFMetadataText(element)
     if textRecords:
         description["text"] = textRecords
     destination.woffMetadataDescription = description
+
 
 def _extractWOFFMetadataLicense(element, destination):
     license = _extractWOFFMetadataDict(element, ("url", "id"))
@@ -113,12 +139,14 @@ def _extractWOFFMetadataLicense(element, destination):
         license["text"] = textRecords
     destination.woffMetadataLicense = license
 
+
 def _extractWOFFMetadataCopyright(element, destination):
     copyright = {}
     textRecords = _extractWOFFMetadataText(element)
     if textRecords:
         copyright["text"] = textRecords
     destination.woffMetadataCopyright = copyright
+
 
 def _extractWOFFMetadataTrademark(element, destination):
     trademark = {}
@@ -127,8 +155,12 @@ def _extractWOFFMetadataTrademark(element, destination):
         trademark["text"] = textRecords
     destination.woffMetadataTrademark = trademark
 
+
 def _extractWOFFMetadataLicensee(element, destination):
-    destination.woffMetadataLicensee = _extractWOFFMetadataDict(element, ("name", "dir", "class"))
+    destination.woffMetadataLicensee = _extractWOFFMetadataDict(
+        element, ("name", "dir", "class")
+    )
+
 
 def _extractWOFFMetadataExtension(element, destination):
     extension = _extractWOFFMetadataDict(element, ("id",))
@@ -148,6 +180,7 @@ def _extractWOFFMetadataExtension(element, destination):
         extensions.extend(destination.woffMetadataExtensions)
     destination.woffMetadataExtensions = extensions + [extension]
 
+
 def _extractWOFFMetadataExtensionItem(element):
     item = _extractWOFFMetadataDict(element, ("id",))
     for subElement in element:
@@ -163,6 +196,7 @@ def _extractWOFFMetadataExtensionItem(element):
             item["values"].append(name)
     return item
 
+
 def _extractWOFFMetadataExtensionName(element):
     name = _extractWOFFMetadataDict(element, ("dir", "class"))
     language = _extractWOFFMetadataLanguage(element)
@@ -171,10 +205,13 @@ def _extractWOFFMetadataExtensionName(element):
     name["text"] = _flattenWOFFMetadataString(element)
     return name
 
+
 def _extractWOFFMetadataExtensionValue(element):
     return _extractWOFFMetadataExtensionName(element)
 
+
 # support
+
 
 def _extractWOFFMetadataDict(element, attributes):
     record = {}
@@ -183,6 +220,7 @@ def _extractWOFFMetadataDict(element, attributes):
         if value is not None:
             record[attribute] = value
     return record
+
 
 def _extractWOFFMetadataText(element):
     records = []
@@ -198,11 +236,13 @@ def _extractWOFFMetadataText(element):
         records.append(record)
     return records
 
+
 def _extractWOFFMetadataLanguage(element):
     language = element.attrib.get("{http://www.w3.org/XML/1998/namespace}lang")
     if language is None:
         language = element.attrib.get("lang")
     return language
+
 
 def _flattenWOFFMetadataString(element, sub=False):
     text = element.text.strip()
@@ -211,7 +251,10 @@ def _flattenWOFFMetadataString(element, sub=False):
     if element.tail:
         text += element.tail.strip()
     if sub:
-        attrib = ["%s=%s" % (key, quoteattr(value)) for key, value in element.attrib.items()]
+        attrib = [
+            "%s=%s" % (key, quoteattr(value))
+            for key, value in element.attrib.items()
+        ]
         attrib = " ".join(attrib)
         if attrib:
             start = "<%s %s>" % (element.tag, attrib)

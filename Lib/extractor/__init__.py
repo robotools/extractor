@@ -12,8 +12,9 @@ _extractFunctions = dict(
     Type1=extractFontFromType1,
     WOFF=extractFontFromWOFF,
     ttx=extractFontFromTTX,
-    vfb=extractFontFromVFB
+    vfb=extractFontFromVFB,
 )
+
 
 def extractFormat(pathOrFile):
     if isType1(pathOrFile):
@@ -28,7 +29,16 @@ def extractFormat(pathOrFile):
         return "vfb"
     return None
 
-def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, format=None, customFunctions={}):
+
+def extractUFO(
+    pathOrFile,
+    destination,
+    doGlyphs=True,
+    doInfo=True,
+    doKerning=True,
+    format=None,
+    customFunctions={},
+):
     if format is None:
         format = extractFormat(pathOrFile)
     if format not in _extractFunctions:
@@ -40,9 +50,19 @@ def extractUFO(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=Tr
     # occurs, print the traceback for debugging and
     # raise an ExtractorError.
     try:
-        func(pathOrFile, destination, doGlyphs=doGlyphs, doInfo=doInfo, doKerning=doKerning, customFunctions=customFunctions.get(format, []))
+        func(
+            pathOrFile,
+            destination,
+            doGlyphs=doGlyphs,
+            doInfo=doInfo,
+            doKerning=doKerning,
+            customFunctions=customFunctions.get(format, []),
+        )
     except:
         import sys
         import traceback
+
         traceback.print_exc(file=sys.stdout)
-        raise ExtractorError("There was an error reading the %s file." % format)
+        raise ExtractorError(
+            "There was an error reading the %s file." % format
+        )

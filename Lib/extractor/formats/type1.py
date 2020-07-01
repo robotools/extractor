@@ -10,6 +10,7 @@ from extractor.tools import RelaxedInfo
 # Public Functions
 # ----------------
 
+
 def isType1(pathOrFile):
     try:
         font = T1Font(pathOrFile)
@@ -18,7 +19,15 @@ def isType1(pathOrFile):
         return False
     return True
 
-def extractFontFromType1(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[]):
+
+def extractFontFromType1(
+    pathOrFile,
+    destination,
+    doGlyphs=True,
+    doInfo=True,
+    doKerning=True,
+    customFunctions=[],
+):
     source = T1Font(pathOrFile)
     destination.lib["public.glyphOrder"] = _extractType1GlyphOrder(source)
     if doInfo:
@@ -33,15 +42,18 @@ def extractFontFromType1(pathOrFile, destination, doGlyphs=True, doInfo=True, do
     for function in customFunctions:
         function(source, destination)
 
+
 def extractType1Info(source, destination):
     info = RelaxedInfo(destination.info)
     _extractType1FontInfo(source, info)
     _extractType1Private(source, info)
     _extractType1FontMatrix(source, info)
 
+
 # ----
 # Info
 # ----
+
 
 def _extractType1FontInfo(source, info):
     sourceInfo = source["FontInfo"]
@@ -92,11 +104,13 @@ def _extractType1FontInfo(source, info):
     info.postscriptUnderlinePosition = sourceInfo.get("UnderlinePosition")
     info.postscriptUnderlineThickness = sourceInfo.get("UnderlineThickness")
 
+
 def _extractType1FontMatrix(source, info):
     # units per em
     matrix = source["FontMatrix"]
     matrix = Transform(*matrix).inverse()
     info.unitsPerEm = int(round(matrix[3]))
+
 
 def _extractType1Private(source, info):
     private = source["Private"]
@@ -118,9 +132,11 @@ def _extractType1Private(source, info):
     # ForceBold
     info.postscriptForceBold = bool(private.get("ForceBold", None))
 
+
 # --------
 # Outlines
 # --------
+
 
 def extractType1Glyphs(source, destination):
     glyphSet = source.getGlyphSet()
@@ -137,12 +153,13 @@ def extractType1Glyphs(source, destination):
         # synthesize the unicode value
         destinationGlyph.unicode = AGL2UV.get(glyphName)
 
+
 # -----------
 # Glyph order
 # -----------
 
-class GlyphOrderPSInterpreter(PSInterpreter):
 
+class GlyphOrderPSInterpreter(PSInterpreter):
     def __init__(self):
         PSInterpreter.__init__(self)
         self.glyphOrder = []
@@ -157,6 +174,7 @@ class GlyphOrderPSInterpreter(PSInterpreter):
         if token == "/CharStrings":
             self.collectTokenForGlyphOrder = True
         return result
+
 
 def _extractType1GlyphOrder(t1Font):
     interpreter = GlyphOrderPSInterpreter()

@@ -254,7 +254,11 @@ def _extractInfoName(source, info):
 
 
 def _priorityOrder(nameID):
-    priority = [(nameID, 1, 0, 0), (nameID, 1, None, None), (nameID, None, None, None)]
+    priority = [
+        (nameID, 1, 0, 0),
+        (nameID, 1, None, None),
+        (nameID, None, None, None),
+    ]
     return priority
 
 
@@ -392,15 +396,21 @@ def _extractInfoCFF(source, info):
         info.postscriptBlueValues = private.rawDict.get("BlueValues", [])
         info.postscriptOtherBlues = private.rawDict.get("OtherBlues", [])
         info.postscriptFamilyBlues = private.rawDict.get("FamilyBlues", [])
-        info.postscriptFamilyOtherBlues = private.rawDict.get("FamilyOtherBlues", [])
+        info.postscriptFamilyOtherBlues = private.rawDict.get(
+            "FamilyOtherBlues", []
+        )
         info.postscriptStemSnapH = private.rawDict.get("StemSnapH", [])
         info.postscriptStemSnapV = private.rawDict.get("StemSnapV", [])
         info.postscriptBlueFuzz = private.rawDict.get("BlueFuzz", None)
         info.postscriptBlueShift = private.rawDict.get("BlueShift", None)
         info.postscriptBlueScale = private.rawDict.get("BlueScale", None)
         info.postscriptForceBold = bool(private.rawDict.get("ForceBold", None))
-        info.postscriptNominalWidthX = private.rawDict.get("nominalWidthX", None)
-        info.postscriptDefaultWidthX = private.rawDict.get("defaultWidthX", None)
+        info.postscriptNominalWidthX = private.rawDict.get(
+            "nominalWidthX", None
+        )
+        info.postscriptDefaultWidthX = private.rawDict.get(
+            "defaultWidthX", None
+        )
     # XXX postscriptSlantAngle
     # XXX postscriptUniqueID
 
@@ -531,12 +541,16 @@ def _extractOpenTypeKerningFromGPOS(source):
     _validateClasses(leftClasses)
     _validateClasses(rightClasses)
     # populate the class marging into the kerning
-    kerning = _replaceRenamedPairMembers(kerning, leftClassRename, rightClassRename)
+    kerning = _replaceRenamedPairMembers(
+        kerning, leftClassRename, rightClassRename
+    )
     # rename the groups to final names
     leftClassRename = _renameClasses(leftClasses, "public.kern1.")
     rightClassRename = _renameClasses(rightClasses, "public.kern2.")
     # populate the final group names
-    kerning = _replaceRenamedPairMembers(kerning, leftClassRename, rightClassRename)
+    kerning = _replaceRenamedPairMembers(
+        kerning, leftClassRename, rightClassRename
+    )
     leftGroups = _setGroupNames(leftClasses, leftClassRename)
     rightGroups = _setGroupNames(rightClasses, rightClassRename)
     # combine the side groups
@@ -745,7 +759,9 @@ def _handleLookupType2Format2(subtable, lookupIndex, subtableIndex):
     # extract the pairs
     kerning = {}
     for class1RecordIndex, class1Record in enumerate(subtable.Class1Record):
-        for class2RecordIndex, class2Record in enumerate(class1Record.Class2Record):
+        for class2RecordIndex, class2Record in enumerate(
+            class1Record.Class2Record
+        ):
             leftClass = (lookupIndex, subtableIndex, class1RecordIndex)
             rightClass = (lookupIndex, subtableIndex, class2RecordIndex)
             valueFormat1 = subtable.ValueFormat1
@@ -867,7 +883,10 @@ def _validateClasses(classes):
             glyphToClass[glyphName].add(className)
     for glyphName, groupList in glyphToClass.items():
         if len(groupList) > 1:
-            raise ExtractorError("Kerning classes are in an conflicting state.")
+            raise ExtractorError(
+                "Kerning classes are in an conflicting state."
+            )
+
 
 
 def _replaceRenamedPairMembers(kerning, leftRename, rightRename):
@@ -904,7 +923,9 @@ def _renameClasses(classes, prefix):
     return renameMap
 
 
-def _extractFeatureClasses(lookupIndex, subtableIndex, classDefs, coverage=None):
+def _extractFeatureClasses(
+    lookupIndex, subtableIndex, classDefs, coverage=None
+):
     """
     Extract classes for a specific lookup in a specific subtable.
     This is relatively straightforward, except for class 0 interpretation.
@@ -945,7 +966,9 @@ def _extractOpenTypeKerningFromKern(source):
     kerning = {}
     for subtable in kern.kernTables:
         if subtable.version != 0:
-            raise ExtractorError("Unknown kern table formst: %d" % subtable.version)
+            raise ExtractorError(
+                "Unknown kern table formst: %d" % subtable.version
+            )
         # XXX the spec defines coverage values for
         # kerning direction (horizontal or vertical)
         # minimum (some sort of kerning restriction)

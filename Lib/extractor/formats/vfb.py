@@ -7,12 +7,15 @@ from fontTools.ufoLib import UFOReader
 
 _ufo2vfbLocation = "/usr/local/bin/vfb2ufo"
 
+
 def haveVfb2ufo():
     return os.path.exists(_ufo2vfbLocation)
+
 
 # ----------------
 # Public Functions
 # ----------------
+
 
 def isVFB(pathOrFile):
     if not isinstance(pathOrFile, str):
@@ -21,7 +24,18 @@ def isVFB(pathOrFile):
         return False
     return True
 
-def extractFontFromVFB(pathOrFile, destination, doGlyphs=True, doInfo=True, doKerning=True, doGroups=True, doFeatures=True, doLib=True, customFunctions=[]):
+
+def extractFontFromVFB(
+    pathOrFile,
+    destination,
+    doGlyphs=True,
+    doInfo=True,
+    doKerning=True,
+    doGroups=True,
+    doFeatures=True,
+    doLib=True,
+    customFunctions=[],
+):
     ufoPath = tempfile.mkdtemp(suffix=".ufo")
     cmds = [_ufo2vfbLocation, "-64", "-fo", pathOrFile, ufoPath]
     cmds = subprocess.list2cmdline(cmds)
@@ -51,7 +65,9 @@ def extractFontFromVFB(pathOrFile, destination, doGlyphs=True, doInfo=True, doKe
                 destination.newGlyph(glyphName)
                 glyph = destination[glyphName]
                 pointPen = glyph.getPointPen()
-                glyphSet.readGlyph(glyphName=glyphName, glyphObject=glyph, pointPen=pointPen)
+                glyphSet.readGlyph(
+                    glyphName=glyphName, glyphObject=glyph, pointPen=pointPen
+                )
         for function in customFunctions:
             function(source, destination)
     finally:
