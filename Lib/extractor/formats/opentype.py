@@ -11,6 +11,7 @@ from extractor.tools import RelaxedInfo, copyAttr
 # Public Functions
 # ----------------
 
+
 def isOpenType(pathOrFile):
     try:
         font = TTFont(pathOrFile)
@@ -19,7 +20,17 @@ def isOpenType(pathOrFile):
         return False
     return True
 
-def extractFontFromOpenType(pathOrFile, destination, doGlyphOrder=True, doGlyphs=True, doInfo=True, doKerning=True, customFunctions=[], doInstructions=True):
+
+def extractFontFromOpenType(
+    pathOrFile,
+    destination,
+    doGlyphOrder=True,
+    doGlyphs=True,
+    doInfo=True,
+    doKerning=True,
+    customFunctions=[],
+    doInstructions=True,
+):
     source = TTFont(pathOrFile)
     if doInfo:
         extractOpenTypeInfo(source, destination)
@@ -38,10 +49,12 @@ def extractFontFromOpenType(pathOrFile, destination, doGlyphOrder=True, doGlyphs
         extractInstructions(source, destination)
     source.close()
 
+
 def extractGlyphOrder(source, destination):
     glyphOrder = source.getGlyphOrder()
     if len(glyphOrder):
         destination.lib["public.glyphOrder"] = glyphOrder
+
 
 def extractInstructions(source, destination):
     lib = destination.lib["public.truetype.instructions"] = {
@@ -59,6 +72,7 @@ def extractInstructions(source, destination):
     extractMaxpValues(source, lib)
     extractPreProgram(source, lib)
 
+
 def extractControlValues(source, lib):
     """
     Extract the TrueType control values table to the font lib.
@@ -67,9 +81,9 @@ def extractControlValues(source, lib):
         return
     cvt = source["cvt "]
     lib["controlValue"] = [
-        {"id": str(i), "value": val}
-        for i, val in enumerate(cvt.values)
+        {"id": str(i), "value": val} for i, val in enumerate(cvt.values)
     ]
+
 
 def extractFontProgram(source, lib):
     """
@@ -79,6 +93,7 @@ def extractFontProgram(source, lib):
         return
     fpgm = source["fpgm"].program
     lib["fontProgram"] = _byteCodeToHtic(fpgm)
+
 
 def extractGlyphPrograms(source, destination):
     """
@@ -101,6 +116,7 @@ def extractGlyphPrograms(source, destination):
             "id": hash_pen.getHash(),
         }
 
+
 def extractMaxpValues(source, lib):
     """
     Extract the TrueType maximum profile values to the font lib.
@@ -108,14 +124,17 @@ def extractMaxpValues(source, lib):
     if "maxp" not in source:
         return
     maxp = source["maxp"]
-    lib.update({
-        "maxFunctionDefs": maxp.maxFunctionDefs,
-        "maxInstructionDefs": maxp.maxInstructionDefs,
-        "maxStackElements": maxp.maxStackElements,
-        "maxStorage": maxp.maxStorage,
-        "maxTwilightPoints": maxp.maxTwilightPoints,
-        "maxZones": maxp.maxZones,
-    })
+    lib.update(
+        {
+            "maxFunctionDefs": maxp.maxFunctionDefs,
+            "maxInstructionDefs": maxp.maxInstructionDefs,
+            "maxStackElements": maxp.maxStackElements,
+            "maxStorage": maxp.maxStorage,
+            "maxTwilightPoints": maxp.maxTwilightPoints,
+            "maxZones": maxp.maxZones,
+        }
+    )
+
 
 def extractPreProgram(source, lib):
     """
@@ -126,13 +145,16 @@ def extractPreProgram(source, lib):
     prep = source["prep"].program
     lib["controlValueProgram"] = _byteCodeToHtic(prep)
 
+
 def _byteCodeToHtic(program):
     stream = InstructionStream(program_bytes=program.getBytecode())
     return "\n%s\n" % str(stream)
 
+
 # ----
 # Info
 # ----
+
 
 def extractOpenTypeInfo(source, destination):
     info = RelaxedInfo(destination.info)
@@ -144,6 +166,7 @@ def extractOpenTypeInfo(source, destination):
     _extractInfoPost(source, info)
     _extractInfoCFF(source, info)
     _extractInfoGasp(source, info)
+
 
 def _extractInfoHead(source, info):
     head = source["head"]
@@ -174,6 +197,7 @@ def _extractInfoHead(source, info):
         styleMapStyleName = "italic"
     info.styleMapStyleName = styleMapStyleName
 
+
 def _extractInfoName(source, info):
     records = []
     nameIDs = {}
@@ -184,15 +208,21 @@ def _extractInfoName(source, info):
         languageID = record.langID
         string = record.toUnicode()
         nameIDs[nameID, platformID, encodingID, languageID] = string
-        records.append((nameID, platformID, encodingID, languageID,
-            dict(
-                nameID=nameID,
-                platformID=platformID,
-                encodingID=encodingID,
-                languageID=languageID,
-                string=string
+        records.append(
+            (
+                nameID,
+                platformID,
+                encodingID,
+                languageID,
+                dict(
+                    nameID=nameID,
+                    platformID=platformID,
+                    encodingID=encodingID,
+                    languageID=languageID,
+                    string=string,
+                ),
             )
-        ))
+        )
     attributes = dict(
         familyName=_priorityOrder(16) + _priorityOrder(1),
         styleName=_priorityOrder(17) + _priorityOrder(2),
@@ -214,7 +244,7 @@ def _extractInfoName(source, info):
         openTypeNameCompatibleFullName=_priorityOrder(18),
         openTypeNameSampleText=_priorityOrder(20),
         openTypeNameWWSFamilyName=_priorityOrder(21),
-        openTypeNameWWSSubfamilyName=_priorityOrder(22)
+        openTypeNameWWSSubfamilyName=_priorityOrder(22),
     )
     for attr, priority in attributes.items():
         value = _skimNameIDs(nameIDs, priority)
@@ -222,13 +252,11 @@ def _extractInfoName(source, info):
             setattr(info, attr, value)
     info.openTypeNameRecords = [record[-1] for record in sorted(records)]
 
+
 def _priorityOrder(nameID):
-    priority = [
-        (nameID, 1, 0, 0),
-        (nameID, 1, None, None),
-        (nameID, None, None, None)
-    ]
+    priority = [(nameID, 1, 0, 0), (nameID, 1, None, None), (nameID, None, None, None)]
     return priority
+
 
 def _skimNameIDs(nameIDs, priority):
     for (nameID, platformID, platEncID, langID) in priority:
@@ -242,6 +270,7 @@ def _skimNameIDs(nameIDs, priority):
             if lID != langID and langID is not None:
                 continue
             return text
+
 
 def _extracInfoOS2(source, info):
     os2 = source["OS/2"]
@@ -276,14 +305,21 @@ def _extracInfoOS2(source, info):
             os2.panose.bArmStyle,
             os2.panose.bLetterForm,
             os2.panose.bMidline,
-            os2.panose.bXHeight
+            os2.panose.bXHeight,
         ]
     # openTypeOS2FamilyClass
     # XXX info.openTypeOS2FamilyClass
     if hasattr(os2, "ulUnicodeRange1"):
-        info.openTypeOS2UnicodeRanges = binaryToIntList(os2.ulUnicodeRange1) + binaryToIntList(os2.ulUnicodeRange2, 32) + binaryToIntList(os2.ulUnicodeRange3, 64) + binaryToIntList(os2.ulUnicodeRange4, 96)
+        info.openTypeOS2UnicodeRanges = (
+            binaryToIntList(os2.ulUnicodeRange1)
+            + binaryToIntList(os2.ulUnicodeRange2, 32)
+            + binaryToIntList(os2.ulUnicodeRange3, 64)
+            + binaryToIntList(os2.ulUnicodeRange4, 96)
+        )
     if hasattr(os2, "ulCodePageRange1"):
-        info.openTypeOS2CodePageRanges = binaryToIntList(os2.ulCodePageRange1) + binaryToIntList(os2.ulCodePageRange2, 32)
+        info.openTypeOS2CodePageRanges = binaryToIntList(
+            os2.ulCodePageRange1
+        ) + binaryToIntList(os2.ulCodePageRange2, 32)
     copyAttr(os2, "sxHeight", info, "xHeight")
     copyAttr(os2, "sCapHeight", info, "capHeight")
     copyAttr(os2, "sTypoAscender", info, "ascender")
@@ -306,6 +342,7 @@ def _extracInfoOS2(source, info):
     copyAttr(os2, "yStrikeoutSize", info, "openTypeOS2StrikeoutSize")
     copyAttr(os2, "yStrikeoutPosition", info, "openTypeOS2StrikeoutPosition")
 
+
 def _extractInfoHhea(source, info):
     if "hhea" not in source:
         return
@@ -316,6 +353,7 @@ def _extractInfoHhea(source, info):
     info.openTypeHheaCaretSlopeRise = hhea.caretSlopeRise
     info.openTypeHheaCaretSlopeRun = hhea.caretSlopeRun
     info.openTypeHheaCaretOffset = hhea.caretOffset
+
 
 def _extractInfoVhea(source, info):
     if "vhea" not in source:
@@ -329,12 +367,14 @@ def _extractInfoVhea(source, info):
     if hasattr(vhea, "caretOffset"):
         info.openTypeVheaCaretOffset = vhea.caretOffset
 
+
 def _extractInfoPost(source, info):
     post = source["post"]
     info.italicAngle = post.italicAngle
     info.postscriptUnderlineThickness = post.underlineThickness
     info.postscriptUnderlinePosition = post.underlinePosition
     info.postscriptIsFixedPitch = bool(post.isFixedPitch)
+
 
 def _extractInfoCFF(source, info):
     if "CFF " not in source:
@@ -364,6 +404,7 @@ def _extractInfoCFF(source, info):
     # XXX postscriptSlantAngle
     # XXX postscriptUniqueID
 
+
 def _extractInfoGasp(source, info):
     if "gasp" not in source:
         return
@@ -379,14 +420,13 @@ def _extractInfoGasp(source, info):
             behavior.append(2)
         if bits & 0x0008:
             behavior.append(3)
-        record = dict(
-            rangeMaxPPEM=size,
-            rangeGaspBehavior=behavior
-        )
+        record = dict(rangeMaxPPEM=size, rangeGaspBehavior=behavior)
         records.append(record)
     info.openTypeGaspRangeRecords = records
 
+
 # Tools
+
 
 def binaryToIntList(value, start=0):
     intList = []
@@ -398,9 +438,11 @@ def binaryToIntList(value, start=0):
         counter += 1
     return intList
 
+
 # --------
 # Outlines
 # --------
+
 
 def extractOpenTypeGlyphs(source, destination):
     # grab the cmap
@@ -444,9 +486,11 @@ def extractOpenTypeGlyphs(source, destination):
         # unicodes
         destinationGlyph.unicodes = reversedMapping.get(glyphName, [])
 
+
 # -------
 # Kerning
 # -------
+
 
 def extractOpenTypeKerning(source, destination):
     kerning = {}
@@ -460,19 +504,26 @@ def extractOpenTypeKerning(source, destination):
         groups[name] = list(sorted(group))
     return kerning, groups
 
+
 def _extractOpenTypeKerningFromGPOS(source):
     gpos = source["GPOS"].table
     # get an ordered list of scripts
     scriptOrder = _makeScriptOrder(gpos)
     # extract kerning and classes from each applicable lookup
-    kerningDictionaries, leftClassDictionaries, rightClassDictionaries = _gatherDataFromLookups(gpos, scriptOrder)
+    (
+        kerningDictionaries,
+        leftClassDictionaries,
+        rightClassDictionaries,
+    ) = _gatherDataFromLookups(gpos, scriptOrder)
     # merge all kerning pairs
     kerning = _mergeKerningDictionaries(kerningDictionaries)
     # get rid of groups that have only one member
     leftSingleMemberGroups = _findSingleMemberGroups(leftClassDictionaries)
     rightSingleMemberGroups = _findSingleMemberGroups(rightClassDictionaries)
     # filter out the single glyph groups from the kerning
-    kerning = _removeSingleMemberGroupReferences(kerning, leftSingleMemberGroups, rightSingleMemberGroups)
+    kerning = _removeSingleMemberGroupReferences(
+        kerning, leftSingleMemberGroups, rightSingleMemberGroups
+    )
     # merge groups that have the exact same member list
     leftClasses, leftClassRename = _mergeClasses(leftClassDictionaries)
     rightClasses, rightClassRename = _mergeClasses(rightClassDictionaries)
@@ -495,6 +546,7 @@ def _extractOpenTypeKerningFromGPOS(source):
     # done.
     return kerning, groups
 
+
 def _makeScriptOrder(gpos):
     """
     Run therough GPOS and make an alphabetically
@@ -508,6 +560,7 @@ def _makeScriptOrder(gpos):
         scripts.remove("DFLT")
         scripts.insert(0, "DFLT")
     return sorted(scripts)
+
 
 def _gatherDataFromLookups(gpos, scriptOrder):
     """
@@ -540,6 +593,7 @@ def _gatherDataFromLookups(gpos, scriptOrder):
             rightClassDictionaries.append(rightClasses)
     return kerningDictionaries, leftClassDictionaries, rightClassDictionaries
 
+
 def _gatherLookupIndexes(gpos):
     """
     Gather a mapping of script to lookup indexes
@@ -551,7 +605,11 @@ def _gatherLookupIndexes(gpos):
         }
     """
     # gather the indexes of the kern features
-    kernFeatureIndexes = [index for index, featureRecord in enumerate(gpos.FeatureList.FeatureRecord) if featureRecord.FeatureTag == "kern"]
+    kernFeatureIndexes = [
+        index
+        for index, featureRecord in enumerate(gpos.FeatureList.FeatureRecord)
+        if featureRecord.FeatureTag == "kern"
+    ]
     # find scripts and languages that have kern features
     scriptKernFeatureIndexes = {}
     for scriptRecord in gpos.ScriptList.ScriptRecord:
@@ -590,6 +648,7 @@ def _gatherLookupIndexes(gpos):
     # done
     return scriptLookupIndexes
 
+
 def _gatherKerningForLookup(gpos, lookupIndex):
     """
     Gather the kerning and class data for a particular lookup.
@@ -621,7 +680,9 @@ def _gatherKerningForLookup(gpos, lookupIndex):
                 kerning = _handleLookupType2Format1(subtable)
                 allKerning.update(kerning)
             elif (lookupType, format) == (2, 2):
-                kerning, leftClasses, rightClasses = _handleLookupType2Format2(subtable, lookupIndex, subtableIndex)
+                kerning, leftClasses, rightClasses = _handleLookupType2Format2(
+                    subtable, lookupIndex, subtableIndex
+                )
                 allKerning.update(kerning)
                 allLeftClasses.update(leftClasses)
                 allRightClasses.update(rightClasses)
@@ -633,12 +694,15 @@ def _gatherKerningForLookup(gpos, lookupIndex):
                 kerning = _handleLookupType2Format1(extSubtable)
                 allKerning.update(kerning)
             elif (lookupType, format) == (2, 2):
-                kerning, leftClasses, rightClasses = _handleLookupType2Format2(extSubtable, lookupIndex, subtableIndex)
+                kerning, leftClasses, rightClasses = _handleLookupType2Format2(
+                    extSubtable, lookupIndex, subtableIndex
+                )
                 allKerning.update(kerning)
                 allLeftClasses.update(leftClasses)
                 allRightClasses.update(rightClasses)
     # done
     return allKerning, allLeftClasses, allRightClasses
+
 
 def _handleLookupType2Format1(subtable):
     """
@@ -661,13 +725,23 @@ def _handleLookupType2Format1(subtable):
                 kerning[leftGlyphName, rightGlyphName] = value
     return kerning
 
+
 def _handleLookupType2Format2(subtable, lookupIndex, subtableIndex):
     """
     Extract kerning, left class and right class dictionaries from a Lookup Type 2 Format 2.
     """
     # extract the classes
-    leftClasses = _extractFeatureClasses(lookupIndex=lookupIndex, subtableIndex=subtableIndex, classDefs=subtable.ClassDef1.classDefs, coverage=subtable.Coverage.glyphs)
-    rightClasses = _extractFeatureClasses(lookupIndex=lookupIndex, subtableIndex=subtableIndex, classDefs=subtable.ClassDef2.classDefs)
+    leftClasses = _extractFeatureClasses(
+        lookupIndex=lookupIndex,
+        subtableIndex=subtableIndex,
+        classDefs=subtable.ClassDef1.classDefs,
+        coverage=subtable.Coverage.glyphs,
+    )
+    rightClasses = _extractFeatureClasses(
+        lookupIndex=lookupIndex,
+        subtableIndex=subtableIndex,
+        classDefs=subtable.ClassDef2.classDefs,
+    )
     # extract the pairs
     kerning = {}
     for class1RecordIndex, class1Record in enumerate(subtable.Class1Record):
@@ -684,6 +758,7 @@ def _handleLookupType2Format2(subtable, lookupIndex, subtableIndex):
                 kerning[leftClass, rightClass] = value
     return kerning, leftClasses, rightClasses
 
+
 def _mergeKerningDictionaries(kerningDictionaries):
     """
     Merge all of the kerning dictionaries found into
@@ -699,6 +774,7 @@ def _mergeKerningDictionaries(kerningDictionaries):
     # done.
     return kerning
 
+
 def _findSingleMemberGroups(classDictionaries):
     """
     Find all classes that have only one member.
@@ -712,6 +788,7 @@ def _findSingleMemberGroups(classDictionaries):
                     del classDictionary[name]
     return toRemove
 
+
 def _removeSingleMemberGroupReferences(kerning, leftGroups, rightGroups):
     """
     Translate group names into glyph names in pairs
@@ -723,6 +800,7 @@ def _removeSingleMemberGroupReferences(kerning, leftGroups, rightGroups):
         right = rightGroups.get(right, right)
         new[left, right] = value
     return new
+
 
 def _mergeClasses(classDictionaries):
     """
@@ -759,6 +837,7 @@ def _mergeClasses(classDictionaries):
         classes[name] = members
     return classes, rename
 
+
 def _setGroupNames(classes, classRename):
     """
     Set the final names into the groups.
@@ -773,6 +852,7 @@ def _setGroupNames(classes, classRename):
             continue
         groups[groupName] = glyphList
     return groups
+
 
 def _validateClasses(classes):
     """
@@ -789,6 +869,7 @@ def _validateClasses(classes):
         if len(groupList) > 1:
             raise ExtractorError("Kerning classes are in an conflicting state.")
 
+
 def _replaceRenamedPairMembers(kerning, leftRename, rightRename):
     """
     Populate the renamed pair members into the kerning.
@@ -800,6 +881,7 @@ def _replaceRenamedPairMembers(kerning, leftRename, rightRename):
         renamedKerning[left, right] = value
     return renamedKerning
 
+
 def _renameClasses(classes, prefix):
     """
     Replace class IDs with nice strings.
@@ -807,7 +889,12 @@ def _renameClasses(classes, prefix):
     renameMap = {}
     for classID, glyphList in classes.items():
         if len(glyphList) == 0:
-            groupName = "%s_empty_lu.%d_st.%d_cl.%d" % (prefix, classID[0], classID[1], classID[2])
+            groupName = "%s_empty_lu.%d_st.%d_cl.%d" % (
+                prefix,
+                classID[0],
+                classID[1],
+                classID[2],
+            )
         elif len(glyphList) == 1:
             groupName = list(glyphList)[0]
         else:
@@ -815,6 +902,7 @@ def _renameClasses(classes, prefix):
             groupName = prefix + glyphList[0]
         renameMap[classID] = groupName
     return renameMap
+
 
 def _extractFeatureClasses(lookupIndex, subtableIndex, classDefs, coverage=None):
     """
@@ -850,6 +938,7 @@ def _extractFeatureClasses(lookupIndex, subtableIndex, classDefs, coverage=None)
     for classIndex, glyphList in classDict.items():
         classes[lookupIndex, subtableIndex, classIndex] = frozenset(glyphList)
     return classes
+
 
 def _extractOpenTypeKerningFromKern(source):
     kern = source["kern"]
