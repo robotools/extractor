@@ -26,18 +26,20 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 7
-MDAP[1]
-push 0
-MDRP[11100]
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+7
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 1 value pushed */
+0
+MDRP[11100]	/* MoveDirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>w324q162+236130+23695+274q95+301l95+30795+334130+372q162+372194+372229+334q229+307l229+301229+274194+236</string>
+        <string>w324q162+236o130+236o95+274q95+301l95+307o95+334o130+372q162+372o194+372o229+334q229+307l229+301o229+274o194+236|</string>
       </dict>
     </dict>
   </lib>

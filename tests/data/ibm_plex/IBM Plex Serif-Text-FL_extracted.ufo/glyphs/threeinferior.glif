@@ -74,64 +74,82 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 0
-RCVT
-IF
-  push 49
-  MDAP[1]
-ELSE
-  push 49 24
-  MIAP[0]
-EIF
-push 0
-RCVT
-IF
-  push 0
-  MDAP[1]
-ELSE
-  push 0 18
-  MIAP[0]
-EIF
-push 49
-SRP0
-push 32 2
-MIRP[10100]
-push 0
-SRP0
-push 15 2
-MIRP[10100]
-push 24 32 15
-SRP1
-SRP2
-IP
-push 24
-MDAP[1]
-push 23 2
-MIRP[10100]
-push 6 23 15
-SRP1
-SRP2
-IP
-push 6
-MDAP[1]
-push 41 32 24
-SRP1
-SRP2
-IP
-push 41
-MDAP[1]
-push 55 24 23
-SRP1
-SRP2
-IP
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  49
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  49 24
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  0
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  0 18
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+49
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+32 2
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+0
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+15 2
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+24 32 15
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+24
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 2 values pushed */
+23 2
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+6 23 15
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+6
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 3 values pushed */
+41 32 24
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+41
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 3 values pushed */
+55 24 23
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>0b346a233e25eb4c851c457d77897a9a821eb25370a5a29abc29701095eb85ddfb27f6899cfd3116637c2552f4056b6901e461b3b1a365c3b3782c3dd3449d8d</string>
+        <string>c592b2e45b019145c23fc2490e45d0c029ec1c26977838001a9d5d30b6c99f2b1fde960346a7314bee590a21b74ae1394687ad536489424d4adbda532e2e6601</string>
       </dict>
     </dict>
   </lib>

@@ -19,16 +19,17 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 2
-MDAP[1]
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+2
+MDAP[1]	/* MoveDirectAbsPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>w306l36+259l36+307l230+488l252+458l131+283l252+108l230+78</string>
+        <string>w306l36+259l36+307l230+488l252+458l131+283l252+108l230+78|</string>
       </dict>
     </dict>
   </lib>

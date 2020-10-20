@@ -34,67 +34,88 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 0
-RCVT
-IF
-  push 2
-  MDAP[1]
-ELSE
-  push 2 28
-  MIAP[0]
-EIF
-push 0
-RCVT
-IF
-  push 15
-  MDAP[1]
-ELSE
-  push 15 18
-  MIAP[0]
-EIF
-push 0
-RCVT
-IF
-  push 7
-  MDAP[1]
-ELSE
-  push 7 18
-  MIAP[0]
-EIF
-push 15
-SRP0
-push 0 1
-MIRP[10100]
-push 7
-SRP0
-push 8 1
-MIRP[10100]
-push 4
-MDRP[10000]
-push 16 2 15
-SRP1
-SRP2
-IP
-push 16
-MDAP[1]
-push 11 6
-MIRP[10100]
-push 0
-SRP0
-push 12
-MDRP[10000]
-push 2
-SRP0
-push 19
-MDRP[10000]
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  2
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  2 28
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  15
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  15 18
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  7
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  7 18
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+15
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+0 1
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+7
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+8 1
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+4
+MDRP[10000]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+16 2 15
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+16
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 2 values pushed */
+11 6
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+0
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 1 value pushed */
+12
+MDRP[10000]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+2
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 1 value pushed */
+19
+MDRP[10000]	/* MoveDirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>7e80b5f93268c9b290a2038ac8d86d3be34ab3c147602e1b60bdbdccae4918fc0903fa74a88c7b7c194ac11ee51ca109ca67d471e12df7f48e4d860cd57362f7</string>
+        <string>5d9ca44a63800838eef2e894fef7b85f74c1485ac552192bc95004fd3499461ade3a7657d155299c548fedfae3b51107f8f99b379d8e3470d601474cae256d01</string>
       </dict>
     </dict>
   </lib>

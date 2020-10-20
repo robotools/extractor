@@ -20,25 +20,29 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 2
-MDAP[1]
-push 0
-RCVT
-IF
-  push 7
-  MDAP[1]
-ELSE
-  push 7 18
-  MIAP[0]
-EIF
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+2
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  7
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  7 18
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>w600l89+232l89+300l511+544l511+475l158+269l158+263l511+57l511-12</string>
+        <string>w600l89+232l89+300l511+544l511+475l158+269l158+263l511+57l511-12|</string>
       </dict>
     </dict>
   </lib>

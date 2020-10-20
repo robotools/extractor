@@ -43,20 +43,23 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 30
-MDAP[1]
-push 10
-MDAP[1]
-push 21 9
-MIRP[10100]
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+30
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 1 value pushed */
+10
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 2 values pushed */
+21 9
+MIRP[10100]	/* MoveIndirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>b8fb647062326b2a6f1e7113622346493f910988c2b4db41fc7b37c50f3f86af201d93adb670fd9f9f8dccae8d5f6d5222a3b8e01127753f7ab5c43c6f4c1a3c</string>
+        <string>fda76031a9799843474dfee75a0f5dd342956a63ced31ec7445aed48fc0508e5b84a42f747abf475a87642c00bb3014ff829f623e4cae4dbefb7c06d2aad3c36</string>
       </dict>
     </dict>
   </lib>
