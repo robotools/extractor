@@ -107,7 +107,7 @@ def extractGlyphPrograms(source, destination):
         if not hasattr(glyph, "program"):
             continue
         destinationGlyph = destination[name]
-        hash_pen = HashPointPen(destinationGlyph, destination)
+        hash_pen = HashPointPen(destinationGlyph.width, destination)
         destinationGlyph.drawPoints(hash_pen)
         destinationGlyph.lib["public.truetype.instructions"] = {
             "assembly": _byteCodeToHtic(glyph.program),
