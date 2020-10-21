@@ -73,14 +73,14 @@ MDAP[1]	/* MoveDirectAbsPt */
 PUSHW[ ]	/* 1 value pushed */
 29
 MDAP[1]	/* MoveDirectAbsPt */
-NPUSHW[ ]	/* 8 values pushed */
-7 208 29 224 29 240 29 3
+NPUSHW[ ]	/* 7 values pushed */
+208 29 224 29 240 29 3
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 34 values pushed */
-33 0 29 16 29 32 29 48 29 64 29 80 29 96 29 112 29 128 29 144 29 160 29 176 29 192 29 208 29 224 29 240 29 16
+NPUSHW[ ]	/* 33 values pushed */
+0 29 16 29 32 29 48 29 64 29 80 29 96 29 112 29 128 29 144 29 160 29 176 29 192 29 208 29 224 29 240 29 16
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 4 values pushed */
-3 0 29 1
+NPUSHW[ ]	/* 3 values pushed */
+0 29 1
 DELTAP3[ ]	/* DeltaExceptionP3 */
 PUSHW[ ]	/* 2 values pushed */
 0 1
@@ -88,38 +88,38 @@ MIRP[10100]	/* MoveIndirectRelPt */
 PUSHW[ ]	/* 1 value pushed */
 3
 MDRP[11100]	/* MoveDirectRelPt */
-NPUSHW[ ]	/* 4 values pushed */
-3 0 3 1
+NPUSHW[ ]	/* 3 values pushed */
+0 3 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 8 values pushed */
-7 160 3 176 3 192 3 3
+NPUSHW[ ]	/* 7 values pushed */
+160 3 176 3 192 3 3
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 255 13 1
+NPUSHW[ ]	/* 3 values pushed */
+255 13 1
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 4 values pushed */
-3 15 13 1
+NPUSHW[ ]	/* 3 values pushed */
+15 13 1
 DELTAP3[ ]	/* DeltaExceptionP3 */
-NPUSHW[ ]	/* 6 values pushed */
-5 239 13 255 13 2
+NPUSHW[ ]	/* 5 values pushed */
+239 13 255 13 2
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 6 values pushed */
-5 95 13 111 13 2
+NPUSHW[ ]	/* 5 values pushed */
+95 13 111 13 2
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 6 values pushed */
-5 143 13 159 13 2
+NPUSHW[ ]	/* 5 values pushed */
+143 13 159 13 2
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 8 values pushed */
-7 31 13 47 13 63 13 3
+NPUSHW[ ]	/* 7 values pushed */
+31 13 47 13 63 13 3
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 6 values pushed */
-5 207 13 223 13 2
+NPUSHW[ ]	/* 5 values pushed */
+207 13 223 13 2
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 4 values pushed */
-3 96 13 1
+NPUSHW[ ]	/* 3 values pushed */
+96 13 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 48 13 1
+NPUSHW[ ]	/* 3 values pushed */
+48 13 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 1 value pushed */
 13
@@ -130,8 +130,8 @@ MIRP[10100]	/* MoveIndirectRelPt */
 PUSHW[ ]	/* 1 value pushed */
 9
 MDRP[11100]	/* MoveDirectRelPt */
-NPUSHW[ ]	/* 4 values pushed */
-3 15 9 1
+NPUSHW[ ]	/* 3 values pushed */
+15 9 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 1 value pushed */
 12

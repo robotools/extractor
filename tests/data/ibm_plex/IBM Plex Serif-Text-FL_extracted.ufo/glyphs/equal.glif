@@ -26,8 +26,8 @@ SVTCA[0]	/* SetFPVectorToAxis */
 PUSHW[ ]	/* 1 value pushed */
 4
 MDAP[1]	/* MoveDirectAbsPt */
-NPUSHW[ ]	/* 4 values pushed */
-3 31 4 1
+NPUSHW[ ]	/* 3 values pushed */
+31 4 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 2 values pushed */
 7 6
@@ -35,8 +35,8 @@ MIRP[10100]	/* MoveIndirectRelPt */
 PUSHW[ ]	/* 1 value pushed */
 0
 MDRP[11100]	/* MoveDirectRelPt */
-NPUSHW[ ]	/* 4 values pushed */
-3 31 0 1
+NPUSHW[ ]	/* 3 values pushed */
+31 0 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 2 values pushed */
 3 6

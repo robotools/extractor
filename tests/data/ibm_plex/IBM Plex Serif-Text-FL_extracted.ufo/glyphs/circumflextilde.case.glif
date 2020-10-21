@@ -49,14 +49,14 @@ SVTCA[0]	/* SetFPVectorToAxis */
 PUSHW[ ]	/* 1 value pushed */
 32
 MDAP[1]	/* MoveDirectAbsPt */
-NPUSHW[ ]	/* 6 values pushed */
-5 31 32 47 32 2
+NPUSHW[ ]	/* 5 values pushed */
+31 32 47 32 2
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 159 32 1
+NPUSHW[ ]	/* 3 values pushed */
+159 32 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 95 32 1
+NPUSHW[ ]	/* 3 values pushed */
+95 32 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 1 value pushed */
 27

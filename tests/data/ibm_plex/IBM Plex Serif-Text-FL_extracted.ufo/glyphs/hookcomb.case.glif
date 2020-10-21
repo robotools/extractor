@@ -28,14 +28,14 @@ PUSHW[ ]	/* 1 value pushed */
 11
 MDAP[1]	/* MoveDirectAbsPt */
 RTG[ ]	/* RoundToGrid */
-NPUSHW[ ]	/* 4 values pushed */
-3 96 11 1
+NPUSHW[ ]	/* 3 values pushed */
+96 11 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 1 value pushed */
 3
 MDRP[11100]	/* MoveDirectRelPt */
-NPUSHW[ ]	/* 4 values pushed */
-3 144 3 1
+NPUSHW[ ]	/* 3 values pushed */
+144 3 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 1 value pushed */
 2

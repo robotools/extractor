@@ -83,8 +83,8 @@ SRP0[ ]	/* SetRefPoint0 */
 PUSHW[ ]	/* 1 value pushed */
 7
 MDRP[11100]	/* MoveDirectRelPt */
-NPUSHW[ ]	/* 4 values pushed */
-3 15 7 1
+NPUSHW[ ]	/* 3 values pushed */
+15 7 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 1 value pushed */
 4
@@ -100,26 +100,26 @@ IP[ ]	/* InterpolatePts */
 PUSHW[ ]	/* 1 value pushed */
 27
 MDAP[1]	/* MoveDirectAbsPt */
-NPUSHW[ ]	/* 4 values pushed */
-3 95 27 1
+NPUSHW[ ]	/* 3 values pushed */
+95 27 1
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 4 values pushed */
-3 127 27 1
+NPUSHW[ ]	/* 3 values pushed */
+127 27 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 79 27 1
+NPUSHW[ ]	/* 3 values pushed */
+79 27 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 6 values pushed */
-5 159 27 175 27 2
+NPUSHW[ ]	/* 5 values pushed */
+159 27 175 27 2
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 255 27 1
+NPUSHW[ ]	/* 3 values pushed */
+255 27 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 15 27 1
+NPUSHW[ ]	/* 3 values pushed */
+15 27 1
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 6 values pushed */
-5 207 27 223 27 2
+NPUSHW[ ]	/* 5 values pushed */
+207 27 223 27 2
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 2 values pushed */
 10 6

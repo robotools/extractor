@@ -112,14 +112,14 @@ IP[ ]	/* InterpolatePts */
 PUSHW[ ]	/* 1 value pushed */
 8
 MDAP[1]	/* MoveDirectAbsPt */
-NPUSHW[ ]	/* 6 values pushed */
-5 63 8 79 8 2
+NPUSHW[ ]	/* 5 values pushed */
+63 8 79 8 2
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 4 values pushed */
-3 240 8 1
+NPUSHW[ ]	/* 3 values pushed */
+240 8 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 0 8 1
+NPUSHW[ ]	/* 3 values pushed */
+0 8 1
 DELTAP2[ ]	/* DeltaExceptionP2 */
 PUSHW[ ]	/* 3 values pushed */
 3 8 0
@@ -129,17 +129,17 @@ IP[ ]	/* InterpolatePts */
 PUSHW[ ]	/* 1 value pushed */
 3
 MDAP[1]	/* MoveDirectAbsPt */
-NPUSHW[ ]	/* 6 values pushed */
-5 159 3 175 3 2
+NPUSHW[ ]	/* 5 values pushed */
+159 3 175 3 2
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 6 values pushed */
-5 31 3 47 3 2
+NPUSHW[ ]	/* 5 values pushed */
+31 3 47 3 2
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 8 values pushed */
-7 31 3 47 3 63 3 3
+NPUSHW[ ]	/* 7 values pushed */
+31 3 47 3 63 3 3
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 64 3 1
+NPUSHW[ ]	/* 3 values pushed */
+64 3 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 2 values pushed */
 4 1
@@ -182,23 +182,23 @@ IP[ ]	/* InterpolatePts */
 PUSHW[ ]	/* 1 value pushed */
 36
 MDAP[1]	/* MoveDirectAbsPt */
-NPUSHW[ ]	/* 6 values pushed */
-5 47 36 63 36 2
+NPUSHW[ ]	/* 5 values pushed */
+47 36 63 36 2
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 127 36 1
+NPUSHW[ ]	/* 3 values pushed */
+127 36 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 6 values pushed */
-5 63 36 79 36 2
+NPUSHW[ ]	/* 5 values pushed */
+63 36 79 36 2
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 4 values pushed */
-3 240 36 1
+NPUSHW[ ]	/* 3 values pushed */
+240 36 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 0 36 1
+NPUSHW[ ]	/* 3 values pushed */
+0 36 1
 DELTAP2[ ]	/* DeltaExceptionP2 */
-NPUSHW[ ]	/* 4 values pushed */
-3 80 36 1
+NPUSHW[ ]	/* 3 values pushed */
+80 36 1
 DELTAP2[ ]	/* DeltaExceptionP2 */
 PUSHW[ ]	/* 2 values pushed */
 31 1

@@ -113,8 +113,8 @@ ELSE[ ]	/* Else */
   0 20
   MIAP[0]	/* MoveIndirectAbsPt */
 EIF[ ]	/* EndIf */
-NPUSHW[ ]	/* 20 values pushed */
-19 0 0 16 0 32 0 48 0 64 0 80 0 96 0 112 0 128 0 9
+NPUSHW[ ]	/* 19 values pushed */
+0 0 16 0 32 0 48 0 64 0 80 0 96 0 112 0 128 0 9
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 1 value pushed */
 20
@@ -136,8 +136,8 @@ IP[ ]	/* InterpolatePts */
 PUSHW[ ]	/* 1 value pushed */
 53
 MDAP[1]	/* MoveDirectAbsPt */
-NPUSHW[ ]	/* 6 values pushed */
-5 47 53 63 53 2
+NPUSHW[ ]	/* 5 values pushed */
+47 53 63 53 2
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 2 values pushed */
 27 4

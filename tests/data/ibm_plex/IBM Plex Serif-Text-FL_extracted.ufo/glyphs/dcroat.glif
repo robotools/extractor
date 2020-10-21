@@ -114,8 +114,8 @@ ELSE[ ]	/* Else */
   28 18
   MIAP[0]	/* MoveIndirectAbsPt */
 EIF[ ]	/* EndIf */
-NPUSHW[ ]	/* 8 values pushed */
-7 0 10 16 10 32 10 3
+NPUSHW[ ]	/* 7 values pushed */
+0 10 16 10 32 10 3
 DELTAP1[ ]	/* DeltaExceptionP1 */
 PUSHW[ ]	/* 1 value pushed */
 10

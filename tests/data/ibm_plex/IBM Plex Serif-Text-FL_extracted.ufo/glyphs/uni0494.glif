@@ -101,20 +101,20 @@ IP[ ]	/* InterpolatePts */
 PUSHW[ ]	/* 1 value pushed */
 34
 MDAP[1]	/* MoveDirectAbsPt */
-NPUSHW[ ]	/* 8 values pushed */
-7 47 34 63 34 79 34 3
+NPUSHW[ ]	/* 7 values pushed */
+47 34 63 34 79 34 3
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 175 34 1
+NPUSHW[ ]	/* 3 values pushed */
+175 34 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 127 34 1
+NPUSHW[ ]	/* 3 values pushed */
+127 34 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 207 34 1
+NPUSHW[ ]	/* 3 values pushed */
+207 34 1
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 4 values pushed */
-3 143 34 1
+NPUSHW[ ]	/* 3 values pushed */
+143 34 1
 DELTAP2[ ]	/* DeltaExceptionP2 */
 PUSHW[ ]	/* 2 values pushed */
 12 1

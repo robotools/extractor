@@ -109,11 +109,11 @@ SRP0[ ]	/* SetRefPoint0 */
 PUSHW[ ]	/* 1 value pushed */
 0
 MDRP[11100]	/* MoveDirectRelPt */
-NPUSHW[ ]	/* 16 values pushed */
-15 144 0 160 0 176 0 192 0 208 0 224 0 240 0 7
+NPUSHW[ ]	/* 15 values pushed */
+144 0 160 0 176 0 192 0 208 0 224 0 240 0 7
 DELTAP1[ ]	/* DeltaExceptionP1 */
-NPUSHW[ ]	/* 8 values pushed */
-7 0 0 16 0 32 0 3
+NPUSHW[ ]	/* 7 values pushed */
+0 0 16 0 32 0 3
 DELTAP2[ ]	/* DeltaExceptionP2 */
 PUSHW[ ]	/* 1 value pushed */
 53
