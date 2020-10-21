@@ -104,7 +104,7 @@ class InstructionStream(object):
                     asm += f"\n{'  ' * indent}{cmd_name}[{arg_bitstring}]\t/* {name} */"
 
                 if args:
-                    asm += f"\n{'  ' * indent}" + " ".join(args)
+                    asm += f"\n{'  ' * indent}{' '.join(args)}"
 
                 if cmd_name in ("ELSE", "FDEF", "IF"):
                     indent += 1
