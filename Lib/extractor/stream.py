@@ -80,7 +80,6 @@ class InstructionStream(object):
                     else:
                         # Take number of arguments from the stream
                         _, num_args = self.read_byte()
-                        args.append(str(num_args))
                     if cmd_name.endswith("B"):
                         for n in range(num_args):
                             _, i = self.read_byte()
