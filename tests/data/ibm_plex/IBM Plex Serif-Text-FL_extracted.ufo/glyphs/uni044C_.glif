@@ -41,52 +41,67 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 0
-RCVT
-IF
-  push 4
-  MDAP[1]
-ELSE
-  push 4 26
-  MIAP[0]
-EIF
-push 0
-RCVT
-IF
-  push 16
-  MDAP[1]
-ELSE
-  push 16 18
-  MIAP[0]
-EIF
-push 0 1
-MIRP[10100]
-push 4
-SRP0
-push 3 1
-MIRP[10100]
-push 7
-MDRP[10000]
-push 8 4 16
-SRP1
-SRP2
-IP
-push 8
-MDAP[1]
-push 25 12
-MIRP[10100]
-push 16
-SRP0
-push 26 12
-MIRP[10100]
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  4
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  4 26
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  16
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  16 18
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 2 values pushed */
+0 1
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+4
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+3 1
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+7
+MDRP[10000]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+8 4 16
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+8
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 2 values pushed */
+25 12
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+16
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+26 12
+MIRP[10100]	/* MoveIndirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>b8dfc2fbbd87aa4f81d66634beadee016275ca19c1fc912f5fafd585c5c06868abcc5e519b8a447f6ed2b4b9b4caeea9b15c5b33b5a5cd7fd66f7744b609f471</string>
+        <string>72bcc035020b8b1585163061e848432532d0a316d02b51244376dfe5f44874a12a1ca20e69002c0d2658721acd32c7fc2655620f83464633b5f1b2aa8010ab09</string>
       </dict>
     </dict>
   </lib>

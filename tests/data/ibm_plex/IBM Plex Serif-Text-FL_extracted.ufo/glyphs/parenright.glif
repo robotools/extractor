@@ -35,18 +35,20 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 12
-MDAP[1]
-push 22
-MDAP[1]
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+12
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 1 value pushed */
+22
+MDAP[1]	/* MoveDirectAbsPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>ea25b5a78a1a723e2bd549f1712dc558bd2328132d55bc06e0cce18beda89a4770cb351829adf9cbb0cd4eacae7b96e9249d7414ea20a80c270502e82700660c</string>
+        <string>407e590f61eed03eeb4a405f32e7fe94138117b8e49f686736697e92cd7065ca63fb4b435a7a5ab78ba2baa2cac88466e597b2779639ecfdf682d51e5c385065</string>
       </dict>
     </dict>
   </lib>

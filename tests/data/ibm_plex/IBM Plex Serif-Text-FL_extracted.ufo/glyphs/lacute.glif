@@ -12,16 +12,17 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 13 5 3
-CALL
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 3 values pushed */
+13 5 3
+CALL[ ]	/* CallFunction */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>w306l34+50l105+50l105+676l34+689l34+727l201+760l201+50l272+50l272+0l34+0l116+802l191+985l279+942l147+786</string>
+        <string>afeb3f260ec24f5c32679e64957906280ed8a16d04d5b3805bb8927e7fca5893029937c0736b53973204b587066f4576cbc95d55fe6f1c18870f3f0097ebdb96</string>
       </dict>
     </dict>
   </lib>

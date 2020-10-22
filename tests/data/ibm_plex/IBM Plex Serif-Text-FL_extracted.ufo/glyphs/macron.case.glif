@@ -15,22 +15,26 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 3
-MDAP[1]
-push 48 3 1
-DELTAP1
-push 96 3 112 3 128 3 144 3 4
-DELTAP1
-push 0
-MDRP[11100]
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+3
+MDAP[1]	/* MoveDirectAbsPt */
+NPUSHW[ ]	/* 3 values pushed */
+48 3 1
+DELTAP1[ ]	/* DeltaExceptionP1 */
+NPUSHW[ ]	/* 9 values pushed */
+96 3 112 3 128 3 144 3 4
+DELTAP1[ ]	/* DeltaExceptionP1 */
+PUSHW[ ]	/* 1 value pushed */
+0
+MDRP[11100]	/* MoveDirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>w600l157+872l443+872l443+809l157+809</string>
+        <string>w600l157+872l443+872l443+809l157+809|</string>
       </dict>
     </dict>
   </lib>

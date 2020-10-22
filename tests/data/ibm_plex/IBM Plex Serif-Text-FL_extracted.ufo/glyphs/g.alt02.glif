@@ -99,91 +99,120 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 0
-RCVT
-IF
-  push 26
-  MDAP[1]
-ELSE
-  push 26 26
-  MIAP[0]
-EIF
-push 0
-RCVT
-IF
-  push 29
-  MDAP[1]
-ELSE
-  push 29 26
-  MIAP[0]
-EIF
-push 0
-RCVT
-IF
-  push 0
-  MDAP[1]
-ELSE
-  push 0 20
-  MIAP[0]
-EIF
-push 74 1
-MIRP[10100]
-push 56 26 74
-SRP1
-SRP2
-IP
-push 56
-MDAP[1]
-push 15 56 31 56 2
-DELTAP1
-push 96 56 1
-DELTAP2
-push 0 56 16 56 2
-DELTAP2
-push 41 1
-MIRP[10100]
-push 80 41 74
-SRP1
-SRP2
-IP
-push 80
-MDAP[1]
-push 112 80 1
-DELTAP2
-push 48 80 1
-DELTAP2
-push 50 10
-MIRP[10100]
-push 112 50 128 50 144 50 160 50 176 50 5
-DELTAP1
-push 11 50 80
-SRP1
-SRP2
-IP
-push 18 56 41
-SRP1
-SRP2
-IP
-push 29
-SRP0
-push 30 1
-MIRP[10100]
-push 26
-SRP0
-push 63 1
-MIRP[10100]
-push 32 63 56
-SRP1
-SRP2
-IP
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  26
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  26 26
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  29
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  29 26
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  0
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  0 20
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 2 values pushed */
+74 1
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+56 26 74
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+56
+MDAP[1]	/* MoveDirectAbsPt */
+NPUSHW[ ]	/* 5 values pushed */
+15 56 31 56 2
+DELTAP1[ ]	/* DeltaExceptionP1 */
+NPUSHW[ ]	/* 3 values pushed */
+96 56 1
+DELTAP2[ ]	/* DeltaExceptionP2 */
+NPUSHW[ ]	/* 5 values pushed */
+0 56 16 56 2
+DELTAP2[ ]	/* DeltaExceptionP2 */
+PUSHW[ ]	/* 2 values pushed */
+41 1
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+80 41 74
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+80
+MDAP[1]	/* MoveDirectAbsPt */
+NPUSHW[ ]	/* 3 values pushed */
+112 80 1
+DELTAP2[ ]	/* DeltaExceptionP2 */
+NPUSHW[ ]	/* 3 values pushed */
+48 80 1
+DELTAP2[ ]	/* DeltaExceptionP2 */
+PUSHW[ ]	/* 2 values pushed */
+50 10
+MIRP[10100]	/* MoveIndirectRelPt */
+NPUSHW[ ]	/* 11 values pushed */
+112 50 128 50 144 50 160 50 176 50 5
+DELTAP1[ ]	/* DeltaExceptionP1 */
+PUSHW[ ]	/* 3 values pushed */
+11 50 80
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 3 values pushed */
+18 56 41
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+29
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+30 1
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+26
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+63 1
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+32 63 56
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>abae43a83774d3122730673f45a5bf593853d76c874c7443278796a1447f5926e5fe191cd65fecc77be24ae5ad749819bf8f607df911c58408350ea42b71a3da</string>
+        <string>dc15ad10e698af7efc34fd8ed02e8804b23391dc36ef0b71eed4eaaa58e866b65760727649872fe31cb01e42058fe9e50188c147bc45eccd1f53da3de8f84147</string>
       </dict>
     </dict>
   </lib>

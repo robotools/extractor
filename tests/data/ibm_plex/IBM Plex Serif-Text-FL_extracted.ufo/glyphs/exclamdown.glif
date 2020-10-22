@@ -34,29 +34,35 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 19
-MDAP[1]
-push 0
-RCVT
-IF
-  push 7
-  MDAP[1]
-ELSE
-  push 7 26
-  MIAP[0]
-EIF
-push 0
-MDRP[11100]
-push 15
-MDRP[11100]
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+19
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  7
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  7 26
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+MDRP[11100]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+15
+MDRP[11100]	/* MoveDirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>4e6f21d1b533a970d0bc4a9ec9c7871307a7be572ea7f4ccf94864439dcd4e97d8dcbdf579330001c62d1f587a1f6c3cf9b418738dbd3a158a63964ef4510ebb</string>
+        <string>aa06d8310b855310be3342b753a580850d721a5aa3a4d22c31878d44a76dbf3a313d3c6da0ac3465b1dfa319124241702a5838f0dabd76df5dc816c8dc5017e9</string>
       </dict>
     </dict>
   </lib>

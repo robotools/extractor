@@ -46,34 +46,44 @@
       <dict>
         <key>assembly</key>
         <string>
-SVTCA[0]
-push 0
-MDAP[1]
-push 47 0 1
-DELTAP1
-push 7
-MDRP[11100]
-push 0
-SRP0
-push 14
-MDRP[10000]
-push 7
-SRP0
-push 21
-MDRP[10000]
-push 7
-SRP0
-push 31
-MDRP[11100]
-push 28
-MDRP[11100]
-IUP[0]
-IUP[1]
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+MDAP[1]	/* MoveDirectAbsPt */
+NPUSHW[ ]	/* 3 values pushed */
+47 0 1
+DELTAP1[ ]	/* DeltaExceptionP1 */
+PUSHW[ ]	/* 1 value pushed */
+7
+MDRP[11100]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+0
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 1 value pushed */
+14
+MDRP[10000]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+7
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 1 value pushed */
+21
+MDRP[10000]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+7
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 1 value pushed */
+31
+MDRP[11100]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+28
+MDRP[11100]	/* MoveDirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
 </string>
         <key>formatVersion</key>
         <string>1</string>
         <key>id</key>
-        <string>b159b9536ff2a8ccc4500b115fd155e80d933e3a315bb174cadd0d58ee538c04502552b530781ad69297bb5243e14ddafceb106bd7c3296d341c244cf392bbc8</string>
+        <string>0465e2b974ef2d573592c5b5a4cdd9acb528f249c3a2a4c032a36270b089c1de684378f2e931e82af7a64b9c121a3731f7615acdcceb001aa040c6a3c16c90d7</string>
       </dict>
     </dict>
   </lib>
