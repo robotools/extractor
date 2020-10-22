@@ -113,7 +113,7 @@ def extractGlyphPrograms(source, destination):
         destinationGlyph.lib["public.truetype.instructions"] = {
             "assembly": _byteCodeToHtic(glyph.program),
             "formatVersion": "1",
-            "id": hash_pen.getHash(),
+            "id": hash_pen.hash,
         }
 
 
