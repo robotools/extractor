@@ -97,7 +97,7 @@ def extractFontProgram(source, lib):
     if "fpgm" not in source:
         return
     fpgm = source["fpgm"].program
-    lib["fontProgram"] = _byteCodeToHtic(fpgm)
+    lib["fontProgram"] = _byteCodeToTtxAssembly(fpgm)
 
 
 def extractGlyphPrograms(source, destination):
@@ -151,10 +151,10 @@ def extractPreProgram(source, lib):
     if "prep" not in source:
         return
     prep = source["prep"].program
-    lib["controlValueProgram"] = _byteCodeToHtic(prep)
+    lib["controlValueProgram"] = _byteCodeToTtxAssembly(prep)
 
 
-def _byteCodeToHtic(program):
+def _byteCodeToTtxAssembly(program):
     stream = InstructionStream(program_bytes=program.getBytecode())
     return "\n%s\n" % str(stream)
 
