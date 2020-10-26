@@ -3,13 +3,13 @@
 <plist version="1.0">
   <dict>
     <key>ascender</key>
-    <integer>1025</integer>
+    <integer>780</integer>
     <key>capHeight</key>
     <integer>698</integer>
     <key>copyright</key>
-    <string>Copyright 2018 IBM Corp. All rights reserved.</string>
+    <string>Copyright 2020 IBM Corp. All rights reserved.</string>
     <key>descender</key>
-    <integer>-275</integer>
+    <integer>-220</integer>
     <key>familyName</key>
     <string>IBM Plex Serif</string>
     <key>guidelines</key>
@@ -93,7 +93,7 @@
         <key>platformID</key>
         <integer>1</integer>
         <key>string</key>
-        <string>Copyright 2018 IBM Corp. All rights reserved.</string>
+        <string>Copyright 2020 IBM Corp. All rights reserved.</string>
       </dict>
       <dict>
         <key>encodingID</key>
@@ -105,7 +105,7 @@
         <key>platformID</key>
         <integer>3</integer>
         <key>string</key>
-        <string>Copyright 2018 IBM Corp. All rights reserved.</string>
+        <string>Copyright 2020 IBM Corp. All rights reserved.</string>
       </dict>
       <dict>
         <key>encodingID</key>
@@ -165,7 +165,7 @@
         <key>platformID</key>
         <integer>1</integer>
         <key>string</key>
-        <string>IBM;IBMPlexSerif-Text;2.005;2018</string>
+        <string>IBM;IBMPlexSerif-Text;2.006;2020</string>
       </dict>
       <dict>
         <key>encodingID</key>
@@ -177,7 +177,7 @@
         <key>platformID</key>
         <integer>3</integer>
         <key>string</key>
-        <string>IBM;IBMPlexSerif-Text;2.005;2018</string>
+        <string>IBM;IBMPlexSerif-Text;2.006;2020</string>
       </dict>
       <dict>
         <key>encodingID</key>
@@ -213,7 +213,7 @@
         <key>platformID</key>
         <integer>1</integer>
         <key>string</key>
-        <string>Version 2.005 2018</string>
+        <string>Version 2.006 2020</string>
       </dict>
       <dict>
         <key>encodingID</key>
@@ -225,7 +225,7 @@
         <key>platformID</key>
         <integer>3</integer>
         <key>string</key>
-        <string>Version 2.005 2018</string>
+        <string>Version 2.006 2020</string>
       </dict>
       <dict>
         <key>encodingID</key>
@@ -261,7 +261,7 @@
         <key>platformID</key>
         <integer>1</integer>
         <key>string</key>
-        <string>IBM Plexª is a trademark of IBM Corp, registered in many jurisdictions worldwide.</string>
+        <string>IBM Plex¨ is a trademark of IBM Corp, registered in many jurisdictions worldwide.</string>
       </dict>
       <dict>
         <key>encodingID</key>
@@ -273,7 +273,7 @@
         <key>platformID</key>
         <integer>3</integer>
         <key>string</key>
-        <string>IBM Plex™ is a trademark of IBM Corp, registered in many jurisdictions worldwide.</string>
+        <string>IBM Plex® is a trademark of IBM Corp, registered in many jurisdictions worldwide.</string>
       </dict>
       <dict>
         <key>encodingID</key>
@@ -418,6 +418,18 @@
         <integer>3</integer>
         <key>string</key>
         <string>http://scripts.sil.org/OFL</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>0</integer>
+        <key>languageID</key>
+        <integer>0</integer>
+        <key>nameID</key>
+        <integer>16</integer>
+        <key>platformID</key>
+        <integer>1</integer>
+        <key>string</key>
+        <string>IBM Plex Serif</string>
       </dict>
       <dict>
         <key>encodingID</key>
@@ -430,6 +442,18 @@
         <integer>3</integer>
         <key>string</key>
         <string>IBM Plex Serif</string>
+      </dict>
+      <dict>
+        <key>encodingID</key>
+        <integer>0</integer>
+        <key>languageID</key>
+        <integer>0</integer>
+        <key>nameID</key>
+        <integer>17</integer>
+        <key>platformID</key>
+        <integer>1</integer>
+        <key>string</key>
+        <string>Text</string>
       </dict>
       <dict>
         <key>encodingID</key>
@@ -469,9 +493,9 @@
       </dict>
     </array>
     <key>openTypeNameUniqueID</key>
-    <string>IBM;IBMPlexSerif-Text;2.005;2018</string>
+    <string>IBM;IBMPlexSerif-Text;2.006;2020</string>
     <key>openTypeNameVersion</key>
-    <string>Version 2.005 2018</string>
+    <string>Version 2.006 2020</string>
     <key>openTypeOS2CodePageRanges</key>
     <array>
       <integer>0</integer>
@@ -520,11 +544,11 @@
     <key>openTypeOS2Type</key>
     <array/>
     <key>openTypeOS2TypoAscender</key>
-    <integer>1025</integer>
+    <integer>780</integer>
     <key>openTypeOS2TypoDescender</key>
-    <integer>-275</integer>
+    <integer>-220</integer>
     <key>openTypeOS2TypoLineGap</key>
-    <integer>0</integer>
+    <integer>300</integer>
     <key>openTypeOS2UnicodeRanges</key>
     <array>
       <integer>0</integer>
@@ -580,13 +604,13 @@
     <key>styleName</key>
     <string>Text</string>
     <key>trademark</key>
-    <string>IBM Plexª is a trademark of IBM Corp, registered in many jurisdictions worldwide.</string>
+    <string>IBM Plex¨ is a trademark of IBM Corp, registered in many jurisdictions worldwide.</string>
     <key>unitsPerEm</key>
     <integer>1000</integer>
     <key>versionMajor</key>
     <integer>2</integer>
     <key>versionMinor</key>
-    <integer>5</integer>
+    <integer>6</integer>
     <key>xHeight</key>
     <integer>518</integer>
   </dict>
