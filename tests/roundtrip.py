@@ -1,13 +1,16 @@
 import extractor
 import defcon
+# from fontTools.ttLib import TTFont
 from ufo2ft import compileTTF
 
 ufo = defcon.Font()
 extractor.extractUFO("data/ibm_plex/IBM Plex Serif-Text-FL.ttf", ufo)
 ufo.save("data/ibm_plex/IBM Plex Serif-Text-FL_extracted.ufo")
 ufo = defcon.Font("data/ibm_plex/IBM Plex Serif-Text-FL_extracted.ufo")
-ttf = compileTTF(ufo)
+ttf = compileTTF(ufo, reverseDirection=False)
 ttf.save("data/ibm_plex/IBM Plex Serif-Text-ufo2ft.ttf")
+# ttf.close()
+# ttf = TTFont("data/ibm_plex/IBM Plex Serif-Text-ufo2ft.ttf")
 ttf.saveXML("data/ibm_plex/IBM Plex Serif-Text-ufo2ft.ttx")
 
 
