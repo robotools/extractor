@@ -51,62 +51,60 @@ class InstructionStream(object):
         asm = ""
         indent = 0
 
-        more = True
-        while more:
+        while True:
             opcode = self.io.read(1)
-            if opcode:
-                opcode = int.from_bytes(opcode, byteorder="big", signed=False)
-                cmd_info = streamOpcodeDict.get(opcode, None)
-                if cmd_info is None:
-                    cmd_info = opcodeDict.get(opcode, None)
-                if cmd_info is None:
-                    print(
-                        asm + "\n"
-                        "Illegal opcode 0x%02x at offset 0x%04x."
-                        % (int(opcode), self.io.tell(),)
-                    )
-                    raise KeyError
-                cmd_name, arg_bits, base_opcode, name = cmd_info
+            if not opcode:
+                return asm.strip()
 
-                args = []
-                if cmd_name in ("EIF", "ELSE", "ENDF"):
-                    indent -= 1
+            opcode = int.from_bytes(opcode, byteorder="big", signed=False)
+            cmd_info = streamOpcodeDict.get(opcode, None)
+            if cmd_info is None:
+                cmd_info = opcodeDict.get(opcode, None)
+            if cmd_info is None:
+                print(
+                    asm + "\n"
+                    "Illegal opcode 0x%02x at offset 0x%04x."
+                    % (int(opcode), self.io.tell(),)
+                )
+                raise KeyError
+            cmd_name, arg_bits, base_opcode, name = cmd_info
 
-                if cmd_name in ("NPUSHB", "NPUSHW", "PUSHB", "PUSHW"):
-                    # PUSH instructions read their arguments from the stream
-                    if cmd_name.startswith("PUSH"):
-                        # Take number of arguments from the opcode
-                        num_args = opcode - base_opcode + 1
-                    else:
-                        # Take number of arguments from the stream
-                        _, num_args = self.read_byte()
-                    if cmd_name.endswith("B"):
-                        for n in range(num_args):
-                            _, i = self.read_byte()
-                            args.append(str(i))
-                    else:
-                        for n in range(num_args):
-                            _, i = self.read_word()
-                            args.append(str(i))
-                    arg_bits = 0  # Don't output bits for push instructions
+            args = []
+            if cmd_name in ("EIF", "ELSE", "ENDF"):
+                indent -= 1
 
-                if arg_bits == 0:
-                    arg_bitstring = " "
+            if cmd_name in ("NPUSHB", "NPUSHW", "PUSHB", "PUSHW"):
+                # PUSH instructions read their arguments from the stream
+                if cmd_name.startswith("PUSH"):
+                    # Take number of arguments from the opcode
+                    num_args = opcode - base_opcode + 1
                 else:
-                    arg_bitstring = num2binary(opcode - base_opcode, arg_bits)
-
-                if cmd_name in ("NPUSHB", "NPUSHW", "PUSHB", "PUSHW"):
-                    num_args = len(args)
-                    val = "value" if num_args == 1 else "values"
-                    asm += f"\n{'  ' * indent}{cmd_name}[{arg_bitstring}]\t/* {num_args} {val} pushed */"
+                    # Take number of arguments from the stream
+                    _, num_args = self.read_byte()
+                if cmd_name.endswith("B"):
+                    for n in range(num_args):
+                        _, i = self.read_byte()
+                        args.append(str(i))
                 else:
-                    asm += f"\n{'  ' * indent}{cmd_name}[{arg_bitstring}]\t/* {name} */"
+                    for n in range(num_args):
+                        _, i = self.read_word()
+                        args.append(str(i))
+                arg_bits = 0  # Don't output bits for push instructions
 
-                if args:
-                    asm += f"\n{'  ' * indent}{' '.join(args)}"
-
-                if cmd_name in ("ELSE", "FDEF", "IF"):
-                    indent += 1
+            if arg_bits == 0:
+                arg_bitstring = " "
             else:
-                more = False
-        return asm.strip()
+                arg_bitstring = num2binary(opcode - base_opcode, arg_bits)
+
+            if cmd_name in ("NPUSHB", "NPUSHW", "PUSHB", "PUSHW"):
+                num_args = len(args)
+                val = "value" if num_args == 1 else "values"
+                asm += f"\n{'  ' * indent}{cmd_name}[{arg_bitstring}]\t/* {num_args} {val} pushed */"
+            else:
+                asm += f"\n{'  ' * indent}{cmd_name}[{arg_bitstring}]\t/* {name} */"
+
+            if args:
+                asm += f"\n{'  ' * indent}{' '.join(args)}"
+
+            if cmd_name in ("ELSE", "FDEF", "IF"):
+                indent += 1
