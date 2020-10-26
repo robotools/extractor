@@ -927,7 +927,6 @@ def _validateClasses(classes):
             )
 
 
-
 def _replaceRenamedPairMembers(kerning, leftRename, rightRename):
     """
     Populate the renamed pair members into the kerning.
