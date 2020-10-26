@@ -3,7 +3,35 @@
   <advance width="549"/>
   <unicode hex="04D1"/>
   <outline>
-    <component base="a"/>
-    <component base="breve.cyrl" xOffset="-37"/>
+    <component base="a" identifier="component0"/>
+    <component base="breve.cyrl" xOffset="-37" identifier="component1"/>
   </outline>
+  <lib>
+    <dict>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>public.objectIdentifiers</key>
+        <dict>
+          <key>component0</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+              <key>useMyMetrics</key>
+              <true/>
+            </dict>
+          </dict>
+          <key>component1</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
 </glyph>

@@ -2,6 +2,11 @@ import time
 from fontTools.pens.boundsPen import ControlBoundsPen
 from fontTools.pens.hashPointPen import HashPointPen
 from fontTools.ttLib import TTFont, TTLibError
+from fontTools.ttLib.tables._g_l_y_f import (
+    OVERLAP_COMPOUND,
+    ROUND_XY_TO_GRID,
+    USE_MY_METRICS,
+)
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from extractor.exceptions import ExtractorError
 from extractor.stream import InstructionStream
@@ -104,16 +109,20 @@ def extractGlyphPrograms(source, destination):
     glyph_set = source.getGlyphSet()
     for name in glyph_set.keys():
         glyph = glyph_set[name]._glyph
+        dest_glyph = destination[name]
+        if glyph.isComposite():
+            # Extract composite flags
+            _extractCompositeFlags(glyph, dest_glyph)
         if not hasattr(glyph, "program"):
             continue
-        destinationGlyph = destination[name]
-        hash_pen = HashPointPen(destinationGlyph.width, destination)
-        destinationGlyph.drawPoints(hash_pen)
-        destinationGlyph.lib["public.truetype.instructions"] = {
-            "assembly": _byteCodeToHtic(glyph.program),
+
+        hash_pen = HashPointPen(dest_glyph.width, destination)
+        dest_glyph.drawPoints(hash_pen)
+        lib = dest_glyph.lib["public.truetype.instructions"] = {
             "formatVersion": "1",
             "id": hash_pen.hash,
         }
+        lib["assembly"] = _byteCodeToTtxAssembly(glyph.program)
 
 
 def extractMaxpValues(source, lib):
@@ -148,6 +157,37 @@ def extractPreProgram(source, lib):
 def _byteCodeToHtic(program):
     stream = InstructionStream(program_bytes=program.getBytecode())
     return "\n%s\n" % str(stream)
+
+
+def _extractCompositeFlags(glyph, dest_glyph):
+    # Find the lib key or add it
+    if (
+        "public.objectLibs" not in dest_glyph.lib
+        or "public.objectIdentifiers"
+        not in dest_glyph.lib["public.objectLibs"]
+    ):
+        dest_glyph.lib["public.objectLibs"] = {
+            "public.objectIdentifiers": {}
+        }
+    object_ids = dest_glyph.lib["public.objectLibs"][
+        "public.objectIdentifiers"
+    ]
+
+    for ci, c in enumerate(glyph.components):
+        flags = {}
+        if c.flags & ROUND_XY_TO_GRID:
+            flags["round"] = True
+        if c.flags & USE_MY_METRICS:
+            flags["useMyMetrics"] = True
+        if c.flags & OVERLAP_COMPOUND:
+            flags["overlap"] = True
+
+        if flags:
+            identifier = f"component{ci}"
+            dest_glyph.components[ci].identifier = identifier
+            object_ids[identifier] = {
+                "public.truetype.instructions": flags
+            }
 
 
 # ----

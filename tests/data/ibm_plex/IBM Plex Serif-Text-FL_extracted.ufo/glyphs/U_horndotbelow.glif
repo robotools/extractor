@@ -3,7 +3,35 @@
   <advance width="741"/>
   <unicode hex="1EF0"/>
   <outline>
-    <component base="Uhorn"/>
-    <component base="dotbelowcomb" xOffset="376"/>
+    <component base="Uhorn" identifier="component0"/>
+    <component base="dotbelowcomb" xOffset="376" identifier="component1"/>
   </outline>
+  <lib>
+    <dict>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>public.objectIdentifiers</key>
+        <dict>
+          <key>component0</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+              <key>useMyMetrics</key>
+              <true/>
+            </dict>
+          </dict>
+          <key>component1</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
 </glyph>

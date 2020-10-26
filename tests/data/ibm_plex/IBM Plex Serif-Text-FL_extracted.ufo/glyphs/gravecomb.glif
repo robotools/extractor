@@ -2,6 +2,24 @@
 <glyph name="gravecomb" format="2">
   <unicode hex="0300"/>
   <outline>
-    <component base="grave" xOffset="-300"/>
+    <component base="grave" xOffset="-300" identifier="component0"/>
   </outline>
+  <lib>
+    <dict>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>public.objectIdentifiers</key>
+        <dict>
+          <key>component0</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
 </glyph>
