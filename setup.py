@@ -30,7 +30,7 @@ setup(
         'pytest>=2.8',
     ],
     install_requires=[
-        "fonttools[ufo,lxml,woff,unicode,type1]>=3.3.1",
+        "fonttools[ufo,lxml,woff,unicode,type1]>=4.0.0",
     ],
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -40,7 +40,6 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python",
         "Topic :: Multimedia :: Graphics :: Editors :: Vector-Based",
