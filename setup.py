@@ -30,7 +30,7 @@ setup(
         'pytest>=2.8',
     ],
     install_requires=[
-        "fonttools[ufo,lxml,woff,unicode,type1]>=4.0.0",
+        "fonttools[ufo,lxml,woff,unicode,type1]>=4.17.0",
     ],
     classifiers=[
         "Development Status :: 4 - Beta",
