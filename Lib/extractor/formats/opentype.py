@@ -112,7 +112,10 @@ def extractGlyphPrograms(source, destination):
         dest_glyph = destination[name]
         if glyph.isComposite():
             # Extract composite flags
-            _extractCompositeFlags(glyph, dest_glyph)
+            # FIXME: Not decided yet, don't extract the flags for now.
+            # See https://github.com/unified-font-object/ufo-spec/issues/162
+            # _extractCompositeFlags(glyph, dest_glyph)
+            pass
         if not hasattr(glyph, "program"):
             continue
 
