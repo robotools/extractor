@@ -3,26 +3,6 @@
   <advance width="680"/>
   <unicode hex="0425"/>
   <outline>
-    <component base="X" identifier="component0"/>
+    <component base="X"/>
   </outline>
-  <lib>
-    <dict>
-      <key>public.objectLibs</key>
-      <dict>
-        <key>public.objectIdentifiers</key>
-        <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-              <key>useMyMetrics</key>
-              <true/>
-            </dict>
-          </dict>
-        </dict>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

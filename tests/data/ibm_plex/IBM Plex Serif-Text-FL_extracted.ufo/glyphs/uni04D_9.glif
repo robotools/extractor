@@ -3,26 +3,6 @@
   <advance width="540"/>
   <unicode hex="04D9"/>
   <outline>
-    <component base="schwa" identifier="component0"/>
+    <component base="schwa"/>
   </outline>
-  <lib>
-    <dict>
-      <key>public.objectLibs</key>
-      <dict>
-        <key>public.objectIdentifiers</key>
-        <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-              <key>useMyMetrics</key>
-              <true/>
-            </dict>
-          </dict>
-        </dict>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

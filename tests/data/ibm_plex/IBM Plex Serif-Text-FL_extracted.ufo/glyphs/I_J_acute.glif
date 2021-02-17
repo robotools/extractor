@@ -2,51 +2,9 @@
 <glyph name="IJacute" format="2">
   <advance width="820"/>
   <outline>
-    <component base="I" identifier="component0"/>
-    <component base="acute.case" xOffset="-124" identifier="component1"/>
-    <component base="J" xOffset="353" identifier="component2"/>
-    <component base="acute.case" xOffset="344" identifier="component3"/>
+    <component base="I"/>
+    <component base="acute.case" xOffset="-124"/>
+    <component base="J" xOffset="353"/>
+    <component base="acute.case" xOffset="344"/>
   </outline>
-  <lib>
-    <dict>
-      <key>public.objectLibs</key>
-      <dict>
-        <key>public.objectIdentifiers</key>
-        <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component1</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component2</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component3</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-        </dict>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

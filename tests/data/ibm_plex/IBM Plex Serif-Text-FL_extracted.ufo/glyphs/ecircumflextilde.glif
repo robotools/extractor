@@ -3,35 +3,7 @@
   <advance width="540"/>
   <unicode hex="1EC5"/>
   <outline>
-    <component base="e" identifier="component0"/>
-    <component base="circumflextilde" xOffset="276" identifier="component1"/>
+    <component base="e"/>
+    <component base="circumflextilde" xOffset="276"/>
   </outline>
-  <lib>
-    <dict>
-      <key>public.objectLibs</key>
-      <dict>
-        <key>public.objectIdentifiers</key>
-        <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-              <key>useMyMetrics</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component1</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-        </dict>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

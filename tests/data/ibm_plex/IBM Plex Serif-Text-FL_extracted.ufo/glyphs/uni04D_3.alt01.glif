@@ -2,35 +2,7 @@
 <glyph name="uni04D3.alt01" format="2">
   <advance width="614"/>
   <outline>
-    <component base="a.alt01" identifier="component0"/>
-    <component base="dieresis" xOffset="-26" identifier="component1"/>
+    <component base="a.alt01"/>
+    <component base="dieresis" xOffset="-26"/>
   </outline>
-  <lib>
-    <dict>
-      <key>public.objectLibs</key>
-      <dict>
-        <key>public.objectIdentifiers</key>
-        <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-              <key>useMyMetrics</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component1</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-        </dict>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

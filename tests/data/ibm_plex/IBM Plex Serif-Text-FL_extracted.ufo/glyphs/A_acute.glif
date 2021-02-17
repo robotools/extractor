@@ -3,35 +3,7 @@
   <advance width="689"/>
   <unicode hex="00C1"/>
   <outline>
-    <component base="A" identifier="component0"/>
-    <component base="acute.case" xOffset="45" identifier="component1"/>
+    <component base="A"/>
+    <component base="acute.case" xOffset="45"/>
   </outline>
-  <lib>
-    <dict>
-      <key>public.objectLibs</key>
-      <dict>
-        <key>public.objectIdentifiers</key>
-        <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-              <key>useMyMetrics</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component1</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-        </dict>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

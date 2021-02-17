@@ -3,42 +3,8 @@
   <advance width="872"/>
   <unicode hex="2158"/>
   <outline>
-    <component base="foursuperior" identifier="component0"/>
-    <component base="fraction" xOffset="379" identifier="component1"/>
-    <component base="fiveinferior" xOffset="522" identifier="component2"/>
+    <component base="foursuperior"/>
+    <component base="fraction" xOffset="379"/>
+    <component base="fiveinferior" xOffset="522"/>
   </outline>
-  <lib>
-    <dict>
-      <key>public.objectLibs</key>
-      <dict>
-        <key>public.objectIdentifiers</key>
-        <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component1</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component2</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-        </dict>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

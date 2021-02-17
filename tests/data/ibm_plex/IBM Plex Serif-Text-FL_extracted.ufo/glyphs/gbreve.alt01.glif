@@ -2,35 +2,7 @@
 <glyph name="gbreve.alt01" format="2">
   <advance width="582"/>
   <outline>
-    <component base="g.alt01" identifier="component0"/>
-    <component base="breve" xOffset="-26" identifier="component1"/>
+    <component base="g.alt01"/>
+    <component base="breve" xOffset="-26"/>
   </outline>
-  <lib>
-    <dict>
-      <key>public.objectLibs</key>
-      <dict>
-        <key>public.objectIdentifiers</key>
-        <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-              <key>useMyMetrics</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component1</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-        </dict>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

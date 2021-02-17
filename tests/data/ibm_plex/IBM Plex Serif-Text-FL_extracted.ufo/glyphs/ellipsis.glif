@@ -3,42 +3,8 @@
   <advance width="810"/>
   <unicode hex="2026"/>
   <outline>
-    <component base="period" identifier="component0"/>
-    <component base="period" xOffset="272" identifier="component1"/>
-    <component base="period" xOffset="544" identifier="component2"/>
+    <component base="period"/>
+    <component base="period" xOffset="272"/>
+    <component base="period" xOffset="544"/>
   </outline>
-  <lib>
-    <dict>
-      <key>public.objectLibs</key>
-      <dict>
-        <key>public.objectIdentifiers</key>
-        <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component1</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component2</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-        </dict>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

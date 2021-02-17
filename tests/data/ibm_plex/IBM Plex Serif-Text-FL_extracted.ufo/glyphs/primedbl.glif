@@ -3,33 +3,7 @@
   <advance width="429"/>
   <unicode hex="2033"/>
   <outline>
-    <component base="prime" identifier="component0"/>
-    <component base="prime" xOffset="182" identifier="component1"/>
+    <component base="prime"/>
+    <component base="prime" xOffset="182"/>
   </outline>
-  <lib>
-    <dict>
-      <key>public.objectLibs</key>
-      <dict>
-        <key>public.objectIdentifiers</key>
-        <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component1</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
-        </dict>
-      </dict>
-    </dict>
-  </lib>
 </glyph>
