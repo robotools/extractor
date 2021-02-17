@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="zeroinferior" format="2">
+  <advance width="374"/>
+  <unicode hex="2080"/>
+  <outline>
+    <contour>
+      <point x="187" y="37" type="qcurve"/>
+      <point x="227" y="37"/>
+      <point x="258" y="91"/>
+      <point x="258" y="138" type="qcurve"/>
+      <point x="258" y="230" type="line"/>
+      <point x="258" y="277"/>
+      <point x="227" y="331"/>
+      <point x="187" y="331" type="qcurve"/>
+      <point x="147" y="331"/>
+      <point x="116" y="277"/>
+      <point x="116" y="230" type="qcurve"/>
+      <point x="116" y="138" type="line"/>
+      <point x="116" y="91"/>
+      <point x="147" y="37"/>
+    </contour>
+    <contour>
+      <point x="187" y="-6" type="qcurve"/>
+      <point x="111" y="-6"/>
+      <point x="37" y="92"/>
+      <point x="37" y="184" type="qcurve"/>
+      <point x="37" y="276"/>
+      <point x="111" y="374"/>
+      <point x="187" y="374" type="qcurve"/>
+      <point x="263" y="374"/>
+      <point x="337" y="276"/>
+      <point x="337" y="184" type="qcurve"/>
+      <point x="337" y="92"/>
+      <point x="263" y="-6"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  20
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  20 24
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  14
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  14 18
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 2 values pushed */
+0 2
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+20
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+7 2
+MIRP[10100]	/* MoveIndirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>0957e3922665d2d86e90d76efce4fe332d7201751ce8a29088ff7d6e7d85900336e0a518aacaf710ace48de4b8547d6c98482e4c0ee36a6b1364eb29835ffc8f</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

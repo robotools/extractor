@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="acircumflex" format="2">
+  <advance width="549"/>
+  <unicode hex="00E2"/>
+  <outline>
+    <component base="a" identifier="component0"/>
+    <component base="circumflex" xOffset="-37" identifier="component1"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>public.objectIdentifiers</key>
+        <dict>
+          <key>component0</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+              <key>useMyMetrics</key>
+              <true/>
+            </dict>
+          </dict>
+          <key>component1</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

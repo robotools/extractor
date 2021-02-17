@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="tilde" format="2">
+  <advance width="600"/>
+  <unicode hex="02DC"/>
+  <outline>
+    <contour>
+      <point x="364" y="614" type="qcurve"/>
+      <point x="344" y="614"/>
+      <point x="306" y="632"/>
+      <point x="288" y="641" type="qcurve"/>
+      <point x="269" y="651"/>
+      <point x="229" y="670"/>
+      <point x="214" y="670" type="qcurve"/>
+      <point x="199" y="670"/>
+      <point x="179" y="656"/>
+      <point x="159" y="636" type="qcurve"/>
+      <point x="137" y="659" type="line"/>
+      <point x="162" y="692"/>
+      <point x="204" y="733"/>
+      <point x="236" y="733" type="qcurve"/>
+      <point x="256" y="733"/>
+      <point x="294" y="715"/>
+      <point x="312" y="706" type="qcurve"/>
+      <point x="331" y="696"/>
+      <point x="371" y="677"/>
+      <point x="386" y="677" type="qcurve"/>
+      <point x="401" y="677"/>
+      <point x="421" y="691"/>
+      <point x="441" y="711" type="qcurve"/>
+      <point x="463" y="688" type="line"/>
+      <point x="438" y="655"/>
+      <point x="396" y="614"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+MDAP[1]	/* MoveDirectAbsPt */
+NPUSHW[ ]	/* 3 values pushed */
+80 0 1
+DELTAP1[ ]	/* DeltaExceptionP1 */
+NPUSHW[ ]	/* 3 values pushed */
+112 0 1
+DELTAP1[ ]	/* DeltaExceptionP1 */
+PUSHW[ ]	/* 1 value pushed */
+6
+MDRP[11100]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+9 6 0
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+13
+MDRP[11100]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+0
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 1 value pushed */
+19
+MDRP[11100]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+22 13 19
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>73f6e426a1024ef9874e11e1121580d6b53cb6d364abe50cf1d12796c14cd398a670ef92c38a01f60c00d1f14202bc0d220f4805558ffc4af69a35a8a944d63e</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

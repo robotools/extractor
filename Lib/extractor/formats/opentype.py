@@ -1,9 +1,15 @@
 import time
-from fontTools.ttLib import TTFont, TTLibError
-from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
-from fontTools.misc.textTools import num2binary
 from fontTools.pens.boundsPen import ControlBoundsPen
+from fontTools.pens.hashPointPen import HashPointPen
+from fontTools.ttLib import TTFont, TTLibError
+from fontTools.ttLib.tables._g_l_y_f import (
+    OVERLAP_COMPOUND,
+    ROUND_XY_TO_GRID,
+    USE_MY_METRICS,
+)
+from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from extractor.exceptions import ExtractorError
+from extractor.stream import InstructionStream
 from extractor.tools import RelaxedInfo, copyAttr
 
 # ----------------
@@ -28,6 +34,7 @@ def extractFontFromOpenType(
     doInfo=True,
     doKerning=True,
     customFunctions=[],
+    doInstructions=True,
 ):
     source = TTFont(pathOrFile)
     if doInfo:
@@ -43,6 +50,8 @@ def extractFontFromOpenType(
         destination.kerning.update(kerning)
     for function in customFunctions:
         function(source, destination)
+    if doInstructions:
+        extractInstructions(source, destination)
     source.close()
 
 
@@ -50,6 +59,135 @@ def extractGlyphOrder(source, destination):
     glyphOrder = source.getGlyphOrder()
     if len(glyphOrder):
         destination.lib["public.glyphOrder"] = glyphOrder
+
+
+def extractInstructions(source, destination):
+    lib = destination.lib["public.truetype.instructions"] = {
+        "formatVersion": 1,
+        "maxFunctionDefs": 0,
+        "maxInstructionDefs": 0,
+        "maxStackElements": 0,
+        "maxStorage": 0,
+        "maxTwilightPoints": 0,
+        "maxZones": 0,
+    }
+    extractControlValues(source, lib)
+    extractFontProgram(source, lib)
+    extractGlyphPrograms(source, destination)
+    extractMaxpValues(source, lib)
+    extractPreProgram(source, lib)
+
+
+def extractControlValues(source, lib):
+    """
+    Extract the TrueType control values table to the font lib.
+    """
+    if "cvt " not in source:
+        return
+    cvt = source["cvt "]
+    lib["controlValue"] = [
+        {"id": str(i), "value": val} for i, val in enumerate(cvt.values)
+    ]
+
+
+def extractFontProgram(source, lib):
+    """
+    Extract the TrueType font program to the font lib.
+    """
+    if "fpgm" not in source:
+        return
+    fpgm = source["fpgm"].program
+    lib["fontProgram"] = _byteCodeToTtxAssembly(fpgm)
+
+
+def extractGlyphPrograms(source, destination):
+    """
+    Extract the TrueType pre-program to the font lib.
+    """
+    if "glyf" not in source:
+        return
+    glyph_set = source.getGlyphSet()
+    for name in glyph_set.keys():
+        glyph = glyph_set[name]._glyph
+        dest_glyph = destination[name]
+        if glyph.isComposite():
+            # Extract composite flags
+            _extractCompositeFlags(glyph, dest_glyph)
+        if not hasattr(glyph, "program"):
+            continue
+
+        hash_pen = HashPointPen(dest_glyph.width, destination)
+        dest_glyph.drawPoints(hash_pen)
+        lib = dest_glyph.lib["public.truetype.instructions"] = {
+            "formatVersion": "1",
+            "id": hash_pen.hash,
+        }
+        lib["assembly"] = _byteCodeToTtxAssembly(glyph.program)
+
+
+def extractMaxpValues(source, lib):
+    """
+    Extract the TrueType maximum profile values to the font lib.
+    """
+    if "maxp" not in source:
+        return
+    maxp = source["maxp"]
+    lib.update(
+        {
+            "maxFunctionDefs": maxp.maxFunctionDefs,
+            "maxInstructionDefs": maxp.maxInstructionDefs,
+            "maxStackElements": maxp.maxStackElements,
+            "maxStorage": maxp.maxStorage,
+            "maxTwilightPoints": maxp.maxTwilightPoints,
+            "maxZones": maxp.maxZones,
+        }
+    )
+
+
+def extractPreProgram(source, lib):
+    """
+    Extract the TrueType pre-program to the font lib.
+    """
+    if "prep" not in source:
+        return
+    prep = source["prep"].program
+    lib["controlValueProgram"] = _byteCodeToTtxAssembly(prep)
+
+
+def _byteCodeToTtxAssembly(program):
+    stream = InstructionStream(program_bytes=program.getBytecode())
+    return "\n%s\n" % str(stream)
+
+
+def _extractCompositeFlags(glyph, dest_glyph):
+    # Find the lib key or add it
+    if (
+        "public.objectLibs" not in dest_glyph.lib
+        or "public.objectIdentifiers"
+        not in dest_glyph.lib["public.objectLibs"]
+    ):
+        dest_glyph.lib["public.objectLibs"] = {
+            "public.objectIdentifiers": {}
+        }
+    object_ids = dest_glyph.lib["public.objectLibs"][
+        "public.objectIdentifiers"
+    ]
+
+    for ci, c in enumerate(glyph.components):
+        flags = {}
+        if c.flags & ROUND_XY_TO_GRID:
+            flags["round"] = True
+        if c.flags & USE_MY_METRICS:
+            flags["useMyMetrics"] = True
+        if c.flags & OVERLAP_COMPOUND:
+            flags["overlap"] = True
+
+        if flags:
+            identifier = f"component{ci}"
+            dest_glyph.components[ci].identifier = identifier
+            object_ids[identifier] = {
+                "public.truetype.instructions": flags
+            }
 
 
 # ----

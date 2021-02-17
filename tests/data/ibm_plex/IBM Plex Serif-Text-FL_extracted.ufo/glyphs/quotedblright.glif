@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="quotedblright" format="2">
+  <advance width="468"/>
+  <unicode hex="201D"/>
+  <outline>
+    <component base="quoteright" identifier="component0"/>
+    <component base="quoteright" xOffset="201" identifier="component1"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>public.objectIdentifiers</key>
+        <dict>
+          <key>component0</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+          <key>component1</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

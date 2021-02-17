@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ijacute" format="2">
+  <advance width="626"/>
+  <outline>
+    <component base="dotlessi" identifier="component0"/>
+    <component base="acute" xOffset="-133" identifier="component1"/>
+    <component base="dotlessj" xOffset="319" identifier="component2"/>
+    <component base="acute" xOffset="183" identifier="component3"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>public.objectIdentifiers</key>
+        <dict>
+          <key>component0</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+          <key>component1</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+          <key>component2</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+          <key>component3</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

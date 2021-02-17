@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="guillemotleft" format="2">
+  <advance width="516"/>
+  <unicode hex="00AB"/>
+  <outline>
+    <component base="guilsinglleft" identifier="component0"/>
+    <component base="guilsinglleft" xOffset="210" identifier="component1"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>public.objectIdentifiers</key>
+        <dict>
+          <key>component0</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+          <key>component1</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

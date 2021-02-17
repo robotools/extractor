@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="arrowdownleft" format="2">
+  <advance width="860"/>
+  <unicode hex="2199"/>
+  <outline>
+    <contour>
+      <point x="187" y="396" type="line"/>
+      <point x="227" y="400" type="line"/>
+      <point x="262" y="201" type="line"/>
+      <point x="496" y="463" type="line"/>
+      <point x="661" y="628" type="line"/>
+      <point x="718" y="572" type="line"/>
+      <point x="553" y="407" type="line"/>
+      <point x="290" y="173" type="line"/>
+      <point x="490" y="137" type="line"/>
+      <point x="486" y="98" type="line"/>
+      <point x="187" y="98" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+4
+MDAP[1]	/* MoveDirectAbsPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w860l187+396l227+400l262+201l496+463l661+628l718+572l553+407l290+173l490+137l486+98l187+98|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

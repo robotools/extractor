@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dieresis.case" format="2">
+  <advance width="600"/>
+  <outline>
+    <contour>
+      <point x="206" y="786" type="qcurve"/>
+      <point x="180" y="786"/>
+      <point x="151" y="816"/>
+      <point x="151" y="839" type="qcurve"/>
+      <point x="151" y="843" type="line"/>
+      <point x="151" y="866"/>
+      <point x="180" y="896"/>
+      <point x="206" y="896" type="qcurve"/>
+      <point x="232" y="896"/>
+      <point x="261" y="866"/>
+      <point x="261" y="843" type="qcurve"/>
+      <point x="261" y="839" type="line"/>
+      <point x="261" y="816"/>
+      <point x="232" y="786"/>
+    </contour>
+    <contour>
+      <point x="394" y="786" type="qcurve"/>
+      <point x="368" y="786"/>
+      <point x="339" y="816"/>
+      <point x="339" y="839" type="qcurve"/>
+      <point x="339" y="843" type="line"/>
+      <point x="339" y="866"/>
+      <point x="368" y="896"/>
+      <point x="394" y="896" type="qcurve"/>
+      <point x="420" y="896"/>
+      <point x="449" y="866"/>
+      <point x="449" y="843" type="qcurve"/>
+      <point x="449" y="839" type="line"/>
+      <point x="449" y="816"/>
+      <point x="420" y="786"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+MDAP[1]	/* MoveDirectAbsPt */
+NPUSHW[ ]	/* 5 values pushed */
+96 0 112 0 2
+DELTAP1[ ]	/* DeltaExceptionP1 */
+NPUSHW[ ]	/* 3 values pushed */
+160 0 1
+DELTAP1[ ]	/* DeltaExceptionP1 */
+PUSHW[ ]	/* 1 value pushed */
+7
+MDRP[11100]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+0
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 1 value pushed */
+14
+MDRP[10000]	/* MoveDirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+7
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 1 value pushed */
+21
+MDRP[10000]	/* MoveDirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>5650c9596f727a6dd3f4b837c568402ac8551bfcb9991a1347da46e117a22a261212e0cf53c9a48d985e694f726fdd08f76c8624f4e9812a68feb6ceeb781314</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

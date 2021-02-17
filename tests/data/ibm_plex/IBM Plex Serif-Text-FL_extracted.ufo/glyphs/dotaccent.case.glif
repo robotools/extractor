@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="dotaccent.case" format="2">
+  <advance width="600"/>
+  <outline>
+    <contour>
+      <point x="300" y="783" type="qcurve"/>
+      <point x="274" y="783"/>
+      <point x="243" y="815"/>
+      <point x="243" y="839" type="qcurve"/>
+      <point x="243" y="842" type="line"/>
+      <point x="243" y="866"/>
+      <point x="274" y="898"/>
+      <point x="300" y="898" type="qcurve"/>
+      <point x="326" y="898"/>
+      <point x="357" y="866"/>
+      <point x="357" y="842" type="qcurve"/>
+      <point x="357" y="839" type="line"/>
+      <point x="357" y="815"/>
+      <point x="326" y="783"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+MDAP[1]	/* MoveDirectAbsPt */
+NPUSHW[ ]	/* 3 values pushed */
+96 0 1
+DELTAP1[ ]	/* DeltaExceptionP1 */
+NPUSHW[ ]	/* 3 values pushed */
+160 0 1
+DELTAP1[ ]	/* DeltaExceptionP1 */
+PUSHW[ ]	/* 1 value pushed */
+7
+MDRP[11100]	/* MoveDirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w600q300+783o274+783o243+815q243+839l243+842o243+866o274+898q300+898o326+898o357+866q357+842l357+839o357+815o326+783|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

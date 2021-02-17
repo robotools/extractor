@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="bullet" format="2">
+  <advance width="416"/>
+  <unicode hex="2022"/>
+  <outline>
+    <contour>
+      <point x="208" y="177" type="qcurve"/>
+      <point x="150" y="177"/>
+      <point x="84" y="247"/>
+      <point x="84" y="298" type="qcurve"/>
+      <point x="84" y="309" type="line"/>
+      <point x="84" y="360"/>
+      <point x="150" y="430"/>
+      <point x="208" y="430" type="qcurve"/>
+      <point x="266" y="430"/>
+      <point x="332" y="360"/>
+      <point x="332" y="309" type="qcurve"/>
+      <point x="332" y="298" type="line"/>
+      <point x="332" y="247"/>
+      <point x="266" y="177"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+7
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 1 value pushed */
+0
+MDRP[11100]	/* MoveDirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w416q208+177o150+177o84+247q84+298l84+309o84+360o150+430q208+430o266+430o332+360q332+309l332+298o332+247o266+177|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="arrowrightarrowleft" format="2">
+  <advance width="860"/>
+  <unicode hex="21C4"/>
+  <outline>
+    <component base="arrowright" yOffset="148" identifier="component0"/>
+    <component base="arrowleft" yOffset="-148" identifier="component1"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.objectLibs</key>
+      <dict>
+        <key>public.objectIdentifiers</key>
+        <dict>
+          <key>component0</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+              <key>useMyMetrics</key>
+              <true/>
+            </dict>
+          </dict>
+          <key>component1</key>
+          <dict>
+            <key>public.truetype.instructions</key>
+            <dict>
+              <key>round</key>
+              <true/>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

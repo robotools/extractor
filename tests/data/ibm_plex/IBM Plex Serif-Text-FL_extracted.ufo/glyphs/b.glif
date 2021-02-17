@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="b" format="2">
+  <advance width="605"/>
+  <unicode hex="0062"/>
+  <outline>
+    <contour>
+      <point x="345" y="-12" type="qcurve"/>
+      <point x="284" y="-12"/>
+      <point x="208" y="42"/>
+      <point x="192" y="79" type="qcurve"/>
+      <point x="188" y="79" type="line"/>
+      <point x="136" y="0" type="line"/>
+      <point x="96" y="0" type="line"/>
+      <point x="96" y="676" type="line"/>
+      <point x="25" y="689" type="line"/>
+      <point x="25" y="727" type="line"/>
+      <point x="192" y="760" type="line"/>
+      <point x="192" y="439" type="line"/>
+      <point x="196" y="439" type="line"/>
+      <point x="212" y="476"/>
+      <point x="285" y="530"/>
+      <point x="345" y="530" type="qcurve"/>
+      <point x="393" y="530"/>
+      <point x="471" y="494"/>
+      <point x="526" y="425"/>
+      <point x="556" y="324"/>
+      <point x="556" y="259" type="qcurve"/>
+      <point x="556" y="194"/>
+      <point x="526" y="93"/>
+      <point x="471" y="24"/>
+      <point x="393" y="-12"/>
+    </contour>
+    <contour>
+      <point x="316" y="52" type="qcurve"/>
+      <point x="380" y="52"/>
+      <point x="453" y="138"/>
+      <point x="453" y="212" type="qcurve"/>
+      <point x="453" y="306" type="line"/>
+      <point x="453" y="380"/>
+      <point x="380" y="466"/>
+      <point x="316" y="466" type="qcurve"/>
+      <point x="293" y="466"/>
+      <point x="248" y="452"/>
+      <point x="213" y="426"/>
+      <point x="192" y="389"/>
+      <point x="192" y="365" type="qcurve"/>
+      <point x="192" y="153" type="line"/>
+      <point x="192" y="129"/>
+      <point x="213" y="92"/>
+      <point x="248" y="66"/>
+      <point x="293" y="52"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  15
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  15 26
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  10
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  10 32
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  0
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  0 18
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  6
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  6 18
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+0
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+25 3
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+4 25 15
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+10
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+7 5
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+9 10 7
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+PUSHW[ ]	/* 1 value pushed */
+9
+MDAP[1]	/* MoveDirectAbsPt */
+PUSHW[ ]	/* 2 values pushed */
+8 1
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 1 value pushed */
+15
+SRP0[ ]	/* SetRefPoint0 */
+PUSHW[ ]	/* 2 values pushed */
+32 3
+MIRP[10100]	/* MoveIndirectRelPt */
+PUSHW[ ]	/* 3 values pushed */
+11 32 0
+SRP1[ ]	/* SetRefPoint1 */
+SRP2[ ]	/* SetRefPoint2 */
+IP[ ]	/* InterpolatePts */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>02958aac6463e1d886beacd68e42b08f3da4043ee20a86da694d95b2dbad9211e8e770a7a7281ccbb6b8408ef03994b5fbae7fe5b7bc4e69ea45054e0050c9ba</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

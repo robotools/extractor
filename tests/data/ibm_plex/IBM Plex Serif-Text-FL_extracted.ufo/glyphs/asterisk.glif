@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="asterisk" format="2">
+  <advance width="471"/>
+  <unicode hex="002A"/>
+  <outline>
+    <contour>
+      <point x="87" y="415" type="line"/>
+      <point x="118" y="458" type="line"/>
+      <point x="200" y="526" type="line"/>
+      <point x="224" y="508" type="line"/>
+      <point x="185" y="409" type="line"/>
+      <point x="154" y="365" type="line"/>
+    </contour>
+    <contour>
+      <point x="86" y="554" type="line"/>
+      <point x="35" y="570" type="line"/>
+      <point x="61" y="650" type="line"/>
+      <point x="111" y="633" type="line"/>
+      <point x="202" y="576" type="line"/>
+      <point x="192" y="548" type="line"/>
+    </contour>
+    <contour>
+      <point x="194" y="694" type="line"/>
+      <point x="194" y="747" type="line"/>
+      <point x="277" y="747" type="line"/>
+      <point x="277" y="694" type="line"/>
+      <point x="250" y="589" type="line"/>
+      <point x="221" y="589" type="line"/>
+    </contour>
+    <contour>
+      <point x="286" y="409" type="line"/>
+      <point x="247" y="508" type="line"/>
+      <point x="271" y="526" type="line"/>
+      <point x="353" y="458" type="line"/>
+      <point x="384" y="415" type="line"/>
+      <point x="317" y="365" type="line"/>
+    </contour>
+    <contour>
+      <point x="269" y="576" type="line"/>
+      <point x="360" y="633" type="line"/>
+      <point x="410" y="650" type="line"/>
+      <point x="436" y="570" type="line"/>
+      <point x="385" y="554" type="line"/>
+      <point x="279" y="548" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  13
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  13 30
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>a3ab13a76ee45ff77e122b904696055cba2bb31111387e562116099d3eaab322f0d8c5686e46e66a12d28406bf8f5fbc865031e95096346baacebcb463e39b8c</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

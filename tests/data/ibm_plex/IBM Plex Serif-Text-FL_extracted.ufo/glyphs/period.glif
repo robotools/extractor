@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="period" format="2">
+  <advance width="266"/>
+  <unicode hex="002E"/>
+  <outline>
+    <contour>
+      <point x="133" y="-12" type="qcurve"/>
+      <point x="101" y="-12"/>
+      <point x="66" y="26"/>
+      <point x="66" y="53" type="qcurve"/>
+      <point x="66" y="59" type="line"/>
+      <point x="66" y="86"/>
+      <point x="101" y="124"/>
+      <point x="133" y="124" type="qcurve"/>
+      <point x="165" y="124"/>
+      <point x="200" y="86"/>
+      <point x="200" y="59" type="qcurve"/>
+      <point x="200" y="53" type="line"/>
+      <point x="200" y="26"/>
+      <point x="165" y="-12"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+0
+RCVT[ ]	/* ReadCVT */
+IF[ ]	/* If */
+  PUSHW[ ]	/* 1 value pushed */
+  0
+  MDAP[1]	/* MoveDirectAbsPt */
+ELSE[ ]	/* Else */
+  PUSHW[ ]	/* 2 values pushed */
+  0 18
+  MIAP[0]	/* MoveIndirectAbsPt */
+EIF[ ]	/* EndIf */
+PUSHW[ ]	/* 1 value pushed */
+7
+MDRP[11100]	/* MoveDirectRelPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w266q133-12o101-12o66+26q66+53l66+59o66+86o101+124q133+124o165+124o200+86q200+59l200+53o200+26o165-12|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

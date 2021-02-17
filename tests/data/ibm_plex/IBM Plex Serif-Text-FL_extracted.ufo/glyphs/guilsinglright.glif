@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="guilsinglright" format="2">
+  <advance width="306"/>
+  <unicode hex="203A"/>
+  <outline>
+    <contour>
+      <point x="54" y="108" type="line"/>
+      <point x="175" y="283" type="line"/>
+      <point x="54" y="458" type="line"/>
+      <point x="76" y="488" type="line"/>
+      <point x="270" y="307" type="line"/>
+      <point x="270" y="259" type="line"/>
+      <point x="76" y="78" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+SVTCA[0]	/* SetFPVectorToAxis */
+PUSHW[ ]	/* 1 value pushed */
+3
+MDAP[1]	/* MoveDirectAbsPt */
+IUP[0]	/* InterpolateUntPts */
+IUP[1]	/* InterpolateUntPts */
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w306l54+108l175+283l54+458l76+488l270+307l270+259l76+78|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>
