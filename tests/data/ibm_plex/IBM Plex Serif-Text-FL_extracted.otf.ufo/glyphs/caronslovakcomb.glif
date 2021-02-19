@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="caronslovakcomb" format="2">
+  <unicode hex="0315"/>
+  <outline>
+    <contour>
+      <point x="7" y="558" type="line"/>
+      <point x="40" y="558" type="line"/>
+      <point x="109" y="748" type="line"/>
+      <point x="18" y="748" type="line"/>
+    </contour>
+  </outline>
+</glyph>
