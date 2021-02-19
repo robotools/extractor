@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="commaturnedtop" format="2">
+  <advance width="600"/>
+  <unicode hex="02BB"/>
+  <outline>
+    <contour>
+      <point x="300" y="582" type="curve" smooth="yes"/>
+      <point x="336" y="582"/>
+      <point x="357" y="605"/>
+      <point x="357" y="636" type="curve" smooth="yes"/>
+      <point x="357" y="640" type="line" smooth="yes"/>
+      <point x="357" y="671"/>
+      <point x="338" y="694"/>
+      <point x="299" y="694" type="curve"/>
+      <point x="308" y="722"/>
+      <point x="328" y="758"/>
+      <point x="353" y="785" type="curve"/>
+      <point x="309" y="785" type="line"/>
+      <point x="270" y="748"/>
+      <point x="243" y="692"/>
+      <point x="243" y="645" type="curve" smooth="yes"/>
+      <point x="243" y="638" type="line" smooth="yes"/>
+      <point x="243" y="607"/>
+      <point x="264" y="582"/>
+    </contour>
+  </outline>
+</glyph>

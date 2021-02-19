@@ -50,7 +50,7 @@ def extractFontFromOpenType(
         destination.kerning.update(kerning)
     for function in customFunctions:
         function(source, destination)
-    if doInstructions:
+    if doInstructions and "glyf" in source:
         extractInstructions(source, destination)
     source.close()
 
