@@ -25,12 +25,18 @@ setup(
     license="MIT",
     package_dir={"": "Lib"},
     packages=find_packages("Lib"),
+    entry_points={
+        "console_scripts": [
+            "extractufo = extractor:cmdline",
+        ]
+    },
     setup_requires=pytest_runner + wheel,
     tests_require=[
         'pytest>=2.8',
     ],
     install_requires=[
         "fonttools[ufo,lxml,woff,unicode,type1]>=4.17.0",
+        "ufoLib2",
     ],
     classifiers=[
         "Development Status :: 4 - Beta",
