@@ -50,7 +50,7 @@ def extractFontFromOpenType(
         destination.kerning.update(kerning)
     for function in customFunctions:
         function(source, destination)
-    if doInstructions and "glyf" in source:
+    if doInstructions:
         extractInstructions(source, destination)
     source.close()
 
@@ -62,6 +62,9 @@ def extractGlyphOrder(source, destination):
 
 
 def extractInstructions(source, destination):
+    if "glyf" not in source:
+        return
+
     lib = destination.lib["public.truetype.instructions"] = {
         "formatVersion": 1,
         "maxFunctionDefs": 0,
