@@ -10,26 +10,19 @@
     <dict>
       <key>public.objectLibs</key>
       <dict>
-        <key>public.objectIdentifiers</key>
+        <key>component0</key>
         <dict>
-          <key>component0</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-              <key>useMyMetrics</key>
-              <true/>
-            </dict>
-          </dict>
-          <key>component1</key>
-          <dict>
-            <key>public.truetype.instructions</key>
-            <dict>
-              <key>round</key>
-              <true/>
-            </dict>
-          </dict>
+          <key>public.truetype.roundOffsetToGrid</key>
+          <true/>
+          <key>public.truetype.useMyMetrics</key>
+          <true/>
+        </dict>
+        <key>component1</key>
+        <dict>
+          <key>public.truetype.roundOffsetToGrid</key>
+          <true/>
+          <key>public.truetype.useMyMetrics</key>
+          <false/>
         </dict>
       </dict>
       <key>public.truetype.instructions</key>
@@ -60,6 +53,8 @@ IUP[1]	/* InterpolateUntPts */
         <key>id</key>
         <string>f9667f90651a781c8f49150b5cd2cf421300a1628d09f131b6cd1c8c8ec7cc4d7256cfa8a8eadb58cb0b1a19a777fc01b1057078474540620f8d60904bf16402</string>
       </dict>
+      <key>public.truetype.overlap</key>
+      <false/>
     </dict>
   </lib>
 </glyph>
