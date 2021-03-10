@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="hookcomb" format="2">
+  <unicode hex="0309"/>
+  <outline>
+    <contour>
+      <point x="18" y="576" type="line"/>
+      <point x="45" y="611" type="line" smooth="yes"/>
+      <point x="76" y="651"/>
+      <point x="94" y="685"/>
+      <point x="94" y="714" type="curve" smooth="yes"/>
+      <point x="94" y="745"/>
+      <point x="75" y="769"/>
+      <point x="23" y="769" type="curve" smooth="yes"/>
+      <point x="-90" y="769" type="line"/>
+      <point x="-90" y="700" type="line"/>
+      <point x="38" y="700" type="line"/>
+      <point x="-14" y="592" type="line"/>
+    </contour>
+  </outline>
+</glyph>

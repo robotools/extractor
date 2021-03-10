@@ -69,6 +69,9 @@ def extractGlyphOrder(source, destination):
 
 
 def extractInstructions(source, destination):
+    if "glyf" not in source:
+        return
+
     lib = destination.lib[TRUETYPE_INSTRUCTIONS_KEY] = {
         "formatVersion": 1,
         "maxFunctionDefs": 0,
