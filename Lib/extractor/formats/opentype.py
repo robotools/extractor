@@ -500,7 +500,6 @@ def extractOpenTypeGlyphs(source, destination):
     # grab the cmap
     vmtx = source.get("vmtx")
     vorg = source.get("VORG")
-    cmap = source.getBestCmap()
     is_ttf = "glyf" in source
     reversedMapping = source.get("cmap").buildReversed()
     # grab the glyphs
