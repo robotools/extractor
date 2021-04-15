@@ -41,6 +41,7 @@ def extractFontFromOpenType(
         extractOpenTypeInfo(source, destination)
     if doGlyphs:
         extractOpenTypeGlyphs(source, destination)
+        extractUnicodeVariationSequences(source, destination)
     if doGlyphOrder:
         extractGlyphOrder(source, destination)
     if doKerning:
@@ -59,6 +60,33 @@ def extractGlyphOrder(source, destination):
     glyphOrder = source.getGlyphOrder()
     if len(glyphOrder):
         destination.lib["public.glyphOrder"] = glyphOrder
+
+
+# ---------------------------
+# Unicode Variation Sequences
+# ---------------------------
+
+
+def extractUnicodeVariationSequences(source, destination):
+    """
+    Extract the Unicode Variation Sequences
+    """
+    cmap = source.get("cmap")
+    mapping = cmap.getBestCmap()
+    for subtable in cmap.tables:
+        if subtable.format == 14:
+            destination.lib["public.unicodeVariationSequences"] = {
+                variationSelector: {
+                    charValue: glyphName if glyphName else mapping.get(charValue)
+                    for (charValue, glyphName) in uvsList
+                }
+                for variationSelector, uvsList in subtable.uvsDict.items()
+            }
+
+
+# ------------
+# Instructions
+# ------------
 
 
 def extractInstructions(source, destination):
