@@ -76,8 +76,8 @@ def extractUnicodeVariationSequences(source, destination):
     for subtable in cmap.tables:
         if subtable.format == 14:
             destination.lib["public.unicodeVariationSequences"] = {
-                variationSelector: {
-                    charValue: glyphName if glyphName else mapping.get(charValue)
+                "%04X" % variationSelector: {
+                    "%04X" % charValue: glyphName if glyphName else mapping.get(charValue)
                     for (charValue, glyphName) in uvsList
                 }
                 for variationSelector, uvsList in subtable.uvsDict.items()
