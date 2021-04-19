@@ -47,4 +47,4 @@ However, the import name for the package remains ``extractor``, without prefix.
    :target: https://travis-ci.org/robotools/extractor
 .. |PyPI Version| image:: https://img.shields.io/pypi/v/ufo-extractor.svg
    :target: https://pypi.org/project/ufo-extractor/
-.. |Python Versions| image:: https://img.shields.io/badge/python-2.7%2C%203.5-blue.svg
+.. |Python Versions| image:: https://img.shields.io/badge/python-3.6%2C%203.8-blue.svg
