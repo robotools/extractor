@@ -12,7 +12,7 @@ deploy:
   - provider: pypi
     server: https://upload.pypi.org/legacy/
     on:
-      repo: typesupply/extractor
+      repo: robotools/extractor
       tags: true
       all_branches: true
       python: 3.6
@@ -26,7 +26,7 @@ deploy:
     api_key:
       secure: Zfco0lC1K1ME79opimESfTq2gjoj702MDcSwm+r/+3mQbJaRROsUQTxtWMYrZ/VplQ8xQCFwO0f5BFZGcaEA/EbGb9DwjcUOpX54hIC1K4tFTWius8U8AuEwrVfvNNtGZRCpvyNVtkijVEM0CgrR8uFWYP4ZPpYOmYTNJH8DCHUw/kEfjjJJr7UKO7sv+7AxvotqDKANb+KuytiIzL1Z+cfD1h3uU7oOqB8fKNlZpE1GBaz+yPExLrGrlgsMWCKFUZShyHOIAM/JybzubX0+h3oyRAZKsn/5wN7Rs6cKnNR33Im+vECiIFlNW3g+GkiXbAAXZQKnJ2W41ShiIbwrk7jkD8ckkEj6JVJznj24h1ZwQ76EbL5YNAjAkFxeWFCfxHaL8z0h3wqoU/FLT6VPQoy1KFC3Vfne8l1n18rOVbWHHuS4xPvvjvl1k3itxh89pVUFR3wAgrcRAcyiNgpDHlS5+TsCz2h0cRSqRKP/PMwtztlQYdZChgUgH8mJIbLUQu5w1syWPGd4360q2OECmM3Xt/wFiCSH59DyZ2GPkSDEZMBzryRkLXliiKHZ2EUwI8kIwbrROCKRjPcUMQW64DX3HenrCBfNwHQ3756bg7ShtaylFvbls8sDFM/BNC406ok65OMW8db+xmQqJFqo0mU2hqRG3S0dP8k4Rst8l54=
     on:
-      repo: typesupply/extractor
+      repo: robotools/extractor
       tags: true
       all_branches: true
       python: 3.6
