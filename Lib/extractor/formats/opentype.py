@@ -12,6 +12,13 @@ from extractor.exceptions import ExtractorError
 from extractor.stream import InstructionStream
 from extractor.tools import RelaxedInfo, copyAttr
 
+
+TRUETYPE_INSTRUCTIONS_KEY = "public.truetype.instructions"
+TRUETYPE_ROUND_KEY = "public.truetype.roundOffsetToGrid"
+TRUETYPE_METRICS_KEY = "public.truetype.useMyMetrics"
+TRUETYPE_OVERLAP_KEY = "public.truetype.overlap"
+OBJECT_LIBS_KEY = "public.objectLibs"
+
 # ----------------
 # Public Functions
 # ----------------
@@ -93,7 +100,7 @@ def extractInstructions(source, destination):
     if "glyf" not in source:
         return
 
-    lib = destination.lib["public.truetype.instructions"] = {
+    lib = destination.lib[TRUETYPE_INSTRUCTIONS_KEY] = {
         "formatVersion": 1,
         "maxFunctionDefs": 0,
         "maxInstructionDefs": 0,
@@ -149,7 +156,7 @@ def extractGlyphPrograms(source, destination):
 
         hash_pen = HashPointPen(dest_glyph.width, destination)
         dest_glyph.drawPoints(hash_pen)
-        lib = dest_glyph.lib["public.truetype.instructions"] = {
+        lib = dest_glyph.lib[TRUETYPE_INSTRUCTIONS_KEY] = {
             "formatVersion": "1",
             "id": hash_pen.hash,
         }
@@ -192,33 +199,24 @@ def _byteCodeToTtxAssembly(program):
 
 def _extractCompositeFlags(glyph, dest_glyph):
     # Find the lib key or add it
-    if (
-        "public.objectLibs" not in dest_glyph.lib
-        or "public.objectIdentifiers"
-        not in dest_glyph.lib["public.objectLibs"]
-    ):
-        dest_glyph.lib["public.objectLibs"] = {
-            "public.objectIdentifiers": {}
-        }
-    object_ids = dest_glyph.lib["public.objectLibs"][
-        "public.objectIdentifiers"
-    ]
+    if OBJECT_LIBS_KEY not in dest_glyph.lib:
+        dest_glyph.lib[OBJECT_LIBS_KEY] = {}
+    object_libs = dest_glyph.lib[OBJECT_LIBS_KEY]
 
     for ci, c in enumerate(glyph.components):
         flags = {}
-        if c.flags & ROUND_XY_TO_GRID:
-            flags["round"] = True
-        if c.flags & USE_MY_METRICS:
-            flags["useMyMetrics"] = True
-        if c.flags & OVERLAP_COMPOUND:
-            flags["overlap"] = True
+        flags[TRUETYPE_ROUND_KEY] = bool(c.flags & ROUND_XY_TO_GRID)
+        flags[TRUETYPE_METRICS_KEY] = bool(c.flags & USE_MY_METRICS)
 
         if flags:
             identifier = f"component{ci}"
             dest_glyph.components[ci].identifier = identifier
-            object_ids[identifier] = {
-                "public.truetype.instructions": flags
-            }
+            object_libs[identifier] = flags
+
+        # Overlap is stored directly in the glyph lib
+        dest_glyph.lib["public.truetype.overlap"] = bool(
+            c.flags & OVERLAP_COMPOUND
+        )
 
 
 # ----
