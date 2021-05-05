@@ -1,3 +1,4 @@
+
 import time
 from fontTools.pens.boundsPen import ControlBoundsPen
 from fontTools.pens.hashPointPen import HashPointPen
@@ -8,6 +9,7 @@ from fontTools.ttLib.tables._g_l_y_f import (
     USE_MY_METRICS,
 )
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
+from fontTools.varLib.mutator import instantiateVariableFont
 from extractor.exceptions import ExtractorError
 from extractor.stream import InstructionStream
 from extractor.tools import RelaxedInfo, copyAttr
@@ -32,6 +34,23 @@ def isOpenType(pathOrFile):
         return False
     return True
 
+def isVarFont(pathOrFile):
+    try:
+        font = TTFont(pathOrFile)
+        fvar = varFont["fvar"]
+        del varFont
+    except TTLibError:
+        return False
+    return True
+
+def locationToName(locDict):
+    name = ""
+    for tag,val in locDict.items():
+        name += f"{tag}_{val};"
+    return name
+
+def getDefaultLocation(varFont):
+    return {axis.axisTag:axis.defaultValue for axis in varFont["fvar"].axes}
 
 def extractFontFromOpenType(
     pathOrFile,
@@ -48,6 +67,20 @@ def extractFontFromOpenType(
         extractOpenTypeInfo(source, destination)
     if doGlyphs:
         extractOpenTypeGlyphs(source, destination)
+        if isVarFont:
+            '''
+            Add Support for extracting Variable Instances as RLayer objects
+            Currently this is pulling the VFs instances but I think using the Sources is a better solution?
+            '''
+            defLoc = getDefaultLocation(source)
+            locations = [instance.coordinates for instance in source["fvar"].instances]
+            # sourceFonts = [instantiateVariableFont(source,loc,True,True) for loc in locations]
+            for varLoc in locations:
+                if varLoc != defLoc:
+                    instanceFont = instantiateVariableFont(source,varLoc)
+                    layerName = locationToName(varLoc)
+                    extractOpenTypeGlyphs(instanceFont, destination, layerName)
+
         extractUnicodeVariationSequences(source, destination)
     if doGlyphOrder:
         extractGlyphOrder(source, destination)
@@ -59,7 +92,11 @@ def extractFontFromOpenType(
     for function in customFunctions:
         function(source, destination)
     if doInstructions:
-        extractInstructions(source, destination)
+        if not isVarFont:
+            '''
+            seems to run into issue with extracting VF component indentifier
+            '''
+            extractInstructions(source, destination)
     source.close()
 
 
@@ -522,19 +559,23 @@ def binaryToIntList(value, start=0):
 # --------
 
 
-def extractOpenTypeGlyphs(source, destination):
+def extractOpenTypeGlyphs(source, destination, layerName="public.default"):
     # grab the cmap
     vmtx = source.get("vmtx")
     vorg = source.get("VORG")
     is_ttf = "glyf" in source
     reversedMapping = source.get("cmap").buildReversed()
+    # add layers
+    if layerName != destination.defaultLayerName:
+        destination.newLayer(layerName)
     # grab the glyphs
     glyphSet = source.getGlyphSet()
     for glyphName in glyphSet.keys():
         sourceGlyph = glyphSet[glyphName]
         # make the new glyph
-        destination.newGlyph(glyphName)
-        destinationGlyph = destination[glyphName]
+        destinationLayer = destination.getLayer(layerName)
+        destinationLayer.newGlyph(glyphName)
+        destinationGlyph = destinationLayer[glyphName]
         # outlines
         if is_ttf:
             pen = destinationGlyph.getPointPen()
