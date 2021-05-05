@@ -37,15 +37,15 @@ def isOpenType(pathOrFile):
 def isVarFont(pathOrFile):
     try:
         font = TTFont(pathOrFile)
-        fvar = varFont["fvar"]
-        del varFont
+        fvar = font["fvar"]
+        del font
     except TTLibError:
         return False
     return True
 
-def locationToName(locDict):
+def locationToName(locations):
     name = ""
-    for tag,val in locDict.items():
+    for tag,val in locations.items():
         name += f"{tag}_{val};"
     return name
 
@@ -74,7 +74,6 @@ def extractFontFromOpenType(
             '''
             defLoc = getDefaultLocation(source)
             locations = [instance.coordinates for instance in source["fvar"].instances]
-            # sourceFonts = [instantiateVariableFont(source,loc,True,True) for loc in locations]
             for varLoc in locations:
                 if varLoc != defLoc:
                     instanceFont = instantiateVariableFont(source,varLoc)
