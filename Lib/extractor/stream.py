@@ -152,6 +152,7 @@ class InstructionStream(object):
 
                 if args:
                     asm += f"\n{'  ' * indent}{' '.join(args)}"
+
             elif vtt:
                 if cmd_name in ("NPUSHB", "NPUSHW", "PUSHB", "PUSHW"):
                     # Format as generic #PUSH for VTT assembly output
