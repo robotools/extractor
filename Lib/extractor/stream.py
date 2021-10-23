@@ -12,14 +12,37 @@ class InstructionStream(object):
     The instruction stream.
     """
 
-    def __init__(self, instruction_processor=None, program_bytes=b""):
+    def __init__(self, instruction_processor=None, program_bytes=b"") -> None:
+        self.ip = instruction_processor
         self.io = BytesIO(program_bytes)
+        self._num_bytes = len(program_bytes)
 
-    def rewind(self):
+    def __len__(self):
+        return self._num_bytes
+
+    def __repr__(self) -> str:
         """
-        Rewind the instruction pointer to the beginning of the stream.
+        Return the instructions from the bytecode in the current stream
+        starting at the beginning.
         """
-        self.io.seek(0)
+        return self.get_assembly()
+
+    def __str__(self) -> str:
+        """
+        Return the instructions from the bytecode in the current stream
+        starting at the beginning.
+        """
+        return self.get_assembly()
+
+    def move_instruction_pointer(self, bytes_offset: int) -> None:
+        """
+        :param bytes_offset: The offset in bytes. May be positive or negative.
+        :type bytes_offset:  int
+
+        Move the instruction pointer inside the current stream, relative to the
+        current pointer position.
+        """
+        self.io.seek(bytes_offset, 1)  # 1 = relative to current position
 
     def read_byte(self):
         """
@@ -41,19 +64,13 @@ class InstructionStream(object):
             return False
         return w, int.from_bytes(w, byteorder="big", signed=True)
 
-    def __repr__(self) -> str:
+    def rewind(self) -> None:
         """
-        Return the instructions from the bytecode in the current stream
-        starting at the beginning.
+        Rewind the instruction pointer to the beginning of the stream.
         """
-        return self.get_assembly()
+        self.io.seek(0)
 
-    def __str__(self) -> str:
-        """
-        Return the instructions from the bytecode in the current stream
-        starting at the beginning.
-        """
-        return self.get_assembly()
+    # Getting the assembly code
 
     @property
     def vtt_assembly(self) -> str:
@@ -64,6 +81,10 @@ class InstructionStream(object):
         return self.get_assembly(dialect="vtt", end="\n")
 
     def get_assembly(self, dialect="ttx", end="\n") -> str:
+        """
+        Return the instructions from the bytecode in the current stream as
+        assembly code in the specified dialect, "ttx" or "vtt".
+        """
         vtt = dialect == "vtt"
         ttx = dialect == "ttx"
         self.rewind()
@@ -251,7 +272,10 @@ class InstructionStream(object):
         # Unknown command
         raise KeyError
 
-    def bitstring_to_color_mnemonic(self, bitstring):
+    def bitstring_to_color_mnemonic(self, bitstring: str) -> str:
+        """
+        Return VTT distance color mnemonics for a bit string
+        """
         if bitstring == "00":
             return "Gr"  # Gray
         elif bitstring == "01":
