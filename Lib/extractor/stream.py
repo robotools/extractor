@@ -172,11 +172,12 @@ class InstructionStream(object):
                         f"\t/* {name} */"
                     )
 
-                if cmd_name in ("ELSE", "FDEF", "IF"):
-                    indent += 1
             else:
                 # Unknown dialect
                 raise NotImplementedError
+
+            if cmd_name in ("ELSE", "FDEF", "IF"):
+                indent += 1
 
     def bitstring_to_mnemonic(self, cmd_name: str, bitstring: str) -> str:
         """
