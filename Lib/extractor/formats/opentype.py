@@ -985,7 +985,18 @@ def _renameClasses(classes, prefix):
         else:
             glyphList = list(sorted(glyphList))
             groupName = prefix + glyphList[0]
-        renameMap[classID] = groupName
+        if groupName in renameMap.values():
+            print("  Dropping duplicate group rename target:")
+            print(f"    {classID} -> {groupName}")
+            print(f"    Glyphs: {glyphList}")
+        else:
+            renameMap[classID] = groupName
+    if len(list(renameMap.values())) != len(set(renameMap.values())):
+        print("Rename list for classes contains duplicates:")
+        values = list(renameMap.values())
+        for v in values:
+            if values.count(v) > 1:
+                print(f"    {v}")
     return renameMap
 
 
