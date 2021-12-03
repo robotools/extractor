@@ -561,7 +561,7 @@ def extractOpenTypeGlyphs(source, destination):
                 xMin, yMin, xMax, yMax = bounds_pen.bounds
                 destinationGlyph.verticalOrigin = tsb + yMax
         # unicodes
-        destinationGlyph.unicodes = reversedMapping.get(glyphName, [])
+        destinationGlyph.unicodes = list(reversedMapping.get(glyphName, []))
 
 
 # -------
