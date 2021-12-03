@@ -25,3 +25,6 @@ htmlcov/
 
 # pyenv python configuration file
 .python-version
+
+# auto-generated version file
+Lib/extractor/_version.py

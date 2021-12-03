@@ -1,4 +1,4 @@
-|Travis Build Status| |PyPI Version| |Python Versions|
+|CI Build Status| |PyPI Version| |Python Versions|
 
 
 UFO Extractor
@@ -43,8 +43,8 @@ Note that, for historical reasons, the package is listed on the
 However, the import name for the package remains ``extractor``, without prefix.
 
 
-.. |Travis Build Status| image:: https://travis-ci.org/robotools/extractor.svg?branch=master
-   :target: https://travis-ci.org/robotools/extractor
+.. |CI Build Status| image:: https://github.com/robotools/extractor/workflows/Tests/badge.svg
+   :target: https://github.com/robotools/extractor/actions?query=workflow%3ATests
 .. |PyPI Version| image:: https://img.shields.io/pypi/v/ufo-extractor.svg
    :target: https://pypi.org/project/ufo-extractor/
 .. |Python Versions| image:: https://img.shields.io/badge/python-3.6%2C%203.8-blue.svg
