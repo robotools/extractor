@@ -38,15 +38,4 @@ jobs:
     - name: Install packages
       run: pip install tox coverage
     - name: Run Tox
-      run: tox -e py-cov
-    - name: Produce coverage files
-      run: |
-        coverage combine
-        coverage xml
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-      with:
-        file: coverage.xml
-        flags: unittests
-        name: codecov-umbrella
-        fail_ci_if_error: true
+      run: tox -e
