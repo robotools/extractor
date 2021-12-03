@@ -38,4 +38,4 @@ jobs:
     - name: Install packages
       run: pip install tox coverage
     - name: Run Tox
-      run: tox -e
+      run: tox
