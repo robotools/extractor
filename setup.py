@@ -29,7 +29,7 @@ setup_params = dict(
           "write_to": 'Lib/extractor/_version.py',
           "write_to_template": '__version__ = "{version}"',
      },
-    setup_requires=pytest_runner + wheel, ['setuptools_scm'],
+    setup_requires=pytest_runner + wheel + ['setuptools_scm'],
     tests_require=[
         'pytest>=3.0.3',
     ],
