@@ -66,3 +66,23 @@ def extractUFO(
         raise ExtractorError(
             "There was an error reading the %s file." % format
         )
+
+
+def cmdline():
+    """
+    Extract one ore more fonts to UFO. Installed as command line script
+    `extractufo`.
+
+    Usage: extractufo font [font ...]
+    """
+    from sys import argv, exit
+    from ufoLib2 import Font
+
+    if len(argv) <= 1:
+        print("No font path supplied.\nUsage: extractufo font [font ...]")
+        exit(1)
+
+    for font_path in argv[1:]:
+        ufo = Font()
+        extractUFO(font_path, ufo)
+        ufo.save(f"{font_path}.ufo", overwrite=True)
