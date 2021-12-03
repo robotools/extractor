@@ -544,6 +544,8 @@ def extractOpenTypeGlyphs(source, destination):
             sourceGlyph.draw(pen)
         # width
         destinationGlyph.width = sourceGlyph.width
+        # unicodes
+        destinationGlyph.unicodes = list(reversedMapping.get(glyphName, []))
         # height and vertical origin
         if vmtx is not None and glyphName in vmtx.metrics:
             destinationGlyph.height = vmtx[glyphName][0]
@@ -560,8 +562,6 @@ def extractOpenTypeGlyphs(source, destination):
                     continue
                 xMin, yMin, xMax, yMax = bounds_pen.bounds
                 destinationGlyph.verticalOrigin = tsb + yMax
-        # unicodes
-        destinationGlyph.unicodes = list(reversedMapping.get(glyphName, []))
 
 
 # -------
