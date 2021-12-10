@@ -274,7 +274,7 @@ def _extractInfoName(source, info):
         platformID = record.platformID
         encodingID = record.platEncID
         languageID = record.langID
-        string = record.toUnicode()
+        string = record.toUnicode('backslashreplace')
         nameIDs[nameID, platformID, encodingID, languageID] = string
         records.append(
             (
