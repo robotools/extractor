@@ -364,7 +364,6 @@ def _extracInfoOS2(source, info):
         info.openTypeOS2VendorID = "".join(r)
     # openTypeOS2Panose
     if hasattr(os2, "panose"):
-        panose = os2.panose
         info.openTypeOS2Panose = [
             os2.panose.bFamilyType,
             os2.panose.bSerifStyle,
