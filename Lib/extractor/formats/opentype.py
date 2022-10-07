@@ -146,7 +146,7 @@ def extractGlyphPrograms(source, destination):
         return
     glyph_set = source.getGlyphSet()
     for name in glyph_set.keys():
-        glyph = glyph_set[name]._glyph
+        glyph, offset = glyph_set[name]._getGlyphAndOffset()
         dest_glyph = destination[name]
         if glyph.isComposite():
             # Extract composite flags
