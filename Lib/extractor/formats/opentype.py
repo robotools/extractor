@@ -101,7 +101,7 @@ def extractInstructions(source, destination):
         return
 
     lib = destination.lib[TRUETYPE_INSTRUCTIONS_KEY] = {
-        "formatVersion": 1,
+        "formatVersion": "1",
         "maxFunctionDefs": 0,
         "maxInstructionDefs": 0,
         "maxStackElements": 0,
@@ -123,9 +123,7 @@ def extractControlValues(source, lib):
     if "cvt " not in source:
         return
     cvt = source["cvt "]
-    lib["controlValue"] = [
-        {"id": str(i), "value": val} for i, val in enumerate(cvt.values)
-    ]
+    lib["controlValue"] = {str(i): val for i, val in enumerate(cvt.values)}
 
 
 def extractFontProgram(source, lib):
@@ -366,7 +364,6 @@ def _extracInfoOS2(source, info):
         info.openTypeOS2VendorID = "".join(r)
     # openTypeOS2Panose
     if hasattr(os2, "panose"):
-        panose = os2.panose
         info.openTypeOS2Panose = [
             os2.panose.bFamilyType,
             os2.panose.bSerifStyle,
