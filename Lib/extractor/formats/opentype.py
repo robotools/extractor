@@ -42,6 +42,7 @@ def extractFontFromOpenType(
     doKerning=True,
     customFunctions=[],
     doInstructions=True,
+    doColors=True,
 ):
     source = TTFont(pathOrFile)
     if doInfo:
@@ -60,6 +61,8 @@ def extractFontFromOpenType(
         function(source, destination)
     if doInstructions:
         extractInstructions(source, destination)
+    if doColors:
+        extractColorsFromOpenType(source, destination)
     source.close()
 
 
@@ -1054,3 +1057,44 @@ def _extractOpenTypeKerningFromKern(source):
         # there are no minimum values.
         kerning.update(subtable.kernTable)
     return kerning
+
+# -----
+# Color
+# -----
+
+COLOR_LAYERS_KEY = "com.github.googlei18n.ufo2ft.colorLayers"
+COLOR_PALETTES_KEY = "com.github.googlei18n.ufo2ft.colorPalettes"
+COLOR_LAYER_MAPPING_KEY = "com.github.googlei18n.ufo2ft.colorLayerMapping"
+UFO2FT_FILTER_KEY = "com.github.googlei18n.ufo2ft.filters"
+def extractColorsFromOpenType(
+    source,
+    destination,
+):
+    if not "CPAL" in source or not "COLR" in source: return
+    destination.lib[UFO2FT_FILTER_KEY] = [{"name": "Explode Color Layer Glyphs", "pre": True}]
+    # UFO format only supports one palette. Others ignored.
+    firstPalette = source["CPAL"].palettes[0]
+    colorIDs = list()
+    for i, color in enumerate(firstPalette):
+        colorIDs.append((color.red/255.0, color.green/255.0, color.blue/255.0, color.alpha/255.0))
+
+    destination.lib[COLOR_PALETTES_KEY] = [[(color.red/255.0, color.green/255.0, color.blue/255.0, color.alpha/255.0) for color in firstPalette]]
+
+    layerGlyphs = list()
+    for (base_glyph, layer_records) in source["COLR"].ColorLayers.items():
+        for i, layer_record in enumerate(layer_records):
+            (name, colorID) = (layer_record.name, layer_record.colorID)
+            layer_name = "color{}_layer{}".format(colorID, i)
+            if not layer_name in destination.layers:
+                layer = destination.newLayer(layer_name)
+                layer._set_color(colorIDs[colorID])
+            glyph = destination[name]
+            destination.layers[layer_name].insertGlyph(glyph, name=base_glyph)
+            layerGlyphs.append(name)
+
+    for (base_glyph, layer_records) in source["COLR"].ColorLayers.items():
+        destination[base_glyph].lib[COLOR_LAYER_MAPPING_KEY] = [("color{}_layer{}".format(lr.colorID, i), lr.colorID) for i, lr in enumerate(layer_records)]
+
+    for name in layerGlyphs:
+        if name in destination.layers.defaultLayer:
+            del destination.layers.defaultLayer[name]
