@@ -29,12 +29,10 @@ def extractFontFromType1(
     customFunctions=[],
 ):
     try:
-        encoding = "ascii"
-        source = T1Font(pathOrFile, encoding=encoding)
+        source = T1Font(pathOrFile, encoding="ascii")
         source["FontInfo"]
     except UnicodeDecodeError:
-        encoding = "macroman"
-        source = T1Font(pathOrFile, encoding=encoding)
+        source = T1Font(pathOrFile, encoding="macroman")
 
     destination.lib["public.glyphOrder"] = _extractType1GlyphOrder(source)
     if doInfo:
