@@ -28,7 +28,14 @@ def extractFontFromType1(
     doKerning=True,
     customFunctions=[],
 ):
-    source = T1Font(pathOrFile)
+    try:
+        encoding = "ascii"
+        source = T1Font(pathOrFile, encoding=encoding)
+        source["FontInfo"]
+    except UnicodeDecodeError:
+        encoding = "macroman"
+        source = T1Font(pathOrFile, encoding=encoding)
+
     destination.lib["public.glyphOrder"] = _extractType1GlyphOrder(source)
     if doInfo:
         extractType1Info(source, destination)
@@ -159,24 +166,6 @@ def extractType1Glyphs(source, destination):
 # -----------
 
 
-class GlyphOrderPSInterpreter(PSInterpreter):
-    def __init__(self):
-        PSInterpreter.__init__(self)
-        self.glyphOrder = []
-        self.collectTokenForGlyphOrder = False
-
-    def do_literal(self, token):
-        result = PSInterpreter.do_literal(self, token)
-        if token == "/FontName":
-            self.collectTokenForGlyphOrder = False
-        if self.collectTokenForGlyphOrder:
-            self.glyphOrder.append(result.value)
-        if token == "/CharStrings":
-            self.collectTokenForGlyphOrder = True
-        return result
-
-
 def _extractType1GlyphOrder(t1Font):
-    interpreter = GlyphOrderPSInterpreter()
-    interpreter.interpret(t1Font.data)
-    return interpreter.glyphOrder
+    glyphSet = t1Font.getGlyphSet()
+    return list(glyphSet)
