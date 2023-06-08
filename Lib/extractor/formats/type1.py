@@ -26,6 +26,7 @@ def extractFontFromType1(
     doGlyphs=True,
     doInfo=True,
     doKerning=True,
+    doFeatures=False,
     customFunctions=[],
 ):
     source = T1Font(pathOrFile)
@@ -38,6 +39,9 @@ def extractFontFromType1(
         # kerning extraction is not supported yet.
         # in theory, it could be retried from an AFM.
         # we need to find the AFM naming rules so that we can sniff for the file.
+        pass
+    if doFeatures:
+        # Type1 does not have OpenType features
         pass
     for function in customFunctions:
         function(source, destination)

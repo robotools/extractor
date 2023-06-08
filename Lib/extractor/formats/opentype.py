@@ -11,6 +11,7 @@ from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from extractor.exceptions import ExtractorError
 from extractor.stream import InstructionStream
 from extractor.tools import RelaxedInfo, copyAttr
+from fontFeatures.ttLib import unparse
 
 
 TRUETYPE_INSTRUCTIONS_KEY = "public.truetype.instructions"
@@ -40,6 +41,7 @@ def extractFontFromOpenType(
     doGlyphs=True,
     doInfo=True,
     doKerning=True,
+    doFeatures=True,
     customFunctions=[],
     doInstructions=True,
 ):
@@ -56,6 +58,9 @@ def extractFontFromOpenType(
         destination.groups.update(groups)
         destination.kerning.clear()
         destination.kerning.update(kerning)
+    if doFeatures:
+        features = extractOpenTypeFeatures(source)
+        destination.features.text = features
     for function in customFunctions:
         function(source, destination)
     if doInstructions:
@@ -1054,3 +1059,14 @@ def _extractOpenTypeKerningFromKern(source):
         # there are no minimum values.
         kerning.update(subtable.kernTable)
     return kerning
+
+
+# -------
+# Features
+# -------
+
+
+def extractOpenTypeFeatures(source):
+    return unparse(source).asFea()
+
+

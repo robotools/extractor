@@ -43,6 +43,7 @@ def extractUFO(
     doGlyphs=True,
     doInfo=True,
     doKerning=True,
+    doFeatures=True,
     format=None,
     customFunctions={},
 ):
@@ -63,6 +64,7 @@ def extractUFO(
             doGlyphs=doGlyphs,
             doInfo=doInfo,
             doKerning=doKerning,
+            doFeatures=doFeatures,
             customFunctions=customFunctions.get(format, []),
         )
     except:
