@@ -27,6 +27,7 @@ Supported input formats:
    (``*.ttx``)
 -  WOFF 1.0/2.0 (``*.woff``, ``*.woff2``)
 -  PostScript Type1 fonts (``*.pfa``, ``*.pfb``, etc.)
+-  FontLab files (``*.vfb``)
 
 Installation
 ------------
