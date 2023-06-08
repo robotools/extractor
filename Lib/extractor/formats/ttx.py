@@ -2,6 +2,7 @@ from extractor.formats.opentype import (
     extractOpenTypeInfo,
     extractOpenTypeGlyphs,
     extractOpenTypeKerning,
+    extractOpenTypeFeatures,
 )
 
 
@@ -23,6 +24,7 @@ def extractFontFromTTX(
     doGlyphs=True,
     doInfo=True,
     doKerning=True,
+    doFeatures=True,
     customFunctions=[],
 ):
     from fontTools.ttLib import TTFont, TTLibError
@@ -38,6 +40,9 @@ def extractFontFromTTX(
         destination.groups.update(groups)
         destination.kerning.clear()
         destination.kerning.update(kerning)
+    if doFeatures:
+        features = extractOpenTypeFeatures(source)
+        destination.features.text = features
     for function in customFunctions:
         function(source, destination)
     source.close()

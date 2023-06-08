@@ -5,6 +5,7 @@ from extractor.formats.opentype import (
     extractOpenTypeInfo,
     extractOpenTypeGlyphs,
     extractOpenTypeKerning,
+    extractOpenTypeFeatures,
 )
 
 try:
@@ -34,6 +35,7 @@ def extractFontFromWOFF(
     doGlyphs=True,
     doInfo=True,
     doKerning=True,
+    doFeatures=True,
     customFunctions=[],
 ):
     source = TTFont(pathOrFile)
@@ -46,6 +48,9 @@ def extractFontFromWOFF(
         destination.groups.update(groups)
         destination.kerning.clear()
         destination.kerning.update(kerning)
+    if doFeatures:
+        features = extractOpenTypeFeatures(source)
+        destination.features.text = features
     for function in customFunctions:
         function(source, destination)
     source.close()
