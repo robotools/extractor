@@ -11,7 +11,6 @@ from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
 from extractor.exceptions import ExtractorError
 from extractor.stream import InstructionStream
 from extractor.tools import RelaxedInfo, copyAttr
-from fontFeatures.ttLib import unparse
 
 
 TRUETYPE_INSTRUCTIONS_KEY = "public.truetype.instructions"
@@ -1067,6 +1066,12 @@ def _extractOpenTypeKerningFromKern(source):
 
 
 def extractOpenTypeFeatures(source):
-    return unparse(source).asFea()
+    try:
+        from fontFeatures.ttLib import unparse
+        _haveFontFeatures = True
+    except ImportError:
+        _haveFontFeatures = False
 
-
+    if _haveFontFeatures:
+        return unparse(source).asFea()
+    return ""
