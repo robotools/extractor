@@ -1066,7 +1066,12 @@ def _extractOpenTypeKerningFromKern(source):
 
 
 def extractOpenTypeFeatures(source):
-    from fontFeatures.ttLib import unparse
-    return unparse(source).asFea()
+    try:
+        from fontFeatures.ttLib import unparse
+        _haveFontFeatures = True
+    except ImportError:
+        _haveFontFeatures = False
 
-
+    if _haveFontFeatures:
+        return unparse(source).asFea()
+    return ""
