@@ -35,6 +35,7 @@ setup_params = dict(
     ],
     install_requires=[
         "fonttools[ufo,lxml,woff,unicode,type1]>=4.17.0",
+        "fontFeatures",
     ],
     classifiers=[
         "Development Status :: 4 - Beta",
