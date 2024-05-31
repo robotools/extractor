@@ -299,6 +299,9 @@ def _extractInfoName(source, info):
         styleMapFamilyName=_priorityOrder(1),
         # styleMapStyleName will be handled in head extraction
         copyright=_priorityOrder(0),
+        # get postscriptFontName first from the name table
+        # this could be overwritten by the CFF fontName when extracting otf binaries
+        postscriptFontName=_priorityOrder(6),
         trademark=_priorityOrder(7),
         openTypeNameDesigner=_priorityOrder(9),
         openTypeNameDesignerURL=_priorityOrder(12),
