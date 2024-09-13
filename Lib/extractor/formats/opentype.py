@@ -1,6 +1,8 @@
 import time
+from fontTools.misc.fixedTools import floatToFixedToFloat
 from fontTools.pens.boundsPen import ControlBoundsPen
 from fontTools.pens.hashPointPen import HashPointPen
+from fontTools.pens.roundingPen import RoundingPointPen
 from fontTools.ttLib import TTFont, TTLibError
 from fontTools.ttLib.tables._g_l_y_f import (
     OVERLAP_COMPOUND,
@@ -8,6 +10,7 @@ from fontTools.ttLib.tables._g_l_y_f import (
     USE_MY_METRICS,
 )
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
+from functools import partial
 from extractor.exceptions import ExtractorError
 from extractor.stream import InstructionStream
 from extractor.tools import RelaxedInfo, copyAttr
@@ -157,7 +160,11 @@ def extractGlyphPrograms(source, destination):
             continue
 
         hash_pen = HashPointPen(dest_glyph.width, destination)
-        dest_glyph.drawPoints(hash_pen)
+        round_pen = RoundingPointPen(
+            hash_pen,
+            transformRoundFunc=partial(floatToFixedToFloat, precisionBits=14)
+        )
+        dest_glyph.drawPoints(round_pen)
         lib = dest_glyph.lib[TRUETYPE_INSTRUCTIONS_KEY] = {
             "formatVersion": "1",
             "id": hash_pen.hash,
