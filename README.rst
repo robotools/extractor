@@ -27,7 +27,7 @@ Supported input formats:
    (``*.ttx``)
 -  WOFF 1.0/2.0 (``*.woff``, ``*.woff2``)
 -  PostScript Type1 fonts (``*.pfa``, ``*.pfb``, etc.)
--  FontLab files (``*.vfb``)
+-  FontLab files (``*.vfb``, when installed with optional dependency "vfb")
 
 Installation
 ------------
@@ -37,6 +37,12 @@ You can install ``extractor`` with ``pip``:
 .. code::
 
    $ pip install ufo-extractor
+
+To install with support for extracting from vfb files:
+
+.. code::
+
+   $ pip install ufo-extractor[vfb]
 
 Note that, for historical reasons, the package is listed on the
 `Python Package Index <https://travis-ci.org/typesupply/extractor>`__ under the name
