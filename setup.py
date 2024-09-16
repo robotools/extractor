@@ -37,6 +37,9 @@ setup_params = dict(
         "fonttools[ufo,lxml,woff,unicode,type1]>=4.17.0",
         "fontFeatures",
     ],
+    extras_require={
+        "vfb": ["vfbLib>=0.7.1"],
+    },
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",
