@@ -46,6 +46,7 @@ def extractFontFromOpenType(
     doFeatures=True,
     customFunctions=[],
     doInstructions=True,
+    doAnchors=True,
 ):
     source = TTFont(pathOrFile)
     if doInfo:
@@ -67,6 +68,8 @@ def extractFontFromOpenType(
         function(source, destination)
     if doInstructions:
         extractInstructions(source, destination)
+    if doAnchors:
+        extractAnchors(source, destination)
     source.close()
 
 
@@ -602,7 +605,7 @@ def _extractOpenTypeKerningFromGPOS(source):
         kerningDictionaries,
         leftClassDictionaries,
         rightClassDictionaries,
-    ) = _gatherDataFromLookups(gpos, scriptOrder)
+    ) = _gatherKerningDataFromLookups(gpos, scriptOrder)
     # merge all kerning pairs
     kerning = _mergeKerningDictionaries(kerningDictionaries)
     # get rid of groups that have only one member
@@ -654,12 +657,12 @@ def _makeScriptOrder(gpos):
     return sorted(scripts)
 
 
-def _gatherDataFromLookups(gpos, scriptOrder):
+def _gatherKerningDataFromLookups(gpos, scriptOrder):
     """
     Gather kerning and classes from the applicable lookups
     and return them in script order.
     """
-    lookupIndexes = _gatherLookupIndexes(gpos)
+    lookupIndexes = _gatherLookupIndexes(gpos, ["kern"])
     seenLookups = set()
     kerningDictionaries = []
     leftClassDictionaries = []
@@ -686,50 +689,50 @@ def _gatherDataFromLookups(gpos, scriptOrder):
     return kerningDictionaries, leftClassDictionaries, rightClassDictionaries
 
 
-def _gatherLookupIndexes(gpos):
+def _gatherLookupIndexes(gpos, featureTags):
     """
     Gather a mapping of script to lookup indexes
-    referenced by the kern feature for each script.
+    referenced by the desired features for each script.
     Returns a dictionary of this structure:
         {
             "latn" : [0],
             "DFLT" : [0]
         }
     """
-    # gather the indexes of the kern features
-    kernFeatureIndexes = [
+    # gather the indexes of the desired features
+    desiredFeatureIndexes = [
         index
         for index, featureRecord in enumerate(gpos.FeatureList.FeatureRecord)
-        if featureRecord.FeatureTag == "kern"
+        if featureRecord.FeatureTag in featureTags
     ]
-    # find scripts and languages that have kern features
-    scriptKernFeatureIndexes = {}
+    # find scripts and languages that have desired features
+    scriptDesiredFeatureIndexes = {}
     for scriptRecord in gpos.ScriptList.ScriptRecord:
         script = scriptRecord.ScriptTag
-        thisScriptKernFeatureIndexes = []
+        thisScriptDesiredFeatureIndexes = []
         defaultLangSysRecord = scriptRecord.Script.DefaultLangSys
         if defaultLangSysRecord is not None:
             f = []
             for featureIndex in defaultLangSysRecord.FeatureIndex:
-                if featureIndex not in kernFeatureIndexes:
+                if featureIndex not in desiredFeatureIndexes:
                     continue
                 f.append(featureIndex)
             if f:
-                thisScriptKernFeatureIndexes.append((None, f))
+                thisScriptDesiredFeatureIndexes.append((None, f))
         if scriptRecord.Script.LangSysRecord is not None:
             for langSysRecord in scriptRecord.Script.LangSysRecord:
                 langSys = langSysRecord.LangSysTag
                 f = []
                 for featureIndex in langSysRecord.LangSys.FeatureIndex:
-                    if featureIndex not in kernFeatureIndexes:
+                    if featureIndex not in desiredFeatureIndexes:
                         continue
                     f.append(featureIndex)
                 if f:
-                    thisScriptKernFeatureIndexes.append((langSys, f))
-        scriptKernFeatureIndexes[script] = thisScriptKernFeatureIndexes
+                    thisScriptDesiredFeatureIndexes.append((langSys, f))
+        scriptDesiredFeatureIndexes[script] = thisScriptDesiredFeatureIndexes
     # convert the feature indexes to lookup indexes
     scriptLookupIndexes = {}
-    for script, featureDefinitions in scriptKernFeatureIndexes.items():
+    for script, featureDefinitions in scriptDesiredFeatureIndexes.items():
         lookupIndexes = scriptLookupIndexes[script] = []
         for language, featureIndexes in featureDefinitions:
             for featureIndex in featureIndexes:
@@ -1085,3 +1088,104 @@ def extractOpenTypeFeatures(source):
     if _haveFontFeatures:
         return unparse(source).asFea()
     return ""
+
+
+# -------
+# Anchors
+# -------
+
+
+def extractAnchors(source, destination):
+    if "GPOS" not in source:
+        return
+
+    gpos = source["GPOS"].table
+    # get an ordered list of scripts
+    scriptOrder = _makeScriptOrder(gpos)
+    # extract anchors from each applicable lookup
+    anchorGroups = _gatherAnchorDataFromLookups(gpos, scriptOrder)
+
+    for groupIndex, groupAnchors in enumerate(anchorGroups):
+        baseAnchors = groupAnchors["baseAnchors"]
+        markAnchors = groupAnchors["markAnchors"]
+
+        for base in baseAnchors.keys():
+            destination[base].appendAnchor({"x": baseAnchors[base]["x"], "y": baseAnchors[base]["y"], "name": f"Anchor-{groupIndex}"})
+        for mark in markAnchors.keys():
+            destination[mark].appendAnchor({"x": markAnchors[mark]["x"], "y": markAnchors[mark]["y"], "name": f"_Anchor-{groupIndex}"})
+
+
+def _gatherAnchorDataFromLookups(gpos, scriptOrder):
+    """
+    Gather anchor data from the applicable lookups
+    and return them in script order.
+    """
+    lookupIndexes = _gatherLookupIndexes(gpos, ["mark", "mkmk"])
+
+    allAnchors = []
+    seenLookups = set()
+    for script in scriptOrder:
+        for lookupIndex in lookupIndexes[script]:
+            if lookupIndex in seenLookups:
+                continue
+            seenLookups.add(lookupIndex)
+            anchorsForThisLookup = _gatherAnchorsForLookup(gpos, lookupIndex)
+            allAnchors = allAnchors + anchorsForThisLookup
+    return allAnchors
+
+
+def _gatherAnchorsForLookup(gpos, lookupIndex):
+    """
+    Gather the anchor data for a particular lookup.
+    Returns a list of anchor group data dicts in the following format:
+        {
+            "baseAnchors": {"A": {"x": 672, "y": 1600}, "B": {"x": 624, "y": 1600}},
+            "markAnchors": {'gravecomb': {'x': -400, 'y': 1500}, 'acutecomb': {'x': -630, 'y': 1500}},
+        }
+    """
+    allAnchorGroups = []
+    lookup = gpos.LookupList.Lookup[lookupIndex]
+    # Type 4 are mark-to-base attachment lookups, type 6 are mark-to-mark ones, type 9 are extended lookups.
+    if lookup.LookupType not in (4, 6, 9):
+        return allAnchorGroups
+    if lookup.LookupType == 9 and lookup.SubTable[0].ExtensionLookupType not in (4,6):
+        return allAnchorGroups
+    for subtableIndex, subtable in enumerate(lookup.SubTable):
+        if (subtable.Format != 1):
+            print(f"  Skipping Anchor lookup subtable of unknown format {subtable.Format}.")
+            continue
+        if (lookup.LookupType == 9):
+            subtable = subtable.ExtSubTable
+        subtableAnchors = _handleAnchorLookupType4Format1(subtable)
+        allAnchorGroups.append(subtableAnchors)
+    return allAnchorGroups
+
+
+def _handleAnchorLookupType4Format1(subtable):
+    """
+    Extract anchors from a Lookup Type 4 Format 1.
+    """
+    anchors = {
+        "baseAnchors": {},
+        "markAnchors": {},
+    }
+
+    if subtable.LookupType not in (4, 6):
+        print(f"  Skipping Anchor lookup subtable with unsupported LookupType {subtable.LookupType}.")
+        return anchors
+
+    subtableIsType4 = subtable.LookupType == 4
+
+    baseCoverage = subtable.BaseCoverage.glyphs if subtableIsType4 else subtable.Mark2Coverage.glyphs
+    markCoverage = subtable.MarkCoverage.glyphs if subtableIsType4 else subtable.Mark1Coverage.glyphs
+
+    for baseRecordIndex, baseRecord in enumerate(subtable.BaseArray.BaseRecord if subtableIsType4 else subtable.Mark2Array.Mark2Record):
+        baseAnchor = baseRecord.BaseAnchor[0] if subtableIsType4 else baseRecord.Mark2Anchor[0]
+        anchors["baseAnchors"].update({baseCoverage[baseRecordIndex]: {"x": baseAnchor.XCoordinate, "y": baseAnchor.YCoordinate}})
+
+    for markRecordIndex, markRecord in enumerate(subtable.MarkArray.MarkRecord if subtableIsType4 else subtable.Mark1Array.MarkRecord):
+        markAnchor = markRecord.MarkAnchor
+        anchors["markAnchors"].update({markCoverage[markRecordIndex]: {"x": markAnchor.XCoordinate, "y": markAnchor.YCoordinate}})
+
+    return anchors
+
