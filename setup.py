@@ -56,7 +56,7 @@ setup_params = dict(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Text Processing :: Fonts",
     ],
-    python_requires='>=3.7',
+    python_requires='>=3.8',
     zip_safe=True,
 )
 
