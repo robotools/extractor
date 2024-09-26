@@ -41,10 +41,10 @@ setup_params = dict(
     install_requires=[
         "fonttools[ufo,lxml,woff,unicode,type1]>=4.17.0",
         "fontFeatures",
-        "ufoLib2",
     ],
     extras_require={
         "vfb": ["vfbLib>=0.7.1"],
+        "script": ["ufoLib2"],
     },
     classifiers=[
         "Development Status :: 4 - Beta",

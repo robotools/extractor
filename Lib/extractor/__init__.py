@@ -85,13 +85,27 @@ def cmdline():
     Usage: extractufo font [font ...]
     """
     from sys import argv, exit
-    from ufoLib2 import Font
+    try:
+        from ufoLib2 import Font
+        library = "ufoLib2"
+    except ImportError:
+        try:
+            from defcon import Font
+            library = "defcon"
+        except ImportError:
+            print("Either ufoLib2 or defcon library is required for this command to work.\nPlease install one of them.")
+            exit(1)
 
     if len(argv) <= 1:
         print("No font path supplied.\nUsage: extractufo font [font ...]")
         exit(1)
 
+    print(f"Will use {library} library for UFO output.")
+
     for font_path in argv[1:]:
+        ufo_path = f"{font_path}.ufo"
+        print(f"Extracting {ufo_path}... ", end="")
         ufo = Font()
         extractUFO(font_path, ufo)
-        ufo.save(f"{font_path}.ufo", overwrite=True)
+        ufo.save(ufo_path, overwrite=True)
+        print("done.")
