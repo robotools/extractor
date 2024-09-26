@@ -1,0 +1,4 @@
+pytest
+ufo2ft
+defcon
+ufoLib2

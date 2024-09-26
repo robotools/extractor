@@ -5,7 +5,14 @@ from extractor.formats.type1 import isType1, extractFontFromType1
 from extractor.formats.ttx import isTTX, extractFontFromTTX
 from extractor.formats.vfb import isVFB, extractFontFromVFB, haveVfb2ufo
 
-__version__ = "0.3.1.dev0"
+try:
+    from ._version import __version__
+except ImportError:
+    try:
+        from setuptools_scm import get_version
+        __version__ = get_version()
+    except ImportError:
+        __version__ = 'unknown'
 
 _extractFunctions = dict(
     OTF=extractFontFromOpenType,
@@ -36,6 +43,7 @@ def extractUFO(
     doGlyphs=True,
     doInfo=True,
     doKerning=True,
+    doFeatures=True,
     format=None,
     customFunctions={},
 ):
@@ -56,6 +64,7 @@ def extractUFO(
             doGlyphs=doGlyphs,
             doInfo=doInfo,
             doKerning=doKerning,
+            doFeatures=doFeatures,
             customFunctions=customFunctions.get(format, []),
         )
     except:

@@ -12,32 +12,40 @@ wheel = ['wheel'] if needs_wheel else []
 with open('README.rst', 'r') as f:
     long_description = f.read()
 
-setup(
+setup_params = dict(
     name="ufo_extractor",
-    version="0.3.1.dev0",
     description="Tools for extracting data from font binaries into UFO objects.",
     long_description=long_description,
     author="Tal Leming",
     author_email="tal@typesupply.com",
-    maintainer="Just van Rossum, Frederik Berlaen",
+    maintainer="Just van Rossum, Frederik Berlaen, Ben Kiel",
     maintainer_email="justvanrossum@gmail.com",
     url="https://github.com/robotools/extractor",
     license="MIT",
     package_dir={"": "Lib"},
     packages=find_packages("Lib"),
+    include_package_data=True,
+    use_scm_version={
+          "write_to": 'Lib/extractor/_version.py',
+          "write_to_template": '__version__ = "{version}"',
+     },
     entry_points={
         "console_scripts": [
             "extractufo = extractor:cmdline",
         ]
     },
-    setup_requires=pytest_runner + wheel,
+    setup_requires=pytest_runner + wheel + ['setuptools_scm'],
     tests_require=[
-        'pytest>=2.8',
+        'pytest>=3.0.3',
     ],
     install_requires=[
         "fonttools[ufo,lxml,woff,unicode,type1]>=4.17.0",
+        "fontFeatures",
         "ufoLib2",
     ],
+    extras_require={
+        "vfb": ["vfbLib>=0.7.1"],
+    },
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",
@@ -54,4 +62,9 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Text Processing :: Fonts",
     ],
+    python_requires='>=3.8',
+    zip_safe=True,
 )
+
+if __name__ == "__main__":
+    setup(**setup_params)

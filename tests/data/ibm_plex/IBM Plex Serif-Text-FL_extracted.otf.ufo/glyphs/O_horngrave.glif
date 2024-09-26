@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ohorngrave" format="2">
+  <advance width="724"/>
+  <unicode hex="1EDC"/>
+  <outline>
+    <contour>
+      <point x="362" y="45" type="curve" smooth="yes"/>
+      <point x="235" y="45"/>
+      <point x="162" y="140"/>
+      <point x="162" y="281" type="curve" smooth="yes"/>
+      <point x="162" y="417" type="line" smooth="yes"/>
+      <point x="162" y="558"/>
+      <point x="235" y="653"/>
+      <point x="362" y="653" type="curve" smooth="yes"/>
+      <point x="489" y="653"/>
+      <point x="562" y="558"/>
+      <point x="562" y="417" type="curve" smooth="yes"/>
+      <point x="562" y="281" type="line" smooth="yes"/>
+      <point x="562" y="140"/>
+      <point x="489" y="45"/>
+    </contour>
+    <contour>
+      <point x="362" y="-12" type="curve" smooth="yes"/>
+      <point x="549" y="-12"/>
+      <point x="674" y="125"/>
+      <point x="674" y="349" type="curve" smooth="yes"/>
+      <point x="674" y="494"/>
+      <point x="623" y="600"/>
+      <point x="535" y="660" type="curve"/>
+      <point x="588" y="660" type="line" smooth="yes"/>
+      <point x="637" y="660"/>
+      <point x="660" y="686"/>
+      <point x="660" y="725" type="curve" smooth="yes"/>
+      <point x="660" y="808" type="line"/>
+      <point x="576" y="808" type="line"/>
+      <point x="576" y="698" type="line"/>
+      <point x="453" y="698" type="line"/>
+      <point x="425" y="706"/>
+      <point x="395" y="710"/>
+      <point x="362" y="710" type="curve" smooth="yes"/>
+      <point x="175" y="710"/>
+      <point x="50" y="573"/>
+      <point x="50" y="349" type="curve" smooth="yes"/>
+      <point x="50" y="125"/>
+      <point x="175" y="-12"/>
+    </contour>
+    <contour>
+      <point x="368" y="758" type="line"/>
+      <point x="399" y="774" type="line"/>
+      <point x="324" y="957" type="line"/>
+      <point x="236" y="914" type="line"/>
+    </contour>
+  </outline>
+</glyph>

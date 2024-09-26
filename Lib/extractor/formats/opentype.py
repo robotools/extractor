@@ -1,6 +1,8 @@
 import time
+from fontTools.misc.fixedTools import floatToFixedToFloat
 from fontTools.pens.boundsPen import ControlBoundsPen
 from fontTools.pens.hashPointPen import HashPointPen
+from fontTools.pens.roundingPen import RoundingPointPen
 from fontTools.ttLib import TTFont, TTLibError
 from fontTools.ttLib.tables._g_l_y_f import (
     OVERLAP_COMPOUND,
@@ -8,9 +10,17 @@ from fontTools.ttLib.tables._g_l_y_f import (
     USE_MY_METRICS,
 )
 from fontTools.ttLib.tables._h_e_a_d import mac_epoch_diff
+from functools import partial
 from extractor.exceptions import ExtractorError
 from extractor.stream import InstructionStream
 from extractor.tools import RelaxedInfo, copyAttr
+
+
+TRUETYPE_INSTRUCTIONS_KEY = "public.truetype.instructions"
+TRUETYPE_ROUND_KEY = "public.truetype.roundOffsetToGrid"
+TRUETYPE_METRICS_KEY = "public.truetype.useMyMetrics"
+TRUETYPE_OVERLAP_KEY = "public.truetype.overlap"
+OBJECT_LIBS_KEY = "public.objectLibs"
 
 # ----------------
 # Public Functions
@@ -33,14 +43,17 @@ def extractFontFromOpenType(
     doGlyphs=True,
     doInfo=True,
     doKerning=True,
+    doFeatures=True,
     customFunctions=[],
     doInstructions=True,
+    doAnchors=True,
 ):
     source = TTFont(pathOrFile)
     if doInfo:
         extractOpenTypeInfo(source, destination)
     if doGlyphs:
         extractOpenTypeGlyphs(source, destination)
+        extractUnicodeVariationSequences(source, destination)
     if doGlyphOrder:
         extractGlyphOrder(source, destination)
     if doKerning:
@@ -48,10 +61,15 @@ def extractFontFromOpenType(
         destination.groups.update(groups)
         destination.kerning.clear()
         destination.kerning.update(kerning)
+    if doFeatures:
+        features = extractOpenTypeFeatures(source)
+        destination.features.text = features
     for function in customFunctions:
         function(source, destination)
     if doInstructions:
         extractInstructions(source, destination)
+    if doAnchors:
+        extractAnchors(source, destination)
     source.close()
 
 
@@ -61,9 +79,39 @@ def extractGlyphOrder(source, destination):
         destination.lib["public.glyphOrder"] = glyphOrder
 
 
+# ---------------------------
+# Unicode Variation Sequences
+# ---------------------------
+
+
+def extractUnicodeVariationSequences(source, destination):
+    """
+    Extract the Unicode Variation Sequences
+    """
+    cmap = source.get("cmap")
+    mapping = cmap.getBestCmap()
+    for subtable in cmap.tables:
+        if subtable.format == 14:
+            destination.lib["public.unicodeVariationSequences"] = {
+                "%04X" % variationSelector: {
+                    "%04X" % charValue: glyphName if glyphName else mapping.get(charValue)
+                    for (charValue, glyphName) in uvsList
+                }
+                for variationSelector, uvsList in subtable.uvsDict.items()
+            }
+
+
+# ------------
+# Instructions
+# ------------
+
+
 def extractInstructions(source, destination):
-    lib = destination.lib["public.truetype.instructions"] = {
-        "formatVersion": 1,
+    if "glyf" not in source:
+        return
+
+    lib = destination.lib[TRUETYPE_INSTRUCTIONS_KEY] = {
+        "formatVersion": "1",
         "maxFunctionDefs": 0,
         "maxInstructionDefs": 0,
         "maxStackElements": 0,
@@ -85,9 +133,7 @@ def extractControlValues(source, lib):
     if "cvt " not in source:
         return
     cvt = source["cvt "]
-    lib["controlValue"] = [
-        {"id": str(i), "value": val} for i, val in enumerate(cvt.values)
-    ]
+    lib["controlValue"] = {str(i): val for i, val in enumerate(cvt.values)}
 
 
 def extractFontProgram(source, lib):
@@ -106,9 +152,9 @@ def extractGlyphPrograms(source, destination):
     """
     if "glyf" not in source:
         return
-    glyph_set = source.getGlyphSet()
-    for name in glyph_set.keys():
-        glyph = glyph_set[name]._glyph
+    glyph_table = source["glyf"]
+    for name in glyph_table.keys():
+        glyph = glyph_table[name]
         dest_glyph = destination[name]
         if glyph.isComposite():
             # Extract composite flags
@@ -117,8 +163,12 @@ def extractGlyphPrograms(source, destination):
             continue
 
         hash_pen = HashPointPen(dest_glyph.width, destination)
-        dest_glyph.drawPoints(hash_pen)
-        lib = dest_glyph.lib["public.truetype.instructions"] = {
+        round_pen = RoundingPointPen(
+            hash_pen,
+            transformRoundFunc=partial(floatToFixedToFloat, precisionBits=14)
+        )
+        dest_glyph.drawPoints(round_pen)
+        lib = dest_glyph.lib[TRUETYPE_INSTRUCTIONS_KEY] = {
             "formatVersion": "1",
             "id": hash_pen.hash,
         }
@@ -161,33 +211,24 @@ def _byteCodeToTtxAssembly(program):
 
 def _extractCompositeFlags(glyph, dest_glyph):
     # Find the lib key or add it
-    if (
-        "public.objectLibs" not in dest_glyph.lib
-        or "public.objectIdentifiers"
-        not in dest_glyph.lib["public.objectLibs"]
-    ):
-        dest_glyph.lib["public.objectLibs"] = {
-            "public.objectIdentifiers": {}
-        }
-    object_ids = dest_glyph.lib["public.objectLibs"][
-        "public.objectIdentifiers"
-    ]
+    if OBJECT_LIBS_KEY not in dest_glyph.lib:
+        dest_glyph.lib[OBJECT_LIBS_KEY] = {}
+    object_libs = dest_glyph.lib[OBJECT_LIBS_KEY]
 
     for ci, c in enumerate(glyph.components):
         flags = {}
-        if c.flags & ROUND_XY_TO_GRID:
-            flags["round"] = True
-        if c.flags & USE_MY_METRICS:
-            flags["useMyMetrics"] = True
-        if c.flags & OVERLAP_COMPOUND:
-            flags["overlap"] = True
+        flags[TRUETYPE_ROUND_KEY] = bool(c.flags & ROUND_XY_TO_GRID)
+        flags[TRUETYPE_METRICS_KEY] = bool(c.flags & USE_MY_METRICS)
 
         if flags:
             identifier = f"component{ci}"
             dest_glyph.components[ci].identifier = identifier
-            object_ids[identifier] = {
-                "public.truetype.instructions": flags
-            }
+            object_libs[identifier] = flags
+
+        # Overlap is stored directly in the glyph lib
+        dest_glyph.lib["public.truetype.overlap"] = bool(
+            c.flags & OVERLAP_COMPOUND
+        )
 
 
 # ----
@@ -268,6 +309,9 @@ def _extractInfoName(source, info):
         styleMapFamilyName=_priorityOrder(1),
         # styleMapStyleName will be handled in head extraction
         copyright=_priorityOrder(0),
+        # get postscriptFontName first from the name table
+        # this could be overwritten by the CFF fontName when extracting otf binaries
+        postscriptFontName=_priorityOrder(6),
         trademark=_priorityOrder(7),
         openTypeNameDesigner=_priorityOrder(9),
         openTypeNameDesignerURL=_priorityOrder(12),
@@ -337,7 +381,6 @@ def _extracInfoOS2(source, info):
         info.openTypeOS2VendorID = "".join(r)
     # openTypeOS2Panose
     if hasattr(os2, "panose"):
-        panose = os2.panose
         info.openTypeOS2Panose = [
             os2.panose.bFamilyType,
             os2.panose.bSerifStyle,
@@ -497,7 +540,6 @@ def extractOpenTypeGlyphs(source, destination):
     # grab the cmap
     vmtx = source.get("vmtx")
     vorg = source.get("VORG")
-    cmap = source.getBestCmap()
     is_ttf = "glyf" in source
     reversedMapping = source.get("cmap").buildReversed()
     # grab the glyphs
@@ -516,6 +558,8 @@ def extractOpenTypeGlyphs(source, destination):
             sourceGlyph.draw(pen)
         # width
         destinationGlyph.width = sourceGlyph.width
+        # unicodes
+        destinationGlyph.unicodes = list(reversedMapping.get(glyphName, []))
         # height and vertical origin
         if vmtx is not None and glyphName in vmtx.metrics:
             destinationGlyph.height = vmtx[glyphName][0]
@@ -532,8 +576,6 @@ def extractOpenTypeGlyphs(source, destination):
                     continue
                 xMin, yMin, xMax, yMax = bounds_pen.bounds
                 destinationGlyph.verticalOrigin = tsb + yMax
-        # unicodes
-        destinationGlyph.unicodes = reversedMapping.get(glyphName, [])
 
 
 # -------
@@ -546,7 +588,7 @@ def extractOpenTypeKerning(source, destination):
     groups = {}
     if "GPOS" in source:
         kerning, groups = _extractOpenTypeKerningFromGPOS(source)
-    elif "kern" in source:
+    if kerning == {} and "kern" in source:
         kerning = _extractOpenTypeKerningFromKern(source)
         groups = {}
     for name, group in groups.items():
@@ -563,7 +605,7 @@ def _extractOpenTypeKerningFromGPOS(source):
         kerningDictionaries,
         leftClassDictionaries,
         rightClassDictionaries,
-    ) = _gatherDataFromLookups(gpos, scriptOrder)
+    ) = _gatherKerningDataFromLookups(gpos, scriptOrder)
     # merge all kerning pairs
     kerning = _mergeKerningDictionaries(kerningDictionaries)
     # get rid of groups that have only one member
@@ -615,12 +657,12 @@ def _makeScriptOrder(gpos):
     return sorted(scripts)
 
 
-def _gatherDataFromLookups(gpos, scriptOrder):
+def _gatherKerningDataFromLookups(gpos, scriptOrder):
     """
     Gather kerning and classes from the applicable lookups
     and return them in script order.
     """
-    lookupIndexes = _gatherLookupIndexes(gpos)
+    lookupIndexes = _gatherLookupIndexes(gpos, ["kern"])
     seenLookups = set()
     kerningDictionaries = []
     leftClassDictionaries = []
@@ -647,50 +689,50 @@ def _gatherDataFromLookups(gpos, scriptOrder):
     return kerningDictionaries, leftClassDictionaries, rightClassDictionaries
 
 
-def _gatherLookupIndexes(gpos):
+def _gatherLookupIndexes(gpos, featureTags):
     """
     Gather a mapping of script to lookup indexes
-    referenced by the kern feature for each script.
+    referenced by the desired features for each script.
     Returns a dictionary of this structure:
         {
             "latn" : [0],
             "DFLT" : [0]
         }
     """
-    # gather the indexes of the kern features
-    kernFeatureIndexes = [
+    # gather the indexes of the desired features
+    desiredFeatureIndexes = [
         index
         for index, featureRecord in enumerate(gpos.FeatureList.FeatureRecord)
-        if featureRecord.FeatureTag == "kern"
+        if featureRecord.FeatureTag in featureTags
     ]
-    # find scripts and languages that have kern features
-    scriptKernFeatureIndexes = {}
+    # find scripts and languages that have desired features
+    scriptDesiredFeatureIndexes = {}
     for scriptRecord in gpos.ScriptList.ScriptRecord:
         script = scriptRecord.ScriptTag
-        thisScriptKernFeatureIndexes = []
+        thisScriptDesiredFeatureIndexes = []
         defaultLangSysRecord = scriptRecord.Script.DefaultLangSys
         if defaultLangSysRecord is not None:
             f = []
             for featureIndex in defaultLangSysRecord.FeatureIndex:
-                if featureIndex not in kernFeatureIndexes:
+                if featureIndex not in desiredFeatureIndexes:
                     continue
                 f.append(featureIndex)
             if f:
-                thisScriptKernFeatureIndexes.append((None, f))
+                thisScriptDesiredFeatureIndexes.append((None, f))
         if scriptRecord.Script.LangSysRecord is not None:
             for langSysRecord in scriptRecord.Script.LangSysRecord:
                 langSys = langSysRecord.LangSysTag
                 f = []
                 for featureIndex in langSysRecord.LangSys.FeatureIndex:
-                    if featureIndex not in kernFeatureIndexes:
+                    if featureIndex not in desiredFeatureIndexes:
                         continue
                     f.append(featureIndex)
                 if f:
-                    thisScriptKernFeatureIndexes.append((langSys, f))
-        scriptKernFeatureIndexes[script] = thisScriptKernFeatureIndexes
+                    thisScriptDesiredFeatureIndexes.append((langSys, f))
+        scriptDesiredFeatureIndexes[script] = thisScriptDesiredFeatureIndexes
     # convert the feature indexes to lookup indexes
     scriptLookupIndexes = {}
-    for script, featureDefinitions in scriptKernFeatureIndexes.items():
+    for script, featureDefinitions in scriptDesiredFeatureIndexes.items():
         lookupIndexes = scriptLookupIndexes[script] = []
         for language, featureIndexes in featureDefinitions:
             for featureIndex in featureIndexes:
@@ -957,7 +999,18 @@ def _renameClasses(classes, prefix):
         else:
             glyphList = list(sorted(glyphList))
             groupName = prefix + glyphList[0]
-        renameMap[classID] = groupName
+        if groupName in renameMap.values():
+            print("  Dropping duplicate group rename target:")
+            print(f"    {classID} -> {groupName}")
+            print(f"    Glyphs: {glyphList}")
+        else:
+            renameMap[classID] = groupName
+    if len(list(renameMap.values())) != len(set(renameMap.values())):
+        print("Rename list for classes contains duplicates:")
+        values = list(renameMap.values())
+        for v in values:
+            if values.count(v) > 1:
+                print(f"    {v}")
     return renameMap
 
 
@@ -1018,3 +1071,121 @@ def _extractOpenTypeKerningFromKern(source):
         # there are no minimum values.
         kerning.update(subtable.kernTable)
     return kerning
+
+
+# -------
+# Features
+# -------
+
+
+def extractOpenTypeFeatures(source):
+    try:
+        from fontFeatures.ttLib import unparse
+        _haveFontFeatures = True
+    except ImportError:
+        _haveFontFeatures = False
+
+    if _haveFontFeatures:
+        return unparse(source).asFea()
+    return ""
+
+
+# -------
+# Anchors
+# -------
+
+
+def extractAnchors(source, destination):
+    if "GPOS" not in source:
+        return
+
+    gpos = source["GPOS"].table
+    # get an ordered list of scripts
+    scriptOrder = _makeScriptOrder(gpos)
+    # extract anchors from each applicable lookup
+    anchorGroups = _gatherAnchorDataFromLookups(gpos, scriptOrder)
+
+    for groupIndex, groupAnchors in enumerate(anchorGroups):
+        baseAnchors = groupAnchors["baseAnchors"]
+        markAnchors = groupAnchors["markAnchors"]
+
+        for base in baseAnchors.keys():
+            destination[base].appendAnchor({"x": baseAnchors[base]["x"], "y": baseAnchors[base]["y"], "name": f"Anchor-{groupIndex}"})
+        for mark in markAnchors.keys():
+            destination[mark].appendAnchor({"x": markAnchors[mark]["x"], "y": markAnchors[mark]["y"], "name": f"_Anchor-{groupIndex}"})
+
+
+def _gatherAnchorDataFromLookups(gpos, scriptOrder):
+    """
+    Gather anchor data from the applicable lookups
+    and return them in script order.
+    """
+    lookupIndexes = _gatherLookupIndexes(gpos, ["mark", "mkmk"])
+
+    allAnchors = []
+    seenLookups = set()
+    for script in scriptOrder:
+        for lookupIndex in lookupIndexes[script]:
+            if lookupIndex in seenLookups:
+                continue
+            seenLookups.add(lookupIndex)
+            anchorsForThisLookup = _gatherAnchorsForLookup(gpos, lookupIndex)
+            allAnchors = allAnchors + anchorsForThisLookup
+    return allAnchors
+
+
+def _gatherAnchorsForLookup(gpos, lookupIndex):
+    """
+    Gather the anchor data for a particular lookup.
+    Returns a list of anchor group data dicts in the following format:
+        {
+            "baseAnchors": {"A": {"x": 672, "y": 1600}, "B": {"x": 624, "y": 1600}},
+            "markAnchors": {'gravecomb': {'x': -400, 'y': 1500}, 'acutecomb': {'x': -630, 'y': 1500}},
+        }
+    """
+    allAnchorGroups = []
+    lookup = gpos.LookupList.Lookup[lookupIndex]
+    # Type 4 are mark-to-base attachment lookups, type 6 are mark-to-mark ones, type 9 are extended lookups.
+    if lookup.LookupType not in (4, 6, 9):
+        return allAnchorGroups
+    if lookup.LookupType == 9 and lookup.SubTable[0].ExtensionLookupType not in (4,6):
+        return allAnchorGroups
+    for subtableIndex, subtable in enumerate(lookup.SubTable):
+        if (subtable.Format != 1):
+            print(f"  Skipping Anchor lookup subtable of unknown format {subtable.Format}.")
+            continue
+        if (lookup.LookupType == 9):
+            subtable = subtable.ExtSubTable
+        subtableAnchors = _handleAnchorLookupType4Format1(subtable)
+        allAnchorGroups.append(subtableAnchors)
+    return allAnchorGroups
+
+
+def _handleAnchorLookupType4Format1(subtable):
+    """
+    Extract anchors from a Lookup Type 4 Format 1.
+    """
+    anchors = {
+        "baseAnchors": {},
+        "markAnchors": {},
+    }
+
+    if subtable.LookupType not in (4, 6):
+        print(f"  Skipping Anchor lookup subtable with unsupported LookupType {subtable.LookupType}.")
+        return anchors
+
+    subtableIsType4 = subtable.LookupType == 4
+
+    baseCoverage = subtable.BaseCoverage.glyphs if subtableIsType4 else subtable.Mark2Coverage.glyphs
+    markCoverage = subtable.MarkCoverage.glyphs if subtableIsType4 else subtable.Mark1Coverage.glyphs
+
+    for baseRecordIndex, baseRecord in enumerate(subtable.BaseArray.BaseRecord if subtableIsType4 else subtable.Mark2Array.Mark2Record):
+        baseAnchor = baseRecord.BaseAnchor[0] if subtableIsType4 else baseRecord.Mark2Anchor[0]
+        anchors["baseAnchors"].update({baseCoverage[baseRecordIndex]: {"x": baseAnchor.XCoordinate, "y": baseAnchor.YCoordinate}})
+
+    for markRecordIndex, markRecord in enumerate(subtable.MarkArray.MarkRecord if subtableIsType4 else subtable.Mark1Array.MarkRecord):
+        markAnchor = markRecord.MarkAnchor
+        anchors["markAnchors"].update({markCoverage[markRecordIndex]: {"x": markAnchor.XCoordinate, "y": markAnchor.YCoordinate}})
+
+    return anchors
+

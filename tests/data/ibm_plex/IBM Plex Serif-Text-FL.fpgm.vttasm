@@ -1,0 +1,298 @@
+#PUSHOFF
+#PUSH, 0
+FDEF[]	/* FunctionDefinition */
+  MPPEM[]	/* MeasurePixelPerEm */
+  #PUSH, 9
+  LT[]	/* LessThan */
+  IF[]	/* If */
+    #PUSH, 1, 1
+    INSTCTRL[]	/* SetInstrExecControl */
+  EIF[]	/* EndIf */
+  #PUSH, 511
+  SCANCTRL[]	/* ScanConversionControl */
+  #PUSH, 68
+  SCVTCI[]	/* SetCVTCutIn */
+  #PUSH, 9, 3
+  SDS[]	/* SetDeltaShiftInGState */
+  SDB[]	/* SetDeltaBaseInGState */
+ENDF[]	/* EndFunctionDefinition */
+#PUSH, 1
+FDEF[]	/* FunctionDefinition */
+  DUP[]	/* DuplicateTopStack */
+  DUP[]	/* DuplicateTopStack */
+  RCVT[]	/* ReadCVT */
+  ROUND[Bl]	/* Round */
+  WCVTP[]	/* WriteCVTInPixels */
+  #PUSH, 1
+  ADD[]	/* Add */
+ENDF[]	/* EndFunctionDefinition */
+#PUSH, 2
+FDEF[]	/* FunctionDefinition */
+  #PUSH, 1
+  LOOPCALL[]	/* LoopAndCallFunction */
+  POP[]	/* PopTopStack */
+ENDF[]	/* EndFunctionDefinition */
+#PUSH, 3
+FDEF[]	/* FunctionDefinition */
+  DUP[]	/* DuplicateTopStack */
+  GC[N]	/* GetCoordOnPVector */
+  #PUSH, 3
+  CINDEX[]	/* CopyXToTopStack */
+  GC[N]	/* GetCoordOnPVector */
+  GT[]	/* GreaterThan */
+  IF[]	/* If */
+    SWAP[]	/* SwapTopStack */
+  EIF[]	/* EndIf */
+  DUP[]	/* DuplicateTopStack */
+  ROLL[]	/* RollTopThreeStack */
+  DUP[]	/* DuplicateTopStack */
+  ROLL[]	/* RollTopThreeStack */
+  MD[N]	/* MeasureDistance */
+  ABS[]	/* Absolute */
+  ROLL[]	/* RollTopThreeStack */
+  DUP[]	/* DuplicateTopStack */
+  GC[N]	/* GetCoordOnPVector */
+  DUP[]	/* DuplicateTopStack */
+  ROUND[Gr]	/* Round */
+  SUB[]	/* Subtract */
+  ABS[]	/* Absolute */
+  #PUSH, 4
+  CINDEX[]	/* CopyXToTopStack */
+  GC[N]	/* GetCoordOnPVector */
+  DUP[]	/* DuplicateTopStack */
+  ROUND[Gr]	/* Round */
+  SUB[]	/* Subtract */
+  ABS[]	/* Absolute */
+  GT[]	/* GreaterThan */
+  IF[]	/* If */
+    SWAP[]	/* SwapTopStack */
+    NEG[]	/* Negate */
+    ROLL[]	/* RollTopThreeStack */
+  EIF[]	/* EndIf */
+  MDAP[R]	/* MoveDirectAbsPt */
+  DUP[]	/* DuplicateTopStack */
+  #PUSH, 0
+  GTEQ[]	/* GreaterThanOrEqual */
+  IF[]	/* If */
+    ROUND[Bl]	/* Round */
+    DUP[]	/* DuplicateTopStack */
+    #PUSH, 0
+    EQ[]	/* Equal */
+    IF[]	/* If */
+      POP[]	/* PopTopStack */
+      #PUSH, 64
+    EIF[]	/* EndIf */
+  ELSE[]	/* Else */
+    ROUND[Bl]	/* Round */
+    DUP[]	/* DuplicateTopStack */
+    #PUSH, 0
+    EQ[]	/* Equal */
+    IF[]	/* If */
+      POP[]	/* PopTopStack */
+      #PUSH, 64
+      NEG[]	/* Negate */
+    EIF[]	/* EndIf */
+  EIF[]	/* EndIf */
+  MSIRP[m]	/* MoveStackIndirRelPt */
+ENDF[]	/* EndFunctionDefinition */
+#PUSH, 4
+FDEF[]	/* FunctionDefinition */
+  DUP[]	/* DuplicateTopStack */
+  GC[N]	/* GetCoordOnPVector */
+  #PUSH, 4
+  CINDEX[]	/* CopyXToTopStack */
+  GC[N]	/* GetCoordOnPVector */
+  GT[]	/* GreaterThan */
+  IF[]	/* If */
+    SWAP[]	/* SwapTopStack */
+    ROLL[]	/* RollTopThreeStack */
+  EIF[]	/* EndIf */
+  DUP[]	/* DuplicateTopStack */
+  GC[N]	/* GetCoordOnPVector */
+  DUP[]	/* DuplicateTopStack */
+  ROUND[Wh]	/* Round */
+  SUB[]	/* Subtract */
+  ABS[]	/* Absolute */
+  #PUSH, 4
+  CINDEX[]	/* CopyXToTopStack */
+  GC[N]	/* GetCoordOnPVector */
+  DUP[]	/* DuplicateTopStack */
+  ROUND[Wh]	/* Round */
+  SUB[]	/* Subtract */
+  ABS[]	/* Absolute */
+  GT[]	/* GreaterThan */
+  IF[]	/* If */
+    SWAP[]	/* SwapTopStack */
+    ROLL[]	/* RollTopThreeStack */
+  EIF[]	/* EndIf */
+  MDAP[R]	/* MoveDirectAbsPt */
+  MIRP[M>RBl]	/* MoveIndirectRelPt */
+ENDF[]	/* EndFunctionDefinition */
+#PUSH, 5
+FDEF[]	/* FunctionDefinition */
+  MPPEM[]	/* MeasurePixelPerEm */
+  DUP[]	/* DuplicateTopStack */
+  #PUSH, 3
+  MINDEX[]	/* MoveXToTopStack */
+  LT[]	/* LessThan */
+  IF[]	/* If */
+    LTEQ[]	/* LessThenOrEqual */
+    IF[]	/* If */
+      #PUSH, 128
+      WCVTP[]	/* WriteCVTInPixels */
+    ELSE[]	/* Else */
+      #PUSH, 64
+      WCVTP[]	/* WriteCVTInPixels */
+    EIF[]	/* EndIf */
+  ELSE[]	/* Else */
+    POP[]	/* PopTopStack */
+    POP[]	/* PopTopStack */
+    DUP[]	/* DuplicateTopStack */
+    RCVT[]	/* ReadCVT */
+    #PUSH, 192
+    LT[]	/* LessThan */
+    IF[]	/* If */
+      #PUSH, 192
+      WCVTP[]	/* WriteCVTInPixels */
+    ELSE[]	/* Else */
+      POP[]	/* PopTopStack */
+    EIF[]	/* EndIf */
+  EIF[]	/* EndIf */
+ENDF[]	/* EndFunctionDefinition */
+#PUSH, 6
+FDEF[]	/* FunctionDefinition */
+  DUP[]	/* DuplicateTopStack */
+  DUP[]	/* DuplicateTopStack */
+  RCVT[]	/* ReadCVT */
+  ROUND[Bl]	/* Round */
+  WCVTP[]	/* WriteCVTInPixels */
+  #PUSH, 1
+  ADD[]	/* Add */
+  DUP[]	/* DuplicateTopStack */
+  DUP[]	/* DuplicateTopStack */
+  RCVT[]	/* ReadCVT */
+  RDTG[]	/* RoundDownToGrid */
+  ROUND[Bl]	/* Round */
+  RTG[]	/* RoundToGrid */
+  WCVTP[]	/* WriteCVTInPixels */
+  #PUSH, 1
+  ADD[]	/* Add */
+ENDF[]	/* EndFunctionDefinition */
+#PUSH, 7
+FDEF[]	/* FunctionDefinition */
+  #PUSH, 6
+  LOOPCALL[]	/* LoopAndCallFunction */
+ENDF[]	/* EndFunctionDefinition */
+#PUSH, 8
+FDEF[]	/* FunctionDefinition */
+  MPPEM[]	/* MeasurePixelPerEm */
+  DUP[]	/* DuplicateTopStack */
+  #PUSH, 3
+  MINDEX[]	/* MoveXToTopStack */
+  GTEQ[]	/* GreaterThanOrEqual */
+  IF[]	/* If */
+    #PUSH, 64
+  ELSE[]	/* Else */
+    #PUSH, 0
+  EIF[]	/* EndIf */
+  ROLL[]	/* RollTopThreeStack */
+  ROLL[]	/* RollTopThreeStack */
+  DUP[]	/* DuplicateTopStack */
+  #PUSH, 3
+  MINDEX[]	/* MoveXToTopStack */
+  GTEQ[]	/* GreaterThanOrEqual */
+  IF[]	/* If */
+    SWAP[]	/* SwapTopStack */
+    POP[]	/* PopTopStack */
+    #PUSH, 128
+    ROLL[]	/* RollTopThreeStack */
+    ROLL[]	/* RollTopThreeStack */
+  ELSE[]	/* Else */
+    ROLL[]	/* RollTopThreeStack */
+    SWAP[]	/* SwapTopStack */
+  EIF[]	/* EndIf */
+  DUP[]	/* DuplicateTopStack */
+  #PUSH, 3
+  MINDEX[]	/* MoveXToTopStack */
+  GTEQ[]	/* GreaterThanOrEqual */
+  IF[]	/* If */
+    SWAP[]	/* SwapTopStack */
+    POP[]	/* PopTopStack */
+    #PUSH, 192
+    ROLL[]	/* RollTopThreeStack */
+    ROLL[]	/* RollTopThreeStack */
+  ELSE[]	/* Else */
+    ROLL[]	/* RollTopThreeStack */
+    SWAP[]	/* SwapTopStack */
+  EIF[]	/* EndIf */
+  DUP[]	/* DuplicateTopStack */
+  #PUSH, 3
+  MINDEX[]	/* MoveXToTopStack */
+  GTEQ[]	/* GreaterThanOrEqual */
+  IF[]	/* If */
+    SWAP[]	/* SwapTopStack */
+    POP[]	/* PopTopStack */
+    #PUSH, 256
+    ROLL[]	/* RollTopThreeStack */
+    ROLL[]	/* RollTopThreeStack */
+  ELSE[]	/* Else */
+    ROLL[]	/* RollTopThreeStack */
+    SWAP[]	/* SwapTopStack */
+  EIF[]	/* EndIf */
+  DUP[]	/* DuplicateTopStack */
+  #PUSH, 3
+  MINDEX[]	/* MoveXToTopStack */
+  GTEQ[]	/* GreaterThanOrEqual */
+  IF[]	/* If */
+    SWAP[]	/* SwapTopStack */
+    POP[]	/* PopTopStack */
+    #PUSH, 320
+    ROLL[]	/* RollTopThreeStack */
+    ROLL[]	/* RollTopThreeStack */
+  ELSE[]	/* Else */
+    ROLL[]	/* RollTopThreeStack */
+    SWAP[]	/* SwapTopStack */
+  EIF[]	/* EndIf */
+  DUP[]	/* DuplicateTopStack */
+  #PUSH, 3
+  MINDEX[]	/* MoveXToTopStack */
+  GTEQ[]	/* GreaterThanOrEqual */
+  IF[]	/* If */
+    #PUSH, 3
+    CINDEX[]	/* CopyXToTopStack */
+    RCVT[]	/* ReadCVT */
+    #PUSH, 384
+    LT[]	/* LessThan */
+    IF[]	/* If */
+      SWAP[]	/* SwapTopStack */
+      POP[]	/* PopTopStack */
+      #PUSH, 384
+      SWAP[]	/* SwapTopStack */
+      POP[]	/* PopTopStack */
+    ELSE[]	/* Else */
+      #PUSH, 3
+      CINDEX[]	/* CopyXToTopStack */
+      RCVT[]	/* ReadCVT */
+      SWAP[]	/* SwapTopStack */
+      POP[]	/* PopTopStack */
+      SWAP[]	/* SwapTopStack */
+      POP[]	/* PopTopStack */
+    EIF[]	/* EndIf */
+  ELSE[]	/* Else */
+    POP[]	/* PopTopStack */
+  EIF[]	/* EndIf */
+  WCVTP[]	/* WriteCVTInPixels */
+ENDF[]	/* EndFunctionDefinition */
+#PUSH, 9
+FDEF[]	/* FunctionDefinition */
+  MPPEM[]	/* MeasurePixelPerEm */
+  GTEQ[]	/* GreaterThanOrEqual */
+  IF[]	/* If */
+    RCVT[]	/* ReadCVT */
+    WCVTP[]	/* WriteCVTInPixels */
+  ELSE[]	/* Else */
+    POP[]	/* PopTopStack */
+    POP[]	/* PopTopStack */
+  EIF[]	/* EndIf */
+ENDF[]	/* EndFunctionDefinition */
+#PUSHON

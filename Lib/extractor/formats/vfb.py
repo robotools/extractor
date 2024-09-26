@@ -1,15 +1,20 @@
 import os
 import shutil
 import tempfile
-import subprocess
 
 from fontTools.ufoLib import UFOReader
 
-_ufo2vfbLocation = "/usr/local/bin/vfb2ufo"
+try:
+    from vfbLib.vfb.vfb import Vfb
+    from vfbLib.ufo.builder import VfbToUfoBuilder
+
+    haveVfbLib = True
+except ImportError:
+    haveVfbLib = False
 
 
 def haveVfb2ufo():
-    return os.path.exists(_ufo2vfbLocation)
+    return haveVfbLib
 
 
 # ----------------
@@ -36,15 +41,30 @@ def extractFontFromVFB(
     doLib=True,
     customFunctions=[],
 ):
+    extract_minimal = True
+    vfb = Vfb(
+        pathOrFile,
+        minimal=extract_minimal,
+        drop_keys=("Encoding", "Encoding Mac"),
+        unicode_strings=True,
+    )
+    vfb.decompile()
+    builder = VfbToUfoBuilder(
+        vfb,
+        minimal=extract_minimal,
+        base64=True,
+        pshints=False,
+        add_kerning_groups=False,
+    )
+    masters = builder.get_ufo_masters(silent=True)
+    ufoLib_source = masters[0]
     ufoPath = tempfile.mkdtemp(suffix=".ufo")
-    cmds = [_ufo2vfbLocation, "-64", "-fo", pathOrFile, ufoPath]
-    cmds = subprocess.list2cmdline(cmds)
-    popen = subprocess.Popen(cmds, shell=True)
-    popen.wait()
+    ufoLib_source.save(ufoPath, overwrite=True)
     try:
-        # vfb2ufo writes ufo2, and has no update since 2015...so dont get to crazy here...
-        # dont validate as vfb2ufo writes invalid ufos
-        source = UFOReader(ufoPath, validate=False)
+        # We now use vfbLib instead of vfb2ufo, which wrote ufo2, and had no update
+        # since 2015, so the extracted UFOs were pretty basic.
+        # More data could be extracted now with vfbLib if needed.
+        source = UFOReader(ufoPath, validate=True)
         if doInfo:
             source.readInfo(destination.info)
         if doKerning:
