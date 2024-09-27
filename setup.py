@@ -29,6 +29,11 @@ setup_params = dict(
           "write_to": 'Lib/extractor/_version.py',
           "write_to_template": '__version__ = "{version}"',
      },
+    entry_points={
+        "console_scripts": [
+            "extractufo = extractor:cmdline",
+        ]
+    },
     setup_requires=pytest_runner + wheel + ['setuptools_scm'],
     tests_require=[
         'pytest>=3.0.3',
@@ -39,6 +44,7 @@ setup_params = dict(
     ],
     extras_require={
         "vfb": ["vfbLib>=0.7.1"],
+        "script": ["ufoLib2"],
     },
     classifiers=[
         "Development Status :: 4 - Beta",
