@@ -246,6 +246,7 @@ def extractOpenTypeInfo(source, destination):
     _extractInfoPost(source, info)
     _extractInfoCFF(source, info)
     _extractInfoGasp(source, info)
+    _extractLibInfo(source, destination.lib)
 
 
 def _extractInfoHead(source, info):
@@ -258,10 +259,7 @@ def _extractInfoHead(source, info):
     # upm
     info.unitsPerEm = head.unitsPerEm
     # created
-    format = "%Y/%m/%d %H:%M:%S"
-    created = head.created
-    created = time.gmtime(max(0, created + mac_epoch_diff))
-    info.openTypeHeadCreated = time.strftime(format, created)
+    info.openTypeHeadCreated = formatDate(head.created)
     # lowestRecPPEM
     info.openTypeHeadLowestRecPPEM = head.lowestRecPPEM
     # flags
@@ -517,6 +515,13 @@ def _extractInfoGasp(source, info):
     info.openTypeGaspRangeRecords = records
 
 
+def _extractLibInfo(source, lib):
+    head = source["head"]
+    lib["public.openTypeHeadModified"] = formatDate(head.modified)
+    post = source["post"]
+    lib["public.openTypePostUnderlinePosition"] = post.underlinePosition
+
+
 # Tools
 
 
@@ -529,6 +534,12 @@ def binaryToIntList(value, start=0):
         value >>= 1
         counter += 1
     return intList
+
+
+def formatDate(date):
+    format = "%Y/%m/%d %H:%M:%S"
+    date = time.gmtime(max(0, date + mac_epoch_diff))
+    return time.strftime(format, date)
 
 
 # --------
