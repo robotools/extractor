@@ -1168,18 +1168,20 @@ def _gatherAnchorsForLookup(gpos, lookupIndex):
         if (lookup.LookupType == 9):
             subtable = subtable.ExtSubTable
         subtableAnchors = _handleAnchorLookupType4Format1(subtable)
-        allAnchorGroups.append(subtableAnchors)
+        allAnchorGroups = allAnchorGroups + subtableAnchors
     return allAnchorGroups
 
 
 def _handleAnchorLookupType4Format1(subtable):
     """
     Extract anchors from a Lookup Type 4 Format 1.
+    Returns a list of anchor group data dicts in the following format:
+        {
+            "baseAnchors": {"A": {"x": 672, "y": 1600}, "B": {"x": 624, "y": 1600}},
+            "markAnchors": {'gravecomb': {'x': -400, 'y': 1500}, 'acutecomb': {'x': -630, 'y': 1500}},
+        }
     """
-    anchors = {
-        "baseAnchors": {},
-        "markAnchors": {},
-    }
+    anchors = []
 
     if subtable.LookupType not in (4, 6):
         print(f"  Skipping Anchor lookup subtable with unsupported LookupType {subtable.LookupType}.")
@@ -1191,12 +1193,26 @@ def _handleAnchorLookupType4Format1(subtable):
     markCoverage = subtable.MarkCoverage.glyphs if subtableIsType4 else subtable.Mark1Coverage.glyphs
 
     for baseRecordIndex, baseRecord in enumerate(subtable.BaseArray.BaseRecord if subtableIsType4 else subtable.Mark2Array.Mark2Record):
-        baseAnchor = baseRecord.BaseAnchor[0] if subtableIsType4 else baseRecord.Mark2Anchor[0]
-        anchors["baseAnchors"].update({baseCoverage[baseRecordIndex]: {"x": baseAnchor.XCoordinate, "y": baseAnchor.YCoordinate}})
+        for baseAnchorIndex, baseAnchor in enumerate(baseRecord.BaseAnchor if subtableIsType4 else baseRecord.Mark2Anchor):
+            for i in range(len(anchors), baseAnchorIndex + 1):
+                anchors.append ({
+                    "baseAnchors": {},
+                    "markAnchors": {},
+                })
+            if baseAnchor:
+                anchors[baseAnchorIndex]["baseAnchors"].update({baseCoverage[baseRecordIndex]: {"x": baseAnchor.XCoordinate, "y": baseAnchor.YCoordinate}})
 
     for markRecordIndex, markRecord in enumerate(subtable.MarkArray.MarkRecord if subtableIsType4 else subtable.Mark1Array.MarkRecord):
+        for i in range(len(anchors), markRecord.Class + 1):
+            anchors.append({
+                "baseAnchors": {},
+                "markAnchors": {},
+            })
         markAnchor = markRecord.MarkAnchor
-        anchors["markAnchors"].update({markCoverage[markRecordIndex]: {"x": markAnchor.XCoordinate, "y": markAnchor.YCoordinate}})
+        if (markAnchor.Format != 1):
+            print(f"  Unexpected markAnchor format {markAnchor.Format}.")
+            continue
+        anchors[markRecord.Class]["markAnchors"].update({markCoverage[markRecordIndex]: {"x": markAnchor.XCoordinate, "y": markAnchor.YCoordinate}})
 
     return anchors
 
