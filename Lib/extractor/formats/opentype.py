@@ -284,7 +284,11 @@ def _extractInfoName(source, info):
         platformID = record.platformID
         encodingID = record.platEncID
         languageID = record.langID
-        string = record.toUnicode()
+        try:
+            string = record.toUnicode()
+        except UnicodeDecodeError:
+            # ignore font names with unknown encoding
+            continue
         nameIDs[nameID, platformID, encodingID, languageID] = string
         records.append(
             (
